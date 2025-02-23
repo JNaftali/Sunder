@@ -17,7 +17,7 @@
 
       perSystem = {pkgs, ...}: {
         packages.default = pkgs.stdenv.mkDerivation {
-          pname = "VykSys";
+          pname = "Sunder";
           version = builtins.substring 0 8 self.rev or "dirty";
 
           src = pkgs.lib.cleanSource ./.;
