@@ -1,0 +1,38 @@
+[
+  {
+    "name": "cwho info",
+    "patterns": [
+      {
+        "pattern": "^The following citizens of w+ are in the realm:$",
+        "type": "regex"
+      },
+      {
+        "pattern": "1",
+        "type": "spacer"
+      },
+      {
+        "pattern": "Citizen\\s+Location\\s+Class\\s+[CT?]",
+        "type": "regex"
+      }
+    ],
+    "children": [
+      {
+        "name": "done",
+        "patterns": [
+          {
+            "type": "prompt"
+          }
+        ]
+      },
+      {
+        "name": "cwho info line",
+        "patterns": [
+          {
+            "pattern": "^\\w+\\s+((?:[\\w\\-,]+ ?)+)\\s+\\w+(?:\\s+\\[OFF\\])?$",
+            "type": "regex"
+          }
+        ]
+      }
+    ]
+  }
+]
