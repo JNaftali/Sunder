@@ -12,7 +12,7 @@ function snd.do_queue()
               table.insert(snd.queue, k)
             end
           elseif k == "def_clarity" then
-            if not snd.checksomeSelfAffs(snd.cures.antipsychotic,1) then
+            if not snd.checksomeSelfAffs(snd.cures.antipsychotic, 1) then
               table.insert(snd.queue, k)
             end
           elseif (k == "def_shroud" or k == "def_ghost" or k == "def_hiding") then
@@ -21,11 +21,11 @@ function snd.do_queue()
             end
           elseif (k == "def_miasma" or k == "def_safeguard" or k == "def_warmth") then
             if
-              not (
-                snd.defenses.def_miasma.state == "deffed" or
-                snd.defenses.def_safeguard.state == "deffed" or
-                snd.defenses.def_warmth.state == "deffed"
-              )
+                not (
+                  snd.defenses.def_miasma.state == "deffed" or
+                  snd.defenses.def_safeguard.state == "deffed" or
+                  snd.defenses.def_warmth.state == "deffed"
+                )
             then
               table.insert(snd.queue, k)
             end
@@ -53,8 +53,8 @@ function snd.do_queue()
         table.insert(snd.queue, "moving")
       end
       if snd.toggles.active and
-      (snd.fitness_override and snd.fitness_override()) or
-      (not snd.fitness_override and (snd.have_aff("asthma") and snd.have_aff("slickness") and gmcp.Char.Vitals.pipe == "1")) then
+          (snd.fitness_override and snd.fitness_override()) or
+          (not snd.fitness_override and (snd.have_aff("asthma") and snd.have_aff("slickness") and gmcp.Char.Vitals.pipe == "1")) then
         snd.need_fitness = true
         table.insert(snd.queue, "fitness")
       else
@@ -66,33 +66,33 @@ function snd.do_queue()
       if ((hasSkill("Purge") and snd.class == "Carnifex") or (hasSkill("Annul") and snd.class == "Warden")) and snd.purge_check() then
         table.insert(snd.queue, "purge")
       end
-        if ((hasSkill("Panacea") and snd.class == "Shaman") or (snd.class == "Alchemist" and hasSkill("Subversion"))) and snd.panacea_check() then
-          table.insert(snd.queue, "panacea")
-        end
-        if ((hasSkill("Purify") and snd.class == "Praenomen") or (hasSkill("Succour") and snd.class == "Akkari")) and snd.purify_check() then
-          table.insert(snd.queue, "purify")
-        end
+      if ((hasSkill("Panacea") and snd.class == "Shaman") or (snd.class == "Alchemist" and hasSkill("Subversion"))) and snd.panacea_check() then
+        table.insert(snd.queue, "panacea")
+      end
+      if ((hasSkill("Purify") and snd.class == "Praenomen") or (hasSkill("Succour") and snd.class == "Akkari")) and snd.purify_check() then
+        table.insert(snd.queue, "purify")
+      end
       if snd.rage_check() and snd.can_rage() then
         table.insert(snd.queue, "rage")
       end
-      if snd.need_dome then
+      if snd.need_dome and snd.balance.dome then
         table.insert(snd.queue, "dome")
       end
-      
-      if snd.toggles.diagaffs~= 0 and snd.hidden_afflictions >= snd.toggles.diagaffs then
+
+      if snd.toggles.diagaffs ~= 0 and snd.hidden_afflictions >= snd.toggles.diagaffs then
         table.insert(snd.queue, "diagnose")
       end
-      
+
       if snd.have_aff("barbed_arrow") then
         table.insert(snd.queue, "barbed_arrow")
       end
       if snd.have_aff("embedded_dagger") then
         table.insert(snd.queue, "embedded_dagger")
       end
-
     end
     if snd.toggles.attacking and snd.offense_loaded and snd.defenses.def_manipulation_dome.state ~= "deffed" then
       table.insert(snd.queue, "attack")
     end
   end
 end
+
