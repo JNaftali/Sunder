@@ -1,0 +1,246 @@
+[
+       {
+              "name": "Panacea Used",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "You drop to one knee and brace an open palm against the ground, drawing in the natural energies to ease your maladies.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "You use Botany Subversion.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Panacea off cd",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "You may once again purify your body of ailments.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Reconfigure / Familiar morph available",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "Your familiar is capable of morphing its form once more.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "You are able to reconfigure your experiment once again.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": "snd.balance.morph = true\n"
+       },
+       {
+              "name": "Reconfigure / Familiar morph used",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^Your spirit familiar morphs into the form of an? (\\w+) spirit\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^You use Experimentation Reconfiguration on an? (.*) experiment\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": "snd.shamanpet = matches[2]\nsnd.balance.morph = false\nsnd.loyalsattacking = false"
+       },
+       {
+              "name": "Experimentation / Familiar summon",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^You use Shamanism Familiar on a (\\w+) spirit\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^You use Experimentation Requesting on a (.*) experiment\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": "snd.shamanpet = matches[2]"
+       },
+       {
+              "name": "Experiment / Familiar gone",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "You must be with your familiar to do that.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "^.* experiment, your loyal companion, has been slain by misadventure\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "You must be with your experiment to do that.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": "snd.familiar = false\n"
+       },
+       {
+              "name": "Experiment / Familiar here",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "Your familiar is already here with you.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "You use Shamanism Recall.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "You tug upon the spiritual bond with your familiar.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "You use Experimentation Recall.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "Your experiment is already at your side.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": "snd.familiar = true\n--snd.send(\"eval\")"
+       },
+       {
+              "name": "OMG YOUR STAFF",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "You must be wielding a quarterstaff to do that.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Lifebloom back",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "You may once again gift yourself with lifebloom.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Lifebloom gone",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "You cannot call upon your lifebloom so soon.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "The pain of your wounds is suddenly washed away by life-force welling up from within you.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": ""
+       }
+]

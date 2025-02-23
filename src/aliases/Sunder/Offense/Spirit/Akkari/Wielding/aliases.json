@@ -1,0 +1,9 @@
+[
+       {
+              "name": "wield bashing",
+              "isActive": "yes",
+              "regex": "^wbsh$",
+              "script": "",
+              "isFolder": "no"
+       }
+]

@@ -1,0 +1,16 @@
+[
+       {
+              "name": "Basic Damage",
+              "isActive": "yes",
+              "regex": "^dmg$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "Group Dmg",
+              "isActive": "yes",
+              "regex": "^gdmg$",
+              "script": "",
+              "isFolder": "no"
+       }
+]

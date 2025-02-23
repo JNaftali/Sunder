@@ -1,0 +1,32 @@
+[
+       {
+              "name": "template",
+              "isActive": "yes",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "Generic",
+              "isActive": "yes",
+              "script": "",
+              "isFolder": "yes"
+       },
+       {
+              "name": "Neutral",
+              "isActive": "yes",
+              "script": "",
+              "isFolder": "yes"
+       },
+       {
+              "name": "Spirit",
+              "isActive": "yes",
+              "script": "",
+              "isFolder": "yes"
+       },
+       {
+              "name": "Shadow",
+              "isActive": "yes",
+              "script": "",
+              "isFolder": "yes"
+       }
+]

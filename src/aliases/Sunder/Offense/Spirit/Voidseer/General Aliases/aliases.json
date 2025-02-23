@@ -1,0 +1,9 @@
+[
+       {
+              "name": "Create Mutagens",
+              "isActive": "yes",
+              "regex": "^muts$",
+              "script": "",
+              "isFolder": "no"
+       }
+]

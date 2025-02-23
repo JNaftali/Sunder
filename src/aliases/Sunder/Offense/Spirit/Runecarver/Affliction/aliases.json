@@ -1,0 +1,16 @@
+[
+       {
+              "name": "Afflictions",
+              "isActive": "yes",
+              "regex": "^aff$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "Group Aff",
+              "isActive": "yes",
+              "regex": "^gaff$",
+              "script": "",
+              "isFolder": "no"
+       }
+]

@@ -1,0 +1,50 @@
+[
+       {
+              "name": "Bud Capture",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^\\\"bud(\\d+)\\\"\\s+a violet lotus bud.*$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^\\\"bud(\\d+)\"\\s+a white lotus bud.*$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^\\\"bud(\\d+)\"\\s+a black lotus bud.*$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Bud Made",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "You use Cultivation Bud.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": ""
+       }
+]

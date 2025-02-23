@@ -1,0 +1,138 @@
+[
+       {
+              "name": "Numbess Used on Self",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^You use Kaido Numbness\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^You cannot make your body numb again so soon\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "You use Kaido Numbness.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Numbness available",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^Your body can withstand full numbness once more\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "Your body can withstand full numbness once more.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Not enough mana transmute",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "You do not have that much mana to transmute.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Transmutation",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^You call upon your Kai training and transmute your \\w+ into pure \\w+.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Kaido strike",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "You use Kaido Strike on",
+                            "type": "startOfLine"
+                     },
+                     {
+                            "pattern": "You must wait before you may use Kai strike again.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Kaido strike back up",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "You may once again use Kai Strike.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": ""
+       }
+]

@@ -1,0 +1,22 @@
+[
+       {
+              "name": "Vermin",
+              "isActive": "yes",
+              "command": "",
+              "hours": "0",
+              "minutes": "0",
+              "seconds": "0",
+              "milliseconds": "0",
+              "script": ""
+       },
+       {
+              "name": "Bard",
+              "isActive": "yes",
+              "command": "",
+              "hours": "0",
+              "minutes": "0",
+              "seconds": "0",
+              "milliseconds": "0",
+              "script": ""
+       }
+]

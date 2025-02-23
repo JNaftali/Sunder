@@ -1,0 +1,37 @@
+[
+       {
+              "name": "FishingGo",
+              "isActive": "yes",
+              "regex": "^fgo (.+)$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "FishSearch",
+              "isActive": "yes",
+              "regex": "^fishing search\\s*(full|info)*\\s*(.+)$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "ToggleAutoFish",
+              "isActive": "yes",
+              "regex": "^afish$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "Fishing Bucket",
+              "isActive": "yes",
+              "regex": "^(sunder maxfish|sunder maxfish (\\d+))$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "Bucket Amount",
+              "isActive": "yes",
+              "regex": "^(sunder fishbucket|sunder fishbucket (.+))$",
+              "script": "",
+              "isFolder": "no"
+       }
+]

@@ -1,0 +1,294 @@
+[
+       {
+              "name": "Arouse bal back",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "You are again able to focus on arousing your body.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Ferocity back",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "You feel your strength of body return.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Arouse used",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "You use Predation Arouse.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "You are unable to arouse your body again so soon.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Ferocity used",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "You use Predation Ferocity.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "You are not able to purge another affliction just yet.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Orel used",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "You use Beastmastery Orel (fly).",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "You use Beastmastery Orel (land).",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "Your orel is not yet ready to fly.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "Your orel is not yet ready to land.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Orel back",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "You can again order your orel to fly or land.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Spider used",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "You use Beastmastery Web on ",
+                            "type": "startOfLine"
+                     },
+                     {
+                            "pattern": "The spider isn't yet ready to web someone again.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Spider back",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "Your spider is able to use its webs once again.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Feint used",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "You use Knifeplay Feint ",
+                            "type": "startOfLine"
+                     },
+                     {
+                            "pattern": "Feints are best used sparingly, lest they become predictable.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Feint back",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "You feel a feint could be effective once more.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Bladesurge used",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "You cannot summon up your offensive battle prowess again so soon.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "Your concentration enhances ten-fold, a surge of pure adrenaline causing your entire body to quiver like a taut bowstring.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Bladesurge back",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "You are once again able to summon up your offensive battle prowess.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Triggered stance tracking",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^You quickly flow into the (.*) stance\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       }
+]

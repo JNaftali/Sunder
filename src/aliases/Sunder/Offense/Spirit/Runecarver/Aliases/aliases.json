@@ -1,0 +1,16 @@
+[
+       {
+              "name": "Sing Summon",
+              "isActive": "yes",
+              "regex": "^sing1$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "Gravity Cannon",
+              "isActive": "yes",
+              "regex": "^gc$",
+              "script": "",
+              "isFolder": "no"
+       }
+]

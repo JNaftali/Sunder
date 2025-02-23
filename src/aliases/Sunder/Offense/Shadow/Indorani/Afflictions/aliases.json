@@ -1,0 +1,23 @@
+[
+       {
+              "name": "Group Affliction",
+              "isActive": "yes",
+              "regex": "^aff$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "limbs",
+              "isActive": "yes",
+              "regex": "^limbs$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "Indorani Group Affs",
+              "isActive": "yes",
+              "regex": "^gaff$",
+              "script": "",
+              "isFolder": "no"
+       }
+]

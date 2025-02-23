@@ -1,0 +1,74 @@
+[
+       {
+              "name": "Alchemist",
+              "isActive": "yes",
+              "script": "",
+              "isFolder": "yes"
+       },
+       {
+              "name": "Archivist",
+              "isActive": "yes",
+              "script": "",
+              "isFolder": "yes"
+       },
+       {
+              "name": "Bloodborn",
+              "isActive": "yes",
+              "script": "",
+              "isFolder": "yes"
+       },
+       {
+              "name": "Carnifex",
+              "isActive": "yes",
+              "script": "",
+              "isFolder": "yes"
+       },
+       {
+              "name": "Earthcaller",
+              "isActive": "yes",
+              "script": "",
+              "isFolder": "yes"
+       },
+       {
+              "name": "Executor",
+              "isActive": "yes",
+              "script": "",
+              "isFolder": "yes"
+       },
+       {
+              "name": "Indorani",
+              "isActive": "yes",
+              "script": "",
+              "isFolder": "yes"
+       },
+       {
+              "name": "Praenomen",
+              "isActive": "yes",
+              "script": "",
+              "isFolder": "yes"
+       },
+       {
+              "name": "Ravager",
+              "isActive": "yes",
+              "script": "",
+              "isFolder": "yes"
+       },
+       {
+              "name": "Revenant",
+              "isActive": "yes",
+              "script": "",
+              "isFolder": "yes"
+       },
+       {
+              "name": "Sciomancer",
+              "isActive": "yes",
+              "script": "",
+              "isFolder": "yes"
+       },
+       {
+              "name": "Teradrim",
+              "isActive": "yes",
+              "script": "",
+              "isFolder": "yes"
+       }
+]

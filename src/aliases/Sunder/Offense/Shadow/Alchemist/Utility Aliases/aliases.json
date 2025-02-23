@@ -1,0 +1,9 @@
+[
+       {
+              "name": "Pull (Allure)",
+              "isActive": "yes",
+              "regex": "^np(.*)$",
+              "script": "",
+              "isFolder": "no"
+       }
+]

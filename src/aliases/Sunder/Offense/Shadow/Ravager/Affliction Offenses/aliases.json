@@ -1,0 +1,23 @@
+[
+       {
+              "name": "Immolation support",
+              "isActive": "yes",
+              "regex": "^fire$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "limb support",
+              "isActive": "yes",
+              "regex": "^limbs$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "Affliction support",
+              "isActive": "yes",
+              "regex": "^gaff$",
+              "script": "",
+              "isFolder": "no"
+       }
+]

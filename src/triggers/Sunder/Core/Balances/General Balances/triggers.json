@@ -1,0 +1,214 @@
+[
+       {
+              "name": "lose balance",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^(Balance|Left Hand Balance|Right Hand Balance) Used: (.*) seconds$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "queue",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^When you can act: (.*)$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "regain balance",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "You have recovered balance on all limbs.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "regain equilibrium",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "You have recovered equilibrium.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "regain arm balance",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^You have recovered balance on your (left|right) arm\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "lose equilibrium",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^Equilibrium Used: (.*) seconds$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Used Eq or Balance",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^(?:Balance|Left Hand Balance|Right Hand Balance) Used: (.+) seconds$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^Time to recover: (.+) seconds$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^Equilibrium Used: (.+) seconds$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "No cooldowns, add your cd to here if you want",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "You have nothing on cooldown right now.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Regenerate used",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^Heat fills your .+ as you will it to regenerate with speed.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "Your body has not recovered enough to regenerate another limb.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Regenerate back",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "The heat subsides, you may regenerate another limb.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": ""
+       }
+]

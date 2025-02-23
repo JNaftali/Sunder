@@ -1,0 +1,82 @@
+[
+       {
+              "name": "Anathemise - Exhaustion",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^(.*)'s breath becomes laboured as exhaustion grips .* limbs, the Wanderer's predation running .* ragged\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Nycto Validation on Anathemise",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^Agony washes over (.*)'s features as the Shadow finds .* wanting, a ragged gasp escaping .*\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Dementia and Dizziness on Anathemise",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^A terrified whimper escapes (.*) as the Seer declares .* fate inevitable, rendering .* expression vacant.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Haemo Validation on Anathemise",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^The Scavenger recognizes (.*) as anathema, .* prying claws eliciting a gush of arterial crimson from .* open wounds.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       }
+]

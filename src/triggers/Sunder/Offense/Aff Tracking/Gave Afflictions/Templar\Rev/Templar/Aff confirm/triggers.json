@@ -1,0 +1,270 @@
+[
+       {
+              "name": "rend",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^(\\w+) begins to bleed vivid red blood from the lacerations by the blade.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^Flesh rended into ribbons, vivid red blood pools from the lacerations caused by the blade\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "cripple body",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^As .+ strikes, a surge of energy cascades along it, striking (\\w+)('s|') body\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "cripple legs",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^As .+ strikes, a surge of energy cascades along it, striking (\\w+)('s|') legs\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "disrupt body",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^A flash of energy cascades down .+, disrupting (\\w+)('s|') balance\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "disrupt mind",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^A flash of energy cascades down .+, disrupting (\\w+)('s|') equilibrium\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "conviction",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^As .+ strikes, sparks of energy fizzle across (\\w+)('s|') body as .+ defences are reduced\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "vorpal confirmation",
+              "isActive": "no",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^Shimmering with vorpal power, .+ directs .+ at (\\w+), and .+ is struck by something unseen\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "lightning/aneda epilepsy",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^The shock leaves (\\w+) twitching sporadically\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": "if matches[2] == snd.target then\n  snd.target_got(\"epilepsy\")\nend"
+       },
+       {
+              "name": "no conviction active",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^Without conviction, your \\w+ empowerment fails to affect (\\w+).$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^Your strike fails to affect \\w+, absent the mark of bimre\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Flared got",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^As (.*) strikes (\\w+), there is a bright flash of light and (\\w+) begins to glow brightly.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Flared cured",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^The glow surrounding (\\w+) vanishes suddenly\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Battlecry deafness",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^(\\w+) grimaces, but appears unaffected by the battlecry\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "battlecry bonk",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^(\\w+) falls to \\w+ knees and clutches \\w+ ears as the shaft of sound strikes\\w+\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       }
+]

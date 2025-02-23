@@ -1,0 +1,54 @@
+[
+       {
+              "name": "leylines",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "yes",
+              "multilineDelta": "9",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "You reach a hand outwards and close your eyes, seeking for the ethereal energies of the leylines around you.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "1",
+                            "type": "spacer"
+                     },
+                     {
+                            "pattern": "^.+$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "1",
+                            "type": "spacer"
+                     },
+                     {
+                            "pattern": "^You detect (\\d+) lesser foci nearby\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "1",
+                            "type": "spacer"
+                     },
+                     {
+                            "pattern": "You detect (\\d+) twin foci nearby.",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "1",
+                            "type": "spacer"
+                     },
+                     {
+                            "pattern": "^You detect (\\d+) minor foci in the area\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       }
+]

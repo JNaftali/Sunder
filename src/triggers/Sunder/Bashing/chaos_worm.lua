@@ -1,0 +1,1 @@
+snd.bashing.target = "worm"

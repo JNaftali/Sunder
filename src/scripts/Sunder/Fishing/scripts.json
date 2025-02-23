@@ -1,0 +1,26 @@
+[
+       {
+              "name": "GetFishingHoles",
+              "isActive": "yes",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "SaveLoad",
+              "isActive": "yes",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "Fishing function",
+              "isActive": "yes",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "Fish Message",
+              "isActive": "yes",
+              "script": "",
+              "isFolder": "no"
+       }
+]

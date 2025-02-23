@@ -1,0 +1,23 @@
+[
+       {
+              "name": "mouse mode",
+              "isActive": "yes",
+              "regex": "^ms$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "group quarter",
+              "isActive": "yes",
+              "regex": "^insta$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "limbs",
+              "isActive": "yes",
+              "regex": "^limbs$",
+              "script": "",
+              "isFolder": "no"
+       }
+]

@@ -1,0 +1,1 @@
+if snd.toggles.bashing then snd.runBasher() end

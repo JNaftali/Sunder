@@ -1,0 +1,1 @@
+snd.send("qeb stand"..snd.sep..snd.swapDir(matches[2]))

@@ -1,0 +1,1 @@
+snd.hamartia_used = false

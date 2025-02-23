@@ -1,0 +1,1 @@
+snd.pierced = snd.getting_hit

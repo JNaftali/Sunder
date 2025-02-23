@@ -1,0 +1,30 @@
+[
+       {
+              "name": "deliver",
+              "isActive": "yes",
+              "regex": "^del (.*)$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "resurrection",
+              "isActive": "yes",
+              "regex": "^rez (\\w+)$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "pilgrimage",
+              "isActive": "yes",
+              "regex": "^pilg$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "latency",
+              "isActive": "yes",
+              "regex": "^pil$",
+              "script": "",
+              "isFolder": "no"
+       }
+]

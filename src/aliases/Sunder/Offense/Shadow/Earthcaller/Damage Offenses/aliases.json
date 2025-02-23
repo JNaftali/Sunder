@@ -1,0 +1,30 @@
+[
+       {
+              "name": "mana drain",
+              "isActive": "yes",
+              "regex": "^mana$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "Group Impale/Tfix",
+              "isActive": "yes",
+              "regex": "^git$",
+              "script": "if snd.class == \"Earthcaller\" then\n  snd.giving_shield = {\"paresis\", \"weariness\", \"sight\", \"asthma\"}\n  snd.giving_spur = {\"impatience\", \"sensitivity\", \"self_pity\", \"stupidity\", \"vertigo\"}\n  snd.giving_subdue =\n    {\n      \"hypochondria\",\n      \"recklessness\",\n      \"stupidity\",\n      \"lethargy\",\n      \"justice\",\n      \"dementia\",\n      \"paranoia\",\n      \"anorexia\",\n    }\n  snd.starting_attack()\n\n  function snd.attack_function()\n  local total_aff_count = snd.aff_count_all()\n  local mental_aff_count = snd.aff_count_mental()\n  \n  local string = \"contemplate \"..snd.target..snd.sep\n \tif not string.find(gmcp.Char.Vitals.wield_right, \"crozier\") then string = string..\"quickwield right crozier\"..snd.sep end\n\tif not string.find(gmcp.Char.Vitals.wield_left, \"buckler\") then string = string..\"quickwield left buckler\"..snd.sep end\n\n    local shield = \"none\"\n    local spur = \"none\"\n    local subdue = \"none\"\n    --Absolve check\n    if snd.mana_percent \u003c 40 and not snd.used.shield then\n      string = \"osso fragment \" .. snd.target\n      --They've hit our aff count limit, let's lock them down/kill them.\n    elseif total_aff_count \u003e= 4 and snd.checkAff(\"sight\") and not snd.used.shield then\n      if not snd.checkAff(\"writhe_transfix\") then\n        string = \"tectonic transfixion \" .. snd.target\n      else\n        string = \"shield deface \" .. snd.target\n        if snd.checkAff(\"hearing\") and not snd.checkAff(\"sensitivity\") then\n          string = \"osso spur \" .. snd.target .. \" sensitivity\" .. snd.sep .. string\n        end\n      end\n    else\n      if snd.balance.battle then\n        for i in pairs(snd.giving_spur) do\n          if not snd.checkAff(snd.giving_spur[i]) and spur == \"none\" then\n            spur = snd.giving_spur[i]\n          end\n        end\n      end\n      if snd.used.shield then\n        shield = \"shield raze\"\n      else\n        for i in pairs(snd.giving_shield) do\n          if not snd.checkAff(snd.giving_shield[i]) and shield == \"none\" then\n            shield = snd.subjugation_attacks[snd.giving_shield[i]]\n          end\n        end\n      end\n      if shield == \"none\" then\n        shield = \"shield strike\"\n      end\n      if snd.used.rebounding and shield ~= \"facesmash\" then\n        shield = \"shield raze\"\n      end\n\n      for i in pairs(snd.giving_subdue) do\n        if\n          not snd.checkAff(snd.giving_subdue[i]) and\n          subdue == \"none\" and\n          snd.giving_subdue[i] ~= spur\n        then\n          subdue = snd.giving_subdue[i]\n        end\n      end\n\n      if spur ~= \"none\" then\n        if snd.toggles.affcalling and not snd.target_gone then\n          string = \"wt spur \" .. snd.target .. \": \" .. spur .. snd.sep\n        end\n        string = string .. \"osso spur \" .. spur .. \" \" .. snd.target .. snd.sep\n      end\n\n      string = string .. shield .. \" \" .. snd.target .. snd.sep\n\n      if not shield:find(\"slam\") then\n        if subdue == \"none\" then\n          string = string .. \"subdue \" .. snd.target\n        else\n          if snd.toggles.affcalling and not snd.target_gone then\n            string = string .. \"wt Subdue \" .. snd.target .. \": \" .. subdue .. snd.sep\n          end\n          string = string .. \"subdue \" .. snd.target .. \" \" .. subdue\n        end\n      end\n    end\n\n    if string.find(string, \"deface\") and not string.find(gmcp.Char.Vitals.wield_left, \"tower\") then\n      string = \"quickwield left tower\"..string..snd.sep\n    end\n\n\n    if string ~= snd.last_attack and not snd.waiting.queue then\n      snd.last_attack = string\n      snd.attack(snd.last_attack)\n      snd.waiting.queue = true\n      tempTimer(snd.delay(), [[snd.waiting.queue = false]])\n    end\n  end\n\n  snd.attack_function()\nend",
+              "isFolder": "no"
+       },
+       {
+              "name": "Smite - Straight damage",
+              "isActive": "yes",
+              "regex": "^dmg$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "Earthcaller Group Dmg",
+              "isActive": "yes",
+              "regex": "^gdmg$",
+              "script": "",
+              "isFolder": "no"
+       }
+]

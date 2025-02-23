@@ -1,0 +1,12 @@
+[
+       {
+              "name": "moveroom",
+              "isActive": "no",
+              "command": "",
+              "hours": "0",
+              "minutes": "0",
+              "seconds": "55",
+              "milliseconds": "0",
+              "script": ""
+       }
+]

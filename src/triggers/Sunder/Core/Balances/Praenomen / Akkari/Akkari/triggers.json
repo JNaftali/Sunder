@@ -1,0 +1,234 @@
+[
+       {
+              "name": "Attend True",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "You may demand their attendance once more.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "You can spew your blood once more.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Attend False",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "You may not force their attendance again quite yet.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "^You use Discipline Attend on \\w+\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^You use Sanguis Spew on \\w+\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "You cannot spew forth your blood again so soon.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Inquisition false",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "You cannot yet undertake another holy inquisition.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "You use Discipline Inquisition on \\w+.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "inquisition true",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "You may undertake another holy inquisition.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Proclaim True",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "Your ability to make proclamations reasserts itself.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Proclaim False",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "You cannot yet carry out another proclamation.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "You use Dictum Proclamation.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Crusade False",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^You use Ascendance Crusade on \\w+.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "You have not yet recovered from your last crusade.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Crusade True",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "You may once again embark upon a crusade.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Unbroken False",
+              "isActive": "no",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "You use Discipline Unbroken.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "You have not yet recovered from your previous last stand.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Unbroken True",
+              "isActive": "no",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "You may defy the clutches of death once more.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": ""
+       }
+]

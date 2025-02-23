@@ -1,0 +1,2 @@
+deleteFull()
+send("more", false)

@@ -1,0 +1,22 @@
+[
+       {
+              "name": "Singing Song",
+              "isActive": "no",
+              "command": "",
+              "hours": "0",
+              "minutes": "0",
+              "seconds": "8",
+              "milliseconds": "100",
+              "script": ""
+       },
+       {
+              "name": "Playing Song",
+              "isActive": "no",
+              "command": "",
+              "hours": "0",
+              "minutes": "0",
+              "seconds": "6",
+              "milliseconds": "100",
+              "script": ""
+       }
+]

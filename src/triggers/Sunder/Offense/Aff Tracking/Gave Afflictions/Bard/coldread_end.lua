@@ -1,0 +1,1 @@
+setTriggerStayOpen("Coldread", 0)

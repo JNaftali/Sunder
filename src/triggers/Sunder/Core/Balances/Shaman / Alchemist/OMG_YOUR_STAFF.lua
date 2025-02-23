@@ -1,0 +1,1 @@
+snd.set_queue("qeb wield quarterstaff")

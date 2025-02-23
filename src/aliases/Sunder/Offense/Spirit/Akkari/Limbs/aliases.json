@@ -1,0 +1,9 @@
+[
+       {
+              "name": "Group Limbs",
+              "isActive": "yes",
+              "regex": "^gli$",
+              "script": "",
+              "isFolder": "no"
+       }
+]

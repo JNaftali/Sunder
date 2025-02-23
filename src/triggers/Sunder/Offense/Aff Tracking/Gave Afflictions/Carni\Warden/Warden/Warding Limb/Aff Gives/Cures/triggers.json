@@ -1,0 +1,190 @@
+[
+       {
+              "name": "Encircle",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^\\w+ hones in on \\w+ prey, leaving a small wound upon (\\w+)\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Maul Hit Confirmation",
+              "isActive": "no",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^\\w+ pounds? .+ into (\\w+)'s (.+) with(?: an)? unforgiving ferocity, thundering after \\w+ for a second strike\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^\\w+ darts? forward and jabs? .+ towards? (\\w+)'s (.+), drawing blood and tearing flesh\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^\\w+ quickly strikes? (\\w+)'s (.+) with .+, leaving \\w+ gasping and bloodied\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^Grabbing hold of (\\w+)'s (.+) with .+ and twisting, \\w+ crushe?s? bone beneath \\w+ grip\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^There is a sickening crunch as \\w+ slams a fist (?:atop|into) (\\w+)'s (.+) with .+\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^Bone and flesh shatters as \\w+ wraps? .+ around (\\w+)'s (.+)\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^Clamping a fist around (\\w+)'s (.+) with .+, \\w+ bruises? and batters? \\w+\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^\\w+ lunges? .+ at (\\w+)'s (.+) in a rapid stab, bones snapping beneath \\w+ grip\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^Pulling back \\w+ arm, \\w+ bashe?s? (\\w+)'s (.+) forcefully with .+\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^With a mighty swing of \\w+ arm fitted with .+, \\w+ smashe?s? into (\\w+)'s (.+)\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^A quick strike with .+ at (\\w+)'s (.+) leaves them gasping and bloodied\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^Slamming a fist into (\\w+)'s (.+) with .+, you hear a sickening crunch\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^Aiming the broad end of a .+ at (\\w+)'s (.+), \\w+ jabs? forward\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^Raising .+ high, \\w+ swings? forward at (\\w+)'s (.+), crushing flesh\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^Gripping both hands over the grip of .+, \\w+ slams? it forcefully into (\\w+)'s (.+)\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^\\w+ lifts? .+ overhead and brings? it down with a shattering blow onto (\\w+)'s (.+)\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^\\w+ strike (\\w+)'s (.+) with a quick but powerful blow from .+\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^With a downward, diagonal strike from .+, \\w+ cuts? a brutal gash into (\\w+)'s (.+)\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^Swinging through the air toward (\\w+)'s (.+?) with .+, \\w+ draws? lines of blood\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^With a broad sweep of .+, \\w+ brings? a crushing blow onto (\\w+)'s (.+)\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^Holding .+ straight in front of \\w+, \\w+ bash(?:es)? the end into (\\w+)'s (.+)\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^Lunging .+ at (\\w+)'s (.+) in a rapid stab, bones snap beneath your grip\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Spear Limb Messages",
+              "isActive": "no",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^\\w+ propels? a hand towards (\\w+)'s (.+), \\w+ ancestral mark alight. A grievous wound opens itself suddenly in the appendage in response, as if a spear had been driven clean through it.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Batter Hit Confirmation",
+              "isActive": "no",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^Taking a solid, aggressive step forward, \\w+ slugs? (\\w+)'s (.+) with a heavy swing from .+\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Roaring proc",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^\\w+ releases? a thunderous roar, driving (\\w+) to \\w+ knees\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^You release a thunderous roar that leaves (\\w+) reeling\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       }
+]

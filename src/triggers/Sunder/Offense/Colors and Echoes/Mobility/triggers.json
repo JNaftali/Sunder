@@ -1,0 +1,234 @@
+[
+       {
+              "name": "fled",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^(\\w+) tumbles out to the (.+)\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^(\\w+) suddenly leaps away to the (.+) atop .+ mount\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^(\\w+) leaves to the (\\w+).$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^(\\w+) leaves to the (\\w+)\\, riding .*.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^(\\w+) stalks out to the (\\w+), .*.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^(\\w+) disappears over the top of a pile of rubble to the (\\w+).$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^(\\w+) begins to scale over the icewall to the .+.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^(\\w+) leaps majestically to the (\\w+).$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^Light begins to return as (\\w+) leaves to the (\\w+).$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^Giving (his|her|their) *-furred coat a vigorous shake, (\\w+) departs to the (\\w+).$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^Your enhanced senses inform you that (\\w+) has appeared to the (\\w+).$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^(\\w+) backflips to the (\\w+).$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "tumble start",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^(\\w+) begins to tumble towards the (.+)\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "alertness",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^Your enhanced senses inform you that (\\w+) has appeared to the (\\w+)\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "alertness here",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^Your enhanced senses inform you that (\\w+) has entered your current location\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^Your angel informs you that (\\w+) is in this room\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "universe tarot",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "A shimmering, translucent image rises up before you, its glittering surface displaying the verdant grasslands, soaring mountains, sprawling settlements and deep blue seas of the Aetolia mainland.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "angel near",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^Your angel informs you that (\\w+) is close by\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "forced movement",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^Your body jerks violently, leading you to the (\\w+)\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^You are dragged by the jaws around your neck to the (\\w+)\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Too close",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^(\\w+) is too close to you!$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Ran Away",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^(\\w+) fades away into the shadows, and is gone.",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       }
+]

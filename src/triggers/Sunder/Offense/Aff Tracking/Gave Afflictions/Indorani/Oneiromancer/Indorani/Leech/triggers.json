@@ -1,0 +1,78 @@
+[
+       {
+              "name": "Aura taken",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^(\\w+) pallidly struggles, \\w+ movements slowed as if burdened by some invisible weight and exertion\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Aura regained or still on",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^(\\w+) appears to regain a little colour.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^The life aura surrounding (\\w+) protects .+ from harm.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^As effortlessly as you had taken it, you callously release the coveted life aura of (\\w+) to fade into the air around you\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^The glowing aura of life surrounding (\\w+) renders your attempt at deformation ineffective\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Already leeched",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^The life aura of (\\w+) has already been leeched away.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^You already manipulate the life force of (\\w+), necromancer\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       }
+]

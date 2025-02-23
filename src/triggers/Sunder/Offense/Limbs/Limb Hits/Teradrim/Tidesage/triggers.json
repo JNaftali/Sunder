@@ -1,0 +1,282 @@
+[
+       {
+              "name": "Heartflutter",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^Your Minor Green rune shimmers and (\\w+) clutches .+ chest.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^(\\w+) gasps and staggers as .* golem punches .+ hard in the chest.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^Acting swiftly and without emotion, .+ delivers a massive strike to (\\w+)'s chest, trammeling .+ heartbeat.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^The cephalopod shimmers as if alive, and (\\w+) stumbles, clutching .+ chest.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Dislocate enemy limb",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^Grabbing hold of (\\w+)'s (.*), .* golem casually wrenches it out of its socket.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^Offering (\\w+) no mercy, .* attempts to deconstruct .+ (.*), twisting it painfully in its socket.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Barrage hit confirmation",
+              "isActive": "no",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^\\w+ strikes? out at (\\w+)'s (.+) as \\w+ barrage continues.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^\\w+ bombards? (\\w+)\\'s (.+) as \\w+ relentless broadside continues the assault.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Shockwave limb breaks",
+              "isActive": "no",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^\\w+ (.*) snaps under the impact.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Shockwave Prompt Turnoff",
+              "isActive": "no",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "",
+                            "type": "prompt"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Barrage prompt turn off",
+              "isActive": "no",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "",
+                            "type": "prompt"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "squeeze",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "uses Synthesis Squeeze \\((.+)\\) on (\\w+)\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Green Major Rune (Cephalopod)",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^Your daubed cephalopod twitches, ancient magic pitching (\\w+) off .+ feet.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^Your Green Major rune flares, casting (\\w+) to the ground.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Undertow (levitation) done",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^(\\w+) has freed (.*) from the grip of the rolling undertow\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^(\\w+) has freed (.*) from the trappings of quicksand\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Teradrim runemarks",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^You have a (\\w+) minor rune painted upon a (\\w+) major rune.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^You quickly inscribe a (\\w+) rune upon a (\\w+) rune on yourself with ink.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Tidesage daubs",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^You paint yourself with the greater mark of the (?\u003cmajor\u003e\\w+) then daub the lesser mark of the (?\u003cminor\u003e\\w+) upon it\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^You have daubed a (?\u003cminor\u003e\\w+) lesser mark onto a (?\u003cmajor\u003e\\w+) greater mark\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Kneeshatter",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^.+ suddenly knocks (\\w+) to the ground, \\w+ (left leg|right leg) snapping from the impact\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^.+ intercepts (\\w+)'s attempt to flee, driving \\w+ to the ground with such force that \\w+ (left leg|right leg) is left hobbled from the impact\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       }
+]

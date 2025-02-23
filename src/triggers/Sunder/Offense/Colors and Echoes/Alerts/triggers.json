@@ -1,0 +1,436 @@
+[
+       {
+              "name": "web invite",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^(\\w+) has invited you to join a web\\. WEB ACCEPT to accept the invitation\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "web call",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^\\(Web\\): (\\w+) says, \"[Ta\\.]*Target: [\\.\\w]*?(\\w+)\\.\"$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "scent",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "yes",
+              "multilineDelta": "2",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "99",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "You use \\w+ Scent\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "1",
+                            "type": "spacer"
+                     },
+                     {
+                            "pattern": "You tilt your head back and deeply inhale any scents from the air.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": "",
+              "children": [
+                     {
+                            "name": "scent end",
+                            "isActive": "yes",
+                            "isFolder": "no",
+                            "multiline": "no",
+                            "multilineDelta": "0",
+                            "matchall": "no",
+                            "filter": "no",
+                            "fireLength": "0",
+                            "highlight": "no",
+                            "highlightFG": "#ff0000",
+                            "highlightBG": "#ffff00",
+                            "patterns": [
+                                   {
+                                          "pattern": "return isPrompt()",
+                                          "type": "lua"
+                                   }
+                            ],
+                            "script": ""
+                     },
+                     {
+                            "name": "scent line",
+                            "isActive": "yes",
+                            "isFolder": "no",
+                            "multiline": "no",
+                            "multilineDelta": "0",
+                            "matchall": "no",
+                            "filter": "no",
+                            "fireLength": "0",
+                            "highlight": "no",
+                            "highlightFG": "#ff0000",
+                            "highlightBG": "#ffff00",
+                            "patterns": [
+                                   {
+                                          "pattern": "^You pick up the faint scent of (\\w+) at (.+)\\.$",
+                                          "type": "regex"
+                                   }
+                            ],
+                            "script": ""
+                     }
+              ]
+       },
+       {
+              "name": "beckon",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^(\\w+) beckons you to .+\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "follow enemy",
+              "isActive": "no",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^You begin to follow (\\w+)\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "melting",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^\\(Web\\): (\\w+) says, \\\"I'm melting! I'm melting!\\\"$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "deliverance use",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "yes",
+              "multilineDelta": "1",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "9,0",
+                            "type": "colour"
+                     },
+                     {
+                            "pattern": "^(\\w+) uses Kaido Deliverance \\(active\\)\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "deliverance proc",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "yes",
+              "multilineDelta": "1",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "9,0",
+                            "type": "colour"
+                     },
+                     {
+                            "pattern": "^(\\w+) uses Kaido Deliverance \\(proc\\) on \\w+\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "can't envenom",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "You have too many effects stacked onto your weapon.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "^No more venoms will fit upon .+\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "arti pipes",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "You have no pipes that need to be lit.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "You possess no means of creating a flame.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "need dismount",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "You cannot do that while mounted.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "You must dismount first before you can do that.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "class change",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^Your active class has been switched to (\\w+)\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^You assume the (\\w+) class\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^You have assumed the (\\w+) class.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^You forfeit the duel and leave the arena\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^You have been defeated and are thrown out of the Arena\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^You have been victorious and leave the Arena in triumph!$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^The combat has been declared a draw and is over\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "radiance",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "A shiver runs down your spine, and you feel an instinctive urge to run as far and as fast as you can.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "^A shimmering image of the face of \\w+ appears fleetingly before you, frowning in concentration\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "Sparks of multicoloured light begin to dance in your mind.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "An odd sensation of warmth begins to fill your body.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "Arcs of white light begin to flash across your vision, radiant and bright.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "Your heart thumps as you realize that you have but seconds left to escape whatever fate awaits you.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "forced tumble",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^You hear \\w+'s? voice and you feel irresistibly compelled to: tumble \\w+$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "unblock",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^\\(Web\\): \\w+ says, \\\"Unblock\\.\\\"$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "defending",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^(\\w+) leaps swiftly in front of (\\w+) to defend .+!$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       }
+]

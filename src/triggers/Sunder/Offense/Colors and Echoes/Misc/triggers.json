@@ -1,0 +1,330 @@
+[
+       {
+              "name": "crit",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "yes",
+              "highlightFG": "#ff5500",
+              "highlightBG": "#000000",
+              "patterns": [
+                     {
+                            "pattern": "^You have scored a (CRITICAL) hit!$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^You have scored a (STAGGERING CRITICAL) hit!$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^You have scored a (CRUSHING CRITICAL) hit!$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^You have scored a (MUTILATING CRITICAL) hit!$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^You have scored an (ANNIHILATING CRITICAL) hit!!!$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "newbie",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "yes",
+              "highlightFG": "#ff007f",
+              "highlightBG": "#000000",
+              "patterns": [
+                     {
+                            "pattern": "^.+ has escaped Slaver\\'s Isle and entered the realm of Aetolia\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "parried",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^You parry the attack to your ([a-z ]+) with a deft maneuver\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "diverted",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "jerks to the side, the attack barely grazing .+\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "outc",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "yes",
+              "multilineDelta": "2",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "[FirstAid]: outc",
+                            "type": "startOfLine"
+                     },
+                     {
+                            "pattern": "1",
+                            "type": "spacer"
+                     },
+                     {
+                            "pattern": "^You remove 1 (\\w+), bringing the total in the cache to (\\d+)\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "gold",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^You collect \\d+ gold from the corpse\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "stand",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "1",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "You are not fallen or kneeling.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "bashing removing spam",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "1",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "You empower your weapon with sacrifice.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "^As the corpse of .+ falls, your aura bestows redemption upon .+\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "A rush of energy fills you as you feel ready to deliver a devastating blow upon your next target.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "shadow globe",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "yes",
+              "highlightFG": "#00007f",
+              "highlightBG": "#000000",
+              "patterns": [
+                     {
+                            "pattern": "A globe of gloaming shadow rests upon the ground here, glistening darkly.",
+                            "type": "substring"
+                     },
+                     {
+                            "pattern": "Pulsing faintly, a globe of glowing spirit lies here.",
+                            "type": "substring"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "monolith sigil",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "yes",
+              "highlightFG": "#ffaaff",
+              "highlightBG": "#000000",
+              "patterns": [
+                     {
+                            "pattern": "A sigil in the shape of a small, rectangular monolith is on the ground.",
+                            "type": "substring"
+                     },
+                     {
+                            "pattern": "There are \\d+ monolith sigils here.",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "cube sigil",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "yes",
+              "highlightFG": "#aa55ff",
+              "highlightBG": "#000000",
+              "patterns": [
+                     {
+                            "pattern": "Resting on the ground is a cube-shaped silver sigil.",
+                            "type": "substring"
+                     },
+                     {
+                            "pattern": "There are \\d+ cube sigils here.",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "sect accept",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^(\\w+) has accepted your challenge!$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^You accept the challenge issued by (\\w+)!$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "sleep",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "Your exhausted mind can stay awake no longer, and you fall into a deep sleep.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "ylem chunks",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^A final swift strike from your pick shatters an unstable ylem deposit, breaking it into several softly glowing chunks.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       }
+]

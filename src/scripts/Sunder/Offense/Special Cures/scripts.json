@@ -1,0 +1,26 @@
+[
+       {
+              "name": "Expunge",
+              "isActive": "yes",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "Rage",
+              "isActive": "yes",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "Fitness",
+              "isActive": "yes",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "Restore",
+              "isActive": "yes",
+              "script": "",
+              "isFolder": "no"
+       }
+]

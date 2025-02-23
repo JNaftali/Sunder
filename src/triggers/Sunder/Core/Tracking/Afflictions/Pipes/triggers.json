@@ -1,0 +1,54 @@
+[
+       {
+              "name": "light pipes",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "You light your supply of pipes, igniting the herbs within.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "pipes out",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "Your pipe has gone cold and dark.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "Your pipes have gone cold and dark.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "That pipe isn't lit.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "^Your pipe with \\w+ has gone cold and dark\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       }
+]

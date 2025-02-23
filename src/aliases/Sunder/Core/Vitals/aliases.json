@@ -1,0 +1,16 @@
+[
+       {
+              "name": "setup",
+              "isActive": "yes",
+              "regex": "^\\?setup$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "toggles",
+              "isActive": "yes",
+              "regex": "^togs$",
+              "script": "",
+              "isFolder": "no"
+       }
+]

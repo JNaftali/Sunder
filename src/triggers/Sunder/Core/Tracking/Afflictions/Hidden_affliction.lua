@@ -1,0 +1,1 @@
+snd.hidden_afflictions = snd.hidden_afflictions + 1

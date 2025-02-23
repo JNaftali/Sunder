@@ -1,0 +1,1 @@
+setTriggerStayOpen("Raceskill capture", 0)

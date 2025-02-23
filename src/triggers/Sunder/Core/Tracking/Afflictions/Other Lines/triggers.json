@@ -1,0 +1,126 @@
+[
+       {
+              "name": "arms",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "A serpentine blademistress spits onto her scimitar before slicing into you, and your arm wastes away beneath burning venom.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "Blood floats up through the water as a blackened, ravenous shark seizes your arm in its maw, nearly tearing it from your body and snapping bones in the process.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "The crone strokes your arm, withering it into uselessness.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "^Before you can avoid it, (\\w+)('s|') hand brushes against your arm and it withers away\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "legs",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "A tattered Bahkatu experiment tears into your knee with his rabid maw, snapping the bone easily beneath such immense pressure.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "A giant, rabid Syll seizes your leg in an iron grip, nearly pulling it clean from the socket.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "A chimera's black lion head seizes your leg in its grip, wrenching it painfully from its socket as it tosses you to the ground.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "A sharp-toothed gremlin's eyes gleam as it slams its head into your knee, shattering it and knocking you off-balance.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "^(\\w+) reaches out and grabs your leg, which almost gives way underneath you as it shrivels feebly away\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "got adder",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^\\w+ uses Tarot Adder on you\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^\\w+ uses Hyalincuru Diamond on you\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "cure adder",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "You rip the Adder tarot from your body, the sharp fangs tearing your flesh.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "You tear the noxious diamond shape from your body, sharp edges slicing your flesh.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "You feel a swirl of violent red and poisonous green energy shatter against your forehead, combining together to afflict you with a dose of",
+                            "type": "startOfLine"
+                     },
+                     {
+                            "pattern": "The Adder tarot on you suddenly lurches into motion as an adder rises up from underneath it",
+                            "type": "startOfLine"
+                     }
+              ],
+              "script": ""
+       }
+]

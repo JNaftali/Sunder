@@ -1,0 +1,1 @@
+cecho("\n<yellow> WATCH OUT SOMEONE FARSEED YOU!")

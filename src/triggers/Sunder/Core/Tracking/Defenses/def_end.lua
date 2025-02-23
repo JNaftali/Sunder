@@ -1,0 +1,1 @@
+setTriggerStayOpen("def start", 0)

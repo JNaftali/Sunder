@@ -1,0 +1,42 @@
+[
+       {
+              "name": "Bruce",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "Bruce the Collector stands nearby with odd objects of many sizes and shapes shoved into his pockets. ",
+                            "type": "substring"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "give sapphire",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "You give a beautiful rough sapphire to Bruce the Collector.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": ""
+       }
+]

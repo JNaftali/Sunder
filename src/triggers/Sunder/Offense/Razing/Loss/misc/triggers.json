@@ -1,0 +1,306 @@
+[
+       {
+              "name": "Flay Complete Failure",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^\\w+ uses? Assassination Flay \\(none\\) on (\\w+)\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "3p razed",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^\\w+ whips .+ through the air in front of (\\w+), to no effect\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^\\w+ lashes out at (\\w+) with .+ but finds no protective barriers to strip\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^\\w+ sends .+ to flay (\\w+) but comes away looking confused\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "reflection down",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^A reflection of (\\w+) blinks out of existence\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Fangbarrier gone",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^The hardened paste coating (\\w+)'s? body sloughs off from .+ skin\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^The paste coating (\\w+)'s? body sloughs off, unable to stick to .+ unnaturally slick skin\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^\\w+ sinks a set of metal fangs into (\\w+), injecting \\w+ into .+ veins\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Def strips",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^(\\w+)'s (\\w+) defence has been stripped.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "razed",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^You raze (\\w+)('s|') speed defence with .+\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^You whip .+ through the air in front of (\\w+), to no effect\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^(\\w+)('s|') aura of weapons rebounding disappears\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^You lash out at (\\w+) with .+ but find no protective barriers to eliminate\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Illumination Fire",
+              "isActive": "no",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^Your flames consume (\\w+)'s (.+)\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^Your flames find no (\\w+) to burn\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Fervour Spew",
+              "isActive": "no",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^You send lava to destroy their shield but they have none.",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^The lava utterly destroys (\\w+) shield.",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^You send lava to destroy their aura of rebounding but they have none.",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^The lava utterly destroys (\\w+) aura of rebounding.",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^You send lava to destroy their protections but find they have none.",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "lyre down",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^(\\w+)'s prismatic barrier dissolves into nothing\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "dome",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^(\\w+)'s protective dome of ylem disperses\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "random tidesage stuff",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^Teeming with sibilant promises, the abyssal voices persuade (\\w+) to part with the (\\w+) defence.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^Desperate to quell \\w+'s haunting chorus, (\\w+) parts with the (\\w+) defence.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "reflection down",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "One of your reflections has been destroyed!",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "All your reflections wink out of existence!",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "Your reflection defence has been stripped.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "One of your reflections has been destroyed! You have 0 left.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": ""
+       }
+]

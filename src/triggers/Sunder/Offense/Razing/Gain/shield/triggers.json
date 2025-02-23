@@ -1,0 +1,66 @@
+[
+       {
+              "name": "gained shield",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^A howling blizzard coalesces about (\\w+), holding .+ attackers at bay\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^(\\w+) is protected by a glittering, magical shield\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^A nearly invisible magical shield forms around (\\w+).$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^An incandescent sphere of fire forms around (\\w+), warding off attacks\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^A gentle hum arises from (\\w+)('s|') angel, as it raises a shield to protect .+\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^The dewdrops evaporate into tiny motes of energy that cohere around (\\w+) in a translucent shield\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^(\\w+) uses (Tattoos Shield)\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "hit shield",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^A dizzying beam of energy strikes you as your attack rebounds off of (\\w+)('s|') shield\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       }
+]

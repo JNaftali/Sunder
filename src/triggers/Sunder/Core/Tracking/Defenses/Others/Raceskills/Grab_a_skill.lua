@@ -1,0 +1,1 @@
+table.insert(snd.skills.raceskills, matches[2])

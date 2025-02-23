@@ -1,0 +1,170 @@
+[
+       {
+              "name": "first aid",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "yes",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "6,0",
+                            "type": "colour"
+                     },
+                     {
+                            "pattern": "[FirstAid]: clot",
+                            "type": "startOfLine"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "first aid",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "yes",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "6,0",
+                            "type": "colour"
+                     },
+                     {
+                            "pattern": "[FirstAid]: sip",
+                            "type": "startOfLine"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "first aid",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "yes",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "6,0",
+                            "type": "colour"
+                     },
+                     {
+                            "pattern": "[FirstAid]: outc",
+                            "type": "startOfLine"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "first aid",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "yes",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "6,0",
+                            "type": "colour"
+                     },
+                     {
+                            "pattern": "[FirstAid]: eat",
+                            "type": "startOfLine"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "first aid",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "yes",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "6,0",
+                            "type": "colour"
+                     },
+                     {
+                            "pattern": "[FirstAid]: smoke",
+                            "type": "startOfLine"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "first aid",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "yes",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "6,0",
+                            "type": "colour"
+                     },
+                     {
+                            "pattern": "[FirstAid]: press",
+                            "type": "startOfLine"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "first aid",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "yes",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "6,0",
+                            "type": "colour"
+                     },
+                     {
+                            "pattern": "[FirstAid]: touch",
+                            "type": "startOfLine"
+                     }
+              ],
+              "script": ""
+       }
+]

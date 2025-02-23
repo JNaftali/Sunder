@@ -1,0 +1,9 @@
+[
+       {
+              "name": "Semi 1v1 Route",
+              "isActive": "yes",
+              "regex": "^kll$",
+              "script": "",
+              "isFolder": "no"
+       }
+]

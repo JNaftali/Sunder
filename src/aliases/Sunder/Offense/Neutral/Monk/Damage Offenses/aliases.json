@@ -1,0 +1,16 @@
+[
+       {
+              "name": "mouse mode",
+              "isActive": "yes",
+              "regex": "^ms$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "head",
+              "isActive": "yes",
+              "regex": "^head$",
+              "script": "",
+              "isFolder": "no"
+       }
+]

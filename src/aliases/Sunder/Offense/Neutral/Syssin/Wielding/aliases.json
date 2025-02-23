@@ -1,0 +1,23 @@
+[
+       {
+              "name": "wield bashing",
+              "isActive": "yes",
+              "regex": "^wbsh$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "wield pvp",
+              "isActive": "yes",
+              "regex": "^wpvp$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "wield bow",
+              "isActive": "yes",
+              "regex": "^wbow$",
+              "script": "",
+              "isFolder": "no"
+       }
+]

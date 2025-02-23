@@ -1,0 +1,158 @@
+[
+       {
+              "name": "razed rebounding",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^You raze (\\w+)('s|') aura of rebounding with (.+)\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^White flames suddenly encase .* as your attack strikes (\\w+)('s|') rebounding aura, burning the aura away\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^Focusing your mind, you imbue .+ with blaze in your hands\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^White flames suddenly encase .+, burning away (\\w+)('s|') rebounding aura\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^You lash out with .+ and crumple (\\w+)('s|') aura of rebounding\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^A line of inky blackness leaps from .+, annihilating (\\w+)'s aura of rebounding in a darkling burst\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^(\\w+) grabs .+ arm and begins to chew, drooling all the while.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "3p raze rebounding",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^\\w+ razes (\\w+)('s|') aura of rebounding with .+\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^\\w+ lashes out with .+ and crumples (\\w+)('s|') aura of rebounding\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^You send .+ to flay (\\w+)'s rebounding defence",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^(\\w+)'s rebounding defence has been stripped\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^(\\w+)'s aura of weapons rebounding disappears\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^\\w+'s flames consume (\\w+)'s aura of rebounding\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^You whip .+ through the air in front of (\\w+), to no effect\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^\\w+ razes? (\\w+)'s .+ defence with .+\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^\\w+'s angel stares passively, but powerfully, at (\\w+).$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Rebounding down",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^Sand coalesces before you into the form of a blade, and with an indifferent snap of the fingers, you send it to slice (\\w+)'s (.*) defence.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^With an indifferent snap, you slice apart (\\w+)'s (.*) defence.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^The stones rip apart (\\w+)'s (.*) defence.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Assume rebounding is down",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^\\w+ uses Dhuriv \\w+ on (\\w+)\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^\\w+ uses Spirituality Raze \\(failure\\) on (\\w+)\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^\\w+ uses Battlefury Razestrike \\(failure\\) on (\\w+)\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^\\w+ uses Battlefury (?:Doubleswing|Doublestrike) on (\\w+)\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       }
+]

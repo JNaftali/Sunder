@@ -1,0 +1,23 @@
+[
+       {
+              "name": "Sunder PK helpfile",
+              "isActive": "yes",
+              "regex": "^(S|s)under (H|h)elp (p|P)(K|k)$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "Sunder defenses helpfile",
+              "isActive": "yes",
+              "regex": "^(S|s)under (H|h)elp (D|d)efenses$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "Sunder calling helpfile",
+              "isActive": "yes",
+              "regex": "^(S|s)under (H|h)elp (C|c)alling$",
+              "script": "",
+              "isFolder": "no"
+       }
+]

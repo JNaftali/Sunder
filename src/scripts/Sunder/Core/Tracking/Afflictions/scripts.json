@@ -1,0 +1,32 @@
+[
+       {
+              "name": "affliction table",
+              "isActive": "yes",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "give/take afflictions",
+              "isActive": "yes",
+              "script": "\nfunction snd.aff_check()\n for i in pairs(snd.afflictions) do\n  if snd.afflictions[i].cures.writhe ~= nil or string.find(i, \"broken\") or string.find(i, \"mangled\") or string.find(i, \"pre_restore\") or i == \"aff_concussion\" then\n   if getStopWatchTime(snd.afflictions[i].timer) \u003e 7 and snd.afflictions[i].state == \"waiting\" then\n    snd.aff_timeout(i)\n   end\n  elseif snd.afflictions[i].state == \"waiting\" and getStopWatchTime(snd.afflictions[i].timer) \u003e 2 then\n   snd.aff_timeout(i)\n  end\n end\nend\n\nfunction snd.aff_timeout(affliction)\n snd.afflictions[affliction].state = \"afflicted\"\n snd.message(\"[Resetting: \u003cwhite\u003e\"..affliction..\"\u003cbrown\u003e]\", \"reset\")\nend\n\nfunction snd.aff_gain(affliction)\n if affliction == \"aeon\" then\n  if snd.defenses.def_speed.state == \"deffed\" then\n   snd.def_take(\"speed\")\n   return\n  end\n end\n snd.message(\"You: \u003cred\u003eGOT\u003cDeepSkyBlue\u003e \"..affliction..\".\", \"affliction\")\n snd.aff_have(affliction)\n raiseEvent(\"sunder_my_affs_updated\")\n raiseEvent(\"sunder_my_limbs_updated\")\nend\n\nfunction snd.aff_have(affliction)\n if snd.cureset == \"archivist\" then\n\tif table.contains(snd.circle_affs, affliction) then\n\t hit_aff = false\n\t for aff in pairs(snd.circle_affs) do\n\t  if not hit_aff then\n\t\t if snd.circle_affs[aff] == affliction then\n\t\t  hit_aff = true\n\t\t else\n     \tsnd.send(\"firstaid predict \"..snd.circle_affs[aff])\n     end\n\t\tend\n\t end\n\tend\n\tif table.contains(snd.square_affs, affliction) then\n\t hit_aff = false\n\t for aff in pairs(snd.square_affs) do\n\t  if not hit_aff then\n\t\t if snd.square_affs[aff] == affliction then\n\t\t  hit_aff = true\n\t\t else\n     \tsnd.send(\"firstaid predict \"..snd.square_affs[aff])\n     end\n\t\tend\n\t end\n\tend\n\tif table.contains(snd.triangle_affs, affliction) then\n\t hit_aff = false\n\t for aff in pairs(snd.triangle_affs) do\n\t  if not hit_aff then\n\t\t if snd.triangle_affs[aff] == affliction then\n\t\t  hit_aff = true\n\t\t else\n     \tsnd.send(\"firstaid predict \"..snd.triangle_affs[aff])\n     end\n\t\tend\n\t end\n\tend\n end\n if not string.find(affliction, \"aff_\") then\n  affliction = \"aff_\"..affliction\n end\n if snd.afflictions[affliction].state == \"healed\" then\n  snd.afflictions[affliction].state = \"afflicted\"\n  raiseEvent(\"sunder_my_affs_updated\")\n  raiseEvent(\"sunder_my_limbs_updated\")\n end\nend\n\nfunction snd.aff_diag(affliction)\n if not string.find(affliction, \"aff_\") then\n  affliction = \"aff_\"..affliction\n end\n snd.aff_have(affliction)\n if snd.toggles.gags then \n  deleteLine()\n end\n if snd.afflictions[affliction].cures.herb ~= nil then\n  if string.find(snd.afflictions[affliction].cures.herb, \"eat\") then\n   snd.aff_color = \"\u003cred\u003e\"\n  elseif string.find(snd.afflictions[affliction].cures.herb, \"smoke\") then\n   snd.aff_color = \"\u003cblue\u003e\"\n  end\n elseif snd.afflictions[affliction].cures.salve ~= nil then\n   snd.aff_color = \"\u003cgreen\u003e\"\n end\n snd.aff_color = \"\u003cyellow\u003e\"\n cecho(snd.aff_color..\"\\n\"..affliction)\n if not string.find(affliction, \"aff_\") then\n  affliction = \"aff_\"..affliction\n end\n echo(\" \"..snd.afflictions[affliction].effect)\n raiseEvent(\"sunder_my_affs_updated\")\n raiseEvent(\"sunder_my_limbs_updated\")\nend\n\nfunction snd.aff_cure(affliction)\n snd.message(\"You: \u003cgreen\u003eHEAL\u003cDeepSkyBlue\u003e \"..affliction..\".\", \"affliction\")\n if snd.afflictions[\"aff_\"..affliction].state==\"healed\" then\n  snd.hidden_afflictions = math.max(0, snd.hidden_afflictions - 1)\n end\n snd.aff_remove(affliction)\nend\n\nfunction snd.aff_remove(affliction)\n if not string.find(affliction, \"aff_\") then\n  affliction = \"aff_\"..affliction\n end\n if snd.afflictions[affliction].cures.writhe ~= nil then\n--  snd.status.writhing = false\n end\n snd.afflictions[affliction].state = \"healed\"\n raiseEvent(\"sunder_my_affs_updated\")\n raiseEvent(\"sunder_my_limbs_updated\")\nend\n\nfunction snd.aff_count_mental()\n  local aff_count = 0\n  for aff in pairs(snd.mental_affs) do\n    if table.contains(snd.target_has, snd.mental_affs[aff]) then\n      aff_count = aff_count + 1\n    end\n  end\n  return aff_count\nend\n\nfunction snd.aff_count_physical()\n  local aff_count = 0\n  for aff in pairs(snd.physical_affs) do\n    if table.contains(snd.target_has, snd.physical_affs[aff]) then\n      aff_count = aff_count + 1\n    end\n  end\n  return aff_count\nend\n\nfunction snd.aff_count_venom() \n--this gives a count of afflictions which -could- have come from venoms.\n--they may have been sourced from other things instead, so ymmv\n  local aff_count = 0\n  for _, aff in pairs(snd.venom_affs) do\n    if table.contains(snd.target_has, aff) then\n      aff_count = aff_count + 1\n    end\n  end\n  return aff_count\nend\n\nfunction snd.aff_count_all()\n  local aff_count = 0\n  for aff in pairs(snd.all_affs) do\n    if table.contains(snd.target_has, snd.all_affs[aff]) then\n      aff_count = aff_count + 1\n    end\n  end\n  return aff_count\nend\n\nfunction snd.real_aff_count_all()\n  local aff_count = 0\n  for aff in pairs(snd.real_all_affs) do\n    if table.contains(snd.target_has, snd.real_all_affs[aff]) then\n      aff_count = aff_count + 1\n    end\n  end\n  return aff_count\nend\n\n",
+              "isFolder": "no"
+       },
+       {
+              "name": "Affliction timers",
+              "isActive": "yes",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "clear",
+              "isActive": "yes",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "Timer",
+              "isActive": "yes",
+              "script": "",
+              "isFolder": "no"
+       }
+]

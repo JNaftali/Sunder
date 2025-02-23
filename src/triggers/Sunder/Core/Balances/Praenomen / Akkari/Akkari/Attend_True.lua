@@ -1,0 +1,1 @@
+snd.can_attend = true

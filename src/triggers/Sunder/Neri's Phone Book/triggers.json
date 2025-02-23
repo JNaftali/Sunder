@@ -1,0 +1,272 @@
+[
+       {
+              "name": "parse_cwho",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "99",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^The following citizens of (Duiran|Enorian|Bloodloch|Spinesreach) are in the realm:$",
+                            "type": "regex"
+                     }
+              ],
+              "script": "",
+              "children": [
+                     {
+                            "name": "reset on prompt",
+                            "isActive": "yes",
+                            "isFolder": "no",
+                            "multiline": "no",
+                            "multilineDelta": "0",
+                            "matchall": "no",
+                            "filter": "no",
+                            "fireLength": "0",
+                            "highlight": "no",
+                            "highlightFG": "#ff0000",
+                            "highlightBG": "#ffff00",
+                            "patterns": [
+                                   {
+                                          "pattern": "return isPrompt()",
+                                          "type": "lua"
+                                   }
+                            ],
+                            "script": ""
+                     },
+                     {
+                            "name": "catch person",
+                            "isActive": "yes",
+                            "isFolder": "no",
+                            "multiline": "no",
+                            "multilineDelta": "0",
+                            "matchall": "no",
+                            "filter": "no",
+                            "fireLength": "0",
+                            "highlight": "no",
+                            "highlightFG": "#ff0000",
+                            "highlightBG": "#ffff00",
+                            "patterns": [
+                                   {
+                                          "pattern": "^(\\w+)\\s+.*$",
+                                          "type": "regex"
+                                   }
+                            ],
+                            "script": ""
+                     },
+                     {
+                            "name": "start list",
+                            "isActive": "yes",
+                            "isFolder": "no",
+                            "multiline": "no",
+                            "multilineDelta": "0",
+                            "matchall": "no",
+                            "filter": "no",
+                            "fireLength": "0",
+                            "highlight": "no",
+                            "highlightFG": "#ff0000",
+                            "highlightBG": "#ffff00",
+                            "patterns": [
+                                   {
+                                          "pattern": "--------------------------------------------------------------------------------",
+                                          "type": "exactMatch"
+                                   }
+                            ],
+                            "script": ""
+                     }
+              ]
+       },
+       {
+              "name": "parse_honours",
+              "isActive": "no",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "999",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "-------------------------------------------------------------------------------",
+                            "type": "substring"
+                     }
+              ],
+              "script": "",
+              "children": [
+                     {
+                            "name": "more's more",
+                            "isActive": "yes",
+                            "isFolder": "no",
+                            "multiline": "no",
+                            "multilineDelta": "0",
+                            "matchall": "no",
+                            "filter": "no",
+                            "fireLength": "0",
+                            "highlight": "no",
+                            "highlightFG": "#ff0000",
+                            "highlightBG": "#ffff00",
+                            "patterns": [
+                                   {
+                                          "pattern": "Type MORE to continue reading.",
+                                          "type": "startOfLine"
+                                   }
+                            ],
+                            "script": ""
+                     },
+                     {
+                            "name": "city army",
+                            "isActive": "yes",
+                            "isFolder": "no",
+                            "multiline": "no",
+                            "multilineDelta": "0",
+                            "matchall": "no",
+                            "filter": "no",
+                            "fireLength": "0",
+                            "highlight": "no",
+                            "highlightFG": "#ff0000",
+                            "highlightBG": "#ffff00",
+                            "patterns": [
+                                   {
+                                          "pattern": "^(?:He|She|They|It) (?:is|are) an? .* in the army of (Spinesreach|Enorian|Bloodloch)\\.$",
+                                          "type": "regex"
+                                   },
+                                   {
+                                          "pattern": "^(?:He|She|They|It) (?:is|are) an? .* in the Oakengard of (Duiran)\\.$",
+                                          "type": "regex"
+                                   }
+                            ],
+                            "script": ""
+                     },
+                     {
+                            "name": "guess by clan",
+                            "isActive": "yes",
+                            "isFolder": "no",
+                            "multiline": "no",
+                            "multilineDelta": "0",
+                            "matchall": "no",
+                            "filter": "no",
+                            "fireLength": "0",
+                            "highlight": "no",
+                            "highlightFG": "#ff0000",
+                            "highlightBG": "#ffff00",
+                            "patterns": [
+                                   {
+                                          "pattern": "^(?:He|She|They|It) (?:is|are) an? member of the clan called '(.+)'\\.",
+                                          "type": "regex"
+                                   },
+                                   {
+                                          "pattern": "^(?:He|She|They|It) (?:is|are) the clan head of the clan called '(.+)'\\.",
+                                          "type": "regex"
+                                   }
+                            ],
+                            "script": ""
+                     },
+                     {
+                            "name": "cleanup",
+                            "isActive": "yes",
+                            "isFolder": "no",
+                            "multiline": "no",
+                            "multilineDelta": "0",
+                            "matchall": "no",
+                            "filter": "no",
+                            "fireLength": "0",
+                            "highlight": "no",
+                            "highlightFG": "#ff0000",
+                            "highlightBG": "#ffff00",
+                            "patterns": [
+                                   {
+                                          "pattern": "^(?:He|She|They|It) .*$",
+                                          "type": "regex"
+                                   },
+                                   {
+                                          "pattern": "^$",
+                                          "type": "regex"
+                                   },
+                                   {
+                                          "pattern": "Fate:",
+                                          "type": "startOfLine"
+                                   },
+                                   {
+                                          "pattern": "General:",
+                                          "type": "startOfLine"
+                                   },
+                                   {
+                                          "pattern": "^.*$",
+                                          "type": "regex"
+                                   }
+                            ],
+                            "script": ""
+                     },
+                     {
+                            "name": "count lines",
+                            "isActive": "yes",
+                            "isFolder": "no",
+                            "multiline": "no",
+                            "multilineDelta": "0",
+                            "matchall": "no",
+                            "filter": "no",
+                            "fireLength": "0",
+                            "highlight": "no",
+                            "highlightFG": "#ff0000",
+                            "highlightBG": "#ffff00",
+                            "patterns": [
+                                   {
+                                          "pattern": "-------------------------------------------------------------------------------",
+                                          "type": "exactMatch"
+                                   }
+                            ],
+                            "script": ""
+                     }
+              ]
+       },
+       {
+              "name": "parse_qwho",
+              "isActive": "no",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "2",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^(.*).$",
+                            "type": "regex"
+                     }
+              ],
+              "script": "",
+              "children": [
+                     {
+                            "name": "close qwho",
+                            "isActive": "yes",
+                            "isFolder": "no",
+                            "multiline": "no",
+                            "multilineDelta": "0",
+                            "matchall": "no",
+                            "filter": "no",
+                            "fireLength": "0",
+                            "highlight": "no",
+                            "highlightFG": "#ff0000",
+                            "highlightBG": "#ffff00",
+                            "patterns": [
+                                   {
+                                          "pattern": "^There are \\d+ people total online with",
+                                          "type": "regex"
+                                   }
+                            ],
+                            "script": ""
+                     }
+              ]
+       }
+]

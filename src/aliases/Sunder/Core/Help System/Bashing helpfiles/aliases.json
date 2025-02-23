@@ -1,0 +1,16 @@
+[
+       {
+              "name": "Sunder bashing",
+              "isActive": "yes",
+              "regex": "^(S|s)under (H|h)elp (B|b)ashing$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "Sunder auto bashing",
+              "isActive": "yes",
+              "regex": "^(S|s)under (H|h)elp (A|a)utobashing$",
+              "script": "",
+              "isFolder": "no"
+       }
+]

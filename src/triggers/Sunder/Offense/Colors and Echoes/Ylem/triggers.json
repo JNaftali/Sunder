@@ -1,0 +1,178 @@
+[
+       {
+              "name": "extraction",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "yes",
+              "highlightFG": "#ff5500",
+              "highlightBG": "#000000",
+              "patterns": [
+                     {
+                            "pattern": "Ethereal motes of energy flood into your outstretched grasp as the extraction continues.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "The air hums with energy as you prepare for the extraction.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "You feel the strain upon your body lessen as the preparation for extraction comes to a close, motes of energy swirling around you.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "collapse",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "yes",
+              "highlightFG": "#ff5500",
+              "highlightBG": "#000000",
+              "patterns": [
+                     {
+                            "pattern": "Latent energies flare around the focus, crackling ominously with power before winking out with a hushed whisper. Motes of pale light drift upwards from the dying leyline's focus, smoldering like a dying ember into the firmament as the focal point collapses into the ether.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "eld formed",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "A swelling of energy originates from deep within the focal point, congealing into",
+                            "type": "startOfLine"
+                     },
+                     {
+                            "pattern": "A swelling of energy originates from deep within the sinkhole, congealing into",
+                            "type": "startOfLine"
+                     },
+                     {
+                            "pattern": "^A tremor runs through the leylines, and in a crackle of searing white lightning, .+ rips free\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "shackled",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "You draw upon the power of the leylines and divert their energy to shackle",
+                            "type": "startOfLine"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "no eld",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "You see no such eld here.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "tap minor",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "You tap into the leylines, reaching outward to the minor focus for extraction. Motes of energy flicker upwards to you.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "minor tapped",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^The very air wavers around you with a sudden fluctuation of power from the leylines and a low hum begins to resonate from the depths of (.*)\\. A minor focal point is being tapped for its energies\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "lesser",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "yes",
+              "highlightFG": "#aa0000",
+              "highlightBG": "#000000",
+              "patterns": [
+                     {
+                            "pattern": "Streams of wavering light emit erratically from an unstable convergence of energy here.",
+                            "type": "substring"
+                     }
+              ],
+              "script": ""
+       }
+]

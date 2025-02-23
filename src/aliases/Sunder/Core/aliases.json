@@ -1,0 +1,54 @@
+[
+       {
+              "name": "target",
+              "isActive": "yes",
+              "regex": "^t (.*)$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "stop attacking",
+              "isActive": "yes",
+              "regex": "^stap$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "target call over web - individual targets",
+              "isActive": "yes",
+              "regex": "^tc (\\w+)$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "reset sunder",
+              "isActive": "yes",
+              "regex": "^rst$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "Help System",
+              "isActive": "yes",
+              "script": "",
+              "isFolder": "yes"
+       },
+       {
+              "name": "Vitals",
+              "isActive": "yes",
+              "script": "",
+              "isFolder": "yes"
+       },
+       {
+              "name": "Toggles",
+              "isActive": "yes",
+              "script": "",
+              "isFolder": "yes"
+       },
+       {
+              "name": "Misc",
+              "isActive": "yes",
+              "script": "",
+              "isFolder": "yes"
+       }
+]

@@ -1,0 +1,1 @@
+snd.set_queue("quickwield both eyesigil"..snd.sep.."relax grip"..snd.sep.."throw eye at ground"..snd.sep.."qeb secure eyesigil")

@@ -1,0 +1,142 @@
+[
+       {
+              "name": "spur call",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^\\(Web\\)\\: (\\w+) says, \\\"(?i:Spur) (\\w+): (.*)\\.\\\"$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "subdue call",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^\\(Web\\)\\: \\w+ says, \\\"(\\[\\w+\\] )?(?i:Afflicting|Subdue) (\\w+): (.*)\\.\\\"$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "1p subdue",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "yes",
+              "multilineDelta": "2",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^You raise an? .+ imperiously towards \\w+, exerting a subduing force upon \\w+ skeletal frame\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "1",
+                            "type": "spacer"
+                     },
+                     {
+                            "pattern": "^You amplify the damage to (\\w+)'s skeleton, splintering bone levying the curse of (.+)\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "aftershock/shadowed ticks",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^Your body radiates waves of pressure, superheating (\\w+)'s vicinity as it (\\w+) \\w+\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^(\\w+) writhes in pain as your brilliant light burns and (\\w+) \\w+\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": "local aff = {\n  chars = \"disfigurement\",\n  disorients = \"dizziness\",\n  stiffens = \"stiffness\",\n  ignites = \"ablaze\",\n  weakens = \"weariness\",\n  burns = \"ablaze\",\n}\nif snd.target == matches[2] then\n  snd.target_got(aff[matches[3]])\nend"
+       },
+       {
+              "name": "Swarm afflicts",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^Your swarm afflicts (\\w+) with (.*).$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^Your swarm restores (\\w+)'s? (hearing)\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Reckoning (hellsight mirror)",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "yes",
+              "multilineDelta": "1",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^Relaxing a fraction of your iron will, you mouth a wordless litany, fixating upon (\\w+) as you direct the Dirge to grant \\w+ a glimpse of the oblivion that awaits\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^\\w+ cries out, suddenly afflicted with (\\w+)\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       }
+]

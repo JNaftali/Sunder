@@ -1,0 +1,266 @@
+[
+       {
+              "name": "Spinslash 2nd half",
+              "isActive": "no",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^Spinning the weapon deftly in \\w+ hands, \\w+ moves? in for another strike\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^\\w+ twists? with the momentum of the attack, bringing \\w+ weapon in again for another laceration\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "no crushed chest",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "Your target must have a crushed chest.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Batter Secondary Messages",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^(\\w+) seems to go somewhat limp under a heavy clean blow\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^(\\w+)'s jaw twists unsettlingly under one of the strikes\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "secondary gutcheck",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^(\\w+) suddenly falls to the ground as .+ begins heaving, tilting \\w+ head to one side\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Crushed Chest - Asthma secondary",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^(\\w+) gasps for air as .+ crushed chest inhibits .+\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Sweep/coil prone",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^The weapon slams into (\\w+)'s legs as it sweeps by, knocking \\w+ painfully to the ground\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^(\\w+) is suddenly thrust to the ground as the weapon weaves its way between \\w+ legs.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": "if snd.target == matches[2] then\n  snd.target_got(\"fallen\")\nend"
+       },
+       {
+              "name": "Hound/simulacrum Balance used",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^Hound Balance Used\\:",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^Simulacrum Balance Used\\:",
+                            "type": "substring"
+                     }
+              ],
+              "script": "disableTrigger(\"Sunder Parry\") -- did I mean to make this? I don't remember\n--I think so because of hound bite\nsnd.balance.hound = false"
+       },
+       {
+              "name": "Hound/Simul balance gain",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "You can order your hounds to act again.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "You can order your simulacrums to act again.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": "snd.balance.hound = true"
+       },
+       {
+              "name": "Hound balance not ready",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "You cannot order your hounds again so soon.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "You cannot order your simulacrums again so soon.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "clumsiness for maul/doublebash",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^\\w+ strikes clumsily at (\\w+) with .+, completely missing \\w+\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": "if snd.target == matches[2] then\n  if snd.using_both_hands == 0 then\n    snd.using_both_hands = 1\n  else\n    disableTrigger(\"Maul Hit Confirmation\")\n    disableTrigger(\"Doublebash Hit Confirmation\")\n  end\nend"
+       },
+       {
+              "name": "cracked ribs just incase",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^You hear an audible 'crunch' as (\\w+)'s ribs crack under the blow\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "crushed chest just in case",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^(\\w+) wheezes as \\w+ ribcage visibly collapses inward as it is crushed\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       }
+]

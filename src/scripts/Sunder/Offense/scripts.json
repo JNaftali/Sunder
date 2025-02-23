@@ -1,0 +1,92 @@
+[
+       {
+              "name": "PvP variables",
+              "isActive": "yes",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "tracking functions",
+              "isActive": "yes",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "Generic applies",
+              "isActive": "yes",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "mending tracking",
+              "isActive": "yes",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "restoration tracking",
+              "isActive": "yes",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "Other salves",
+              "isActive": "yes",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "attack function",
+              "isActive": "yes",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "alerts",
+              "isActive": "yes",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "misc",
+              "isActive": "yes",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "All attacks",
+              "isActive": "yes",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "Calculate stuff",
+              "isActive": "yes",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "Class specific stuff",
+              "isActive": "yes",
+              "script": "",
+              "isFolder": "yes"
+       },
+       {
+              "name": "Target calling",
+              "isActive": "yes",
+              "script": "",
+              "isFolder": "yes"
+       },
+       {
+              "name": "Special Cures",
+              "isActive": "yes",
+              "script": "",
+              "isFolder": "yes"
+       },
+       {
+              "name": "Timers",
+              "isActive": "yes",
+              "script": "",
+              "isFolder": "yes"
+       }
+]

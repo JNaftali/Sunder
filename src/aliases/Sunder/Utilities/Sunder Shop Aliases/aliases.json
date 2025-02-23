@@ -1,0 +1,51 @@
+[
+       {
+              "name": "Buying Fluids",
+              "isActive": "yes",
+              "regex": "^fillcache (\\d+) (elixirs|poultices|venoms)$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "Filling Elixirs!",
+              "isActive": "yes",
+              "regex": "^fillvials$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "Consuming Elixirs",
+              "isActive": "yes",
+              "regex": "^unfillvials$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "Filling Poultices",
+              "isActive": "yes",
+              "regex": "^fillbandages$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "Consuming Poultices",
+              "isActive": "yes",
+              "regex": "^unfillbandages$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "priceall",
+              "isActive": "yes",
+              "regex": "^priceall (\\w+) (\\d+) (\\d+)$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "Buying pills",
+              "isActive": "yes",
+              "regex": "^buypills (\\d+)$",
+              "script": "",
+              "isFolder": "no"
+       }
+]

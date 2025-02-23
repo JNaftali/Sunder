@@ -1,0 +1,1 @@
+setTriggerStayOpen("wounds start", 0)

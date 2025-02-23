@@ -1,0 +1,30 @@
+[
+       {
+              "name": "healing",
+              "isActive": "no",
+              "regex": "^hl$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "defenses",
+              "isActive": "yes",
+              "regex": "^tdf$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "clotting",
+              "isActive": "no",
+              "regex": "^tclt$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "standing",
+              "isActive": "no",
+              "regex": "^ss$",
+              "script": "",
+              "isFolder": "no"
+       }
+]

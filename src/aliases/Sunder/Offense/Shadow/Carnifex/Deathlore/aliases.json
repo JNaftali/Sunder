@@ -1,0 +1,9 @@
+[
+       {
+              "name": "rez",
+              "isActive": "yes",
+              "regex": "^rez (\\w+)$",
+              "script": "",
+              "isFolder": "no"
+       }
+]

@@ -1,0 +1,74 @@
+[
+       {
+              "name": "Akkari",
+              "isActive": "yes",
+              "script": "",
+              "isFolder": "yes"
+       },
+       {
+              "name": "Ascendril",
+              "isActive": "yes",
+              "script": "",
+              "isFolder": "yes"
+       },
+       {
+              "name": "Luminary",
+              "isActive": "yes",
+              "script": "",
+              "isFolder": "yes"
+       },
+       {
+              "name": "Oneiromancer",
+              "isActive": "yes",
+              "script": "",
+              "isFolder": "yes"
+       },
+       {
+              "name": "Runecarver",
+              "isActive": "yes",
+              "script": "",
+              "isFolder": "yes"
+       },
+       {
+              "name": "Sentinel",
+              "isActive": "yes",
+              "script": "",
+              "isFolder": "yes"
+       },
+       {
+              "name": "Templar",
+              "isActive": "yes",
+              "script": "",
+              "isFolder": "yes"
+       },
+       {
+              "name": "Shaman",
+              "isActive": "yes",
+              "script": "",
+              "isFolder": "yes"
+       },
+       {
+              "name": "Warden",
+              "isActive": "yes",
+              "script": "",
+              "isFolder": "yes"
+       },
+       {
+              "name": "Zealot",
+              "isActive": "yes",
+              "script": "",
+              "isFolder": "yes"
+       },
+       {
+              "name": "Tidesage",
+              "isActive": "yes",
+              "script": "",
+              "isFolder": "yes"
+       },
+       {
+              "name": "Voidseer",
+              "isActive": "yes",
+              "script": "",
+              "isFolder": "yes"
+       }
+]

@@ -1,0 +1,70 @@
+[
+       {
+              "name": "rockcrush",
+              "isActive": "yes",
+              "regex": "^rc$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "harvest rock",
+              "isActive": "yes",
+              "regex": "^hr$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "Check stuff",
+              "isActive": "yes",
+              "regex": "^check (\\w+)$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "Separator changing",
+              "isActive": "yes",
+              "regex": "^config separator( (.+))?$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "Who Parsing",
+              "isActive": "yes",
+              "regex": "^who groups$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "Easy logging",
+              "isActive": "yes",
+              "regex": "^logfoci (\\w+) (.+)$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "re-show windows",
+              "isActive": "yes",
+              "regex": "^reload window (\\w+)$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "gauntlet change",
+              "isActive": "yes",
+              "regex": "^(mygauntlet|mygauntlet (\\d+))$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "Toxicology",
+              "isActive": "yes",
+              "script": "",
+              "isFolder": "yes"
+       },
+       {
+              "name": "Sunder Shop Aliases",
+              "isActive": "yes",
+              "script": "",
+              "isFolder": "yes"
+       }
+]

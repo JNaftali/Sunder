@@ -1,0 +1,30 @@
+[
+       {
+              "name": "move on",
+              "isActive": "yes",
+              "regex": "^goylem$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "move to next",
+              "isActive": "yes",
+              "regex": "^goylem next$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "move on start",
+              "isActive": "yes",
+              "regex": "^goylem start$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "stop ylem",
+              "isActive": "yes",
+              "regex": "^goylem stop$",
+              "script": "",
+              "isFolder": "no"
+       }
+]

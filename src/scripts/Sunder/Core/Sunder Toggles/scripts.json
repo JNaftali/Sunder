@@ -1,0 +1,14 @@
+[
+       {
+              "name": "Toggles load + save",
+              "isActive": "yes",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "toggle info",
+              "isActive": "yes",
+              "script": "",
+              "isFolder": "no"
+       }
+]

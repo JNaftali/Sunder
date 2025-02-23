@@ -1,0 +1,1 @@
+snd.alertnessHit("adjacent", matches[2], "alertness")

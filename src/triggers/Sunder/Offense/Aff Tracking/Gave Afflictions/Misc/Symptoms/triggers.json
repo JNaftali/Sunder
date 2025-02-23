@@ -1,0 +1,570 @@
+[
+       {
+              "name": "Epilepsy",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^(\\w+) begins to jerk and shake violently, foaming at the mouth.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^(\\w+) begins to shake wildly.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "berserking",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^(\\w+) begins to fume at the mouth and turns bright red.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Berserking 2",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^(\\w+) grabs your arm and begins to chew, drooling all the while\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^(\\w+) grabs one arm of \\w+ and attempts to eat it\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^Screaming and spitting, (\\w+) claws at .+ eyes\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^(\\w+) beats ineffectually at your chest\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^(\\w+) pounds his fists maniacally on \\w+\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "loneliness",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^(\\w+) glances nervously around the room.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "vertigo",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^(\\w+) looks around at the ground longingly.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "pacifism",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^(\\w+) smiles, a look of radiant peace spread across .+ features.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "deafness",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^(\\w+) clutches .+ ears, attempting to block out an unheard noise.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^The lion head upon your chimera suddenly opens its maw and lets forth a mighty roar at (\\w+), stunning .+ with its power.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^The lion head upon your chimera lets forth a powerful roar at (\\w+), but .+ appears unfazed by the attack.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Paresis symptoms",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^(\\w+) suddenly stiffens as a ghast brushes .+ with a finger.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^(\\w+) stiffens suddenly,.+ features frozen in a visage of agony.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^An undead .* wildly grabs (\\w+)'s wrist within .+ gnarled fingers.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^(\\w+) fights .+ seizing muscles with reckless abandon.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^(\\w+)'s? limbs go limp under .+ allergies, leaving .+ unable to move\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^Lost in the flow of battle, (\\w+) staves off their seizing muscles for the moment\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "ablazeit",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^Flames leap around (\\w+), charring .+ flesh.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^Flames spew from a firelord, engulfing (\\w+) and consumes .+ flesh.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^Flames spew in from the .*, engulfing (\\w+) and consuming .+ flesh.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^Flames spew from a firelord, engulfing (\\w+) and consuming .+ flesh.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "clumsiness",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^(\\w+) strikes clumsily at .+ with .*, completely missing.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Impatience",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^(\\w+) shuffles .+ feet in boredom.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "webbed",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^Sticky strands of webbing spray out from .* to cover (\\w+)\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^Deftly spinning a web of silk, .+ traps (\\w+) within it\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^Sticky strands of webbing spray out to cover (\\w+) as you touch the web tattoo\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Deadly flames",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^Deadly flames leap around (\\w+), charring .+ flesh.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "fireblock proc",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^(\\w+)'s shield of flame repels the fiery attack.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^(\\w+)'s tectonic pressure smothers the flames.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Broken Leg Check",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^(\\w+)'s broken legs cause .+ to fall to the ground in a heap.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^Your hear two loud snaps and see (\\w+) fall to the ground.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Vomiting extra line",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^(\\w+) doubles over, vomiting violently.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Zealot indifference",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^(\\w+)'s eyelids droop as .+ expression turns lax.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^(\\w+)'s focus seems to quaver suddenly\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "aegis ropes",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^Binding arcane power slithers around (\\w+)'s body, ensnaring .+ like ropes or vines\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Spinalrip paresis",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^Waves of agony pass through (\\w+), who seems to freeze in place\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Chill/Freezing",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^Frost appears on (\\w+)'s flesh as an inky shadeling reaches out to touch .+.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^You send the cold of the grave to freeze (\\w+).$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^(\\w+) shivers slightly as the fist strikes .+.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^You reach out and grab (\\w+)'s arm, chilling .+ to the bone.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^(\\w+) suddenly shudders as .+ is struck by a sudden chill.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^Frost forms upon .+ and spreads to (\\w+)\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "opens its maw wide before breathing forth a stream of freezing air towards (\\w+)\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^Specks of frost form on (\\w+) as \\w+ shivers with fear\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^Terror overcomes (\\w+) as the frost forms over \\w+ completely\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": "if matches[2] == snd.target then\n  snd.target_got(\"cold\")\n  if snd.toggles.atkecho and snd.toggles.gags then\n   deleteLine()\n   snd.message(\"Chilled: \"..matches[2]..\".\")\n  end\nelseif snd.toggles.nontargetgags and snd.toggles.gags then\n  deleteFull()\nend\n"
+       },
+       {
+              "name": "Stupidity",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^Curiously, (\\w+) begins gnawing on .+ fingers.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^(\\w+) lets out a loud bark. Puzzling isn't it\\?$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^(\\w+) stares at nothing in particular, looking somewhat stupid.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^God only knows why, but (\\w+) launches .+ into a set of jumping jacks.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^(\\w+) screams in fear and cowers before some unseen terror.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Vomiting+asleep",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^(\\w+) chokes in \\w+ sleep as .+ vomits into \\w+ airway\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       }
+]

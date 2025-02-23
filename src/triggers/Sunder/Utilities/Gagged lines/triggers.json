@@ -1,0 +1,166 @@
+[
+       {
+              "name": "Luminary/Earthcaller",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^\\w+'s light burns \\w+\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^\\w+'s wounds close up before your eyes\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^\\w+'s pressure waves superheat \\w+\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": "if snd.toggles.nontargetgags and snd.toggles.gags then\n  deleteFull()\nend"
+       },
+       {
+              "name": "Sciomancer",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^The air shifts around (\\w+), a little delayed as if \\w+ was lighter.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Praenomen",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^\\w+ appears irritated as the sun bears down upon \\w+.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^\\w+ uses Mentis (Seduction|Temptation) on \\w+\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^\\w+ staggers for a moment, clutching \\w+ head\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^\\w+ slumps, appearing physically weakened\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Weapon wiping",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^\\w+ carefully wipes all the venoms off of .+.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Generic items",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "You have no more room in your fluidcache.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "You light your supply of pipes, igniting the herbs within.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Carnifex",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^(\\w+) pales as a trickle of \\w+ soul ebbs from an ethereal wound.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Shaman",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^(\\w+) summons the will of the Elder Shaman to resist delusion.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       }
+]

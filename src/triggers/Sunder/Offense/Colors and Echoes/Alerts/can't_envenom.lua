@@ -1,0 +1,1 @@
+snd.send("wipe left"..snd.sep.."wipe right")

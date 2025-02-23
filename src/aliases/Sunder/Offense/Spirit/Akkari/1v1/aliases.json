@@ -1,0 +1,9 @@
+[
+       {
+              "name": "Naarak Host Route",
+              "isActive": "yes",
+              "regex": "^narrak$",
+              "script": "",
+              "isFolder": "no"
+       }
+]

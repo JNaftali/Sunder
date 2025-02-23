@@ -1,0 +1,450 @@
+[
+       {
+              "name": "Naturalism Displacement - Shaman",
+              "isActive": "no",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^The earth parts and forcibly ejects (\\w+), the roots that bore .+ there relinquishing their grip and returning from whence they came, leaving .+ where your companion once stood.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Leaving enemy",
+              "isActive": "no",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^(\\w+) leaves to the (\\w+).$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^(\\w+) leaves to the (\\w+)\\, riding .*.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^(\\w+) stalks out to the (\\w+), .*.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^Leaving a thin trail of fire in .* wake, (\\w+) heads towards the (\\w+).$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^(\\w+) disappears over the top of a pile of rubble to the (\\w+).$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Enemy lightform",
+              "isActive": "no",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^Closing .+ eyes briefly in concentration, (\\w+) begins to break apart into tiny motes of light until no trace of .+ can be seen where .+ once stood.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Reform lightform enemy",
+              "isActive": "no",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^Your surroundings become blindingly bright as (\\w+) becomes corporeal once more.$ ",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Trees",
+              "isActive": "no",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^Grabbing onto nearby branches, (\\w+) quickly climbs up into the treetops.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^You notice (\\w+) swing nimbly into view in the trees overhead.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Flying away",
+              "isActive": "no",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^(\\w+) begins to flap .+ wings powerfully, and rises quickly up into the firmament.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^(\\w+) flies up into the skies, carried by .+ mount's beating wings.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^(\\w+) is quickly carried up into the skies.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^(\\w+) flits into view directly overhead.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Burrow",
+              "isActive": "no",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^(\\w+) burrows into the ground and disappears from sight.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Syssin Scale",
+              "isActive": "no",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^(\\w+) begins to scale over the icewall to the .+.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Target tentacled",
+              "isActive": "no",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^\\w+ touches a tattoo and suddenly the ground splits open as a nightmarish tentacle shoots skywards, dragging (\\w+) back to earth.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^You touch the tentacle tattoo and suddenly the ground splits open as a nightmarish tentacle shoots skywards, dragging (\\w+) back to earth.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^(\\w+) tumbles to the ground helplessly.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Leap run",
+              "isActive": "no",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^(\\w+) leaps majestically to the (\\w+).$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Mind wrench  to location",
+              "isActive": "no",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^(\\w+) drifts into view, carried by some unseen force.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^You pick up (\\w+) and wrench .+ across the land, sacrificing your telepathic bond with .+ in the process.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^(\\w+) is suddenly thrown off .+ feet, spinning in mid-air before vanishing from sight.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Person Lured",
+              "isActive": "no",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^\\w+ eyes cloudy and limbs stiff, (\\w+) strides in from the .+\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "You got banished",
+              "isActive": "no",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^(\\w+) uses Kaido Banish on you.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Pilg out",
+              "isActive": "no",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^You turn to see (\\w+) shimmer away.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Purgatory",
+              "isActive": "no",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^\\w+ uses Purification Purgatory.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Name finder",
+              "isActive": "no",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^\\(Web\\): \\w+ says, \"Where you at (\\w+) (.|\\?)\"",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^\\(Web\\): \\w+ says, \"(\\w+) where are you(.|\\?)\"$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Sand shifted to us",
+              "isActive": "no",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^(\\w+) is suddenly spat out of the ground.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Fracture",
+              "isActive": "no",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^You sense that (\\w+) has entered the Iernian Fracture.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Pulled Away (Me)",
+              "isActive": "no",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^You feel a moment of disorientation as you are magically summoned.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^Your surroundings spin and vanish into the distance as you are wrenched from your location and flung far across the land.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^You are enveloped by a blazing sphere of light and are carried helplessly away.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "You feel yourself compelled to leave the room, beckoned by the allure of a guardian angel.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "^Roots snake upward and abruptly tangle about your ankles, yanking you unceremoniously down into the waiting earth. For a few moments you struggle for breath, soil invading your nostrils, before you are deposited to the surface once more in whereabouts unknown.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": ""
+       }
+]

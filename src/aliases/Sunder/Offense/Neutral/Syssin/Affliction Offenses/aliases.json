@@ -1,0 +1,37 @@
+[
+       {
+              "name": "mouse mode",
+              "isActive": "yes",
+              "regex": "^ms$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "legs",
+              "isActive": "yes",
+              "regex": "^legs$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "magic",
+              "isActive": "yes",
+              "regex": "^mg$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "kill",
+              "isActive": "yes",
+              "regex": "^kl$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "1v1",
+              "isActive": "yes",
+              "regex": "^aff$",
+              "script": "",
+              "isFolder": "no"
+       }
+]

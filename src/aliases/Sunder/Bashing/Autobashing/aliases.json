@@ -1,0 +1,16 @@
+[
+       {
+              "name": "move",
+              "isActive": "yes",
+              "regex": "^move$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "initiate",
+              "isActive": "yes",
+              "regex": "^gogo(?: (\\w+))?$",
+              "script": "",
+              "isFolder": "no"
+       }
+]

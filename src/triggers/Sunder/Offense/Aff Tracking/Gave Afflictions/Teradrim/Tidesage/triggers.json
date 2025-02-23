@@ -1,0 +1,282 @@
+[
+       {
+              "name": "Room got sandy",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^\\w+ uses? Desiccation Flood\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^\\w+ uses? Desiccation Desert\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^A cascade of sand flows in from the \\w+, settling over the surroundings\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^A swirling cloud of dust and sand sweeps in from the \\w+, blanketing the area with a layer of sand\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^A wave of magical sand surges in from the \\w+ and settles into the surroundings\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Sand gone",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "There is not enough sand present in this location.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "The sand pervading this area blows away as the magics controlling it disperse.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "^\\w+ uses? Desiccation (Whirl|Meld)\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^\\w+ uses? Desiccation Wave",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Room got foggy",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^\\w+ uses? Inundation Inundate\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^\\w+ uses? Inundation Fogbank\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^A wave of impenetrable fog sweeps in from the \\w+\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^Rolling in from the \\w+, thick waves of magical fog settle over the surroundings in an icy pall\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^Waves of freezing fog roll in from the \\w+, the spectral form of an eldritch apparition aglow in its depths\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Fog gone",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "There is no thick fog inundating this location.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "You relax your will on the surrounding fog and it dissipates in a swath of harmless plumes.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "Bereft of any remaining magics, the thick fog inundating the area blows away on a cold breeze.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "^\\w+ uses? Inundation (Gyre|Subsume)\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^\\w+ uses? Inundation Ebb",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Earthenmaw/Spearfall impale",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^A mighty stalagmite erupts from below and tears through (\\w+)'s? gut, impaling \\w+ on its end\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^Without warning, a lethal icicle plunges, spearing (\\w+) through the back and to the ground\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": "if matches[2] == snd.target then\n  snd.target_got(\"writhe_impaled\")\nend"
+       },
+       {
+              "name": "Ricochet/Flux",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^\\w+ quickly adjusts? the momentum of .+, smashing it into (\\w+)'s (.+)\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^Redirecting the flow of .+ tidal flux sends it careening into (\\w+)'s (.+)\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": "if matches[2] == snd.target then\n  snd.target_got(matches[3]:gsub(\" \",\"_\")..\"_crippled\")\nend"
+       },
+       {
+              "name": "Knockdown",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^As (\\w+) attempts to flee upwards, .+ quickly lashes out to grab \\w+ ankle in a crushing grip and throws \\w+ to the ground\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^(\\w+)'s attempt to flee upwards stirs .+ into sudden motion, its features implacable as it enacts a detainment protocol and sends \\w+ sprawling to the ground\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Inundation Gnash",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^The sudden silhouette leaves (\\w+) with (.+)\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^Your thin whip of sand imparts (\\w+) with (.+)\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Imbue water",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^Frost spreads from the impact, and (\\w+) shivers as a deep chill pervades \\w+ body\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Imbue fire",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^Cinders burst from the elemental's digits as the strike connects, setting (\\w+) ablaze\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^As the strike connects, the fist erupts in flames and ignites (\\w+)\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       }
+]

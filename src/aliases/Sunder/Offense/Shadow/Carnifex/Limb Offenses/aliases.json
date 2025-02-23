@@ -1,0 +1,23 @@
+[
+       {
+              "name": "limbs",
+              "isActive": "yes",
+              "regex": "^limbs$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "legs",
+              "isActive": "no",
+              "regex": "^legs$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "Carnifex Limb Aff Support (need Tundralhowl dog)",
+              "isActive": "yes",
+              "regex": "^gaff$",
+              "script": "",
+              "isFolder": "no"
+       }
+]

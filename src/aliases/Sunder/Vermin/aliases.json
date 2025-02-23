@@ -1,0 +1,9 @@
+[
+       {
+              "name": "Vermin Basher",
+              "isActive": "yes",
+              "regex": "^toggle vermin$",
+              "script": "",
+              "isFolder": "no"
+       }
+]

@@ -1,0 +1,208 @@
+[
+       {
+              "name": "got limb damage",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "yes",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "6,0",
+                            "type": "colour"
+                     },
+                     {
+                            "pattern": "^Your (.*) has taken ((\\d+)\\.(\\d+))\\% damage\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "cured limb damage",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "yes",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "6,0",
+                            "type": "colour"
+                     },
+                     {
+                            "pattern": "^Your (.*) has recovered ((\\d+)\\.(\\d+))\\% damage\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "wounds start",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "200",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "You take a moment to assess how damaged your limbs are:",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": "",
+              "children": [
+                     {
+                            "name": "wounds line",
+                            "isActive": "yes",
+                            "isFolder": "no",
+                            "multiline": "no",
+                            "multilineDelta": "0",
+                            "matchall": "no",
+                            "filter": "no",
+                            "fireLength": "0",
+                            "highlight": "no",
+                            "highlightFG": "#ff0000",
+                            "highlightBG": "#ffff00",
+                            "patterns": [
+                                   {
+                                          "pattern": "^(.*):\\s+((\\d+)\\.(\\d+))\\% \\(\\w+ bruising\\).*$",
+                                          "type": "regex"
+                                   }
+                            ],
+                            "script": ""
+                     },
+                     {
+                            "name": "wounds end",
+                            "isActive": "yes",
+                            "isFolder": "no",
+                            "multiline": "no",
+                            "multilineDelta": "0",
+                            "matchall": "no",
+                            "filter": "no",
+                            "fireLength": "0",
+                            "highlight": "no",
+                            "highlightFG": "#ff0000",
+                            "highlightBG": "#ffff00",
+                            "patterns": [
+                                   {
+                                          "pattern": "return isPrompt()",
+                                          "type": "lua"
+                                   }
+                            ],
+                            "script": ""
+                     }
+              ]
+       },
+       {
+              "name": "parry",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^You will now attempt to parry attacks to your ([a-z ]+)\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^You will attempt to parry attacks to your ([a-z ]+)\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^You will now attempt to intercept and counter attacks coming at your ([a-z ]+)\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^You will attempt to throw those who attack your ([a-z ]+)\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^You will now try and fend off attacks aimed at your ([a-z ]+)\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^You will ruthlessly oppose attacks on your ([a-z ]+)\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^With a predatory growl, you oppose the attack on your ([a-z ]+), denying it purchase\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^Moving in, \\w+ feints a blow towards your (.+)\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "unparry",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^A .+ golem lashes out as you parry the blow, rattling your defences\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "You cease your attempts at parrying.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "^You cease opposing attacks against a specific body part\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^(\\w+) uses Fury Distract on you\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "Agony lances through your arm and you can no longer maintain your guard.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "You shift your guard to protect yourself.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "^\\w+ uses Fury Distract \\(boosted\\) on you\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "Struggling to defend yourself, the final blow leaves you reeling.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": ""
+       }
+]

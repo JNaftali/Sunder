@@ -1,0 +1,9 @@
+[
+       {
+              "name": "beckon",
+              "isActive": "yes",
+              "regex": "^bk(?: (.*))?$",
+              "script": "",
+              "isFolder": "no"
+       }
+]

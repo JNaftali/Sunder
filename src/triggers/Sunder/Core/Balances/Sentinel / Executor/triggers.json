@@ -1,0 +1,114 @@
+[
+       {
+              "name": "might used",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "Your blood boils and you let out a mighty roar of defiance.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "You're not ready to call upon your might.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "You cannot call upon your enduring grit again so soon.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "You use Artifice Grit.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "You use Woodlore Might.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "might available",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "You can call upon your might once more.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "You may once more display your enduring grit.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Exploit used",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "Spotting an opening for a brutal assault, you send your accomplices into a manic rage with a sharp command.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "You cannot do that again so soon.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "Sensing an opportunity to strike against your foe, you drive your companions into a frenzy.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Exploit back",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "You may once more exploit an opponent's opening.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "You may take advantage of an opportunity once again.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": ""
+       }
+]

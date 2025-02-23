@@ -1,0 +1,1 @@
+snd.aff_cure("adder_tarot")

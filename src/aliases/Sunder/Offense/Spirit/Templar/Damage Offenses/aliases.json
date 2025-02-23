@@ -1,0 +1,30 @@
+[
+       {
+              "name": "damage",
+              "isActive": "yes",
+              "regex": "^dmg$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "Group Impale",
+              "isActive": "yes",
+              "regex": "^gimp$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "Group Aff - Requires 1 Luminary",
+              "isActive": "yes",
+              "regex": "^gaff$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "Bleed/Hemm",
+              "isActive": "yes",
+              "regex": "^bleed$",
+              "script": "if snd.class == \"Templar\" then\n  snd.starting_attack()\n\n  function snd.attack_function()\n    local string = \"\"-- we'll load this with our attack string\n    local call = \"\"  -- and this with our affliction call\n    \n                     -- next, the afflictions we want to give\n    local touse = {}\n    local tohit = {}\n    local extraaff = \"hemorrhage\" -- and in case we don't find enough of them\n    \n    local left_crescent = \"\"\n    if tonumber(gmcp.Char.Vitals.charge_left) \u003e= 85 then left_crescent = \"blade release left crescent \"..snd.target end\n    \n    local right_crescent = \"\" \n    if tonumber(gmcp.Char.Vitals.charge_right) \u003e= 85 then right_crescent = \"blade release right crescent \"..snd.target end\n\n    \n    if not snd.waiting.queue then\n      \n      snd.giving = {   -- set the affs we want to use\n      \"hearing\", \n      --\"haemophilia\", \n      \"clumsiness\",\n      \"sensitivity\"}\n       \n      -- We really only care about the sensitivity/haemophilia\n      -- If they have both, go straight into damage\n      if snd.checksomeAffs({\"haemophilia\", \"sensitivity\"}, 2) then\n        table.insert(touse, \"hemorrhage\")\n        table.insert(touse, \"hemorrhage\")\n        \n      else\n        -- If that condition isn't met, pick affs from the list above\n        for i in pairs(snd.giving) do\n          if not snd.checkAff(snd.giving[i]) then\n            -- Don't add an aff we've already got in the list!\n            if not table.contains(touse, snd.giving[i]) then\n              table.insert(touse, snd.giving[i])\n            end\n          end\n        end\n      end\n      \n      -- now let's convert affs to venoms/empowerments\n      for aff in pairs(touse) do\n        table.insert(tohit, snd.effects[touse[aff]])\n      end\n      \n      -- if we didn't find enough stuff to hit with, stick in hemorrhage.\n      while #tohit \u003c 3 do\n        table.insert(tohit, extraaff)\n      end\n\n      if (snd.used.shield and snd.used.rebounding) then -- Double barrier, try to break through both with rsk/blaze.\n        string = \"razestrike \" .. snd.target .. \" blaze\"\n        \n      elseif (snd.used.shield or snd.used.rebounding) then -- One layer of barrier, rsk w/venom.\n        string = \"razestrike \" .. snd.target .. \" \" .. tohit[1]\n        call = \"wt Afflicting \" .. snd.target .. \": \" .. tohit[1]\n        \n      else -- Send 2 hits with venoms/empowerments\n        string = \"dsk \" .. snd.target .. \" \" .. tohit[2] .. \" \" .. tohit[1]\n        call = \"wt Afflicting \" .. snd.target .. \": \" .. tohit[2] .. \", \" .. tohit[1]\n        \n        if left_crescent ~= \"\" and snd.checkAff(\"sensitivity\") then string = left_crescent..snd.sep..string end\n        if right_crescent ~= \"\" and snd.checkAff(\"sensitivity\") then string = right_crescent..snd.sep..string end \n      end\n      \n    end\n    \n    -- prepend our affliction call, if we need one\n    if snd.toggles.affcalling and not snd.target_gone then\n      string = call .. snd.sep .. string\n    end\n    \n    -- handle anti-spam and the actual attacking now\n    if string ~= snd.last_attack and not snd.waiting.queue then\n      snd.last_attack = string\n      snd.attack(snd.last_attack)\n      snd.waiting.queue = true\n      tempTimer(snd.delay(), [[snd.waiting.queue = false]])\n    end\n  end\n\n  snd.attack_function()\nend",
+              "isFolder": "no"
+       }
+]

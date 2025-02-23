@@ -1,0 +1,37 @@
+[
+       {
+              "name": "mouse mode",
+              "isActive": "yes",
+              "regex": "^ms$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "Venom Lock",
+              "isActive": "yes",
+              "regex": "^aff$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "Transfix + Sensitivity",
+              "isActive": "yes",
+              "regex": "^lumi$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "Mentals",
+              "isActive": "yes",
+              "regex": "^ment$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "Bleeding",
+              "isActive": "yes",
+              "regex": "^bleed$",
+              "script": "",
+              "isFolder": "no"
+       }
+]

@@ -1,0 +1,9 @@
+[
+       {
+              "name": "damage",
+              "isActive": "yes",
+              "regex": "^dmg$",
+              "script": "",
+              "isFolder": "no"
+       }
+]

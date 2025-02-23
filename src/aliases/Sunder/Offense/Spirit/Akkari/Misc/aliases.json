@@ -1,0 +1,9 @@
+[
+       {
+              "name": "Lure",
+              "isActive": "yes",
+              "regex": "^lure (\\w+)$",
+              "script": "",
+              "isFolder": "no"
+       }
+]

@@ -1,0 +1,26 @@
+[
+       {
+              "name": "load defenses",
+              "isActive": "yes",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "defense options",
+              "isActive": "yes",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "parrying",
+              "isActive": "yes",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "Methods",
+              "isActive": "yes",
+              "script": "",
+              "isFolder": "yes"
+       }
+]

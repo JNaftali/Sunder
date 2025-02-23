@@ -1,0 +1,44 @@
+[
+       {
+              "name": "sacs",
+              "isActive": "yes",
+              "regex": "^sac (\\w+)$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "milking",
+              "isActive": "yes",
+              "regex": "^milk (\\w+)$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "cask",
+              "isActive": "yes",
+              "regex": "^cask (\\w+)$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "unvenom",
+              "isActive": "yes",
+              "regex": "^unvenom$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "venoms",
+              "isActive": "yes",
+              "regex": "^venoms$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "rag",
+              "isActive": "yes",
+              "regex": "^rag$",
+              "script": "",
+              "isFolder": "no"
+       }
+]

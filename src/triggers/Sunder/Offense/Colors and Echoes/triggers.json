@@ -1,0 +1,96 @@
+[
+       {
+              "name": "1p combat messages",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "yes",
+              "multilineDelta": "2",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "99",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^You use (\\w+) (.+) on (.+)\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "1",
+                            "type": "spacer"
+                     },
+                     {
+                            "pattern": "^(.+)$",
+                            "type": "regex"
+                     }
+              ],
+              "script": "",
+              "children": [
+                     {
+                            "name": "rebounded",
+                            "isActive": "yes",
+                            "isFolder": "no",
+                            "multiline": "no",
+                            "multilineDelta": "0",
+                            "matchall": "no",
+                            "filter": "no",
+                            "fireLength": "0",
+                            "highlight": "no",
+                            "highlightFG": "#ff0000",
+                            "highlightBG": "#ffff00",
+                            "patterns": [
+                                   {
+                                          "pattern": "^The attack rebounds away from .+ aura!$",
+                                          "type": "regex"
+                                   },
+                                   {
+                                          "pattern": "The attack rebounds back onto you!",
+                                          "type": "exactMatch"
+                                   }
+                            ],
+                            "script": ""
+                     },
+                     {
+                            "name": "end used",
+                            "isActive": "yes",
+                            "isFolder": "no",
+                            "multiline": "no",
+                            "multilineDelta": "0",
+                            "matchall": "no",
+                            "filter": "no",
+                            "fireLength": "0",
+                            "highlight": "no",
+                            "highlightFG": "#ff0000",
+                            "highlightBG": "#ffff00",
+                            "patterns": [
+                                   {
+                                          "pattern": "return isPrompt()",
+                                          "type": "lua"
+                                   }
+                            ],
+                            "script": ""
+                     }
+              ]
+       },
+       {
+              "name": "1p untargeted combat message",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^You use (\\w+) ([^' on ']+)\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       }
+]

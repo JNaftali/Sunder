@@ -1,0 +1,1 @@
+send("goto "..snd.found_globe)

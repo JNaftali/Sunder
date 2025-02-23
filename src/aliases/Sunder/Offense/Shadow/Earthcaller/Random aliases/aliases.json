@@ -1,0 +1,23 @@
+[
+       {
+              "name": "beckon",
+              "isActive": "yes",
+              "regex": "^bk(?: (.*))?$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "force stop",
+              "isActive": "yes",
+              "regex": "^fs(.*)$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "resurrection",
+              "isActive": "yes",
+              "regex": "^rez (\\w+)$",
+              "script": "",
+              "isFolder": "no"
+       }
+]

@@ -1,0 +1,1 @@
+setTriggerStayOpen("batter call", 0)

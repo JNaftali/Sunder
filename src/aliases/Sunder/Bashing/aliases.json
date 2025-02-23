@@ -1,0 +1,92 @@
+[
+       {
+              "name": "start bashing",
+              "isActive": "yes",
+              "regex": "^aa$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "stop bashing",
+              "isActive": "yes",
+              "regex": "^ast$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "fasthunt",
+              "isActive": "yes",
+              "regex": "^ff$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "Followbash",
+              "isActive": "yes",
+              "regex": "^fba(?: (\\w+))?$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "generics",
+              "isActive": "yes",
+              "regex": "^toggle generic$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "orbs",
+              "isActive": "yes",
+              "regex": "^orbs$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "Buy orbs",
+              "isActive": "yes",
+              "regex": "^buyorbs$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "chocolates",
+              "isActive": "yes",
+              "regex": "^choc$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "See if Sunder has path",
+              "isActive": "yes",
+              "regex": "^check this area$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "single attack",
+              "isActive": "yes",
+              "regex": "^f$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "Move to next area",
+              "isActive": "yes",
+              "regex": "^move to next area$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "Apothecary mode",
+              "isActive": "yes",
+              "regex": "^snd apothecary(?: (on|off))?$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "Autobashing",
+              "isActive": "yes",
+              "script": "",
+              "isFolder": "yes"
+       }
+]

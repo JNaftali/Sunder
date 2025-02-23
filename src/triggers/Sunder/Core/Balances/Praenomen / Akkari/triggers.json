@@ -1,0 +1,182 @@
+[
+       {
+              "name": "Mending / Vivify False",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^You utter a low hiss from exertion as you will the power of your blood to repair the wounds your undead body has sustained.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "Blood cannot be called upon to repair your walking corpse again so soon.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "^Flushed with the bounty of purest, unadulterated life, you exert your will to expend your vitality in a surge which knits your flesh in an instant.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "You may not invoke the vitality of your lifeforce again quite yet.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": "snd.balance.mend = false"
+       },
+       {
+              "name": "Mending / Vivify True",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "You may mend your body once more.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "Your body thrums anew, the vitality inherent in your essence ready to once again knit your flesh.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": "snd.balance.mend = true"
+       },
+       {
+              "name": "Purify / Succour False",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "Your blood boils and you let out a mighty roar of defiance.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "A soothing glow surrounds you as you draw on spiritual succour, comforting warmth easing your ills.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "You cannot purify your blood again so quickly!",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "The warmth of succour flares for a second time, continuing to soothe what ails you.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "You cannot call upon heavenly succour again so soon.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": "snd.balance.purify = false"
+       },
+       {
+              "name": "Purify / Succour True",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "You may purify your blood once more.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "You may draw upon spiritual succour once more.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": "snd.balance.purify = true"
+       },
+       {
+              "name": "Unbroken / Deluge True",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "You may defy the clutches of death once more.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "Your skin prickles as your blood regains its thickness.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": "snd.balance.unbroken = true"
+       },
+       {
+              "name": "Unbroken / Deluge False",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "You have not yet recovered from your previous last stand.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "You use Discipline Unbroken.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "You use Sanguis Deluge.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "Your blood reserves has not recovered just yet.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "Your deluge defence has been stripped.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "You have flooded your undead body with warm, pulsating lifeblood.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": "snd.balance.unbroken = false"
+       }
+]

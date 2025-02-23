@@ -1,0 +1,1 @@
+snd.glory = snd.glory + 1

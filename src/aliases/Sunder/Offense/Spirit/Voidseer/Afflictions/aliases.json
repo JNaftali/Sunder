@@ -1,0 +1,16 @@
+[
+       {
+              "name": "Basic group affs (Darkside)",
+              "isActive": "yes",
+              "regex": "^aff2$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "Basic group affs (Sunder)",
+              "isActive": "yes",
+              "regex": "^aff$",
+              "script": "",
+              "isFolder": "no"
+       }
+]

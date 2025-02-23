@@ -1,0 +1,1 @@
+setTriggerStayOpen("diag start", 0)

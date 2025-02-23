@@ -1,0 +1,14 @@
+[
+       {
+              "name": "quest variables",
+              "isActive": "yes",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "run quests",
+              "isActive": "yes",
+              "script": "",
+              "isFolder": "no"
+       }
+]

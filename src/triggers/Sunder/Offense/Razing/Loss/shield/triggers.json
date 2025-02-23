@@ -1,0 +1,158 @@
+[
+       {
+              "name": "3p raze shield",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^\\w+ razes (\\w+)('s|') magical shield with .+\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^\\w+ holds .+ quarterstaff aloft, the leaves at your feet drawing upward in summons\\. With a flick of the weapon, .+ sends them to swirl about (\\w+), the serrated edges drawing tiny cuts in .+ skin as they shred .+ defences\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^Flames creep up (\\w+)'s magical shield from within, \\w+ burning shroud consuming it in an instant\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^You touch your tattoo and a massive, translucent hammer rises up and shatters the magical shield surrounding (\\w+)\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^Your flames consume (\\w+)'s shield\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^You send .+ to flay (\\w+)'s shield defence",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^With a casual flick of .+ wrist, \\w+ sends a spell of degradation into (\\w+)'s Spirit.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^The meteor slams into (\\w+)'s shield, shattering it\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "You touch your tattoo and summon the hammer but find nothing to strike.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "^(\\w+)'s shield rapidly dissipates, .+ lust for blood overwhelming it\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^You whip .+ through the air in front of (\\w+), to no effect.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^\\w+ razes? (\\w+)'s magical shield with .+\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "bone fetish resounds with a chiming echo that shatters (\\w+)'s shield.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^(\\w+)'s shielded defence has been stripped.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^A massive, translucent hammer rises out of .+ tattoo and smashes (\\w+)'s magical shield.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^(\\w+)'s shielded defence has been stripped.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^The protective shield around (\\w+) dissipates.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^With a blinding cut of light, the Cleaver splits (\\w+)'s magical shield in two.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^A thrust from the barbed tail of a vicious wyvern spirit pierces (\\w+)'s magical shield.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^The chaos hound rips (\\w+)'s magical shield to shreds\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^Saliva drips from the many mouths of the cerberus as its teeth shatter (\\w+)'s shield\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "razed shield",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^You raze (\\w+)('s|') magical shield with (.+)\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^You use Spirituality Raze \\(shield\\) on (\\w+)\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^You lash out with .+ and shatter (\\w+)('s|') translucent shield\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^You draw your quarterstaff upward as it taps into its stored natural energy, the leaves at your feet heeding your call\\. With a flick of the weapon, you send them to scourge (\\w+), the serrated edges leaving tiny cuts as they swirl about .+ and shred .+ defences\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^You use (Primality Leafstorm) on (\\w+)\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^You use (Primality Leafstorm Boosted) on (\\w+)\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^You use Tenacity Devastate on (\\w+).$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^You use Tenacity Devastate \\(fail\\) on (\\w+).$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^You touch your tattoo and summon the hammer but (\\w+) isn't protected.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^(\\w+) grabs .+ arm and begins to chew, drooling all the while\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       }
+]

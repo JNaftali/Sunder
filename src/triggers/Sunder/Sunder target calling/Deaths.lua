@@ -1,0 +1,1 @@
+snd.targeting.who = matches[2]

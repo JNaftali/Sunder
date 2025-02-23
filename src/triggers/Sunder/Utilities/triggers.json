@@ -1,0 +1,172 @@
+[
+       {
+              "name": "rock crush",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^You crush an? \\w+ rock in your mighty fist\\. When you open your hand, you find \\w+ inks?\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "shop ih",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "200",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^You can see the following (\\d+) objects:$",
+                            "type": "regex"
+                     }
+              ],
+              "script": "",
+              "children": [
+                     {
+                            "name": "shop ih end",
+                            "isActive": "yes",
+                            "isFolder": "no",
+                            "multiline": "no",
+                            "multilineDelta": "0",
+                            "matchall": "no",
+                            "filter": "no",
+                            "fireLength": "0",
+                            "highlight": "no",
+                            "highlightFG": "#ff0000",
+                            "highlightBG": "#ffff00",
+                            "patterns": [
+                                   {
+                                          "pattern": "return isPrompt()",
+                                          "type": "lua"
+                                   }
+                            ],
+                            "script": ""
+                     },
+                     {
+                            "name": "ih line",
+                            "isActive": "yes",
+                            "isFolder": "no",
+                            "multiline": "no",
+                            "multilineDelta": "0",
+                            "matchall": "no",
+                            "filter": "no",
+                            "fireLength": "0",
+                            "highlight": "no",
+                            "highlightFG": "#ff0000",
+                            "highlightBG": "#ffff00",
+                            "patterns": [
+                                   {
+                                          "pattern": "^\"([^\\d]+)(\\d+)\"\\s+(.*).$",
+                                          "type": "regex"
+                                   }
+                            ],
+                            "script": ""
+                     }
+              ]
+       },
+       {
+              "name": "Room Vnums",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^You divine the location of this death as (.+) in (.+)\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^You see that \\w+ is at (.+) in (.+)\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Zealot farsee",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^The hazy scenery of (.+) fills the space briefly before fading away\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Faster Water Movement w/mmap",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "There's water ahead of you. You'll have to swim to make it through.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": "mmp.swim()"
+       },
+       {
+              "name": "speedwalk automount",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "yes",
+              "multilineDelta": "2",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^Distance to .+: (\\d+)\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "You start speedwalking.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": ""
+       }
+]

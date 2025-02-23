@@ -1,0 +1,44 @@
+[
+       {
+              "name": "Add Target List",
+              "isActive": "yes",
+              "regex": "^atl (.+)$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "Add Target Position",
+              "isActive": "yes",
+              "regex": "^atp (\\w+)(?:\\s)?(\\d+)?$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "List Targets",
+              "isActive": "yes",
+              "regex": "^tlist$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "Clear Target List",
+              "isActive": "yes",
+              "regex": "^atlc$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "Remove Target",
+              "isActive": "yes",
+              "regex": "^atr (\\w+)$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "Skip current target",
+              "isActive": "yes",
+              "regex": "^nt$",
+              "script": "",
+              "isFolder": "no"
+       }
+]

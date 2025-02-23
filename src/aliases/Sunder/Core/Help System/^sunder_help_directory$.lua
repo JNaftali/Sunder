@@ -1,0 +1,1 @@
+cecho("\n<MediumSeaGreen>Found: <white>"..getMudletHomeDir())

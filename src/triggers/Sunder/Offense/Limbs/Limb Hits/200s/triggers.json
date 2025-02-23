@@ -1,0 +1,254 @@
+[
+       {
+              "name": "Titan Spear",
+              "isActive": "no",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^Crystalline fragments form jagged spears across .+ arm and \\w+ drives? it cruelly through (\\w+)'s (.+), poisoning \\w+ as shards find purchase in \\w+ flesh\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Tiarna Shear",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^Verdant energy spills along \\w+'s arm, expanding its proportions to that of a mighty bear's\\. Transformed into an instrument of Her vengeance, \\w+ mauls (\\w+)'s (.+) with gleaming claws, rendering flesh to bloodied ribbon\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^Verdant energy spills along your arm, suffusing it with ursine fury. Transformed into an instrument of Her vengeance, you maul (\\w+)'s (.+) with gleaming claws, rendering flesh to bloodied ribbon\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Aetherial Volley",
+              "isActive": "no",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^Inciting the Mejevsavelnel of old, \\w+ beckons? Cthalut, the Archer to \\w+ aid. Celestial light kindles into an arrow of sun's fire, before volleying forth as a shooting star to strike (\\w+)'s (.+)\\.",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Nocturn Lash",
+              "isActive": "no",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^The shadow \\w+ casts? elongates, stretching hungrily towards (\\w+)'s (.+)\\. The suddenly corporeal shade envelops \\w+ in a whirlwind of frenzied strikes, bleeding its malice into \\w+\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Glory counting",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "Resonating with chaotic energies, a circular rainbow forms in a shimmer of Astral-inspired glory.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Astral Contaminate",
+              "isActive": "no",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^Palm splayed and with (\\w+)'s (.+) the subject of your ire, you send forth ropelike threads of yellow-green to infect him with poisonous, chaotic contamination\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Astral Hamartia Back",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "You may once again expose the flaws of your enemies.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Glories in Room",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "There are (.+) chromatic glories here.",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "There is (.+) chromatic glory here.",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Hamartia/plasma/etc",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^Eldritch coils of oceanic light arise about your outstretched fingers, blooming toward (\\w+) and exposing the flaw of (\\w+) amidst disembodied laughter.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^A beat of .+ mighty wings brings forth a cirrus of superheated light, plasmatic winds inspired by the sun itself gusting across and over (\\w+) and searing \\w+ with (\\w+)\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^\\w+ sweeps? a cowl of darkness across \\w+ shoulders, gathering the force of night about \\w+ before lashing outward toward (\\w+) in a chiaroscuro coil of stygian shadow and starry scintillation, tainting \\w+ with (\\w+).$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^Volatile black energy wreathes .+ fingertips as \\w+ thrusts? them into (\\w+), imparting (\\w+) within \\w+\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^Drawing tendrils of raw power from \\w+ very body, \\w+ weaves? the four elements into an atrophic vortex and turns it loose upon (\\w+), observing impassively as the forces assail \\w+ with (\\w+)\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^With a simple gesture, you command a swarming hive of enraged bees, marking (\\w+) as the unfortunate victim. The bees surround .+, stinging .+ exposed flesh and afflicting .+ with (.+)\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": "if matches[2] == snd.target then\n snd.target_got(matches[3])\nend"
+       },
+       {
+              "name": "Seraph Flagellate",
+              "isActive": "no",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "yes",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^\\w+ extends a hand in judgement, tendrils of golden fire streaming forth to assail (\\w+)'s (.+) with their burning, searing, agonising condemnation\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^Extending a hand in judgement, tendrils of golden fire stream forth to assail (\\w+)'s (.+) with their burning, searing, agonising condemnation\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Generic afflict line",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^You have afflicted (\\w+) with (\\w+)\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       }
+]

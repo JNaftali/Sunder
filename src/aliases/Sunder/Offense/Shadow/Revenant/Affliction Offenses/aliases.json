@@ -1,0 +1,30 @@
+[
+       {
+              "name": "retribution stack",
+              "isActive": "yes",
+              "regex": "^ret$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "legs",
+              "isActive": "yes",
+              "regex": "^lgs$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "impale mode",
+              "isActive": "yes",
+              "regex": "^im$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "newbie mode",
+              "isActive": "yes",
+              "regex": "^newb$",
+              "script": "",
+              "isFolder": "no"
+       }
+]

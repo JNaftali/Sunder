@@ -1,0 +1,132 @@
+[
+       {
+              "name": "Endgame skills add for defup purposes",
+              "isActive": "no",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^You currently possess the following racial skills\\:",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Which endgame skills you got?",
+              "isActive": "no",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^(.+)$",
+                            "type": "regex"
+                     }
+              ],
+              "script": "\n\nlocal possible_skills = {\n  \"Selfishness\",\n  \"Chameleon\",\n  \"Irongrip\",\n  \"Nightsight\",\n  \"Stalking\",\n  \"Heatsight\",\n  \"Pacing\",\n  \"Gripping\"\n}\nfor _, v in pairs(possible_skills) do\n  if string.find(matches[2], v) and not table.isMember(snd.skills.raceskills, v) then\n  if v == \"Gripping\" then\n   if not table.isMember(snd.skills.raceskills, \"Irongrip\") then\n    table.insert(snd.skills.raceskills,\"Irongrip\")\n   end\n  else\n   table.insert(snd.skills.raceskills, v)\n   end\n  end\nend"
+       },
+       {
+              "name": "Turn off Endgame skills check",
+              "isActive": "no",
+              "isFolder": "no",
+              "multiline": "yes",
+              "multilineDelta": "1",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "+----------------------+----------------------+----------------------+",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "^To learn more about a racial ability, type RACIAL HELP \\\u003cability\\\u003e\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Raceskill capture",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "20",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "You have activated the following racial abilities:",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": "",
+              "children": [
+                     {
+                            "name": "Grab a skill",
+                            "isActive": "yes",
+                            "isFolder": "no",
+                            "multiline": "no",
+                            "multilineDelta": "0",
+                            "matchall": "no",
+                            "filter": "no",
+                            "fireLength": "0",
+                            "highlight": "no",
+                            "highlightFG": "#ff0000",
+                            "highlightBG": "#ffff00",
+                            "patterns": [
+                                   {
+                                          "pattern": "^Racial Ability #\\d+: (.+)$",
+                                          "type": "regex"
+                                   },
+                                   {
+                                          "pattern": "^Racial Regeneration: (.+)$",
+                                          "type": "regex"
+                                   }
+                            ],
+                            "script": ""
+                     },
+                     {
+                            "name": "Close capture",
+                            "isActive": "yes",
+                            "isFolder": "no",
+                            "multiline": "no",
+                            "multilineDelta": "0",
+                            "matchall": "no",
+                            "filter": "no",
+                            "fireLength": "0",
+                            "highlight": "no",
+                            "highlightFG": "#ff0000",
+                            "highlightBG": "#ffff00",
+                            "patterns": [
+                                   {
+                                          "pattern": "",
+                                          "type": "prompt"
+                                   }
+                            ],
+                            "script": ""
+                     }
+              ]
+       }
+]

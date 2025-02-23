@@ -1,0 +1,30 @@
+[
+       {
+              "name": "True Who Parsing",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "yes",
+              "multilineDelta": "1",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^(.+)\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "1",
+                            "type": "spacer"
+                     },
+                     {
+                            "pattern": "^There (are \\d+ people total online with \\d+ people that are hidden from you\\.|is 1 person online\\. Lonely you!)$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       }
+]

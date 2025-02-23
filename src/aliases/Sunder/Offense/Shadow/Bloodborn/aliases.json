@@ -1,0 +1,16 @@
+[
+       {
+              "name": "Fire",
+              "isActive": "yes",
+              "regex": "^fire$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "Air",
+              "isActive": "yes",
+              "regex": "^air$",
+              "script": "",
+              "isFolder": "no"
+       }
+]

@@ -1,0 +1,206 @@
+[
+       {
+              "name": "Tenacity Cripple",
+              "isActive": "no",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^(\\w+)'s (left leg|right leg|left arm|right arm) is badly crippled under the handaxe.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Tenacity Punish",
+              "isActive": "no",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^Capitalizing on the damage of (\\w+)\\'s \\w+ (\\w+), \\w+ brutally hacks? into it with a blow from each blade\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "embed pull",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^Grabbing hold of its haft, you wrench your axe loose from (\\w+)\\'s (.+)\\, further damaging muscle and bone in the process\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Tenacity Devastate",
+              "isActive": "no",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^Throwing \\w+ axes in a precise, savage pattern, \\w+ shreds? apart (\\w+)'s protective barriers with each passing of a blade\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^Throwing \\w+ axes in a precise, savage pattern, \\w+ rends? through (\\w+)'s magical shield with .+, while .+ flies past and finds purchase within \\w+ vulnerable flesh\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^Throwing \\w+ axes in a precise, savage pattern, \\w+ rends? through (\\w+)'s rebounding aura with .+, while .+ flies past and finds purchase within \\w+ vulnerable flesh\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^Weight shifting with each throw, \\w+ launche?s? .+ towards (\\w+), though they fly wide with the lack of protective barriers to direct their force\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Fury Reverberate",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^Drawing a deep breath, \\w+ releases? a tremendous shout which ripples through the battlefield, reverberating until \\w+ voice gives out\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Fury Shatter Second Aff",
+              "isActive": "no",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^(\\w+) stares about .+ frenziedly, wild-eyed.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^(\\w+) glances about .+ with an unsure expression.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^A glazed look descends over the features of (\\w+).$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^(\\w+)'s eyes spin wildly.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Pierce tracking",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "You have gained the pierce defence.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Tenacity Chop",
+              "isActive": "no",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^\\w+ chops? into (\\w+)'s (.+) with a powerful draw of .+, the blade sinking into \\w+ flesh\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Tenacity Assault",
+              "isActive": "no",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^With a quick overhand throw, \\w+ hurls? .+ at (\\w+), the blade tearing into the flesh of \\w+ (.+)\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       }
+]

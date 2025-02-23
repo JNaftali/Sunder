@@ -1,0 +1,30 @@
+[
+       {
+              "name": "Group Afflictions",
+              "isActive": "yes",
+              "regex": "^aff$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "Annhilate and Mesmerize",
+              "isActive": "yes",
+              "regex": "^mez$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "akkari Group Affs",
+              "isActive": "yes",
+              "regex": "^gaff$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "Group Lock",
+              "isActive": "yes",
+              "regex": "^glo$",
+              "script": "",
+              "isFolder": "no"
+       }
+]

@@ -1,0 +1,29 @@
+[
+       {
+              "name": "mouse",
+              "isActive": "yes",
+              "regex": "^ms$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "stormtouched",
+              "isActive": "yes",
+              "regex": "^storm$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "vlock",
+              "isActive": "yes",
+              "regex": "^supp$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "Utility Aliases",
+              "isActive": "yes",
+              "script": "",
+              "isFolder": "yes"
+       }
+]

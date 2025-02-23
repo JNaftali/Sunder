@@ -1,0 +1,107 @@
+[
+       {
+              "name": "my location",
+              "isActive": "yes",
+              "regex": "^loc$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "eye sigil",
+              "isActive": "yes",
+              "regex": "^eye$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "web tattoo",
+              "isActive": "yes",
+              "regex": "^tw(?: (.*))?$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "brazier",
+              "isActive": "yes",
+              "regex": "^brz(?: (.*))?$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "tentacle",
+              "isActive": "yes",
+              "regex": "^tnt(?: (.*))?$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "orrery",
+              "isActive": "yes",
+              "regex": "^or$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "breathe fire",
+              "isActive": "yes",
+              "regex": "^bf$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "prism",
+              "isActive": "yes",
+              "regex": "^prm(?: (.*))?$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "shackle",
+              "isActive": "yes",
+              "regex": "^sh$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "tumble",
+              "isActive": "yes",
+              "regex": "^tm (\\w+)$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "dummy mode",
+              "isActive": "yes",
+              "regex": "^dummy$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "swing up",
+              "isActive": "yes",
+              "regex": "^su$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "swing down",
+              "isActive": "yes",
+              "regex": "^sd$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "Quick translocator alias",
+              "isActive": "yes",
+              "regex": "^ut$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "disperse",
+              "isActive": "yes",
+              "regex": "^toggle disperse (\\w+)$",
+              "script": "",
+              "isFolder": "no"
+       }
+]

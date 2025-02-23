@@ -1,0 +1,9 @@
+[
+       {
+              "name": "Basic Group Limbs",
+              "isActive": "yes",
+              "regex": "^limbs$",
+              "script": "",
+              "isFolder": "no"
+       }
+]

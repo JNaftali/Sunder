@@ -1,0 +1,14 @@
+[
+       {
+              "name": "Custom Basher Paths",
+              "isActive": "yes",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "Custom bashing route making",
+              "isActive": "yes",
+              "script": "",
+              "isFolder": "no"
+       }
+]

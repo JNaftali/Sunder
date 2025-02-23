@@ -1,0 +1,37 @@
+[
+       {
+              "name": "hypnotise",
+              "isActive": "yes",
+              "regex": "^hyp$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "shadow mark",
+              "isActive": "yes",
+              "regex": "^sm$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "hypnotise stack",
+              "isActive": "yes",
+              "regex": "^hypno$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "hypnotise magic stack",
+              "isActive": "yes",
+              "regex": "^hypm$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "suggest",
+              "isActive": "yes",
+              "regex": "^sg (\\w+)$",
+              "script": "",
+              "isFolder": "no"
+       }
+]

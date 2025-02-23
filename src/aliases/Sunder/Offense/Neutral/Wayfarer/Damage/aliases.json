@@ -1,0 +1,16 @@
+[
+       {
+              "name": "sensi + tfix support",
+              "isActive": "yes",
+              "regex": "^dmg$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "Lacerate (Bleed) focused",
+              "isActive": "yes",
+              "regex": "^bleed$",
+              "script": "",
+              "isFolder": "no"
+       }
+]

@@ -1,0 +1,130 @@
+[
+       {
+              "name": "vermin",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "Tongue flicking to taste the air, a pebbly black snake comes into view.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "The glint of pebbly scales alerts you to the entrance of a black snake.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "With a faint slithering noise, a pebbly black snake enters.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "You spy a seagull, rooting around the ground for scraps of anything edible.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "The faint clicking of insect legs on stone alerts you to the entrance of a carrion beetle.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "A carrion beetle enters, scavenging for flesh.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "A carrion beetle scuttles in, searching for food.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "A black rat scurries in, looking for food.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "A reticulated planthopper lands on a perch nearby, becoming eerily still.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "The faint clicking of insect legs on stone alerts you to the entrance of a giant ugly pincher.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "An ugly pincher scuttles in, searching for food.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "A tiny pincher scuttles in, searching for food.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "The faint clicking of insect legs on stone alerts you to the entrance of an ugly pincher.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "A giant ugly pincher enters, scavenging for flesh.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "An ugly pincher enters, scavenging for flesh.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "A tiny pincher enters, scavenging for flesh.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "The faint clicking of insect legs on stone alerts you to the entrance of a tiny pincher.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "A giant ugly pincher scuttles in, searching for food.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Sell Vermin",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "A large scientific laboratory",
+                            "type": "startOfLine"
+                     },
+                     {
+                            "pattern": "Illuminated cave passage between shops",
+                            "type": "startOfLine"
+                     },
+                     {
+                            "pattern": "Entering Bloodloch market district",
+                            "type": "startOfLine"
+                     },
+                     {
+                            "pattern": "A dockyard slum",
+                            "type": "startOfLine"
+                     },
+                     {
+                            "pattern": "Cabalist Ghada nods curtly at you.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "Along a reinforced wooden pier",
+                            "type": "startOfLine"
+                     }
+              ],
+              "script": ""
+       }
+]

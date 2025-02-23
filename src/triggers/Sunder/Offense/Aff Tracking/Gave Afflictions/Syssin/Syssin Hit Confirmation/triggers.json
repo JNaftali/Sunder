@@ -1,0 +1,78 @@
+[
+       {
+              "name": "whip attacks",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^\\w+ sends .+ to flay (\\w+), lashing out with the tip\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "dirk dstab",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^Lunging in, .+ sticks (\\w+) with .+\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^\\w+ drives .+ into (\\w+) with a vicious stab\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^\\w+ jabs (\\w+) with .+\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^\\w+ neatly skewers (\\w+) with a stab from .+\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^Deftly twirling the weapon in .+ hand, .+ jabs .+ with it once more\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Slit",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^Blood sprays like a gushing fountain as \\w+ viciously slits the throat of the helpless (\\w+)\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       }
+]

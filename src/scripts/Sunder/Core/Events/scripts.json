@@ -1,0 +1,83 @@
+[
+       {
+              "name": "gmcp_room",
+              "isActive": "yes",
+              "eventHandlerList": [
+                     "gmcp.Room.Info"
+              ],
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "gmcp_vitals",
+              "isActive": "yes",
+              "eventHandlerList": [
+                     "gmcp.Char.Vitals"
+              ],
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "gmcp_items",
+              "isActive": "yes",
+              "eventHandlerList": [
+                     "gmcp.Char.Items.List"
+              ],
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "gmcp_item_add",
+              "isActive": "yes",
+              "eventHandlerList": [
+                     "gmcp.Char.Items.Add"
+              ],
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "gmcp_item_remove",
+              "isActive": "yes",
+              "eventHandlerList": [
+                     "gmcp.Char.Items.Remove"
+              ],
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "gmcp_item_update",
+              "isActive": "yes",
+              "eventHandlerList": [
+                     "gmcp.Char.Items.Update"
+              ],
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "gmcp_people_update",
+              "isActive": "yes",
+              "eventHandlerList": [
+                     "gmcp.Room.Players"
+              ],
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "gmcp_people_remove",
+              "isActive": "yes",
+              "eventHandlerList": [
+                     "gmcp.Room.RemovePlayer"
+              ],
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "gmcp_people_add",
+              "isActive": "yes",
+              "eventHandlerList": [
+                     "gmcp.Room.AddPlayer"
+              ],
+              "script": "",
+              "isFolder": "no"
+       }
+]

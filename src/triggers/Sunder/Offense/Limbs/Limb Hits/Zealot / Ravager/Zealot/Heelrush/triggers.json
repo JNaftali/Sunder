@@ -1,0 +1,74 @@
+[
+       {
+              "name": "Heelrush 1st hit",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "yes",
+              "multilineDelta": "3",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^Spotting an opening, (\\w+) lets? loose a kick into (\\w+)'s (.+).$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^\\w+'?s? blow lands heavily with weight.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Heelrush 2nd hit",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "yes",
+              "multilineDelta": "3",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^Whirling .+ foot around, (\\w+) lands? it into (\\w+)'s (.+) with a second hit\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^\\w+'?s? blow lands heavily with weight.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Heelrush 3rd hit",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "yes",
+              "multilineDelta": "3",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^With the last of .+ momentum, (\\w+) heaves? a straight kick into (\\w+)'s (.+)\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^\\w+'?s? blow lands heavily with weight.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       }
+]

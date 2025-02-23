@@ -1,0 +1,1 @@
+snd.def_gain("divert_melee")

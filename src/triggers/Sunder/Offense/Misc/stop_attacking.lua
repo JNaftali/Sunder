@@ -1,0 +1,1 @@
+if snd.toggles.attacking == true then snd.toggle("attacking") end

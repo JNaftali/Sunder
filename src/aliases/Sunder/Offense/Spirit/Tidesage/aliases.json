@@ -1,0 +1,20 @@
+[
+       {
+              "name": "Afflictions",
+              "isActive": "yes",
+              "script": "",
+              "isFolder": "yes"
+       },
+       {
+              "name": "Damage",
+              "isActive": "yes",
+              "script": "",
+              "isFolder": "yes"
+       },
+       {
+              "name": "Limbs",
+              "isActive": "yes",
+              "script": "",
+              "isFolder": "yes"
+       }
+]

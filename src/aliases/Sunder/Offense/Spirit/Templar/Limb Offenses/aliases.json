@@ -1,0 +1,16 @@
+[
+       {
+              "name": "limbs",
+              "isActive": "yes",
+              "regex": "^limbs$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "ice blast limbs",
+              "isActive": "yes",
+              "regex": "^lb$",
+              "script": "",
+              "isFolder": "no"
+       }
+]

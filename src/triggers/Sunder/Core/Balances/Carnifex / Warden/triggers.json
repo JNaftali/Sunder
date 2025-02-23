@@ -1,0 +1,134 @@
+[
+       {
+              "name": "purged",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "You purge your body of weakness, imbuing your soul with strength.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "You purge your body of weakness, but find nothing to cleanse.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "A sensation of warmth pulses through your ancestral mark as an ailment is annulled.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "can't purge",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "Your soul has not recovered enough to be purged once more.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "You cannot call upon the ancestors for annulment again so soon.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "purge up",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "You may once again purge your body.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "You may once again annul an ailment that plagues you.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Furor can use",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^You may once again throw yourself into a furor.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "You may once more focus yourself for a rigorous assault.",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Furor not ready",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^You cannot throw yourself into a furor again yet.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^You use Savagery Furor.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "You use Warding Rigor.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "You cannot yet prepare yourself for arigorous assault.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": ""
+       }
+]

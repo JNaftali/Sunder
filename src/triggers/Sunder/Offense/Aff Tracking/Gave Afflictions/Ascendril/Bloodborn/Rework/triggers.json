@@ -1,0 +1,570 @@
+[
+       {
+              "name": "Windlance/befoul prone",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^The force of the lance knocks (\\w+) from .+ feet, the static wind shocking .+.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^(\\w+) buckles beneath the force of the magical bolt, its sorcerous strength driving .+ to .+ knees.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": "if matches[2] == snd.target then\n  snd.used.shield = false\n  snd.target_got(\"fallen\")\n  snd.target_got(\"whiplash\")\nend"
+       },
+       {
+              "name": "Etherflux",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^Elemental energy ripples across (\\w+), sizzling as it irradiates their skin\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^Vile sorcery slides along (\\w+), tormenting \\w+ with catalysed humours\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Etherflux proc",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^Your etherflux flares under the elements, causing (.+) in (\\w+)\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Frostwrack/coldsnap",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^Frost forms upon (\\w+), plunging \\w+ body temperature into a deep cold\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": "if matches[2] == snd.target then\n  snd.target_got(\"cold\")\n  snd.target_got(\"cold\")\nend"
+       },
+       {
+              "name": "Frozen feet cured",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^The ice chips away, releasing (\\w+)'s feet\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Rimespear/icicle",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^A vicious icicle launches through the sky and pierces into (\\w+)'s stomach with its pointed tip.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^A rime\\-crusted lance of energy darts across the air and stabs into (\\w+)'s gut\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": "if matches[2] == snd.target then\n  snd.last_hit_limb = \"torso\"\n  snd.last_limb_dmg = 12\n  snd.took_limb_dmg(snd.last_hit_limb, snd.last_limb_dmg)\n  snd.onHit2({\"Parry\"})\nend"
+       },
+       {
+              "name": "Fragment/Shatter",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^Whipping through the air, a rheumy chunk smashes against (\\w+)'s (.+)\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^Winding through the air, an ice shard buries itself into (\\w+)'s (.+)\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": "if matches[2] == snd.target then\n  snd.last_hit_limb = matches[3]\n  snd.last_limb_dmg = 4\n  snd.took_limb_dmg(snd.last_hit_limb, snd.last_limb_dmg)\n  snd.onHit2({\"Parry\"})\nend"
+       },
+       {
+              "name": "Frozen feet",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^Heaps of dark frost accumulate at (\\w+)'s feet and harden into ice with the aid of the present direfog\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^Some of the crystalline ice adheres to (\\w+)'s feet and glazes over in thepresence of a frosty glazeflow\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Writhe ice",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^Some of the frosty phlegm hardens, encasing (\\w+) in ice\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^Elemental energy coaxes the crystalline ice to harden, encasing (\\w+) in frost\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Writhe ice cured",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^The ice encasing (\\w+) cracks and sloughs off in chunks, shattering upon the ground\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Arcbolt/Murkspark",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^Gloomy glimmers gnaw into (\\w+)'s flesh, scourging \\w+ with galvanised bile\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^The arcing chain of electricity slams into (\\w+), the deafening impact causing .+ body to jerk wildly\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": "if matches[2] == snd.target then\n  if snd.checkAff(\"paresis\") then\n    snd.target_got(\"paralysis\")\n  else\n    snd.target_got(\"paresis\")\n  end\nend"
+       },
+       {
+              "name": "pressurize/equilibrium laxity",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^A vacant expression dominates (\\w+)'s expression as \\w+ black bile shifts, leaving \\w+ lax\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^The powerful pressure causes a lack of blood flow to (\\w+)'s head, leaving .+ with a lax expression.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": "if matches[2] == snd.target then\n  snd.target_got(\"laxity\")\nend"
+       },
+       {
+              "name": "Capacitance/Impediment disrupt",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^A nauseating wave ripples outward from \\w+, disrupting (\\w+) with its profane force\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^Bolts of shocking energy spark outwards from your hands, leaping into (\\w+) in a lightning-fast flash.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": "if matches[2] == snd.target then\n  snd.target_got(\"disrupted\")\nend"
+       },
+       {
+              "name": "Vein/restore",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "You use Hematurgy Vein.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "You have too recently purged your tainted blood.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "You use Thaumaturgy Restore.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "You have too recently restored your body.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": "snd.balance.restore = false"
+       },
+       {
+              "name": "vein/restore back",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "You may once again cleanse your tainted blood.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "You may once again restore your body.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": "snd.balance.restore = true"
+       },
+       {
+              "name": "Befoul/windlance shield break",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^(\\w+)'s shield melts away beneath the force of the sorcerous bolt, rendering it worthless\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^The lance rips through (\\w+)'s magical shield, tearing it apart as it passes.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": "if matches[2] == snd.target then\n  snd.used.shield = false\nend"
+       },
+       {
+              "name": "Well/fulcrum passive affs",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^Your (?:well|fulcrum) affects (\\w+) with (\\w+)\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": "if matches[2] == snd.target then\n  snd.target_got(matches[3])\nend"
+       },
+       {
+              "name": "Arcane strip",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^Your (?:fulcrum|well) strips (\\w+) of the arcane defence\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "disgorge/conflagrate ablaze",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^The sickening deluge of bile sizzles and pops, causing (\\w+) to burst into dark flames\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^The heated conflagration surrounds (\\w+), causing .+ body to burst into flames\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": "if matches[2] == snd.target then\n  snd.target_got(\"ablaze\")\nend"
+       },
+       {
+              "name": "Marrowchill/Winterheart",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^Raw phlegmatic power stabs into (\\w+)'s heart and rattles \\w+ bones\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^Winter's icy grasp closes around (\\w+)'s heart, causing them to wince\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": "if matches[2] == snd.target then\n  snd.target_got(\"winterheart\")\n  if winterheart_timer then killTimer(winterheart_timer) end\n  winterheart_timer = tempTimer(30, [[snd.target_cured(\"winterheart\")]])\nend"
+       },
+       {
+              "name": "Marrowchill/winterheart full mana drain",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^Profane ice enfolds (\\w+) in its insidious embrace, encasing \\w+ in black frost\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": "if matches[2] == snd.target then\n  snd.target_got(\"cold\")\n  snd.target_got(\"cold\")\n  snd.target_got(\"cold\")\n  snd.target_got(\"writhe_ice\")\nend"
+       },
+       {
+              "name": "Ashen feet proc",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^Flames burst from under (\\w+)'s feet and consume .+ legs in a horrific blaze.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Ashenfeet cured",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^The ashen curse placed upon (\\w+) lifts\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Aeroblast prone",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^The howling winds crash into either side of (\\w+), flipping .+ over and smashing .+ against the ground\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^A nauseating jolt runs through (\\w+), causing .+ to smash against the ground\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Firewhirl shlorp",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^The flames surrounding (\\w+) get sucked into a raging whirl of fire as it spins past \\w+\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       }
+]

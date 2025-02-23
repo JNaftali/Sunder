@@ -1,0 +1,1 @@
+snd.balance.inspire = true

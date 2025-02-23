@@ -1,0 +1,16 @@
+[
+       {
+              "name": "newbie damage",
+              "isActive": "yes",
+              "regex": "^newb$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "vet damage",
+              "isActive": "yes",
+              "regex": "^dmg$",
+              "script": "",
+              "isFolder": "no"
+       }
+]

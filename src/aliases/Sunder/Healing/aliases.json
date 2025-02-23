@@ -1,0 +1,22 @@
+[
+       {
+              "name": "defense toggle",
+              "isActive": "yes",
+              "regex": "^kd (.*)$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "defense options",
+              "isActive": "yes",
+              "regex": "^(ldd (.*)|defup)$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "Toggles",
+              "isActive": "yes",
+              "script": "",
+              "isFolder": "yes"
+       }
+]

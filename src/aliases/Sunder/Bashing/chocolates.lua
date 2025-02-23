@@ -1,0 +1,1 @@
+snd.send("eat mint"..snd.sep.."eat hazelnut"..snd.sep.."eat caramel"..snd.sep.."eat strawberry")

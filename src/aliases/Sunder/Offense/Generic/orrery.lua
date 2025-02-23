@@ -1,0 +1,1 @@
+snd.send("infuse orrery with last.globe")

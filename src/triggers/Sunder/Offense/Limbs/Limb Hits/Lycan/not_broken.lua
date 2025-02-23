@@ -1,0 +1,1 @@
+snd.limb_status[matches[2]] = "healed"

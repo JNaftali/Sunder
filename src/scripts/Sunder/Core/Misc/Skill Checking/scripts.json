@@ -1,0 +1,26 @@
+[
+       {
+              "name": "parse_skillsets",
+              "isActive": "yes",
+              "eventHandlerList": [
+                     "gmcp.Char.Skills.Groups"
+              ],
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "populate_skills",
+              "isActive": "yes",
+              "eventHandlerList": [
+                     "gmcp.Char.Skills.List"
+              ],
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "has_skill",
+              "isActive": "yes",
+              "script": "",
+              "isFolder": "no"
+       }
+]

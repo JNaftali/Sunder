@@ -1,0 +1,690 @@
+[
+       {
+              "name": "Scorch / Torment",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^\\w+ uses? Purification Scorch on (\\w+)\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^\\w+ uses? Ravaging Torment on (\\w+)\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": "if matches[2] == snd.target then\n\tif not snd.checkAff(\"ablaze\") then\n    snd.target_got(\"ablaze\") \n    snd.last_aff = \"ablaze\" \n  end\n  if snd.checkAff(\"ablaze\") then\n    snd.flamestack = snd.flamestack + 1\n  end\nend\nif (snd.class == \"Zealot\" or snd.class == \"Ravager\") and matches[2] == snd.target and snd.flamestack \u003e 0 then\n  cecho(\"\\n\"..snd.target..\" Now has \u003clight_goldenrod\u003e\"..snd.flamestack..\"\u003cdodger_blue\u003e stacks of intensity\")\nend",
+              "children": [
+                     {
+                            "name": "Scorch fails",
+                            "isActive": "yes",
+                            "isFolder": "no",
+                            "multiline": "no",
+                            "multilineDelta": "0",
+                            "matchall": "no",
+                            "filter": "no",
+                            "fireLength": "0",
+                            "highlight": "no",
+                            "highlightFG": "#ff0000",
+                            "highlightBG": "#ffff00",
+                            "patterns": [
+                                   {
+                                          "pattern": "^(\\w+)'s shield of flame repels the fiery attack.$",
+                                          "type": "regex"
+                                   },
+                                   {
+                                          "pattern": "^(\\w+)'s tectonic pressure smothers the flames.$",
+                                          "type": "regex"
+                                   }
+                            ],
+                            "script": ""
+                     }
+              ]
+       },
+       {
+              "name": "3P Ignites",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^Flames leap from .+ and ignite (\\w+)\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^Flames spew from a firelord, engulfing (\\w+) and consuming \\w+ flesh.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Predation / Wrath Watching",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^You see (\\w+) shift \\w+ parry to \\w+ (.+)\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": "if matches[2] == snd.target then\n snd.parried_limb = matches[3]\nend"
+       },
+       {
+              "name": "No Flames",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^There are no flames around (\\w+)\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Fire Level 1",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "Flames leap around (\\w+), charring \\w+ flesh.",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Fire Level 2",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^Hot flames leap around (\\w+), charring \\w+ flesh.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Fire Level 3",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^White-hot flames leap around (\\w+), charring \\w+ flesh.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Fire Level 4",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^Deadly flames leap around (\\w+), charring \\w+ flesh.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Branding / Infernal Seal",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^\\w+ uses? Purification Infernal on (\\w+).$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^(\\w+) is already suffering under an Infernal Seal.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^\\w+ uses? Ravaging Branding on (\\w+).$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^(\\w+) is already suffering under an Infernal Seal.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": "if matches[2] == snd.target then\n  snd.target_got(\"infernal_seal\")\n  tempTimer(125, [[snd.target_cured(\"infernal_seal\")]])\nend \nif (snd.class == \"Zealot\" or snd.class == \"Ravager\") and matches[2] == snd.target and snd.flamestack \u003e 0 then\n  cecho(\"\\n\"..snd.target..\" Now has \u003clight_goldenrod\u003e\"..snd.flamestack..\"\u003cdodger_blue\u003e stacks of intensity\")\nend",
+              "children": [
+                     {
+                            "name": "Seal Fails",
+                            "isActive": "yes",
+                            "isFolder": "no",
+                            "multiline": "no",
+                            "multilineDelta": "0",
+                            "matchall": "no",
+                            "filter": "no",
+                            "fireLength": "0",
+                            "highlight": "no",
+                            "highlightFG": "#ff0000",
+                            "highlightBG": "#ffff00",
+                            "patterns": [
+                                   {
+                                          "pattern": "^(\\w+)'s shield of flame repels the fiery attack.$",
+                                          "type": "regex"
+                                   },
+                                   {
+                                          "pattern": "^(\\w+)'s tectonic pressure smothers the flames.$",
+                                          "type": "regex"
+                                   }
+                            ],
+                            "script": ""
+                     }
+              ]
+       },
+       {
+              "name": "Welt cooldown tracking",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "A throbbing welt forms on (\\w+)'s (.+).",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "A painful contusion forms on (\\w+)'s (.+).",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Swagger/Wrath Counter",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^Your sapped_strength affliction now has (\\d+) stacks?\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": "snd.swagger = tonumber(matches[2])\nif snd.class == \"Zealot\" or snd.class == \"Ravager\" then\n  cecho(\"\u003cred\u003e\\nSwagger Total: \u003cwhite\u003e\"..snd.swagger)\nend\n"
+       },
+       {
+              "name": "Welt Proc",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^(\\w+) winces as \\w+ (.+) throbs from duress.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Hellfire / Pyromania Prone",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^The force of the heated air unbalances (\\w+) and \\w+ falls.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^The oppressive heat of rufescent hellflames causes (\\w+) to stumble and fall.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": "if matches[2] == snd.target then\n  snd.target_got(\"fallen\")\n  if not snd.checksomeAffs({\"right_leg_crippled\",\"left_leg_crippled\"}, 2) then\n    snd.target_got(\"right_leg_crippled\")\n    snd.target_got(\"left_leg_crippled\")\n  end    \nend  \nif (snd.class == \"Zealot\" or snd.class == \"Ravager\") and matches[2] == snd.target and snd.flamestack \u003e 0 then\n  cecho(\"\\n\"..snd.target..\" Now has \u003clight_goldenrod\u003e\"..snd.flamestack..\"\u003cdodger_blue\u003e stacks of intensity\")\nend"
+       },
+       {
+              "name": "Extinguish / Immolation Successful",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^\\w+ uses? Purification Immolation on (\\w+).$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^\\w+ uses? Ravaging Extinguish on (\\w+).$",
+                            "type": "regex"
+                     }
+              ],
+              "script": "if matches[2] == snd.target then\n  if snd.checkAff(\"ablaze\") then\n    snd.target_cured(\"ablaze\")\n    snd.flamestack = 0\n  end\nend \nif (snd.class == \"Zealot\" or snd.class == \"Ravager\") and matches[2] == snd.target and snd.flamestack \u003e 0 then\n  cecho(\"\\n\"..snd.target..\" Now has \u003clight_goldenrod\u003e\"..snd.flamestack..\"\u003cdodger_blue\u003e stacks of intensity\")\nend"
+       },
+       {
+              "name": "Extinguish / Immolation Failure",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^\\w+ uses? Purification Immolation \\(failure\\) on (\\w+).$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^\\w+ uses? Ravaging Extinguish \\(failure\\) on (\\w+).$",
+                            "type": "regex"
+                     }
+              ],
+              "script": "if matches[2] == snd.target then\n  if snd.checkAff(\"ablaze\")  then\n    snd.flamestack = snd.flamestack - 1\n  end\nend \nif (snd.class == \"Zealot\" or snd.class == \"Ravager\") and matches[2] == snd.target and snd.flamestack \u003e 0 then\n  cecho(\"\\n\"..snd.target..\" Now has \u003clight_goldenrod\u003e\"..snd.flamestack..\"\u003cdodger_blue\u003e stacks of intensity\")\nend"
+       },
+       {
+              "name": "Whipburst / Tenderise",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^(\\w+) uses? Zeal Whipburst \\(flame\\) on (\\w+).$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^(\\w+) uses? Brutality Tenderise \\(flame\\) on (\\w+).$",
+                            "type": "regex"
+                     }
+              ],
+              "script": "if matches[3] == snd.target then\n  if snd.checkAff(\"ablaze\") then\n    snd.flamestack = snd.flamestack + 1\n  end\nend \nif (snd.class == \"Zealot\" or snd.class == \"Ravager\") and matches[2] == snd.target and snd.flamestack \u003e 0 then\n  cecho(\"\\n\"..snd.target..\" Now has \u003clight_goldenrod\u003e\"..snd.flamestack..\"\u003cdodger_blue\u003e stacks of intensity\")\nend",
+              "children": [
+                     {
+                            "name": "Whipburst fails",
+                            "isActive": "yes",
+                            "isFolder": "no",
+                            "multiline": "no",
+                            "multilineDelta": "0",
+                            "matchall": "no",
+                            "filter": "no",
+                            "fireLength": "0",
+                            "highlight": "no",
+                            "highlightFG": "#ff0000",
+                            "highlightBG": "#ffff00",
+                            "patterns": [
+                                   {
+                                          "pattern": "^(\\w+)'s shield of flame repels the fiery attack.$",
+                                          "type": "regex"
+                                   },
+                                   {
+                                          "pattern": "^(\\w+)'s tectonic pressure smothers the flames.$",
+                                          "type": "regex"
+                                   }
+                            ],
+                            "script": ""
+                     }
+              ]
+       },
+       {
+              "name": "Ablaze Count tracking",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^A hellcat shreds (\\w+) with blazing claws, heat lashing forth to scourge .+.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^A tormented, subjugated soul shrieks in anguish, shambling forward to assail (\\w+) with a flurry of fiery strikes\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^The chaos storm belches fire at (\\w+), burning \\w+ badly.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Ravage / Firefist Proc",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^Your burning fist catches (\\w+) alight in a pale, triumphant blaze.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^Perdition's flames ravage (\\w+) as your blow connects, setting \\w+ ablaze\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^Perdition's flames ravage (\\w+) as \\w+'s blow connects, setting \\w+ ablaze\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": "if matches[2] == snd.target then\n  if not snd.checkAff(\"ablaze\") then\n    snd.target_got(\"ablaze\") \n    snd.last_aff = \"ablaze\" \n  end\nend \nif (snd.class == \"Zealot\" or snd.class == \"Ravager\") and matches[2] == snd.target and snd.flamestack \u003e 0 then\n  cecho(\"\\n\"..snd.target..\" Now has \u003clight_goldenrod\u003e\"..snd.flamestack..\"\u003cdodger_blue\u003e stacks of intensity\")\nend",
+              "children": [
+                     {
+                            "name": "Firefist proc fails",
+                            "isActive": "yes",
+                            "isFolder": "no",
+                            "multiline": "no",
+                            "multilineDelta": "0",
+                            "matchall": "no",
+                            "filter": "no",
+                            "fireLength": "0",
+                            "highlight": "no",
+                            "highlightFG": "#ff0000",
+                            "highlightBG": "#ffff00",
+                            "patterns": [
+                                   {
+                                          "pattern": "^(\\w+)'s shield of flame repels the fiery attack.$",
+                                          "type": "regex"
+                                   },
+                                   {
+                                          "pattern": "^(\\w+)'s tectonic pressure smothers the flames.$",
+                                          "type": "regex"
+                                   }
+                            ],
+                            "script": ""
+                     }
+              ]
+       },
+       {
+              "name": "Hellfire / Pyromania fire damage",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^The ground vents open, and a hellish torrent of heat and ash scourge (\\w+).$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^Gouts of incandescent hellfire explode from the ground, torturous flames searing (\\w+)'s flesh\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": "if matches[2] == snd.target then\n    if snd.checkAff(\"ablaze\") then  \n      snd.flamestack = snd.flamestack + 1\n    end\nend \nif (snd.class == \"Zealot\" or snd.class == \"Ravager\") and matches[2] == snd.target and snd.flamestack \u003e 0 then\n  cecho(\"\\n\"..snd.target..\" Now has \u003clight_goldenrod\u003e\"..snd.flamestack..\"\u003cdodger_blue\u003e stacks of intensity\")\nend"
+       },
+       {
+              "name": "Someone is watching you",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "You feel an unseen gaze momentarily upon you, vanishing as quickly as it came.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Hellfire / Pyromania Used",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "You use Purification Pyromania.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "You have already enacted pyromania.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "You use Ravaging Hellfire.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "You have already called on harrowing hellfire.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": "snd.pyromania = true"
+       },
+       {
+              "name": "Hellfire / Pyromania Back",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "You feel the heat in the ground dissipate.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "The harrowing hellfire finally disperses, and the surrounds begin to cool.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": "snd.pyromania = false"
+       },
+       {
+              "name": "Can't Blitz / Rampage",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "There is no one here you can see.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": "snd.blitz = false"
+       },
+       {
+              "name": "Self Rebuke / Oppose Limb Tracking",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^You use Zeal Rebuke (.*).$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^You will ruthlessly oppose attacks on your (.*).$",
+                            "type": "regex"
+                     }
+              ],
+              "script": "if matches[2] == \"left leg\" then\n  snd.rebuke_limb = \"left leg\"\nelseif matches[2] == \"right leg\" then\n  snd.rebuke_limb = \"right leg\"\nelseif matches[2] == \"right arm\" then\n  snd.rebuke_limb = \"right arm\"\nelseif matches[2] == \"left arm\" then\n  snd.rebuke_limb = \"left arm\"\nend"
+       },
+       {
+              "name": "Bustup Fail",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "yes",
+              "multilineDelta": "3",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^You seize (\\w+)'s (.+) in your powerful hands, and twist it cruelly.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^You wrench with all your strength, but the bone is already busted up.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       }
+]

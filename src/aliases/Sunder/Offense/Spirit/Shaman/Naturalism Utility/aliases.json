@@ -1,0 +1,51 @@
+[
+       {
+              "name": "Surge",
+              "isActive": "yes",
+              "regex": "^ns (.*)$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "Canopy",
+              "isActive": "yes",
+              "regex": "^can$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "Screen",
+              "isActive": "yes",
+              "regex": "^scr$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "Flow",
+              "isActive": "no",
+              "regex": "^fl(.*)$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "Thorncoat",
+              "isActive": "yes",
+              "regex": "^tco(.*)$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "Displacement",
+              "isActive": "yes",
+              "regex": "^disp(.*)$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "Pull",
+              "isActive": "yes",
+              "regex": "^np(.*)$",
+              "script": "",
+              "isFolder": "no"
+       }
+]

@@ -1,0 +1,30 @@
+[
+       {
+              "name": "Team Afflictions",
+              "isActive": "yes",
+              "regex": "^affs$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "Team Damage",
+              "isActive": "yes",
+              "regex": "^tdmg$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "Support Audience/Allies",
+              "isActive": "yes",
+              "regex": "^supp$",
+              "script": "if snd.class == \"Bard\" then -- We're a super awesome badass bard, obv\n\nsnd.starting_attack() -- always run this first, it does some important resets\n\nfunction snd.attack_function() -- defining this function is how we tell sunder what to do\n\n    if not snd.waiting.queue then -- don't want to spam, this will prevent that\n \n -- if i'm in a rhythm combo, i can't use sword affs.\n \n if snd.rhythm then\n    snd.giving = {\n    \"perplexed\",\n    \"self_loathing\",\n    \"berserking\",\n    \"dazed\",\n    \n     }    \n\n    else\n  \n  -- My affs normally when not in a rhythm combo.\n  \n    snd.giving = {\n  \"misery\",\n  \"paresis\",\n  \"clumsiness\",\n  \"asthma\",\n  \"slickness\",\n  \"anorexia\",\n  \"perplexed\",\n  \"shyness\",\n  \"dizziness\",\n  \"weariness\",\n  \"sensitivity\",\n  \"haemophilia\",\n  \"vomiting\",\n  \"allergies\",\n  \"recklessness\",\n  --\"voyria\",\n  }\n    \n end\n  \n\t\t-- declare some important variables, you can add more here if you need\n    local canWeave = false\n    local canSing = false\n    local canPlay = false\n    local myinstrument = \"ocarina449359\" -- put your own instrument's id# here.\n    local needInstrument = false\n\t\tlocal string = \"\"\n\t\tlocal call = \"\"\n    local nextaff = \"none\"\n    local tempoaff = \"none\"\n    -- 1 affliction from snd.giving\n  for i in pairs(snd.giving) do\n    if\n      not snd.checkAff(snd.giving[i]) \n      and nextaff == \"none\"\n      and snd.giving[i] ~= snd.needle\n    then\n      nextaff = snd.giving[i]\n    end\n  end\n  \n  for i in pairs(snd.giving) do\n    if\n      not snd.checkAff(snd.giving[i]) \n      and tempoaff == \"none\"\n      and snd.giving[i] ~= snd.needle\n      and table.contains(snd.venom_affs, snd.giving[i])\n        then\n          tempoaff = snd.giving[i]\n        end\n    end  \n   \n \n -- Let's run a check for weaving. If I need to modify this in some way (i.e a support route), I will there. \n  \n  if tonumber(gmcp.Char.Vitals.dithering) \u003c 1\n  and (string.find((gmcp.Char.Vitals.wield_left), \"empty\") or  string.find((gmcp.Char.Vitals.wield_right), \"empty\")) then\n\t\t\tcanWeave = true -- Hell yeah brother\n  end     \n  \n  -- Let's run a check for singing. I don't want to sing if it's not cheap. Ymmv on this decision - I will modify it in the support route example.\n    \n  if not snd.singing then\n\t\t\tcanSing = true -- I'm an idol\n  end    \n\n\n-- Let's run a check for playing. I will really not be using it in this route,  but it's nice to write and use later.\n\n  if not snd.playing\n  and (string.find((gmcp.Char.Vitals.wield_left), myinstrument) or  string.find((gmcp.Char.Vitals.wield_right), myinstrument)) then\n\t\t\tcanPlay = true -- Jam out!!\n  end \n\n\n\n\n      \n    -- Only cowards and losers spam shield or rebounding \u003e:(\n  if canPlay\n    and hasSkill(\"Youth\", \"Songcalling\") then\n      string = \"play song of youth\"\n      \n    -- Let's still efficiently use sing in teams if we can.    \n  elseif canSing\n    and hasSkill(\"Youth\", \"Songcalling\") then\n      string = \"sing song of youth\"\n        \n    -- Dithering Block. \n    -- \n    -- Let's check for globes first. If we don't have destiny up, we need to do that here.\n    -- If we do have destiny, we can do it as part of our string later.\n    \n-- There is no dithering in this route.\n-- ... yet.\n\n\n    --- Balance Block\n    \n  elseif snd.used.shield then\n      string = \"pierce \"..snd.target  \n  elseif snd.used.rebounding then\n      string = \"pierce \"..snd.target\n          \n  elseif snd.aff_count_all() \u003e 2\n    and not snd.checkAff(\"magnanimity\") then\n      string = \"ridicule \"..snd.target\n  \n  elseif table.contains(snd.performance_affs, nextaff) then\n      string = snd.performance_attacks[nextaff]..\" \"..snd.target\n  else    \n\t\t  string = \"tempo \"..snd.target..\" \"..snd.effects[nextaff]\n\t \t  call = \"wt Afflicting \"..snd.target..\": \"..snd.effects[nextaff]\n    end\n  \n  if snd.balance.inspire\n    and hasSkill(\"Inspire\", \"Songcalling\") then\n      string = \"inspire\"..snd.sep..string\n    end\n\n\t\t-- check if we need to prepend an affliction call\n\t\tif snd.toggles.affcalling and not snd.target_gone then\n\t\t\tstring = call..snd.sep..string\n\t\tend\n\t\t-- we don't want to resend our existing attack, so check against that\n\t\tif string ~= snd.last_attack and not snd.waiting.queue then\n\t\t\t-- if we've got a new attack now, \n\t\t\tsnd.last_attack = string\n\t\t\tsnd.attack(snd.last_attack)\n\t\t\t-- manage the anti-spam check below\n\t\t\tsnd.waiting.queue = true\n\t\t\ttempTimer(snd.delay(), [[snd.waiting.queue = false]])\n\t\tend\n\tend\nend\nsnd.attack_function() -- make sure to actually send the attack once on use!\nend",
+              "isFolder": "no"
+       },
+       {
+              "name": "Salve support",
+              "isActive": "yes",
+              "regex": "^legs$",
+              "script": "",
+              "isFolder": "no"
+       }
+]

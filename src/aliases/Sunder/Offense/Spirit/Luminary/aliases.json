@@ -1,0 +1,26 @@
+[
+       {
+              "name": "Spirituality",
+              "isActive": "yes",
+              "script": "",
+              "isFolder": "yes"
+       },
+       {
+              "name": "Devotion",
+              "isActive": "yes",
+              "script": "",
+              "isFolder": "yes"
+       },
+       {
+              "name": "Affliction Offenses",
+              "isActive": "yes",
+              "script": "",
+              "isFolder": "yes"
+       },
+       {
+              "name": "Damage Offenses",
+              "isActive": "yes",
+              "script": "",
+              "isFolder": "yes"
+       }
+]

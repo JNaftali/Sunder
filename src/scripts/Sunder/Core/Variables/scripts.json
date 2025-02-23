@@ -1,0 +1,41 @@
+[
+       {
+              "name": "options",
+              "isActive": "yes",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "toggles",
+              "isActive": "yes",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "vitals",
+              "isActive": "yes",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "misc",
+              "isActive": "yes",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "landmarks",
+              "isActive": "yes",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "class_catch",
+              "isActive": "yes",
+              "eventHandlerList": [
+                     "gmcp.Char.Vitals"
+              ],
+              "script": "",
+              "isFolder": "no"
+       }
+]

@@ -1,0 +1,1 @@
+snd.used.shield = false

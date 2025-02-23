@@ -1,0 +1,448 @@
+[
+       {
+              "name": "fishing prompt",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^Line: (\\d+)\\% Fish: (\\d+)\\% Distance: (\\d+)\\%$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "fishing caught",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^With a mighty heave, you lift (.*) out of the water\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Fishing tick",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "You use Fishing (tick).",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Fishing failed",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "You use Fishing Disappointment.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Fishing stopped",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "You reel in your line and cease fishing.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Fishing Cut",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "You use Fishing Cut.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "FishNeedUpdate",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "You reel frantically against",
+                            "type": "substring"
+                     },
+                     {
+                            "pattern": "You guide the pole to one side, leading the fighting creature",
+                            "type": "substring"
+                     },
+                     {
+                            "pattern": "With a fluid flick of your wrist, you loose the fishhook",
+                            "type": "substring"
+                     },
+                     {
+                            "pattern": "Your line jerks sharply down as your hook finds a home in something.",
+                            "type": "substring"
+                     },
+                     {
+                            "pattern": "The fish tugs wearily against your line.",
+                            "type": "substring"
+                     },
+                     {
+                            "pattern": "The fish tugs madly against your line.",
+                            "type": "substring"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "FishCast",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "With a fluid flick of your wrist, you loose the fishhook",
+                            "type": "startOfLine"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Fishing Lead",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "Your line jerks sharply down as your hook finds a home in something.",
+                            "type": "substring"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Speed up fishing",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "You use Fishing Lead.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "You use Fishing Reel.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Fishing Stop",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "yes",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#000000",
+              "patterns": [
+                     {
+                            "pattern": "You sense that you will be unable to catch any of the fish that remain here.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "With no room in your bucket for .*, you are forced to cut it loose.",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Fishing Gags",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^Your line bobs idly in the water.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "You use Fishing (nibble).",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "Your line dips as something nibbles lightly at its end.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "You use Fishing Reel.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "You reel frantically against",
+                            "type": "startOfLine"
+                     },
+                     {
+                            "pattern": "You use Fishing Lead.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "You have made an especially mighty",
+                            "type": "startOfLine"
+                     },
+                     {
+                            "pattern": "Added .+ to your bucket!",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "You use Fishing Catch.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "The creature at the other end of your line gives a mighty jerk,",
+                            "type": "startOfLine"
+                     },
+                     {
+                            "pattern": "You lightly nick your taut line,",
+                            "type": "startOfLine"
+                     },
+                     {
+                            "pattern": "You use Fishing Cast.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "You're not fishing yet! Try FISHING CAST at a fishing hole to get started.",
+                            "type": "substring"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Fishing Sell",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^You give .+ to Hob\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Fishing Hit",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "You use Fishing \\(hit\\).",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Fishing Weight",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "At (.*), this falls below your heaviest catch of .+ at this hole by .*.",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "At (.*), this is the largest catch of .+ you've had at .+!",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "CaptureFishingHole",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "yes",
+              "multilineDelta": "1",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "20",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^You are standing within (.+)\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^The (.+) teem with:",
+                            "type": "regex"
+                     }
+              ],
+              "script": "",
+              "children": [
+                     {
+                            "name": "CaptureFishingHole close",
+                            "isActive": "yes",
+                            "isFolder": "no",
+                            "multiline": "no",
+                            "multilineDelta": "0",
+                            "matchall": "no",
+                            "filter": "no",
+                            "fireLength": "0",
+                            "highlight": "no",
+                            "highlightFG": "#ff0000",
+                            "highlightBG": "#ffff00",
+                            "patterns": [
+                                   {
+                                          "pattern": "",
+                                          "type": "prompt"
+                                   }
+                            ],
+                            "script": ""
+                     },
+                     {
+                            "name": "Fishing hole line",
+                            "isActive": "yes",
+                            "isFolder": "no",
+                            "multiline": "no",
+                            "multilineDelta": "0",
+                            "matchall": "no",
+                            "filter": "no",
+                            "fireLength": "0",
+                            "highlight": "no",
+                            "highlightFG": "#ff0000",
+                            "highlightBG": "#ffff00",
+                            "patterns": [
+                                   {
+                                          "pattern": "^ - \\d+ of (.+)$",
+                                          "type": "regex"
+                                   }
+                            ],
+                            "script": ""
+                     }
+              ]
+       }
+]

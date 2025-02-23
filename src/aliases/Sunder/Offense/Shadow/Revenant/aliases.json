@@ -1,0 +1,53 @@
+[
+       {
+              "name": "Revenant Group Dmg Stun (Get Vardrax Venom)",
+              "isActive": "yes",
+              "regex": "^gdmg$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "Revenant Group Dmg Stun (No Vardrax Venom)",
+              "isActive": "yes",
+              "regex": "^gimp$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "Blender Alias (Wield a 2-handed)",
+              "isActive": "yes",
+              "regex": "^arc$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "Wielding",
+              "isActive": "yes",
+              "script": "",
+              "isFolder": "yes"
+       },
+       {
+              "name": "Righteousness",
+              "isActive": "yes",
+              "script": "",
+              "isFolder": "yes"
+       },
+       {
+              "name": "Affliction Offenses",
+              "isActive": "yes",
+              "script": "",
+              "isFolder": "yes"
+       },
+       {
+              "name": "Damage Offenses",
+              "isActive": "yes",
+              "script": "",
+              "isFolder": "yes"
+       },
+       {
+              "name": "Limb Offenses",
+              "isActive": "yes",
+              "script": "",
+              "isFolder": "yes"
+       }
+]

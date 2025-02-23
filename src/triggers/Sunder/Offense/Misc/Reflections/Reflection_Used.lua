@@ -1,0 +1,1 @@
+snd.reflection_charge = snd.reflection_charge-1

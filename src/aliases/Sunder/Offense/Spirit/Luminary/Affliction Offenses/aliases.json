@@ -1,0 +1,23 @@
+[
+       {
+              "name": "mouse mode",
+              "isActive": "yes",
+              "regex": "^ms$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "Group Affs - Used to lock someone in place",
+              "isActive": "yes",
+              "regex": "^gaff$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "Limb support",
+              "isActive": "yes",
+              "regex": "^limbs$",
+              "script": "",
+              "isFolder": "no"
+       }
+]

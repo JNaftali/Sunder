@@ -1,0 +1,46 @@
+[
+       {
+              "name": "Rhythm Attack Lines",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^\\w+ neatly pierces (\\w+) with .+\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^\\w+ gashes open (\\w+) with a flick of .+\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^With a sharp jab, .+ buries .+ into (\\w+)\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^\\w+ quickly strikes (\\w+) with .+\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^\\w+ drives .+ into (\\w+) with a quick thrust\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^\\w+ lacerates (\\w+) with a swing of .+\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^\\w+ nimbly cuts into (\\w+) with .+\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       }
+]

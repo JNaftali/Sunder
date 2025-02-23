@@ -1,0 +1,248 @@
+[
+       {
+              "name": "Gate - Someone is using an ability",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "yes",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^(\\w+) uses? (\\w+)",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "return snd.illusionChecks.abilityGate()",
+                            "type": "lua"
+                     }
+              ],
+              "script": "",
+              "children": [
+                     {
+                            "name": "Basic attack",
+                            "isActive": "yes",
+                            "isFolder": "no",
+                            "multiline": "no",
+                            "multilineDelta": "0",
+                            "matchall": "no",
+                            "filter": "no",
+                            "fireLength": "0",
+                            "highlight": "no",
+                            "highlightFG": "#ff0000",
+                            "highlightBG": "#ffff00",
+                            "patterns": [
+                                   {
+                                          "pattern": "^(\\w+) uses? (\\w+) (\\w+) on (\\w+)\\.$",
+                                          "type": "regex"
+                                   }
+                            ],
+                            "script": ""
+                     },
+                     {
+                            "name": "Attack w/conditional",
+                            "isActive": "yes",
+                            "isFolder": "no",
+                            "multiline": "no",
+                            "multilineDelta": "0",
+                            "matchall": "no",
+                            "filter": "no",
+                            "fireLength": "0",
+                            "highlight": "no",
+                            "highlightFG": "#ff0000",
+                            "highlightBG": "#ffff00",
+                            "patterns": [
+                                   {
+                                          "pattern": "^(\\w+) uses? (\\w+) (\\w+)[ -](\\w+) on (\\w+)\\.$",
+                                          "type": "regex"
+                                   }
+                            ],
+                            "script": "local selves = {herself = true, himself = true, itself = true, themself = true}\nlocal target = selves[matches[6]] and matches[2] or matches[6]\n\n\nif snd.target == target and snd.all_class_attacks[matches[3]] ~= nil then\n  snd.getting_hit = target\n  if matches[4] == \"Shadowprice\" then\n    if snd.all_class_attacks[matches[3]][matches[5]] ~= nil then\n      snd.skill_being_used = matches[5]\n      snd.all_class_attacks[matches[3]][matches[5]](target, matches[4])\n    end\n   elseif matches[4] == \"Spiritpact\" then\n    if snd.all_class_attacks[matches[3]][matches[5]] ~= nil then\n      snd.skill_being_used = matches[5]\n      snd.all_class_attacks[matches[3]][matches[5]](target, matches[4])\n    end  \n  elseif snd.all_class_attacks[matches[3]][matches[4]] ~= nil then\n      snd.skill_being_used = matches[4]\n      snd.all_class_attacks[matches[3]][matches[4]](target, matches[5])\n  end\nend\n\nif matches[2] == snd.target and target == \"You\" then\n  snd.used.rebounding = false\n  snd.used.shield = false\n  snd.target_cured(\"barrier\")\n  snd.target_cured(\"dome\")\nend"
+                     },
+                     {
+                            "name": "Some attacks contain conditional in ()",
+                            "isActive": "yes",
+                            "isFolder": "no",
+                            "multiline": "no",
+                            "multilineDelta": "0",
+                            "matchall": "no",
+                            "filter": "no",
+                            "fireLength": "0",
+                            "highlight": "no",
+                            "highlightFG": "#ff0000",
+                            "highlightBG": "#ffff00",
+                            "patterns": [
+                                   {
+                                          "pattern": "^(\\w+) uses? (\\w+) (\\w+) \\((.+)\\) on (\\w+)\\.$",
+                                          "type": "regex"
+                                   }
+                            ],
+                            "script": ""
+                     },
+                     {
+                            "name": "Conditional w/shadowprice",
+                            "isActive": "yes",
+                            "isFolder": "no",
+                            "multiline": "no",
+                            "multilineDelta": "0",
+                            "matchall": "no",
+                            "filter": "no",
+                            "fireLength": "0",
+                            "highlight": "no",
+                            "highlightFG": "#ff0000",
+                            "highlightBG": "#ffff00",
+                            "patterns": [
+                                   {
+                                          "pattern": "^(\\w+) uses? (\\w+) Shadowprice (\\w+) \\((.+)\\) on (\\w+)\\.$",
+                                          "type": "regex"
+                                   },
+                                   {
+                                          "pattern": "^(\\w+) uses? (\\w+) Spiritpact (\\w+) \\((.+)\\) on (\\w+)\\.$",
+                                          "type": "regex"
+                                   }
+                            ],
+                            "script": "local selves = {herself = true, himself = true, itself = true, themself = true}\nlocal target = selves[matches[6]] and matches[2] or matches[6]\n\nif snd.target == target and snd.all_class_attacks[matches[3]] ~= nil then\n  if snd.all_class_attacks[matches[3]][matches[4]] ~= nil then\n    snd.getting_hit = target\n    snd.skill_being_used = matches[4]\n    snd.all_class_attacks[matches[3]][matches[4]](target, matches[5])\n  end\nend\n-- This might be only Hew and if so it's a pain in the ass.\n\nif matches[2] == snd.target and target == \"You\" then\n  snd.used.rebounding = false\n  snd.used.shield = false\n  snd.target_cured(\"barrier\")\n  snd.target_cured(\"dome\")\nend"
+                     },
+                     {
+                            "name": "Self skills (heals, shields, etc)",
+                            "isActive": "yes",
+                            "isFolder": "no",
+                            "multiline": "no",
+                            "multilineDelta": "0",
+                            "matchall": "no",
+                            "filter": "no",
+                            "fireLength": "0",
+                            "highlight": "no",
+                            "highlightFG": "#ff0000",
+                            "highlightBG": "#ffff00",
+                            "patterns": [
+                                   {
+                                          "pattern": "^(\\w+) uses? (\\w+) (\\w+).$",
+                                          "type": "regex"
+                                   }
+                            ],
+                            "script": ""
+                     },
+                     {
+                            "name": "Self skills (heals, shields, etc) with conditional",
+                            "isActive": "yes",
+                            "isFolder": "no",
+                            "multiline": "no",
+                            "multilineDelta": "0",
+                            "matchall": "no",
+                            "filter": "no",
+                            "fireLength": "0",
+                            "highlight": "no",
+                            "highlightFG": "#ff0000",
+                            "highlightBG": "#ffff00",
+                            "patterns": [
+                                   {
+                                          "pattern": "^(\\w+) uses? (\\w+) (\\w+) \\((.+)\\).$",
+                                          "type": "regex"
+                                   },
+                                   {
+                                          "pattern": "^(\\w+) uses? (\\w+) (\\w+) (\\w+).$",
+                                          "type": "regex"
+                                   }
+                            ],
+                            "script": ""
+                     },
+                     {
+                            "name": "Attack w/double conditional",
+                            "isActive": "yes",
+                            "isFolder": "no",
+                            "multiline": "no",
+                            "multilineDelta": "0",
+                            "matchall": "no",
+                            "filter": "no",
+                            "fireLength": "0",
+                            "highlight": "no",
+                            "highlightFG": "#ff0000",
+                            "highlightBG": "#ffff00",
+                            "patterns": [
+                                   {
+                                          "pattern": "^(\\w+) uses? (\\w+) (\\w+)[- ](\\w+) \\(?([A-Za-z ]+)\\)? on (\\w+)\\.$",
+                                          "type": "regex"
+                                   }
+                            ],
+                            "script": "local selves = {herself = true, himself = true, itself = true, themself = true}\nlocal target = selves[matches[7]] and matches[2] or matches[7]\n\nif snd.target == target and snd.all_class_attacks[matches[3]] ~= nil then\n  if snd.all_class_attacks[matches[3]][matches[4]] ~= nil then\n    snd.getting_hit = target\n    snd.skill_being_used = matches[4]\n    snd.all_class_attacks[matches[3]][matches[4]](target, matches[5], matches[6])\n  end\nend\n\nif matches[2] == snd.target and target == \"You\" then\n  snd.used.rebounding = false\n  snd.used.shield = false\n  snd.target_cured(\"barrier\")\n  snd.target_cured(\"dome\")\nend"
+                     },
+                     {
+                            "name": "got hit",
+                            "isActive": "yes",
+                            "isFolder": "no",
+                            "multiline": "no",
+                            "multilineDelta": "0",
+                            "matchall": "no",
+                            "filter": "no",
+                            "fireLength": "0",
+                            "highlight": "no",
+                            "highlightFG": "#ff0000",
+                            "highlightBG": "#ffff00",
+                            "patterns": [
+                                   {
+                                          "pattern": "^(\\w+) uses (\\w+) (\\w+).* on you\\.$",
+                                          "type": "regex"
+                                   }
+                            ],
+                            "script": ""
+                     },
+                     {
+                            "name": "Soulcage/remembrance",
+                            "isActive": "yes",
+                            "isFolder": "no",
+                            "multiline": "no",
+                            "multilineDelta": "0",
+                            "matchall": "no",
+                            "filter": "no",
+                            "fireLength": "0",
+                            "highlight": "no",
+                            "highlightFG": "#ff0000",
+                            "highlightBG": "#ffff00",
+                            "patterns": [
+                                   {
+                                          "pattern": "You use Oneiromancy Remembrance.",
+                                          "type": "exactMatch"
+                                   },
+                                   {
+                                          "pattern": "You use Necromancy Soulcage.",
+                                          "type": "exactMatch"
+                                   },
+                                   {
+                                          "pattern": "You use Spirituality Sacrifice.",
+                                          "type": "exactMatch"
+                                   },
+                                   {
+                                          "pattern": "You use Subjugation Endoskeleton.",
+                                          "type": "exactMatch"
+                                   }
+                            ],
+                            "script": "for i in pairs(snd.afflictions) do\n  snd.aff_remove(i)\nend\nsnd.hidden_afflictions = 0"
+                     }
+              ]
+       },
+       {
+              "name": "Synthesis/Animation gate.",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^(\\w+ .+) uses (Animation|Synthesis) (\\w+)(?: \\((.+)\\))? on (\\w+)\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": "snd.hitting = matches[2]\nsnd.maybe_affs = {}\ndisableTrigger(\"Sunder Dodge\")\ndisableTrigger(\"Sunder Parry\")\ndisableTrigger(\"Sunder Rebounding\")\ndisableTrigger(\"Monk Hit Tracking\")\nsnd.last_affs = {}\nsnd.last_limb_dmg = 0\nif snd.last_hit_limb and snd.last_hit_limb~=\"none\" then\n  snd.last_struck_limb = snd.last_hit_limb\n  snd.last_hit_limb = \"none\"\nend\nsnd.using_both_hands = 0\nsnd.skill_being_used = \"\"\n\nif snd.target == matches[6] and snd.all_class_attacks[matches[3]] ~= nil then\n  if snd.all_class_attacks[matches[3]][matches[4]] ~= nil then\n    snd.getting_hit = matches[6]\n    snd.skill_being_used = matches[4]\n    snd.all_class_attacks[matches[3]][matches[4]](matches[6],matches[5])\n  end\nend"
+       }
+]

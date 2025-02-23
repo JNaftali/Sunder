@@ -1,0 +1,23 @@
+[
+       {
+              "name": "Compile Pather",
+              "isActive": "yes",
+              "regex": "^path compile$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "Add Path Room",
+              "isActive": "yes",
+              "regex": "^path addroom$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "Start Pather",
+              "isActive": "yes",
+              "regex": "^path create$",
+              "script": "",
+              "isFolder": "no"
+       }
+]

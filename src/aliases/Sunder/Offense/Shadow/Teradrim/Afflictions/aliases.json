@@ -1,0 +1,9 @@
+[
+       {
+              "name": "Basic Aff",
+              "isActive": "yes",
+              "regex": "^aff$",
+              "script": "",
+              "isFolder": "no"
+       }
+]

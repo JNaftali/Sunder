@@ -1,0 +1,398 @@
+[
+       {
+              "name": "Zenith / Delirium Gone",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "Your zenith of power fades and departs your body.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "The joy of agonising delirium fades from you.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": "snd.zenith = false\nsnd.zenith_coming = false"
+       },
+       {
+              "name": "Zenith / Delirium Coming",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "You are already reaching towards your zenith.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "^Your eyes flash with light as you hone your focus, sinking into the wellspring of spirit within you.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "You use Purification Zenith.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "You use Ravaging Delirium.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "Soulfire burns in your veins, your thoughts consumed utterly by sweet, agonising delirium.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "You already strive toward a state of delirium.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": "snd.zenith_coming = true"
+       },
+       {
+              "name": "Firefist / Ravage Used",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "You use Purification Firefist.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "You use Ravaging Ravage.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "You cannot ravage an enemy again so soon.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "You cannot ignite your fists again so soon.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": "snd.def_def(\"firefist\")\nsnd.firefist = true\nsnd.firefist_cooldown = false"
+       },
+       {
+              "name": "Firefist / Ravage Down",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "The flames around your fists are extinguished as their life is spent.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "The crucious hellfire dissipates from your fists.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": "snd.firefist = false\nsnd.firefist_cooldown = false"
+       },
+       {
+              "name": "Firefist / Ravage On Cooldown",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "You may coat your fists in flames once more.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "You may ravage an enemy again; let the flames of Perdition ignite your fists.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": "snd.firefist_cooldown = true"
+       },
+       {
+              "name": "Hackles / Assail Down",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "Your hackles are not primed to strike just yet.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "Your hook trembles, yearning to assail your hated enemies.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "You cannot assail someone again so soon.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": "snd.hackles = false"
+       },
+       {
+              "name": "Hackles / Assail Up",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "Your chains rise up like hackles, ready to strike.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "Your soul quivers in your meat hook, ready to assail once more.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": "snd.hackles = true"
+       },
+       {
+              "name": "Psi Recover Down",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "You use Psionics Recover.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "Your mind has not recovered enough to do that again.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "You use Egotism Boost.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "You cannot yet undertake an ego boost.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Psi Recover Up",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "You can now recover from mental detriment once more.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "You may now endure another boost to your ego.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Wrath / Predation Used",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "You use Zeal Wrath.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "You are not quite ready to deliver your wrath.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "You use Brutality Predation.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "You use Brutality Predation (extend).",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "You use Zeal Wrath (extend).",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "You cannot call upon predation again so soon.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": "snd.wrath = false"
+       },
+       {
+              "name": "Predation / Wrath Back Up",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "You may call upon your wrath once more.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "You may call upon predation again.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": "snd.wrath = true"
+       },
+       {
+              "name": "Zenith / Delirium Ready",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "Soulfire burns in your veins, your thoughts consumed utterly by sweet, agonising delirium.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "Your fiery soul has reached its zenith of power.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "^Drawing the currents of fire and spirit through your being, your power reaches a calm, trembling zenith, ready to be unleashed in your attacks.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "You have reached your zenith!",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "Agony and ecstasy merge as a singular whole; you have achieved delirium.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": "snd.zenith = true\nsnd.zenith_coming = false"
+       },
+       {
+              "name": "Can Predation - Brutality",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "Your predatory instincts wane.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "Your predation defence has been stripped.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Blitz / Rampage Back",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "You may once more go on another rampage.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": "snd.blitz = true"
+       }
+]

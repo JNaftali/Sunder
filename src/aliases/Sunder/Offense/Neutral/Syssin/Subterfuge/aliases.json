@@ -1,0 +1,23 @@
+[
+       {
+              "name": "darkflood",
+              "isActive": "yes",
+              "regex": "^df$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "abduct",
+              "isActive": "yes",
+              "regex": "^at(?: (.*))?$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "Vortex",
+              "isActive": "yes",
+              "regex": "^vt(?: (.*))?$",
+              "script": "",
+              "isFolder": "no"
+       }
+]

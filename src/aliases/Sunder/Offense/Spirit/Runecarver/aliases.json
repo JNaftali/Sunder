@@ -1,0 +1,32 @@
+[
+       {
+              "name": "Affliction",
+              "isActive": "yes",
+              "script": "",
+              "isFolder": "yes"
+       },
+       {
+              "name": "Damage",
+              "isActive": "yes",
+              "script": "",
+              "isFolder": "yes"
+       },
+       {
+              "name": "Limb",
+              "isActive": "yes",
+              "script": "",
+              "isFolder": "yes"
+       },
+       {
+              "name": "Combination (Limb and Aff)",
+              "isActive": "yes",
+              "script": "",
+              "isFolder": "yes"
+       },
+       {
+              "name": "Aliases",
+              "isActive": "yes",
+              "script": "",
+              "isFolder": "yes"
+       }
+]

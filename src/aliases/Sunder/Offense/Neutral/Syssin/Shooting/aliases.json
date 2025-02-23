@@ -1,0 +1,30 @@
+[
+       {
+              "name": "snipe",
+              "isActive": "yes",
+              "regex": "^snp (\\w+)$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "meteor",
+              "isActive": "yes",
+              "regex": "^met(?: (.*))?$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "ghost",
+              "isActive": "yes",
+              "regex": "^gs(?: (.*))?$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "Shoot",
+              "isActive": "yes",
+              "regex": "^shoot(.*)$",
+              "script": "",
+              "isFolder": "no"
+       }
+]

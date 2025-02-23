@@ -1,0 +1,50 @@
+[
+       {
+              "name": "Stab Success",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^Pulsing ominously, the weapon floods (\\w+)'s chest with an array of inverted light.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Stab Failure",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^Stepping quickly out of the way, \\w+ dodges the attack.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "You strike out clumsily and miss your mark.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "",
+                            "type": "prompt"
+                     }
+              ],
+              "script": ""
+       }
+]

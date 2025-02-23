@@ -1,0 +1,1 @@
+snd.send("order " .. snd.current_division .. " fortify")

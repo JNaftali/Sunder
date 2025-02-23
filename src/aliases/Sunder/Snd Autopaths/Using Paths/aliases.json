@@ -1,0 +1,16 @@
+[
+       {
+              "name": "Bash areas of your choice",
+              "isActive": "yes",
+              "regex": "^bashpath (.+)$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "Single Area Path",
+              "isActive": "yes",
+              "regex": "^goarea$",
+              "script": "",
+              "isFolder": "no"
+       }
+]

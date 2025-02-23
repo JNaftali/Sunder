@@ -1,0 +1,86 @@
+[
+       {
+              "name": "Custom walk delay",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^Your progress is hindered by .+ as you slowly make your way \\w+\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^You slowly head to the \\w+, burdened by .+\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "You fight your way through the raging fires as you head",
+                            "type": "startOfLine"
+                     },
+                     {
+                            "pattern": "Your crippled limbs delay your movement.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Custom movement for Sonn",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^As you press against the bookcase, you feel it give way.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^A sharp click sounds within the walls as you pull on the lever, the noise reverberating through the surrounding corridor noisily.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^Giving a strident screech, the bookcase slides to the side to reveal a passage downward.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Downed shrine in Order logs",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "yes",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "erected a shrine at '",
+                            "type": "substring"
+                     },
+                     {
+                            "pattern": "- \\w+ erected a shrine at '(.+)'\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       }
+]

@@ -1,0 +1,16 @@
+[
+       {
+              "name": "yank",
+              "isActive": "yes",
+              "regex": "^bk(?: (.*))?$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "backstab",
+              "isActive": "yes",
+              "regex": "^bs(.*)$",
+              "script": "",
+              "isFolder": "no"
+       }
+]

@@ -1,0 +1,38 @@
+[
+       {
+              "name": "bedazzle",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "yes",
+              "multilineDelta": "4",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^You use Subterfuge Bedazzle on (\\w+)\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^You sprinkle some silvery powder over (\\w+) and grin widely as .+ looks about with a look of slight bafflement on .+ face\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^You have afflicted with (.+)\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "1",
+                            "type": "spacer"
+                     },
+                     {
+                            "pattern": "^You have afflicted with (.+)\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       }
+]

@@ -1,0 +1,66 @@
+[
+       {
+              "name": "Doublebash Hit Confirmation",
+              "isActive": "no",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^\\w+ powerfully swings? .+ down upon (\\w+)'s (.+) and pulls? back with ease, readying a second blow\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^Winding up, \\w+ brutally smashe?s? .+ into (\\w+)'s (.+)\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^\\w+ crushe?s? (\\w+)'s (.+) beneath a mighty overhead blow from .+\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^\\w+ sends? (\\w+)'s (.+) reeling with a mighty strike from .+\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^\\w+ steps? in, gruesomely smashing up (\\w+)'s (.+) with .+\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^\\w+ mutilates? (\\w+)'s (.+) with a vengeful blow from .+\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^Lifting up .+, \\w+ slams? it into (\\w+)'s (.+) with numbing force\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Wither Limb Messages",
+              "isActive": "no",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^With a gesture towards (\\w+)'s (.+), \\w+ exerts? \\w+ power over \\w+ captured souls, forcing them to crush it\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       }
+]

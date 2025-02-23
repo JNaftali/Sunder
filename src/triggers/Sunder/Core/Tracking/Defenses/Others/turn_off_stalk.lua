@@ -1,0 +1,1 @@
+snd.defenses.def_stalking.needit = false

@@ -1,0 +1,9 @@
+[
+       {
+              "name": "Combo from Enebish",
+              "isActive": "yes",
+              "regex": "^combo$",
+              "script": "",
+              "isFolder": "no"
+       }
+]

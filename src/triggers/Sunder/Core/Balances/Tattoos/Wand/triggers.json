@@ -1,0 +1,46 @@
+[
+       {
+              "name": "Wand used",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "As you touch the wand tattoo, you feel your mind refreshed and rejuvenated.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "You touch the wand tattoo, but nothing happens.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Wand recovered",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "Your wand tattoo tingles slightly.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": ""
+       }
+]

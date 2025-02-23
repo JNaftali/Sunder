@@ -1,0 +1,106 @@
+[
+       {
+              "name": "Direblow Hit Confirmation",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "yes",
+              "multilineDelta": "2",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "10",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "(^With .* boundless strength, .+ drives? .+ rigid hand through (\\w+).$|^Weakened, .+ thrusts? .+ rigid hand into (\\w+) with low momentum.)",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "(hand parts flesh and delivers a deep, gory wound.$|sinks partly in as blood oozes around it\\.$)",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Rampage / Blitz Affs",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^ (\\w+)\\'s (.+) twists and breaks under the blow.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^(\\w+)'s ribs crack unsettlingly under the blow\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^(\\w+)'s throat crumples under the blow\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^(\\w+) gasps in pain, \\w+ (.+) shattering under the assault\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^(\\w+) doubles over as \\w+ ribs crack under the remorseless strike\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^(\\w+)'s throat seizes up from the force of the blow\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": "if matches[2] == snd.target then\n  if matches[1]:find(\"ribs\") then\n    snd.target_got(\"cracked_ribs\")\n  elseif matches[1]:find(\"throat\") then\n    snd.target_got(\"crippled_throat\")\n  else\n   snd.target_got(matches[3]..\"_crippled\")\n  end\nend\n"
+       },
+       {
+              "name": "Zealot farsee",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^The hazy scenery of (.+) fills the space briefly before fading away\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Zealot indifference",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^(\\w+)'s eyelids droop as .+ expression turns lax.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       }
+]

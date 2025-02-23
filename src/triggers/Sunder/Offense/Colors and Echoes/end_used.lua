@@ -1,0 +1,1 @@
+setTriggerStayOpen("1p combat messages", 0)

@@ -1,0 +1,23 @@
+[
+       {
+              "name": "Main index",
+              "isActive": "yes",
+              "regex": "^(S|s)under (H|h)elp$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "Ylem helpfile",
+              "isActive": "yes",
+              "regex": "^(S|s)under (H|h)elp (Y|y)lem$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "Toggles help",
+              "isActive": "yes",
+              "regex": "^(S|s)under (H|h)elp (T|t)oggles$",
+              "script": "",
+              "isFolder": "no"
+       }
+]

@@ -1,0 +1,23 @@
+[
+       {
+              "name": "damage",
+              "isActive": "yes",
+              "regex": "^dmg$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "Mes feast",
+              "isActive": "yes",
+              "regex": "^feast$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "Praenomen Group Dmg",
+              "isActive": "yes",
+              "regex": "^gdmg$",
+              "script": "",
+              "isFolder": "no"
+       }
+]

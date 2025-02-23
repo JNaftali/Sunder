@@ -1,0 +1,1 @@
+snd.send("wt I'm at ("..gmcp.Room.Info.num..") '"..gmcp.Room.Info.name.."' in "..gmcp.Room.Info.area)

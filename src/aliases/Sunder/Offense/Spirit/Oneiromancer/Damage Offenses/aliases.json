@@ -1,0 +1,16 @@
+[
+       {
+              "name": "damage",
+              "isActive": "yes",
+              "regex": "^dmg$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "Deform Damage",
+              "isActive": "yes",
+              "regex": "^dmg2$",
+              "script": "",
+              "isFolder": "no"
+       }
+]

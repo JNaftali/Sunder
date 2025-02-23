@@ -1,0 +1,51 @@
+[
+       {
+              "name": "Set Division",
+              "isActive": "yes",
+              "regex": "^war division (\\w+)$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "March Troops",
+              "isActive": "yes",
+              "regex": "^mt (\\w+)$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "Set March Destination",
+              "isActive": "yes",
+              "regex": "^war destination (.+)$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "Fortify",
+              "isActive": "yes",
+              "regex": "^war fort$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "Attack Division",
+              "isActive": "yes",
+              "regex": "^war kill (\\w+)$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "Order Division",
+              "isActive": "yes",
+              "regex": "^war order (.*)$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "Sunder Help War",
+              "isActive": "yes",
+              "regex": "^(S|s)under (H|h)elp (W|w)ar$",
+              "script": "",
+              "isFolder": "no"
+       }
+]

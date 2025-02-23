@@ -1,0 +1,1 @@
+snd.found_globe = 0

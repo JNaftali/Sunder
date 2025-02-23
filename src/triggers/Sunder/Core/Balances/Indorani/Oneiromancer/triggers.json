@@ -1,0 +1,218 @@
+[
+       {
+              "name": "Fool/Fire - Used",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "You press the Fool tarot to your forehead and a sensation of warmth ripples through your body.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "The Fool will have no effect for now.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "You quickly unfurl a crisply folded piece of paper evocative of fire, letting blazing orange salvo cascade over you in a cleansing manner.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": "snd.balance.fool = false"
+       },
+       {
+              "name": "Fool/Fire - Available",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "You may use the Fool tarot once more.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "You may once more invoke cleansing fire.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": "snd.balance.fool = true"
+       },
+       {
+              "name": "Aeon/Hourglass - Not ready",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "You cannot deliver the curse of Aeon again so soon.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "You cannot stretch the flow of time via an hourglass again so soon.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": "snd.balance.aeon = false\n\n"
+       },
+       {
+              "name": "Hourglass used",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "yes",
+              "multilineDelta": "1",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^You unfurl an hourglass toward (\\w+) amidst a shimmer of sleek silver\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^The sleek silver shades distort around (\\w+) to slow (her|his|their) innate sense of time\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Aeon used",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "yes",
+              "multilineDelta": "1",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^Standing the Aeon on your open palm, you blow it lightly at \\w+\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^You watch as it seems to slow \\w+'s? movement through the time stream\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Person aeoned.",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "^The sleek silver shades distort around (\\w+) to slow \\w+ innate sense of time\\.$",
+                            "type": "regex"
+                     },
+                     {
+                            "pattern": "^You watch as it seems to slow (\\w+)'s? movement through the time stream\\.$",
+                            "type": "regex"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Aeon/Hourglass - Ready",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "You may induce the curse of Aeon once more.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "You may once more stretch the flow of time via a folded hourglass.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": "snd.balance.aeon = true"
+       },
+       {
+              "name": "Soulcage Ready",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "You feel that your soul is strong enough to be protected once more.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": ""
+       },
+       {
+              "name": "Soulcage Not Ready",
+              "isActive": "yes",
+              "isFolder": "no",
+              "multiline": "no",
+              "multilineDelta": "0",
+              "matchall": "no",
+              "filter": "no",
+              "fireLength": "0",
+              "highlight": "no",
+              "highlightFG": "#ff0000",
+              "highlightBG": "#ffff00",
+              "patterns": [
+                     {
+                            "pattern": "Your soul has not recovered sufficiently for you to protect it from death.",
+                            "type": "exactMatch"
+                     },
+                     {
+                            "pattern": "You use Necromancy Soulcage.",
+                            "type": "exactMatch"
+                     }
+              ],
+              "script": ""
+       }
+]

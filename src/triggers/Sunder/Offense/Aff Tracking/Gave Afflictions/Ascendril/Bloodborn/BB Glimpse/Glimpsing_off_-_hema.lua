@@ -1,0 +1,1 @@
+snd.glimpsing = false

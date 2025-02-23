@@ -1,0 +1,30 @@
+[
+       {
+              "name": "venoms only",
+              "isActive": "yes",
+              "regex": "^vn$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "affs",
+              "isActive": "yes",
+              "regex": "^aff$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "legs",
+              "isActive": "yes",
+              "regex": "^legs$",
+              "script": "",
+              "isFolder": "no"
+       },
+       {
+              "name": "magic",
+              "isActive": "yes",
+              "regex": "^mg$",
+              "script": "",
+              "isFolder": "no"
+       }
+]

@@ -1,0 +1,14 @@
+[
+       {
+              "name": "Affs",
+              "isActive": "yes",
+              "script": "",
+              "isFolder": "yes"
+       },
+       {
+              "name": "Damage",
+              "isActive": "yes",
+              "script": "",
+              "isFolder": "yes"
+       }
+]
