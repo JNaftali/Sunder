@@ -15,6 +15,10 @@
       {
         "pattern": "You use Manipulation Dome.",
         "type": "exactMatch"
+      },
+      {
+        "pattern": "You cannot bring forth ylem energy to protect you again so soon.",
+        "type": "exactMatch"
       }
     ],
     "script": ""
