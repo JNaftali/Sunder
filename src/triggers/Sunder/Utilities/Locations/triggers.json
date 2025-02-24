@@ -1,18 +1,21 @@
 [
   {
     "name": "cwho info",
+    "multiline": "yes",
+    "multilineDelta": "2",
+    "fireLength": "100",
     "patterns": [
       {
-        "pattern": "^The following citizens of w+ are in the realm:$",
+        "pattern": "^The following citizens of \\w+ are in the realm:$",
         "type": "regex"
       },
       {
-        "pattern": "1",
-        "type": "spacer"
+        "pattern": "^Citizen\\s+Location\\s+Class\\s+\\[CT\\?\\]$",
+        "type": "regex"
       },
       {
-        "pattern": "Citizen\\s+Location\\s+Class\\s+[CT?]",
-        "type": "regex"
+        "pattern": "--------------------------------------------------------------------------------",
+        "type": "exactMatch"
       }
     ],
     "children": [
