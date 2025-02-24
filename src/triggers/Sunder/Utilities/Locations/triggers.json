@@ -43,5 +43,14 @@
         "type": "regex"
       }
     ]
+  },
+  {
+    "name": "Pinpoint Locate",
+    "patterns": [
+      {
+        "pattern": "^Indistinct images of (.*) flicker in and out of view before fading fully.$",
+        "type": "regex"
+      }
+    ]
   }
 ]
