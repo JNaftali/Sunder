@@ -1,12 +1,14 @@
-name: Build Docs
+name: Build and Deploy Docs
 
 on:
   push:
     branches:
       - main
-  pull_request:
-    branches:
-      - main
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
   build-docs:
@@ -21,8 +23,24 @@ jobs:
       - name: Build Documentation
         run: nix build .#docs --out-link result-docs
 
-      - name: Upload Documentation Artifact
-        uses: actions/upload-artifact@v4
+      - name: Prepare Docs for Deployment
+        run: |
+          mkdir -p public
+          cp -r result-docs/* public/
+
+      - name: Upload Pages Artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          name: documentation
-          path: result-docs
+          path: public
+
+  deploy:
+    needs: build-docs
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
