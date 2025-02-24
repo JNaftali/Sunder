@@ -1,3 +1,9 @@
+--- @submodule core
+
+--- Queue handling.
+-- This handles any queued actions we're doing including:
+-- lighting pipes, putting up defences, bashing, fitness, dome, diagnose and more
+-- @function snd.do_queue
 function snd.do_queue()
   snd.queue = {}
   if snd.toggles.active then
@@ -95,4 +101,3 @@ function snd.do_queue()
     end
   end
 end
-
