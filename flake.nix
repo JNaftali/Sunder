@@ -23,24 +23,46 @@
             lua51Packages.ldoc
           ];
         };
-        packages.default = pkgs.stdenv.mkDerivation {
-          pname = "Sunder";
-          version = builtins.substring 0 8 self.rev or "dirty";
+        packages = {
+          default = pkgs.stdenv.mkDerivation {
+            pname = "Sunder";
+            version = builtins.substring 0 8 self.rev or "dirty";
 
-          src = pkgs.lib.cleanSource ./.;
+            src = pkgs.lib.cleanSource ./.;
 
-          nativeBuildInputs = with pkgs; [
-            temurin-jre-bin-17
-          ];
+            nativeBuildInputs = with pkgs; [
+              temurin-jre-bin-17
+            ];
 
-          buildPhase = ''
-            java -jar muddle.jar
-          '';
+            buildPhase = ''
+              java -jar muddle.jar
+            '';
 
-          installPhase = ''
-            mkdir -p $out
-            cp -r build/* $out/
-          '';
+            installPhase = ''
+              mkdir -p $out
+              cp -r build/* $out/
+            '';
+          };
+          docs = pkgs.stdenv.mkDerivation {
+            pname = "Sunder Docs";
+            version = builtins.substring 0 8 self.rev or "dirty";
+
+            src = pkgs.lib.cleanSource ./.;
+
+            nativeBuildInputs = with pkgs; [
+              lua51Packages.lua
+              lua51Packages.ldoc
+            ];
+
+            buildPhase = ''
+              ldoc src/
+            '';
+
+            installPhase = ''
+              mkdir -p $out
+              cp -r doc/* $out/
+            '';
+          };
         };
       };
     };
