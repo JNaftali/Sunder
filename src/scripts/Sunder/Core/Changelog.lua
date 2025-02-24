@@ -1,3 +1,11 @@
+--6.000
+--[3615] Jawcrack / Slug now gives 'blurry vision' instead of 'stuttering'.
+--[3615] Edgekick / Windpipe now additionally gives the 'stuttering' affliction.
+--Dome added to snd.balance
+--Dome check now respects snd.balance.dome
+--Added vnums to cwho info
+--Added vnums to Ravager pinpoint
+--Added vnums to Scenttrails
 --5.533
 --Fixed Wayfarer Assault adding/removing the extra damage on the first hit.
 --Fixed the extra damage from assault adding to ranged attacks
@@ -39,7 +47,7 @@
 --Updated Bard aliases with a bit of extra calling and refined overall.
 --Fixed inhibit/wraith triggers not removing shield.
 
---5.5 BRADS 
+--5.5 BRADS
 -- Added Bard skill tracking to 'all attacks'.
 -- Added Bravado and Inspire to snd.cooldowns.
 -- Added defense tracking (and all triggers) to scripts.
@@ -120,7 +128,7 @@
 --5.23
 -- Updated API handling to handle changes due to changelog 1918
 -- Added the alias 'update <who> (guild/city) <value>'
--- Added mining enemies in for use with bashing commands 
+-- Added mining enemies in for use with bashing commands
 -- Added a "walkarea" command to walk around the current area without hitting stuff
 -- Fixed some vampire deffing issues
 -- Updated snd ndb handling on honors to not remove info it already has, though it may be outdated since it isn't in API
@@ -147,7 +155,7 @@
 -- Added a cooldown/balance tracker for crystal tattoo
 
 
---5.2 
+--5.2
 -- Updated some toggles that weren't updating the gui
 -- Updated handle_hounds to include blurry vision, separate frozen levels and ability to give/not give houndmark/tacticianmark
 -- Added a line for paresis from warden version of reckless
@@ -181,7 +189,7 @@
 --Went through Indorani deffing to try and make it not so spammy. I was dumb, don't ask.
 --Added an alias to move to next area while using custom bashing routes if you want to skip the current one for whatever reason.
 --Fixed sand swelter trying to defup without having sand down
---Fixed absorb ylem queue for those who don't have the gauntlet w/insta absorb lmao 400 credits well spent amirite 
+--Fixed absorb ylem queue for those who don't have the gauntlet w/insta absorb lmao 400 credits well spent amirite
 --Removed oberglot from Djeir catacombs targets as you can't kill it or something (Rhine)
 --Fixed the bio steroid trigger to remove qeb, needs to be used while off balance
 --Fixed matching cases for battleaxe (same as previous weapon types in 5.07, just missed) (Sryaen)
@@ -223,7 +231,7 @@
 --Fixed poultice trigger having commented out the cure method for salves, oops
 --Added trigger for frost hits from warding anoint
 --Fixed Revenant maingauche trying to def improperly based on a typo
---There was a change in syntax from the original version of chirography skills compared to what was released. 
+--There was a change in syntax from the original version of chirography skills compared to what was released.
 --     As a result, some offense aliases won't scribe releases (vorpal/crescent etc) correctly and has been fixed.
 -- Fixed an issue with Warding Terrorize not tracking appropriately.
 -- Fixed Sunder not checking certain skills for whether or not you had access, had commented it out for testing purposes.
@@ -282,7 +290,7 @@
 --Will automatically check Raceskills to use those if you have them
 --Will automatically check Tattoos to use those if you have them
 --Will not try to parry unless you are able to with the skills associated
---Archivist basic group aff route updated and fleshed out 
+--Archivist basic group aff route updated and fleshed out
 --Archivist madness moved to the snd.balance frame
 --Fixed Sentinel triggers not getting the dodge/parry to remove affs on venoms appropriately
 --Won't try to grab staked corpsed
@@ -352,9 +360,9 @@
 --4.18
 --Added regenerate tracking to restoration salve
 --Removed extra ironskin defense line trigger
---Fixed ironskin defense command 
+--Fixed ironskin defense command
 --Fixed spheres not working properly for Archivist
---Added an alias to check score to fix snd.class not properly getting set 
+--Added an alias to check score to fix snd.class not properly getting set
 --Updated the Vortex path to include the area with treants
 --Added the def line for zealot resurgence
 --Added Zealot indifference via Psionics Dull
@@ -417,7 +425,7 @@
 --Just debugging. Nothing major changed.
 
 --4.08
---Alright, I swear to whatever god may listen to text rants, if the calling hasn't been fixed because GMCP is a POS at times, I'm going to 
+--Alright, I swear to whatever god may listen to text rants, if the calling hasn't been fixed because GMCP is a POS at times, I'm going to
 --Fixed raloth limb breaking trigger to correctly capture breaks
 --Updated Ascendril offenses
 
@@ -478,7 +486,7 @@
 --Opened up the bite trigger so it didn't break on artifact fangs and etc
 --The goylem functions shouldn't loop now if you try it while in a city. You will need to GOYLEM START to restart it.
 --Added a mounted check based on gmcp to above movement function.
---Added/updated area mobs to the bashing table: 
+--Added/updated area mobs to the bashing table:
 --Arbothia, Drakuum, Ollin, Kalydian, Maghuir Fissure, Torturer's Caverns, Mamashi, Three Rock, Ia'shal, Tcanna
 --Shadow has weird calling habits and likes to call their class. Sunder will now recognize those aff calls appropriately.
 --Added swirl/mental disrupt to 1p tracking
@@ -495,7 +503,7 @@
 --Updated enemy affs to properly change colors for the lock affs (paralysis, asthma, stupidity, anorexia), as well as prone/pseudo prone
 --Updated enemy limb tracker to display different colors for levels of breaks
 
---Added the function snd.checksomeAffs. 
+--Added the function snd.checksomeAffs.
 --It accepts a list of affs in a table, along with a 2nd argument of a number of affs it needs to hit to return true
 --For example: snd.checksomeAffs({"slickness","clumsiness", "hypochondria", "weariness", "paresis"}, 2)
 --This will return true if 2 of the affs are hit, at minimum. This allows you to open up your aff checking and not be rigid.
@@ -632,7 +640,7 @@
 --Added wielding tracking. Still slightly buggy, working on it!
 --Added a new utilities folder with some stuff for toxicology.
 --Sunder is now packaged in modules, though I'll also maintain a full package.
-  --NOTE! I'm expecting bugs with this, please try it out and report errors!
+--NOTE! I'm expecting bugs with this, please try it out and report errors!
 --Fixed a bug with tekura bashing. Apparently there was no cobra toggle.
 --The ls alias now supports multiple target callers.
 
