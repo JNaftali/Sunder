@@ -52,5 +52,23 @@
         "type": "regex"
       }
     ]
+  },
+  {
+    "name": "Position Wayfind",
+    "patterns": [
+      {
+        "pattern": "^You must go south to reach (.*)\\.$",
+        "type": "regex"
+      }
+    ]
+  },
+  {
+    "name": "Glimpse Espy",
+    "patterns": [
+      {
+        "pattern": "^You peer into the distance, and see that \\w+ is at (.*) in \\w+\\.$",
+        "type": "regex"
+      }
+    ]
   }
 ]

@@ -1,3 +1,6 @@
+--6.001
+--Added Position Wayfind
+--Added Glimpse Espy
 --6.000
 --[3615] Jawcrack / Slug now gives 'blurry vision' instead of 'stuttering'.
 --[3615] Edgekick / Windpipe now additionally gives the 'stuttering' affliction.
