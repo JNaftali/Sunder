@@ -1,86 +1,38 @@
 [
-       {
-              "name": "Changelog",
-              "isActive": "no",
-              "script": "",
-              "isFolder": "no"
-       },
-       {
-              "name": "init",
-              "isActive": "yes",
-              "script": "",
-              "isFolder": "no"
-       },
-       {
-              "name": "login",
-              "isActive": "yes",
-              "script": "",
-              "isFolder": "no"
-       },
-       {
-              "name": "Death handling",
-              "isActive": "yes",
-              "script": "",
-              "isFolder": "no"
-       },
-       {
-              "name": "get rid of expandalias",
-              "isActive": "yes",
-              "script": "",
-              "isFolder": "no"
-       },
-       {
-              "name": "Sunder Map tweaks",
-              "isActive": "yes",
-              "script": "",
-              "isFolder": "no"
-       },
-       {
-              "name": "Target listening",
-              "isActive": "yes",
-              "script": "",
-              "isFolder": "no"
-       },
-       {
-              "name": "Variables",
-              "isActive": "yes",
-              "script": "",
-              "isFolder": "yes"
-       },
-       {
-              "name": "Events",
-              "isActive": "yes",
-              "script": "",
-              "isFolder": "yes"
-       },
-       {
-              "name": "Misc",
-              "isActive": "yes",
-              "script": "",
-              "isFolder": "yes"
-       },
-       {
-              "name": "Logic",
-              "isActive": "yes",
-              "script": "",
-              "isFolder": "yes"
-       },
-       {
-              "name": "Tracking",
-              "isActive": "yes",
-              "script": "",
-              "isFolder": "yes"
-       },
-       {
-              "name": "Neri's Phone Book",
-              "isActive": "yes",
-              "script": "",
-              "isFolder": "yes"
-       },
-       {
-              "name": "Sunder Toggles",
-              "isActive": "yes",
-              "script": "",
-              "isFolder": "yes"
-       }
+  {
+    "name": "init",
+    "isActive": "yes",
+    "script": "",
+    "isFolder": "no"
+  },
+  {
+    "name": "login",
+    "isActive": "yes",
+    "script": "",
+    "isFolder": "no"
+  },
+  {
+    "name": "Death handling",
+    "isActive": "yes",
+    "script": "",
+    "isFolder": "no"
+  },
+  {
+    "name": "get rid of expandalias",
+    "isActive": "yes",
+    "script": "",
+    "isFolder": "no"
+  },
+  {
+    "name": "Sunder Map tweaks",
+    "isActive": "yes",
+    "script": "",
+    "isFolder": "no"
+  },
+  {
+    "name": "Target listening",
+    "isActive": "yes",
+    "script": "",
+    "isFolder": "no"
+  }
 ]

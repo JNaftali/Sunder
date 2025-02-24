@@ -16,6 +16,13 @@
       systems = ["x86_64-linux" "aarch64-linux"];
 
       perSystem = {pkgs, ...}: {
+        devShells.default = pkgs.mkShell {
+          name = "Sunder";
+          packages = with pkgs; [
+            lua51Packages.lua
+            lua51Packages.ldoc
+          ];
+        };
         packages.default = pkgs.stdenv.mkDerivation {
           pname = "Sunder";
           version = builtins.substring 0 8 self.rev or "dirty";
