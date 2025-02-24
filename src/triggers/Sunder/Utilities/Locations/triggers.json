@@ -17,7 +17,7 @@
     ],
     "children": [
       {
-        "name": "done",
+        "name": "cwho_done",
         "patterns": [
           {
             "type": "prompt"
@@ -32,6 +32,15 @@
             "type": "regex"
           }
         ]
+      }
+    ]
+  },
+  {
+    "name": "Scenttrails",
+    "patterns": [
+      {
+        "pattern": "^You pick up the trail of (\\w+) at (.*)\\.$",
+        "type": "regex"
       }
     ]
   }
