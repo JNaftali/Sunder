@@ -25,7 +25,7 @@
 -- @field Rajamala
 -- @field Troll
 -- @field Xoran
--- @table raceskill defaults
+-- @table snd.defaultRaceskills
 snd.defaultRaceskills = {
   Arborean = { "Photosynth", "Hardy", "Enroot" },
   Arqeshi = { "Trawling", "Willful", "Ice Breathing" },
