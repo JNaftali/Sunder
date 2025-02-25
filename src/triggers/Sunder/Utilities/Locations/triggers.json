@@ -91,5 +91,14 @@
         "type": "regex"
       }
     ]
+  },
+  {
+    "name": "Presences Intruders",
+    "patterns": [
+      {
+        "pattern": "^You sense \\w+ at:\\s+(.*)\\.$",
+        "type": "regex"
+      }
+    ]
   }
 ]
