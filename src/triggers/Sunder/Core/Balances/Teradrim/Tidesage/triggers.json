@@ -170,6 +170,10 @@
       {
         "pattern": "Your golem has regained its awareness to grapple.",
         "type": "exactMatch"
+      },
+      {
+        "pattern": "Your elemental has regained the strength to clutch another victim.",
+        "type": "exactMatch"
       }
     ]
   }
