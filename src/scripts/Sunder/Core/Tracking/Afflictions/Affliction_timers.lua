@@ -31,11 +31,10 @@ end
 -- @function snd.affTimers.start
 -- @param aff string of affliction to start timing
 -- @param time integer time in seconds of how long the aff should stick
--- @reset boolean if true the timer will be refreshed if the target is afflicted with the aff again
+-- @param reset boolean if true the timer will be refreshed if the target is afflicted with the aff again
 function snd.affTimers.start(aff, time, reset) --reset is true if it'll reset the time on the aff if they already have it
   if reset or not snd.affTimers.list[aff] or not remainingTime(snd.affTimers.list[aff]) then
     snd.affTimers.kill(aff)
     snd.affTimers.list[aff] = tempTimer(time, function() snd.target_cured(aff) end)
   end
 end
-
