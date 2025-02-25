@@ -530,7 +530,7 @@
     "script": ""
   },
   {
-    "name": "nmembrane cure blurry",
+    "name": "membrane cure blurry",
     "patterns": [
       {
         "pattern": "^A thin membrane flickers over (\\w+)'s eyes as \\w+ blink, slowly retracting as \\w+ opens \\w+ outer eyelid\\.$",
