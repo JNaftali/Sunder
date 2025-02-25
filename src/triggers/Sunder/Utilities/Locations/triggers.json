@@ -69,7 +69,25 @@
     "name": "Glimpse Espy",
     "patterns": [
       {
-        "pattern": "^You peer into the distance, and see that \\w+ is at (.*) in \\w+\\.$",
+        "pattern": "^You peer into the distance, and see that \\w+ is at (.*) in .*\\.$",
+        "type": "regex"
+      }
+    ]
+  },
+  {
+    "name": "Seek Glance",
+    "patterns": [
+      {
+        "pattern": "^The shadowy reflection reveals \\w+ to be at (.*) in .*\\.$",
+        "type": "regex"
+      }
+    ]
+  },
+  {
+    "name": "Sense Scry",
+    "patterns": [
+      {
+        "pattern": "^You see that \\w+ is at (.*)\\.$",
         "type": "regex"
       }
     ]
