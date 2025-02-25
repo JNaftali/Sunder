@@ -66,7 +66,8 @@ snd.balance = snd.balance or {
   ejamend = true,
   equinox = true,
   eventide = true,
-  rattle = true, -- teradrim/tidesage rattle/reprisal
+  rattle = true,  -- teradrim/tidesage rattle/reprisal
+  grapple = true, --teradrim/tidesage grapple/clutch
   dome = true,
 }
 
@@ -138,4 +139,3 @@ snd.last = snd.last or {
   focus = "",
   tree = ""
 }
-

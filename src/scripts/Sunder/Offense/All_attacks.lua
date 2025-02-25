@@ -1537,6 +1537,9 @@ snd.all_class_attacks = {
     end,
     Grapple = function(target)
       snd.target_got("writhe_grappled")
+      snd.balance.grapple = false
+      if golemgrapple_timer then killTimer("golemgrapple_timer") end
+      golemgrapple_timer = tempTimer(15, [[snd.balance.grapple = true]])
     end,
     Shatter = function(target)
       snd.used.shield = false

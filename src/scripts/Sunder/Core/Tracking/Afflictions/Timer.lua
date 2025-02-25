@@ -13,47 +13,48 @@ timer.values = timer.values or {}
 
 
 function timer:init()
-	if exists("MudTimer", "timer") == 0 then
-		permTimer("MudTimer", "", 1, [[timer:script()]] )
-	end
+  if exists("MudTimer", "timer") == 0 then
+    permTimer("MudTimer", "", 1, [[timer:script()]])
+  end
 
-	enableTimer("MudTimer")
+  enableTimer("MudTimer")
 end
 
 function timer:set(xname, xduration)
-	self.values[xname] = xduration
+  self.values[xname] = xduration
 end
 
 function timer:get(xname)
-	if self.values[xname] == nil then
-		return(nil)
-	end
+  if self.values[xname] == nil then
+    return (nil)
+  end
 
-	return (self.values[xname])
+  return (self.values[xname])
 end
 
 function timer:script()
-	-- decrement all timers
-	for k, v in pairs(timer.values) do
-		timer.values[k] = timer.values[k]-1
+  -- decrement all timers
+  for k, v in pairs(timer.values) do
+    timer.values[k] = timer.values[k] - 1
 
-		-- Timer has reached 0 (expired)
-		if timer.values[k] < 1 and k ~= "" then
-			timer.values[k] = nil	
+    -- Timer has reached 0 (expired)
+    if timer.values[k] < 1 and k ~= "" then
+      timer.values[k] = nil
 
-			if _G[k] ~= nil then
-				-- call timer with 0 (expired)
-				_G[k](k, 0)
-			end
-		else
-			-- have timer called every second with "fname, time" as argument
-			if _G[k] ~= nil then
-				_G[k](k, timer.values[k])
-			end
-		end
-	end
+      if _G[k] ~= nil then
+        -- call timer with 0 (expired)
+        _G[k](k, 0)
+      end
+    else
+      -- have timer called every second with "fname, time" as argument
+      if _G[k] ~= nil then
+        _G[k](k, timer.values[k])
+      end
+    end
+  end
 
-	if timer.custom ~= nil then
-		timer:custom()
-	end
+  if timer.custom ~= nil then
+    timer:custom()
+  end
 end
+

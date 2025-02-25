@@ -1,274 +1,176 @@
 [
-       {
-              "name": "Momentum over",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "Your momentum dies off.",
-                            "type": "exactMatch"
-                     },
-                     {
-                            "pattern": "Your body is still recovering from its last boost of momentum.",
-                            "type": "exactMatch"
-                     },
-                     {
-                            "pattern": "You bow your head, concentrating and matching your heartbeat to the vibrations of the earth beneath you. When you raise your eyes, you feel your body ready to strike.",
-                            "type": "exactMatch"
-                     },
-                     {
-                            "pattern": "You use Wavebreaking Hightide.",
-                            "type": "exactMatch"
-                     },
-                     {
-                            "pattern": "The benefits of the high tide ebb away.",
-                            "type": "exactMatch"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "Momentum able again",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "Your body has recovered from its increased momentum.",
-                            "type": "exactMatch"
-                     },
-                     {
-                            "pattern": "Your body is able to benefit from another high tide.",
-                            "type": "exactMatch"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "Absorb used",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "You are unable to absorb another affliction so soon.",
-                            "type": "exactMatch"
-                     },
-                     {
-                            "pattern": "As you lift your arms overhead, the dust and earth around you rise up, collecting in a cloud about your person. The cloud thickens and cakes over your flesh, and when it falls away, you feel healthier.",
-                            "type": "exactMatch"
-                     },
-                     {
-                            "pattern": "You use Wavebreaking Yearn.",
-                            "type": "exactMatch"
-                     },
-                     {
-                            "pattern": "You use Terramancy Absorb.",
-                            "type": "exactMatch"
-                     },
-                     {
-                            "pattern": "The sea will not respond to your yearning again so soon.",
-                            "type": "exactMatch"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "Absorb ready",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "You may once more absorb an affliction from your flesh.",
-                            "type": "exactMatch"
-                     },
-                     {
-                            "pattern": "You may once again yearn for the sea to lend you its succour.",
-                            "type": "exactMatch"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "Earthenwill / Engulf True",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "You may once again strengthen your will.",
-                            "type": "exactMatch"
-                     },
-                     {
-                            "pattern": "You have already solidified your will with that of your golem.",
-                            "type": "exactMatch"
-                     },
-                     {
-                            "pattern": "You may once again work in tandem with your elemental.",
-                            "type": "exactMatch"
-                     }
-              ],
-              "script": "snd.balance.earthenwill = true"
-       },
-       {
-              "name": "Earthenwill / Engulf False",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "Your imbue_will defence has been stripped.",
-                            "type": "exactMatch"
-                     },
-                     {
-                            "pattern": "Your elemental_engulf defence has been stripped.",
-                            "type": "exactMatch"
-                     },
-                     {
-                            "pattern": "You are still recovering from the last time you solidified your will with that of your golem.",
-                            "type": "exactMatch"
-                     },
-                     {
-                            "pattern": "You cannot coordinate with your elemental again so soon.",
-                            "type": "exactMatch"
-                     }
-              ],
-              "script": "snd.balance.earthenwill = false"
-       },
-       {
-              "name": "Golem Call",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "You must be with your golem to do that.",
-                            "type": "exactMatch"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "Stoneblast/riptide",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^The stones rip apart (\\w+)'s (\\w+) defence\\.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^The riptide washes away (\\w+)'s (\\w+) defence\\.$",
-                            "type": "regex"
-                     }
-              ],
-              "script": "if matches[2] == snd.target then\n  snd.used.rebounding = false\n  if matches[3] ~= \"rebounding\" then\n    snd.used.shield = false\n  end\nend"
-       },
-       {
-              "name": "Rattle",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^As (\\w+) parries the blow, a synthetic crystal elemental enacts a vengeful reprisal, leaving.+ reeling and vulnerable\\.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^.+ lashes out as (\\w+) parries the blow, rattling.+ defences\\.$",
-                            "type": "regex"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "Rattle  back",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "Your elemental has recovered from its former reprisal and may enact another, should opportunity present.",
-                            "type": "exactMatch"
-                     },
-                     {
-                            "pattern": "Your golem has regained its awareness to rattle.",
-                            "type": "exactMatch"
-                     }
-              ],
-              "script": ""
-       }
+  {
+    "name": "Momentum over",
+    "patterns": [
+      {
+        "pattern": "Your momentum dies off.",
+        "type": "exactMatch"
+      },
+      {
+        "pattern": "Your body is still recovering from its last boost of momentum.",
+        "type": "exactMatch"
+      },
+      {
+        "pattern": "You bow your head, concentrating and matching your heartbeat to the vibrations of the earth beneath you. When you raise your eyes, you feel your body ready to strike.",
+        "type": "exactMatch"
+      },
+      {
+        "pattern": "You use Wavebreaking Hightide.",
+        "type": "exactMatch"
+      },
+      {
+        "pattern": "The benefits of the high tide ebb away.",
+        "type": "exactMatch"
+      }
+    ]
+  },
+  {
+    "name": "Momentum able again",
+    "patterns": [
+      {
+        "pattern": "Your body has recovered from its increased momentum.",
+        "type": "exactMatch"
+      },
+      {
+        "pattern": "Your body is able to benefit from another high tide.",
+        "type": "exactMatch"
+      }
+    ]
+  },
+  {
+    "name": "Absorb used",
+    "patterns": [
+      {
+        "pattern": "You are unable to absorb another affliction so soon.",
+        "type": "exactMatch"
+      },
+      {
+        "pattern": "As you lift your arms overhead, the dust and earth around you rise up, collecting in a cloud about your person. The cloud thickens and cakes over your flesh, and when it falls away, you feel healthier.",
+        "type": "exactMatch"
+      },
+      {
+        "pattern": "You use Wavebreaking Yearn.",
+        "type": "exactMatch"
+      },
+      {
+        "pattern": "You use Terramancy Absorb.",
+        "type": "exactMatch"
+      },
+      {
+        "pattern": "The sea will not respond to your yearning again so soon.",
+        "type": "exactMatch"
+      }
+    ]
+  },
+  {
+    "name": "Absorb ready",
+    "patterns": [
+      {
+        "pattern": "You may once more absorb an affliction from your flesh.",
+        "type": "exactMatch"
+      },
+      {
+        "pattern": "You may once again yearn for the sea to lend you its succour.",
+        "type": "exactMatch"
+      }
+    ]
+  },
+  {
+    "name": "Earthenwill / Engulf True",
+    "patterns": [
+      {
+        "pattern": "You may once again strengthen your will.",
+        "type": "exactMatch"
+      },
+      {
+        "pattern": "You have already solidified your will with that of your golem.",
+        "type": "exactMatch"
+      },
+      {
+        "pattern": "You may once again work in tandem with your elemental.",
+        "type": "exactMatch"
+      }
+    ],
+    "script": "snd.balance.earthenwill = true"
+  },
+  {
+    "name": "Earthenwill / Engulf False",
+    "patterns": [
+      {
+        "pattern": "Your imbue_will defence has been stripped.",
+        "type": "exactMatch"
+      },
+      {
+        "pattern": "Your elemental_engulf defence has been stripped.",
+        "type": "exactMatch"
+      },
+      {
+        "pattern": "You are still recovering from the last time you solidified your will with that of your golem.",
+        "type": "exactMatch"
+      },
+      {
+        "pattern": "You cannot coordinate with your elemental again so soon.",
+        "type": "exactMatch"
+      }
+    ],
+    "script": "snd.balance.earthenwill = false"
+  },
+  {
+    "name": "Golem Call",
+    "patterns": [
+      {
+        "pattern": "You must be with your golem to do that.",
+        "type": "exactMatch"
+      }
+    ]
+  },
+  {
+    "name": "Stoneblast/riptide",
+    "patterns": [
+      {
+        "pattern": "^The stones rip apart (\\w+)'s (\\w+) defence\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^The riptide washes away (\\w+)'s (\\w+) defence\\.$",
+        "type": "regex"
+      }
+    ],
+    "script": "if matches[2] == snd.target then\n  snd.used.rebounding = false\n  if matches[3] ~= \"rebounding\" then\n    snd.used.shield = false\n  end\nend"
+  },
+  {
+    "name": "Rattle",
+    "patterns": [
+      {
+        "pattern": "^As (\\w+) parries the blow, a synthetic crystal elemental enacts a vengeful reprisal, leaving.+ reeling and vulnerable\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^.+ lashes out as (\\w+) parries the blow, rattling.+ defences\\.$",
+        "type": "regex"
+      }
+    ]
+  },
+  {
+    "name": "Rattle  back",
+    "patterns": [
+      {
+        "pattern": "Your elemental has recovered from its former reprisal and may enact another, should opportunity present.",
+        "type": "exactMatch"
+      },
+      {
+        "pattern": "Your golem has regained its awareness to rattle.",
+        "type": "exactMatch"
+      }
+    ]
+  },
+  {
+    "name": "Grapple back",
+    "patterns": [
+      {
+        "pattern": "Your golem has regained its awareness to grapple.",
+        "type": "exactMatch"
+      }
+    ]
+  }
 ]
