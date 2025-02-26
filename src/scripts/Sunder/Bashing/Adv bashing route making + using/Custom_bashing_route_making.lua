@@ -14,48 +14,47 @@ function snd_bashAreas(areas_chosen)
       for x, y in pairs(full_list_of_areas) do
         area_being_checked = x:lower()
         if area_being_checked:find(v) then
-        --some headache stuff
-          if not (area_being_checked=="a bandit encampment in the bonro sands" and v:find("bonro") and #v<16) then
-          cecho("\n<MediumSeaGreen>Found: "..x)
+          --some headache stuff
+          if not (area_being_checked == "a bandit encampment in the bonro sands" and v:find("bonro") and #v < 16) then
+            cecho("\n<MediumSeaGreen>Found: " .. x)
             local area_to_be_added = full_list_of_areas[x]
             if #path_being_constructed ~= 0 then
               for l, m in pairs(path_being_constructed) do
                 local areas_added = 0
                 for a, b in pairs(m) do
-                  if b == "ptcity" and areas_added < num_areas then 
+                  if b == "ptcity" and areas_added < num_areas then
                     path_being_constructed[l][a] = snd.bashing_area_beginning_rooms[x]
                     areas_added = areas_added + 1
                   end --21
-                end--20
-              end--18
-            end--17
+                end   --20
+              end     --18
+            end       --17
             table.insert(path_being_constructed, area_to_be_added)
             break
           end
         end
       end
     end
-    
+
     local final_path = {}
-    
+
     for myareastobash, roomsinthoseareas in pairs(path_being_constructed) do
       for first_room, next_room in pairs(roomsinthoseareas) do
         final_path[first_room] = next_room
       end
     end
-  
-    snd.message("If that's right, "..gmcp.Char.Status.name..", head on over to the first area!")
+
+    snd.message("If that's right, " .. gmcp.Char.Status.name .. ", head on over to the first area!")
     bot.going = true
     bot.path = final_path
     if not snd.toggles.fasthunt then
       snd.toggle("fasthunt")
-    end    
+    end
     snd.aa()
   end
-
 end
 
-snd.bashing_area_beginning_rooms ={
+snd.bashing_area_beginning_rooms = {
   ["the Dolbodi Campsite"] = "19323",
   ["the Khauskin Mines"] = "25408",
   ["the Feral Caves"] = "16274",
@@ -164,7 +163,7 @@ snd.bashing_area_beginning_rooms ={
   ["Perilaus"] = "11962",
   ["Dovan Hollow"] = "49286",
   ["the Squal"] = "14926",
-  [ "the Maul"] = "50236",
+  ["the Maul"] = "50236",
   ["the forgotten depths of Mount Helba"] = "57086",
   ["the Bakal Chasm"] = "61011",
   ["the Village of Craneskull"] = "3553",
@@ -188,4 +187,5 @@ snd.bashing_area_beginning_rooms ={
   ["a basilisk lair"] = "68354",
   ["the Dyisen-Ashtan Memoryscape"] = "72093",
   ["Tak-re"] = "5966",
+  ["Eftehl Island"] = "59815",
 }
