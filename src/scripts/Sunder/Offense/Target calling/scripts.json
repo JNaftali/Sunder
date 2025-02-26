@@ -1,8 +1,11 @@
 [
-       {
-              "name": "Functions for calling",
-              "isActive": "yes",
-              "script": "",
-              "isFolder": "no"
-       }
+  {
+    "name": "Functions for calling",
+    "isActive": "yes",
+    "script": "",
+    "isFolder": "no"
+  },
+  {
+    "name": "Target calling"
+  }
 ]
