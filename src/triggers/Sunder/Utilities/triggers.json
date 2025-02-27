@@ -168,5 +168,10 @@
       }
     ],
     "script": ""
+  },
+  {
+    "name": "Who parser",
+    "isActive": "no",
+    "isFolder": "yes"
   }
 ]
