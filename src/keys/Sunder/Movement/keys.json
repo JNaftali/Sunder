@@ -1,114 +1,105 @@
 [
-       {
-              "name": "north",
-              "isActive": "yes",
-              "command": "",
-              "script": "",
-              "keys": "keypad+8",
-              "isFolder": "no"
-       },
-       {
-              "name": "south",
-              "isActive": "yes",
-              "command": "",
-              "script": "",
-              "keys": "return",
-              "isFolder": "no"
-       },
-       {
-              "name": "south",
-              "isActive": "yes",
-              "command": "",
-              "script": "expandAlias(\"s\", false)",
-              "keys": "keypad+2",
-              "isFolder": "no"
-       },
-       {
-              "name": "east",
-              "isActive": "yes",
-              "command": "",
-              "script": "",
-              "keys": "keypad+6",
-              "isFolder": "no"
-       },
-       {
-              "name": "west",
-              "isActive": "yes",
-              "command": "",
-              "script": "",
-              "keys": "keypad+4",
-              "isFolder": "no"
-       },
-       {
-              "name": "northeast",
-              "isActive": "yes",
-              "command": "",
-              "script": "",
-              "keys": "keypad+9",
-              "isFolder": "no"
-       },
-       {
-              "name": "northwest",
-              "isActive": "yes",
-              "command": "",
-              "script": "",
-              "keys": "keypad+7",
-              "isFolder": "no"
-       },
-       {
-              "name": "southeast",
-              "isActive": "yes",
-              "command": "",
-              "script": "",
-              "keys": "keypad+3",
-              "isFolder": "no"
-       },
-       {
-              "name": "southwest",
-              "isActive": "yes",
-              "command": "",
-              "script": "",
-              "keys": "keypad+1",
-              "isFolder": "no"
-       },
-       {
-              "name": "look",
-              "isActive": "yes",
-              "command": "",
-              "script": "",
-              "keys": "keypad+5",
-              "isFolder": "no"
-       },
-       {
-              "name": "up",
-              "isActive": "yes",
-              "command": "",
-              "script": "",
-              "keys": "keypad+minus",
-              "isFolder": "no"
-       },
-       {
-              "name": "down",
-              "isActive": "yes",
-              "command": "",
-              "script": "",
-              "keys": "keypad+plus",
-              "isFolder": "no"
-       },
-       {
-              "name": "in",
-              "isActive": "yes",
-              "command": "",
-              "script": "",
-              "keys": "keypad+slash",
-              "isFolder": "no"
-       },
-       {
-              "name": "out",
-              "isActive": "yes",
-              "command": "",
-              "script": "",
-              "keys": "keypad+asterisk",
-              "isFolder": "no"
-       }
+  {
+    "name": "north",
+    "isActive": "yes",
+    "command": "",
+    "script": "",
+    "keys": "keypad+8",
+    "isFolder": "no"
+  },
+  {
+    "name": "south",
+    "isActive": "yes",
+    "command": "",
+    "keys": "keypad+2",
+    "isFolder": "no"
+  },
+  {
+    "name": "east",
+    "isActive": "yes",
+    "command": "",
+    "script": "",
+    "keys": "keypad+6",
+    "isFolder": "no"
+  },
+  {
+    "name": "west",
+    "isActive": "yes",
+    "command": "",
+    "script": "",
+    "keys": "keypad+4",
+    "isFolder": "no"
+  },
+  {
+    "name": "northeast",
+    "isActive": "yes",
+    "command": "",
+    "script": "",
+    "keys": "keypad+9",
+    "isFolder": "no"
+  },
+  {
+    "name": "northwest",
+    "isActive": "yes",
+    "command": "",
+    "script": "",
+    "keys": "keypad+7",
+    "isFolder": "no"
+  },
+  {
+    "name": "southeast",
+    "isActive": "yes",
+    "command": "",
+    "script": "",
+    "keys": "keypad+3",
+    "isFolder": "no"
+  },
+  {
+    "name": "southwest",
+    "isActive": "yes",
+    "command": "",
+    "script": "",
+    "keys": "keypad+1",
+    "isFolder": "no"
+  },
+  {
+    "name": "look",
+    "isActive": "yes",
+    "command": "",
+    "script": "",
+    "keys": "keypad+5",
+    "isFolder": "no"
+  },
+  {
+    "name": "up",
+    "isActive": "yes",
+    "command": "",
+    "script": "",
+    "keys": "keypad+minus",
+    "isFolder": "no"
+  },
+  {
+    "name": "down",
+    "isActive": "yes",
+    "command": "",
+    "script": "",
+    "keys": "keypad+plus",
+    "isFolder": "no"
+  },
+  {
+    "name": "in",
+    "isActive": "yes",
+    "command": "",
+    "script": "",
+    "keys": "keypad+slash",
+    "isFolder": "no"
+  },
+  {
+    "name": "out",
+    "isActive": "yes",
+    "command": "",
+    "script": "",
+    "keys": "keypad+asterisk",
+    "isFolder": "no"
+  }
 ]
