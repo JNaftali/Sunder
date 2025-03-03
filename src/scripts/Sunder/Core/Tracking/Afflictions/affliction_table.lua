@@ -165,7 +165,6 @@ snd.afflictions = {
   aff_infested                   = { state = "healed", effect = "", cures = { herb = "goldenseal", tree = "send" }, assess = false, timer = createStopWatch() },
   aff_insomnia                   = { state = "healed", effect = "", cures = {}, assess = false, timer = createStopWatch() },
   aff_irradiated_limb            = { state = "healed", effect = "more damage from bolt", cures = {}, assess = false, timer = createStopWatch() },
-  aff_itchy                      = { state = "healed", effect = "tree has to cure this first always", cures = { tree = "send" }, assess = false, timer = createStopWatch() },
   aff_intimidated                = { state = "healed", effect = "can't heal above 90%", cures = {}, assess = false, timer = createStopWatch() },
   aff_justice                    = { state = "healed", effect = "", cures = { herb = "bellwort", tree = "send" }, assess = false, timer = createStopWatch() },
   aff_laxity                     = { state = "healed", effect = "", cures = { herb = "bellwort", tree = "send" }, assess = false, timer = createStopWatch() },

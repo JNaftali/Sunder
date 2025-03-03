@@ -97,7 +97,6 @@ snd.priorities =
   -- "aff_impatience",
   -- "aff_dissonance",
   -- "aff_infested",
-  -- "aff_itchy",
   -- "aff_rot_heat",
   -- "aff_rot_spirit",
   -- "aff_accursed",

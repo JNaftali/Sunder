@@ -192,7 +192,6 @@ snd.anxieties = {
   "sadness",
   "self_pity",
   "hubris",
-  "itchy",
 }
 
 snd.other_affs = {
