@@ -137,7 +137,6 @@ snd.afflictions = {
   aff_gorged                     = { state = "healed", effect = "", cures = { salve = "epidermal to head", tree = "send" }, assess = false, timer = createStopWatch() },
   aff_haemophilia                = { state = "healed", effect = "", cures = { herb = "ginseng", tree = "send" }, assess = false, timer = createStopWatch() },
   aff_hallucinations             = { state = "healed", effect = "", cures = { herb = "ash", tree = "send", focus = "send" }, assess = false, timer = createStopWatch() },
-  aff_halted                     = { state = "healed", effect = "", cures = {}, assess = false, timer = createStopWatch() },
   aff_hatred                     = { state = "healed", effect = "", cures = { herb = "ash", tree = "send", focus = "send" }, assess = false, timer = createStopWatch() },
   aff_head_crippled              = { state = "healed", effect = "", cures = {}, assess = false, timer = createStopWatch() },
   aff_head_bruised               = { state = "healed", effect = "", cures = { salve = "mending to head" }, assess = false, timer = createStopWatch() },
