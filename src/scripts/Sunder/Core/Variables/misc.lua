@@ -191,11 +191,7 @@ snd.all_affs = table.n_union(snd.physical_affs, snd.mental_affs, { "hypochondria
 snd.anxieties = {
   "sadness",
   "self_pity",
-  "baldness",
-  "commitment_fear",
-  "body_odor",
   "hubris",
-  "worrywart",
   "itchy",
 }
 

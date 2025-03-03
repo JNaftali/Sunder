@@ -431,7 +431,6 @@ snd.cures = {
   },
 
   coagulation = {
-    "body_odor",
     "lethargy",
     "allergies",
     "mental_disruption",
@@ -444,7 +443,6 @@ snd.cures = {
   },
 
   depressant = {
-    "commitment_fear",
     "merciful",
     "recklessness",
     "egocentric",
@@ -458,7 +456,6 @@ snd.cures = {
   },
 
   decongestant = {
-    "baldness",
     "clumsiness",
     "hypochondria",
     "weariness",
@@ -495,7 +492,6 @@ snd.cures = {
   },
 
   eucrasia = {
-    "worrywart",
     "misery",
     "hopelessness",
     "echoes",
@@ -642,4 +638,3 @@ snd.cureset_skills = {
   predator = { "Knifeplay", "Predation", "Beastmastery" },
   siderealist = { "Astranomia", "Crystalism", "Ostension" },
 }
-

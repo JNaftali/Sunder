@@ -5,7 +5,6 @@ if matches[2] == snd.target then
     snd.target_got("sadness")
   elseif matches[3] == "hubris" then
     snd.target_got("hubris")
-  elseif matches[3] == "commitment fear" then
-    snd.target_got("commitment_fear")
   end
 end
+
