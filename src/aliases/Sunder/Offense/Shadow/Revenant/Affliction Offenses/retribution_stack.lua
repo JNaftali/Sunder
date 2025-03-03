@@ -18,8 +18,6 @@ function snd.attack_function()
 		-- we're going to use a different affliction stack if the target is locked
 		if snd.target_locked() then
 			snd.giving = {
-			"left_leg_crippled",
-			"right_leg_crippled",
 			"crippled",
 			"mental_disruption",
 			"physical_disruption",

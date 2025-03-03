@@ -14,8 +14,6 @@ function snd.attack_function()
 			"confusion",
       "slickness",
       "anorexia",
-			"left_leg_crippled",
-			"right_leg_crippled",
       "heartflutter",
 			"vomiting",
 			"dizziness",

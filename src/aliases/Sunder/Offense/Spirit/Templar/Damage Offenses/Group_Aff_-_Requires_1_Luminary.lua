@@ -31,8 +31,6 @@ function snd.attack_function()
 			"slickness",
 			"anorexia",
 			"stupidity",
-			"left_leg_crippled",
-			"right_leg_crippled",
 			"clumsiness",
 			"haemophilia",
 			"allergies",

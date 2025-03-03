@@ -14,10 +14,6 @@ if snd.class == "Revenant" then
   		end
   		-- set the affs we want to use
   			snd.giving = {
-  			"left_arm_crippled",
-  			"right_arm_crippled",    
-  			"left_leg_crippled",
-  			"right_leg_crippled",
         "stupidity",
   			"anorexia",
   			"slickness",

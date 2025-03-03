@@ -30,8 +30,6 @@ function snd.attack_function()
       "vomiting",
       "allergies",
       "slickness",
-			"left_leg_crippled",
-			"right_leg_crippled",
       "anorexia",
       "stupidity",
       }

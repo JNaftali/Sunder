@@ -1,31 +1,12 @@
 if snd.class == "Executor" then -- Requires Raloth and Icewyrm
-snd.current_offense = "SentSalve"
+snd.current_offense = "SentImpale"
 
-local second_attack = ""
 
 snd.starting_attack()
 function snd.attack_function()
-
-	if not snd.waiting.queue then
-
-    if snd.checkAff("destroyed_throat") then
-    snd.giving = {
-    "slickness",
-    "asthma",
-    "paresis",
-    "confusion",
-    "vomiting",
-    "dizziness",
-    "sight",
-    "hearing",
-    "sensitivity",
-    }
-    else
-    snd.giving = {
-    
+  local second_attack = ""
+  snd.giving = {
     "frozen",
-    "anorexia",
-    "stupidity",
     "asthma",
     "slickness",
     "paresis",
@@ -35,18 +16,18 @@ function snd.attack_function()
     "sight",
     "hearing",
     "sensitivity",
-    }
-    end	
+  }
+	if not snd.waiting.queue then
 
 	string = ""
 	call = ""
 	left = "none"
 	right = "none"
 
-	 left, right = Executor_Attack_Choice(snd.giving, left, right) -- we send our aff list to a function to get our attacks.
+	left, right = Executor_Attack_Choice(snd.giving, left, right) -- we send our aff list to a function to get our attacks.
 
-		if left  == "none" then left  = "delphinium" end
-		if right == "none" then right = "delphinium" end
+		if left  == "none" then left  = "epseth" end
+		if right == "none" then right = "epseth" end
 	
 		if snd.no_parry() then 
 			second_attack = "inveigle"
@@ -126,6 +107,5 @@ function snd.attack_function()
 		end
 	end
 end
-
 	snd.attack_function()
 end

@@ -1,9 +1,5 @@
 if snd.class == "Carnifex" then
 snd.giving = {
-"left_leg_crippled",
-"right_leg_crippled",
-"left_arm_crippled",
-"right_arm_crippled",
 "paresis",
 "asthma",
 "slickness",
@@ -43,10 +39,10 @@ if not snd.waiting.queue then
    end
   end
   if left == "none" then
-   left = "epseth"
+   left = "delphinium"
   end
   if right == "none" then
-   right = "epseth"
+   right = "delphinium"
   end
 	x = ""
   

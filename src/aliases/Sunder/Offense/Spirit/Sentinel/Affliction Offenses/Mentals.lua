@@ -18,8 +18,6 @@ snd.giving = {
 "asthma",
 "slickness",
 "confusion",
-"left_leg_crippled",
-"right_leg_crippled",
 "anorexia",
 "heartflutter",
 "sight",

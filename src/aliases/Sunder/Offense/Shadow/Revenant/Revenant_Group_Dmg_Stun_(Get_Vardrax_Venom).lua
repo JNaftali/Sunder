@@ -24,8 +24,6 @@ function snd.attack_function()
       "clumsiness",
       "paresis",     
       "sensitivity",
-      "left_leg_crippled",
-      "right_leg_crippled",      
       "asthma",      
       "vomiting",
       "allergies",

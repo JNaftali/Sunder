@@ -12,10 +12,6 @@ if snd.class == "Siderealist" then
       "anorexia",
       "stupidity",
       --some filler I guess
-      "left_leg_crippled",
-      "right_leg_crippled",
-      "left_arm_crippled",
-      "right_arm_crippled",
       "voyria",
     }
     -- defining this function is how we tell sunder what to do

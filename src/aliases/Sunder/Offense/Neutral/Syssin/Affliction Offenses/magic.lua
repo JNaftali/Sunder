@@ -23,8 +23,6 @@ function snd.attack_function()
 	local missing = snd.missingAff("stupidity/paresis/anorexia/asthma/slickness", "/")
 	if snd.target_locked() then
 		snd.giving = {
-		"left_leg_crippled",
-		"right_leg_crippled",
 		"hearing",
 		"sensitivity",
 		"voyria"

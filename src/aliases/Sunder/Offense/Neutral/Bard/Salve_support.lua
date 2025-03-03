@@ -6,43 +6,38 @@ if snd.class == "Bard" then
   function snd.attack_function()
     -- defining this function is how we tell sunder what to do
     if not snd.waiting.queue then
-
       snd.giving =
-        {
-          "left_leg_crippled",
-          "right_leg_crippled",
-          "left_arm_crippled",
-          "right_arm_crippled",
-          "stupidity",
-          "anorexia",
-          "slickness",
-          "asthma",
-          "paresis",
-          "clumsiness",
-          "weariness",
-        }
+      {
+        "stupidity",
+        "anorexia",
+        "slickness",
+        "asthma",
+        "paresis",
+        "clumsiness",
+        "weariness",
+      }
       local canPlay = false
       local string = ""
       local call = ""
       local tempoaff = "none"
       -- 1 affliction from snd.giving
-      
+
       for i in pairs(snd.giving) do
         if
-          not snd.checkAff(snd.giving[i]) and
-          tempoaff == "none" and
-          snd.giving[i] ~= snd.needle and
-          table.contains(snd.venom_affs, snd.giving[i])
+            not snd.checkAff(snd.giving[i]) and
+            tempoaff == "none" and
+            snd.giving[i] ~= snd.needle and
+            table.contains(snd.venom_affs, snd.giving[i])
         then
           tempoaff = snd.giving[i]
         end
       end
-      
+
       -- Only cowards and losers spam shield or rebounding >:(
       if snd.used.shield or snd.used.rebounding then
         string = "pierce " .. snd.target
       else
-        string = "tempo " .. snd.target .." "..snd.effects[tempoaff]
+        string = "tempo " .. snd.target .. " " .. snd.effects[tempoaff]
         call = "wt Afflicting " .. snd.target .. ": " .. snd.effects[tempoaff]
       end
       if snd.balance.inspire and hasSkill("Inspire", "Songcalling") then
@@ -67,3 +62,4 @@ if snd.class == "Bard" then
   snd.attack_function()
   -- make sure to actually send the attack once on use!
 end
+

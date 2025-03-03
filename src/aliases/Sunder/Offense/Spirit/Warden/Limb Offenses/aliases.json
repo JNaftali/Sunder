@@ -1,16 +1,16 @@
 [
-       {
-              "name": "limbs",
-              "isActive": "yes",
-              "regex": "^limbs$",
-              "script": "",
-              "isFolder": "no"
-       },
-       {
-              "name": "legs",
-              "isActive": "no",
-              "regex": "^legs$",
-              "script": "",
-              "isFolder": "no"
-       }
+  {
+    "name": "limbs",
+    "isActive": "yes",
+    "regex": "^limbs$",
+    "script": "",
+    "isFolder": "no"
+  },
+  {
+    "name": "legs",
+    "isActive": "no",
+    "regex": "^legs$",
+    "script": "",
+    "isFolder": "no"
+  }
 ]

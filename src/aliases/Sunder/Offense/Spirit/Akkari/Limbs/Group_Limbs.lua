@@ -21,10 +21,6 @@ function snd.attack_function()
  snd.primary_aff = {
     --"effused_blood",
     "blood_rune",
-    "left_leg_crippled",
-    "right_leg_crippled",
-    "left_arm_crippled",
-    "right_arm_crippled",
     "paresis",
     "stupidity",
     "anorexia",

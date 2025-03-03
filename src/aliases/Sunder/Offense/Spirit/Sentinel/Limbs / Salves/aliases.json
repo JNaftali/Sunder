@@ -1,23 +1,22 @@
 [
-       {
-              "name": "Group Impale/Frozen",
-              "isActive": "yes",
-              "regex": "^gimp$",
-              "script": "if snd.class == \"Sentinel\" then -- Requires Raloth and Icewyrm\nsnd.current_offense = \"SentImpale\"\nsnd.giving = {\n\n\"frozen\",\n\"left_leg_crippled\",\n\"right_leg_crippled\",\n\"left_arm_crippled\",\n\"right_arm_crippled\",\n\"asthma\",\n\"slickness\",\n\"paresis\",\n\"confusion\",\n\"vomiting\",\n\"dizziness\",\n\"sight\",\n\"hearing\",\n\"sensitivity\",\n}\n\nlocal second_attack = \"\"\n\nsnd.starting_attack()\nfunction snd.attack_function()\n\n\tif not snd.waiting.queue then\n\n\tstring = \"\"\n\tcall = \"\"\n\tleft = \"none\"\n\tright = \"none\"\n\n\tleft, right = Sentinel_Attack_Choice(snd.giving, left, right) -- we send our aff list to a function to get our attacks.\n\n\t\tif left  == \"none\" then left  = \"epseth\" end\n\t\tif right == \"none\" then right = \"epseth\" end\n\t\n\t\tif snd.no_parry() then \n\t\t\tsecond_attack = \"thrust\"\n\t\telse\n\t\t\tsecond_attack = \"stab\"\n\t\tend\n\n\t\tif snd.used.rebounding and snd.used.shield then\n\t\t\tstring = \"dhuriv dualraze \"..snd.target\n\t\t\t\n\t\telseif left == \"destroyed_throat\" then\n\t\t\tstring = \"dhuriv throatcrush \"..snd.target\n\t\t\t\n\t\telseif snd.target_impaled then\n\t\t\tstring = \"dhuriv gorge \"..snd.target\n\t\t\t\n\t\telseif not snd.used.rebounding and not snd.used.shield and snd.checkAff(\"left_leg_crippled\") and snd.limb_status[\"left leg\"] == \"healed\" and (snd.parried_limb ~= \"left leg\" or snd.no_parry()) then\n\t\t\tstring = \"dhuriv pierce \"..snd.target..\" left\"\n\t\t\n\t\telseif not snd.used.rebounding and not snd.used.shield and snd.checkAff(\"right_leg_crippled\") and snd.limb_status[\"right leg\"] == \"healed\" and (snd.parried_limb ~= \"right leg\" or snd.no_parry()) then\n\t\t\tstring = \"dhuriv pierce \"..snd.target..\" right\"\n\n  \telseif snd.proned() then         \n      if not snd.checkAff(\"writhe_impaled\") then\n      \tstring = \"dhuriv impale \"..snd.target\n       else\n        string = \"qdmount\"..snd.sep..\"qmount \"..snd.my_raloth..snd.sep..\"order \"..snd.my_raloth..\" trample \"..snd.target\n      end\t\n\t\t\t\n\t\telseif snd.dhuriv_attacks[left] == \"daunt\" or snd.dhuriv_attacks[left] == \"icewyrm\" then\n\t\t\tleft = snd.daunt_animals[left]\n\t\t\tstring = left..snd.target..snd.sep..\"dhuriv flourish \"..snd.target..\" \"..snd.effects[right]\n\t\t\t\t\t\t\n\t\telse\n\n\t\t\tif table.contains(snd.dhuriv_affs, left) then\n\t\t\t\tif not table.contains(snd.effects, right) then\n\t\t\t\t\tstring = \"dhuriv combo \"..snd.target..\" \"..snd.dhuriv_attacks[left]..\" \"..snd.dhuriv_attacks[right]\n\t\t\t\telse\n\t\t\t\t\tstring = \"dhuriv combo \"..snd.target..\" \"..snd.dhuriv_attacks[left]..\" \"..second_attack..\" \"..snd.effects[right]\n\t\t\t\tend\n\t\t\telseif table.contains(snd.dhuriv_affs, right) then\n\t\t\t\tstring = \"dhuriv combo \"..snd.target..\" slash \"..snd.dhuriv_attacks[right]..\" \"..snd.effects[left]\n\t\t\telse\n\t\t\t\tstring = \"dhuriv combo \"..snd.target..\" slash \"..second_attack..\" \"..snd.effects[left]..\" \"..snd.effects[right]\n\t\t\tend\n\t\tend\n\t\t\n\t\tif snd.toggles.affcalling and not snd.target_gone then\n\t\t\tif table.contains(snd.effects, left) then \n\t\t\t\tcall = \"wt Afflicting \"..snd.target..\": \"..snd.effects[left]\n\t\t\t\tif table.contains(snd.effects, right) then \n\t\t\t\t\tcall = call..\", \"..snd.effects[right]\n\t\t\t\tend\n\t\t\t\tcall = call..snd.sep\n\t\t\telseif table.contains(snd.effects, right) then \n\t\t\t\tcall = \"wt Afflicting \"..snd.target..\": \"..snd.effects[right]..snd.sep\n\t\t\tend\n\t\tend\n\n\t\tif snd.checksomeAffs({\"confusion\", \"left_leg_crippled\", \"right_leg_crippled\", \"fallen\", \"heartflutter\"}, 5) then\n\t\t\tstring = \"dhuriv spinecut \"..snd.target\n\t\tend\n\t\t\n\t\tif string:find(\"impale\") or string:find(\"gorge\") or string:find(\"throatcrush\") or string:find(\"dualraze\") or string:find(\"spinecut\") or string:find(\"pierce\") then\n\t\t\tcall = \"\"\n\t\tend\n\n\t\tstring = call..string\n\t\tif string ~= snd.last_attack and not snd.waiting.queue then\n\t\t\tsnd.last_attack = string\n\t\t\tsnd.attack(snd.last_attack)\n\t\t\tsnd.waiting.queue = true\n\t\t\ttempTimer(snd.delay(), [[snd.waiting.queue = false]])\n\t\tend\n\tend\nend\n\tsnd.attack_function()\nend",
-              "isFolder": "no"
-       },
-       {
-              "name": "Salves",
-              "isActive": "yes",
-              "regex": "^salve$",
-              "script": "",
-              "isFolder": "no"
-       },
-       {
-              "name": "Group spinecut",
-              "isActive": "yes",
-              "regex": "^gsc$",
-              "script": "",
-              "isFolder": "no"
-       }
+  {
+    "name": "group impale frozen",
+    "isActive": "yes",
+    "regex": "^gimp$",
+    "isFolder": "no"
+  },
+  {
+    "name": "Salves",
+    "isActive": "yes",
+    "regex": "^salve$",
+    "script": "",
+    "isFolder": "no"
+  },
+  {
+    "name": "Group spinecut",
+    "isActive": "yes",
+    "regex": "^gsc$",
+    "script": "",
+    "isFolder": "no"
+  }
 ]

@@ -2,8 +2,6 @@ if snd.class == "Sentinel" then
 snd.current_offense = "SentLumiSupport"
 if snd.target_locked() then
 			snd.giving = {
-			"left_leg_crippled",
-			"right_leg_crippled",
       "confusion",
       "impairment",
 			"weariness",
@@ -18,8 +16,6 @@ if snd.target_locked() then
       "asthma",
       "slickness",
       "anorexia",
-			"left_leg_crippled",
-			"right_leg_crippled",
       "confusion",
       "weariness",
       "vomiting",

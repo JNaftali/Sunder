@@ -30,8 +30,6 @@ if snd.class == "Revenant" then
         "allergies",
         "haemophilia",
         "slickness",
-        "left_leg_crippled",
-  			"right_leg_crippled",
         "anorexia",
         "stupidity",
         --"recklessness",

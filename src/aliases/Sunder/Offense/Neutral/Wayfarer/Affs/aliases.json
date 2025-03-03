@@ -1,23 +1,20 @@
 [
-       {
-              "name": "Salve affs priority",
-              "isActive": "yes",
-              "regex": "^legs$",
-              "script": "",
-              "isFolder": "no"
-       },
-       {
-              "name": "wayfarer aff support",
-              "isActive": "yes",
-              "regex": "^gaff$",
-              "script": "",
-              "isFolder": "no"
-       },
-       {
-              "name": "Group Limbs w/execute",
-              "isActive": "yes",
-              "regex": "^limbs$",
-              "script": "if snd.class == \"Wayfarer\" then\nsnd.starting_attack()\nfunction snd.attack_function()\n\n  if not snd.waiting.queue then\n    local string = \"\"\n    local call = \"\"\n\t\tlocal limb_tohit = \"\"\n    local targ = \"nothing\"\n\t\tlocal touse = {}\n    local tohit = {}\n    local fury = tonumber(gmcp.Char.Vitals.fury)\n    local distract = false\n    if gmcp.Char.Vitals.ability_bal == \"1\" and fury \u003e=30 then\n      distract = true\n    end\n \n    \n\t  snd.giving_limbs = {\"head\", \"right leg\", \"left leg\", \"left arm\", \"right arm\",}  \n    for k, v in pairs(snd.giving_limbs) do\n      if snd.limb_status[v] == \"healed\" and ((snd.parried_limb ~= v and snd.last_struck_limb ~= v) or snd.no_parry() or distract) then\n        limb_tohit = v\n        break\n      end\n    end\n        \n    snd.giving = {\n      \"left_leg_crippled\",\n      \"right_leg_crippled\",\n      \"left_arm_crippled\",\n      \"right_arm_crippled\",\n      \"anorexia\",\n      \"asthma\",\n      \"slickness\",\n      \"stupidity\",\n      \"paresis\",\n      \"sensitivity\",\n      \"weariness\",\n      \"clumsiness\",\n    }\n    \n    for i in pairs(snd.giving) do\n      if not snd.checkAff(snd.giving[i]) then\n        if not table.contains(touse, snd.giving[i]) then \n          table.insert(touse, snd.giving[i])\n        end\n      end\n\t\tend\n    \n    \n    for i in pairs(touse) do\n\t\t\ttable.insert(tohit, snd.effects[touse[i]])\n\t\tend\n    \n    local execute_check = snd.checkAff(\"head_broken\") and \n      snd.checksomeAffs({\"left_arm_broken\",\"right_arm_broken\",\"left_leg_broken\",\"right_leg_broken\"},1) and\n      snd.checkAff(\"fallen\")\n    \n    if snd.used.shield and snd.used.rebounding then\n      string = \"axe devastate \"..snd.target\n    elseif snd.used.shield or snd.used.rebounding then\n      string = \"axe devastate \"..snd.target..\" \"..tohit[1]\n      call = \"wt Afflicting \"..snd.target..\": \"..tohit[1]..snd.sep\n    elseif execute_check then\n      string = \"axe execute \"..snd.target\n    elseif snd.checksomeAffs({\"right_leg_crippled\", \"left_leg_crippled\", \"right_leg_broken\", \"left_leg_broken\"}, 1) and not snd.checkAff(\"fallen\") then\n      string = \"axe sweep \"..snd.target\n    else\n      string = \"axe chop \"..snd.target..\" \"..limb_tohit..\" \"..tohit[1]\n      call = \"wt Afflicting \"..snd.target..\": \"..tohit[1]..snd.sep\n    end\n    \n    if distract then\n      string = \"fury distract \"..snd.target..snd.sep..string\n    end\n\n\t\tif snd.toggles.affcalling and not snd.target_gone then\n\t\t\tstring = call..string\n\t\tend\n  \n  \tif string ~= snd.last_attack and not snd.waiting.queue then\n\t\t\tsnd.last_attack = string\n\t\t\tsnd.attack(snd.last_attack)\n\t\t\tsnd.waiting.queue = true\n\t\t\ttempTimer(snd.delay(), [[snd.waiting.queue = false]])\n\t\tend\n  \n  end\nend\nsnd.attack_function()\nend",
-              "isFolder": "no"
-       }
+  {
+    "name": "Salve affs priority",
+    "isActive": "yes",
+    "regex": "^legs$",
+    "isFolder": "no"
+  },
+  {
+    "name": "wayfarer aff support",
+    "isActive": "yes",
+    "regex": "^gaff$",
+    "isFolder": "no"
+  },
+  {
+    "name": "Group Limbs w/execute",
+    "isActive": "yes",
+    "regex": "^limbs$",
+    "isFolder": "no"
+  }
 ]

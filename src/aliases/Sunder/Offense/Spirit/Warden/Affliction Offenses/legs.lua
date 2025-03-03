@@ -1,9 +1,5 @@
 if snd.class == "Warden" then
   snd.giving = {
-	"left_leg_crippled",
-	"right_leg_crippled",
-	"left_arm_crippled",
-	"right_arm_crippled",    
   "stupidity",
 	"anorexia",
 	"slickness",

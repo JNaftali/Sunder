@@ -1,14 +1,8 @@
 [
-       {
-              "name": "Affliction Offenses",
-              "isActive": "yes",
-              "script": "",
-              "isFolder": "yes"
-       },
-       {
-              "name": "Limbs / Salves",
-              "isActive": "yes",
-              "script": "",
-              "isFolder": "yes"
-       }
+  {
+    "name": "Affliction Offenses",
+    "isActive": "yes",
+    "script": "",
+    "isFolder": "yes"
+  }
 ]

@@ -31,10 +31,10 @@ function snd.attack_function()
    end
   end
   if left == "none" then
-   left = "epteth"
+   left = "delphinium"
   end
   if right == "none" then
-   right = "epseth"
+   right = "delphinium"
   end
 	x = ""
   if snd.used.rebounding and snd.used.shield then

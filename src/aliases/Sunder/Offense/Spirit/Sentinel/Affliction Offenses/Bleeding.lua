@@ -9,8 +9,6 @@ function snd.attack_function()
 			snd.giving = {
 			"impairment",
 			"confusion",
-			"left_leg_crippled",
-			"right_leg_crippled",
 			"weariness",
 			"dizziness",
       }

@@ -25,10 +25,6 @@ function snd.attack_function()
 		}
 		
 snd.scythe_gash = {
-    "left_leg_crippled",
-    "right_leg_crippled",
-    "left_arm_crippled",
-    "right_arm_crippled",
 		"asthma",
 		"slickness",
 		"anorexia",

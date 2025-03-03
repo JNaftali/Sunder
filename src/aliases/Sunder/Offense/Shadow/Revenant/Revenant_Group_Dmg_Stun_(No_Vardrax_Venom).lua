@@ -34,8 +34,6 @@ function snd.attack_function()
       "sensitivity",
       "haemophilia",
       "slickness",
-      "left_leg_crippled",
-      "right_leg_crippled",
       --"anorexia",
       --"stupidity",
       --"recklessness",
