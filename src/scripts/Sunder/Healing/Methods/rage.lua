@@ -21,7 +21,6 @@ function snd.rage_check()
 
   local rage_affs = {
     "aff_hubris",
-  "aff_pacifism",
   "aff_peace",
   "aff_agony",
   "aff_accursed",

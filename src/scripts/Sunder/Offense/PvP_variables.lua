@@ -1,4 +1,3 @@
-
 snd.offense_loaded = true
 snd.hitting = "none"
 
@@ -81,7 +80,7 @@ snd.transmutation = true
 snd.locking = false
 
 --Ascendril / Bloodborn
-snd.flamewreathed = {limb = "", resonance = ""}
+snd.flamewreathed = { limb = "", resonance = "" }
 snd.glimpse = "none"
 snd.gorged = ""
 snd.glimpsing = false
@@ -156,40 +155,40 @@ snd.disperse = "none" -- Can be set to none, callers or all.
 
 snd.limbs = {}
 snd.parried_limb = "none"
-snd.last_hit_limb = "none" --not safe for use in routes.
+snd.last_hit_limb = "none"    --not safe for use in routes.
 snd.last_struck_limb = "none" --this can be used in routes
 snd.last_limb_dmg = 0
 snd.resto_limb = "none"
 snd.current_restoration_aff = ""
 snd.limb_targeting = {
-left = "none",
-right = "none"
+  left = "none",
+  right = "none"
 }
 snd.limb_dmg = {
-head = 0,
-torso = 0,
-["left arm"] = 0,
-["right arm"] = 0,
-["left leg"] = 0,
-["right leg"] = 0,
-total = 0,
+  head = 0,
+  torso = 0,
+  ["left arm"] = 0,
+  ["right arm"] = 0,
+  ["left leg"] = 0,
+  ["right leg"] = 0,
+  total = 0,
 }
 snd.limb_status = {
-head = "healed",
-torso = "healed",
-["left arm"] = "healed",
-["right arm"] = "healed",
-["left leg"] = "healed",
-["right leg"] = "healed"
+  head = "healed",
+  torso = "healed",
+  ["left arm"] = "healed",
+  ["right arm"] = "healed",
+  ["left leg"] = "healed",
+  ["right leg"] = "healed"
 }
 snd.limb_bruising = {
-skin = 0,
-head = 0,
-torso = 0,
-["left arm"] = 0,
-["right arm"] = 0,
-["left leg"] = 0,
-["right leg"] = 0
+  skin = 0,
+  head = 0,
+  torso = 0,
+  ["left arm"] = 0,
+  ["right arm"] = 0,
+  ["left leg"] = 0,
+  ["right leg"] = 0
 }
 
 
@@ -203,125 +202,126 @@ snd.target_impaled = false -- do we specifically have our target imapled
 snd.fleshbaneStacks = 0
 
 snd.effects = {
---venoms
-sight = "oculus",
-blurry_vision = "oculus",
-hearing = "prefarar",
-asthma = "kalmia", 
-paresis = "curare", 
-clumsiness = "xentio", 
-sensitivity = "prefarar", 
-vomiting = "euphorbia",
-allergies = "darkshade", 
-colocasia = "colocasia", 
-haemophilia = "hepafarin", 
-peace = "ouabain",
-deadening = "vardrax",
+  --venoms
+  sight = "oculus",
+  blurry_vision = "oculus",
+  hearing = "prefarar",
+  asthma = "kalmia",
+  paresis = "curare",
+  clumsiness = "xentio",
+  sensitivity = "prefarar",
+  vomiting = "euphorbia",
+  allergies = "darkshade",
+  colocasia = "colocasia",
+  haemophilia = "hepafarin",
+  peace = "ouabain",
+  deadening = "vardrax",
 
-sleep = "delphinium", --note this is not the asleep aff, is going to be a meta aff
+  sleep = "delphinium", --note this is not the asleep aff, is going to be a meta aff
 
-stupidity = "aconite", 
-weariness = "vernalius", 
-recklessness = "eurypteria", 
-dizziness = "larkspur", 
-shyness = "digitalis", 
+  stupidity = "aconite",
+  weariness = "vernalius",
+  recklessness = "eurypteria",
+  dizziness = "larkspur",
+  shyness = "digitalis",
 
-anorexia = "slike",
-belonephobia = "araceae",
-slickness = "gecko",
+  anorexia = "slike",
+  belonephobia = "araceae",
+  slickness = "gecko",
 
-stuttering = "jalk",
+  stuttering = "jalk",
 
-voyria = "voyria", --immunity
+  voyria = "voyria", --immunity
 
-squelched = "selarnia",
-disfigurement = "monkshood",
+  squelched = "selarnia",
+  disfigurement = "monkshood",
 
-thin_blood = "scytherus",
-left_leg_crippled = "epseth",
-right_leg_crippled = "epseth",
-left_arm_crippled = "epteth",
-right_arm_crippled = "epteth",
+  thin_blood = "scytherus",
+  left_leg_crippled = "epseth",
+  right_leg_crippled = "epseth",
+  left_arm_crippled = "epteth",
+  right_arm_crippled = "epteth",
 
-conviction = "conviction",
-mental_disruption = "disrupt",
-physical_disruption = "disrupt",
-crippled = "cripple",
-crippled_body = "cripple",
-hemorrhage = "hemorrhage",
-flared = "flare",
+  conviction = "conviction",
+  mental_disruption = "disrupt",
+  physical_disruption = "disrupt",
+  crippled = "cripple",
+  crippled_body = "cripple",
+  hemorrhage = "hemorrhage",
+  flared = "flare",
 
-rend = "rend",
+  rend = "rend",
 
-cirisosis = "cirisosis",
+  cirisosis = "cirisosis",
 }
 
 snd.venoms = {
-    "sumac",
-    "xentio",
-    "oleander",
-    "eurypteria",
-    "kalmia",
-    "digitalis",
-    "darkshade",
-    "curare",
-    "epteth",
-    "prefarar",
-    "monkshood",
-    "euphorbia",
-    "colocasia",
-    "oculus",
-    "hepafarin",
-    "camus",
-    "vernalius",
-    "epseth",
-    "larkspur",
-    "slike",
-    "voyria",
-    "delphinium",
-    "vardrax",
-    "loki",
-    "aconite",
-    "selarnia",
-    "gecko",
-    "scytherus",
-    "ouabain",
-  }
+  "sumac",
+  "xentio",
+  "oleander",
+  "eurypteria",
+  "kalmia",
+  "digitalis",
+  "darkshade",
+  "curare",
+  "epteth",
+  "prefarar",
+  "monkshood",
+  "euphorbia",
+  "colocasia",
+  "oculus",
+  "hepafarin",
+  "camus",
+  "vernalius",
+  "epseth",
+  "larkspur",
+  "slike",
+  "voyria",
+  "delphinium",
+  "vardrax",
+  "loki",
+  "aconite",
+  "selarnia",
+  "gecko",
+  "scytherus",
+  "ouabain",
+}
 
 function snd.rev_empower(aff)
-
-   local revenant = {
-        ["conviction"] = "bimre",
-        ["disrupt"] = "dirne",
-        ["cripple"] = "azu",
-        ["hemorrhage"] = "wilave",
-        ["flare"] = "livfa",
-                    }
-    if revenant[aff] == nil then return aff
-    else return revenant[aff]
-    end
+  local revenant = {
+    ["conviction"] = "bimre",
+    ["disrupt"] = "dirne",
+    ["cripple"] = "azu",
+    ["hemorrhage"] = "wilave",
+    ["flare"] = "livfa",
+  }
+  if revenant[aff] == nil then
+    return aff
+  else
+    return revenant[aff]
+  end
 end
 
 snd.spirituality_attacks = {
-paresis = "shield strike",
-sight = "shield brilliance",
-misery = "shield facesmash",
-weariness = "shield punch",
-asthma = "lambaste",
-haemophilia = "lambaste",
-confusion = "perform dazzle",
-writhe_transfix = "evoke transfixion",
+  paresis = "shield strike",
+  sight = "shield brilliance",
+  misery = "shield facesmash",
+  weariness = "shield punch",
+  asthma = "lambaste",
+  haemophilia = "lambaste",
+  confusion = "perform dazzle",
+  writhe_transfix = "evoke transfixion",
 }
 
 snd.subjugation_attacks = {
-paresis = "shield strike",
-sight = "shield horrify",
-misery = "shield facesmash",
-weariness = "shield punch",
-asthma = "beset",
-haemophilia = "beset",
-confusion = "dirge hysteria",
-writhe_transfix = "tectonic transfixion",
+  paresis = "shield strike",
+  sight = "shield horrify",
+  misery = "shield facesmash",
+  weariness = "shield punch",
+  asthma = "beset",
+  haemophilia = "beset",
+  confusion = "dirge hysteria",
+  writhe_transfix = "tectonic transfixion",
 }
 
 snd.hound_attacks = {
@@ -345,7 +345,7 @@ snd.hound_attacks = {
     mark = "mark",
     loki = "contagion",
     bite = "bite",
-              },
+  },
   ["Warden"] = {
     recklessness = "chant",
     dizziness = "chant",
@@ -371,278 +371,277 @@ snd.hound_attacks = {
 
 snd.cures = {
 
-amaurosis = {
-"sight",
-},
+  amaurosis = {
+    "sight",
+  },
 
-ototoxin = {
-"hearing",
-},
+  ototoxin = {
+    "hearing",
+  },
 
-kawhe = {
-"no_insomnia",
-},
+  kawhe = {
+    "no_insomnia",
+  },
 
-stimulant = {
-"no_instawake",
-},
+  stimulant = {
+    "no_instawake",
+  },
 
-panacea = {
-"stormtouched",
-"patterns",
-"rot_body",
-"rot_wither",
-"rot_heat",
-"rot_spirit",
-"rot_benign",
-},
+  panacea = {
+    "stormtouched",
+    "patterns",
+    "rot_body",
+    "rot_wither",
+    "rot_heat",
+    "rot_spirit",
+    "rot_benign",
+  },
 
-anabiotic = {
-"plodding",
-"idiocy",
-},
-infusion = {
-  "etherflux",
-  "squelched",
-},
-opiate = {
-"paralysis",
-"paresis",
-"mirroring",
-"crippled_body",
-"crippled",
-"blisters",
-"slickness",
-"heartflutter",
-"slough",
-},
+  anabiotic = {
+    "plodding",
+    "idiocy",
+  },
+  infusion = {
+    "etherflux",
+    "squelched",
+  },
+  opiate = {
+    "paralysis",
+    "paresis",
+    "mirroring",
+    "crippled_body",
+    "crippled",
+    "blisters",
+    "slickness",
+    "heartflutter",
+    "slough",
+  },
 
-steroid = {
-"hubris",
-"pacifism",
-"peace",
-"accursed",
-"agony",
-"limp_veins",
-"lovers_effect",
-"laxity",
-"superstition",
-"generosity",
-"justice",
-"magnanimity",
-},
+  steroid = {
+    "hubris",
+    "peace",
+    "accursed",
+    "agony",
+    "limp_veins",
+    "lovers_effect",
+    "laxity",
+    "superstition",
+    "generosity",
+    "justice",
+    "magnanimity",
+  },
 
-coagulation = {
-"body_odor",
-"lethargy",
-"allergies",
-"mental_disruption",
-"physical_disruption",
-"vomiting",
-"exhausted",
-"thin_blood",
-"rend",
-"haemophilia",
-},
+  coagulation = {
+    "body_odor",
+    "lethargy",
+    "allergies",
+    "mental_disruption",
+    "physical_disruption",
+    "vomiting",
+    "exhausted",
+    "thin_blood",
+    "rend",
+    "haemophilia",
+  },
 
-depressant = {
-"commitment_fear",
-"merciful",
-"recklessness",
-"egocentric",
-"masochism",
-"agoraphobia",
-"loneliness",
-"berserking",
-"vertigo",
-"claustrophobia",
-"nyctophobia",
-},
+  depressant = {
+    "commitment_fear",
+    "merciful",
+    "recklessness",
+    "egocentric",
+    "masochism",
+    "agoraphobia",
+    "loneliness",
+    "berserking",
+    "vertigo",
+    "claustrophobia",
+    "nyctophobia",
+  },
 
-decongestant = {
-"baldness",
-"clumsiness",
-"hypochondria",
-"weariness",
-"asthma",
-"sensitivity",
-"ringing_ears",
-"impairment",
-"blood_poison",
-},
+  decongestant = {
+    "baldness",
+    "clumsiness",
+    "hypochondria",
+    "weariness",
+    "asthma",
+    "sensitivity",
+    "ringing_ears",
+    "impairment",
+    "blood_poison",
+  },
 
-euphoriant = {
-"self_pity",
-"stupidity",
-"dizziness",
-"faintness",
-"shyness",
-"epilepsy",
-"impatience",
-"dissonance",
-"infested",
-},
+  euphoriant = {
+    "self_pity",
+    "stupidity",
+    "dizziness",
+    "faintness",
+    "shyness",
+    "epilepsy",
+    "impatience",
+    "dissonance",
+    "infested",
+  },
 
-antipsychotic = {
-"sadness",
-"confusion",
-"dementia",
-"hallucinations",
-"paranoia",
-"hatred",
-"hypersomnia",
-"addiction",
-"blood_curse",
-"blighted",
-},
+  antipsychotic = {
+    "sadness",
+    "confusion",
+    "dementia",
+    "hallucinations",
+    "paranoia",
+    "hatred",
+    "hypersomnia",
+    "addiction",
+    "blood_curse",
+    "blighted",
+  },
 
-eucrasia = {
-"worrywart",
-"misery",
-"hopelessness",
-"echoes",
-"hollow",
-"narcolepsy",
-"perplexed",
-"self_loathing"
-},
+  eucrasia = {
+    "worrywart",
+    "misery",
+    "hopelessness",
+    "echoes",
+    "hollow",
+    "narcolepsy",
+    "perplexed",
+    "self_loathing"
+  },
 
-willow = {
-"aeon",
-"hellsight",
-"deadening"
-},
+  willow = {
+    "aeon",
+    "hellsight",
+    "deadening"
+  },
 
-yarrow = {
-"slickness",
-"withering",
-"disfigurement",
-"migraine",
-},
+  yarrow = {
+    "slickness",
+    "withering",
+    "disfigurement",
+    "migraine",
+  },
 
-epidermal_torso = {
-"anorexia",
-"gorged",
---"effused_blood",
-},
+  epidermal_torso = {
+    "anorexia",
+    "gorged",
+    --"effused_blood",
+  },
 
-epidermal_head = {
-"indifference",
-"stuttering",
-"blurry_vision",
-"burnt_eyes",
-"blindness",
-"gloom",
-"deafness"
-},
+  epidermal_head = {
+    "indifference",
+    "stuttering",
+    "blurry_vision",
+    "burnt_eyes",
+    "blindness",
+    "gloom",
+    "deafness"
+  },
 
-epidermal = {
-"anorexia",
-"gorged",
---"effused_blood",
-"indifference",
-"stuttering",
-"blurry_vision",
-"blindness",
-"deafness"
-},
+  epidermal = {
+    "anorexia",
+    "gorged",
+    --"effused_blood",
+    "indifference",
+    "stuttering",
+    "blurry_vision",
+    "blindness",
+    "deafness"
+  },
 
-caloric = {
-"hypothermia",
-"frozen",
-"frigid",
-"shivering",
---"no_caloric"
-},
-mending = {
-"destroyed_throat",
-"crippled_throat",
-"lightwound",
-"ablaze",
-"cracked_ribs",
-"left_arm_crippled",
-"left_arm_dislocated",
-"right_arm_crippled",
-"right_arm_dislocated",
-"left_leg_crippled",
-"left_leg_dislocated",
-"right_leg_crippled",
-"right_leg_dislocated",
-},
+  caloric = {
+    "hypothermia",
+    "frozen",
+    "frigid",
+    "shivering",
+    --"no_caloric"
+  },
+  mending = {
+    "destroyed_throat",
+    "crippled_throat",
+    "lightwound",
+    "ablaze",
+    "cracked_ribs",
+    "left_arm_crippled",
+    "left_arm_dislocated",
+    "right_arm_crippled",
+    "right_arm_dislocated",
+    "left_leg_crippled",
+    "left_leg_dislocated",
+    "right_leg_crippled",
+    "right_leg_dislocated",
+  },
 
-focus = {
-"muddled",
-"egocentric",
-"stupidity",
-"anorexia",
-"epilepsy",
-"mirroring",
-"mental_disruption",
-"peace",
-"paranoia",
-"hallucinations",
-"dizziness",
-"indifference",
-"berserking",
-"pacifism",
-"lovers_effect",
-"laxity",
-"manablight",
-"hatred",
-"generosity",
-"claustrophobia",
-"vertigo",
-"faintness",
-"loneliness",
-"agoraphobia",
-"echoes",
-"gnawing",
-"masochism",
-"recklessness",
-"weariness",
-"impatience",
-"confusion",
-"dementia",
-"nyctophobia",
-"patterns",
-"dread"
-}
+  focus = {
+    "muddled",
+    "egocentric",
+    "stupidity",
+    "anorexia",
+    "epilepsy",
+    "mirroring",
+    "mental_disruption",
+    "peace",
+    "paranoia",
+    "hallucinations",
+    "dizziness",
+    "indifference",
+    "berserking",
+    "lovers_effect",
+    "laxity",
+    "manablight",
+    "hatred",
+    "generosity",
+    "claustrophobia",
+    "vertigo",
+    "faintness",
+    "loneliness",
+    "agoraphobia",
+    "echoes",
+    "gnawing",
+    "masochism",
+    "recklessness",
+    "weariness",
+    "impatience",
+    "confusion",
+    "dementia",
+    "nyctophobia",
+    "patterns",
+    "dread"
+  }
 
 }
 
 snd.entangleaffs = {
   "writhe_transfix",
-	"writhe_impaled",
-	"writhe_web",
-	"writhe_thighlock",
-	"writhe_armpitlock",
-	"writhe_necklock",
+  "writhe_impaled",
+  "writhe_web",
+  "writhe_thighlock",
+  "writhe_armpitlock",
+  "writhe_necklock",
   "writhe_ropes",
   "writhe_vines",
   "writhe_grappled",
   "writhe_dartpinned",
- }
+}
 
 
 
 snd.cureset_skills = {
-ascendril = {"Elemancy", "Arcanism", "Thaumaturgy", "Humourism", "Hematurgy", "Esoterica"},
-sciomancer = {"Sciomancy", "Sorcery", "Gravitation", "Malediction", "Runecarving", "Sporulation"},
-indorani = {"Necromancy", "Tarot", "Domination","Hyalincuru", "Contracts", "Oneiromancy"},
-praenomen = {"Corpus", "Mentis", "Sanguis", "Ascendance", "Dictum", "Discipline"},
-archivist = {"Geometrics", "Numerology", "Bioessence", "Cultivation", "Enlightenment", "Voidgazing"},
-teradrim = {"Terramancy", "Animation", "Desiccation", "Wavebreaking", "Inundation", "Synthesis"},
-luminary = {"Spirituality", "Devotion", "Illumination","Tectonics", "Apocalyptia", "Subjugation"},
-sentinel = {"Dhuriv", "Woodlore", "Tracking", "Shadowdancing", "Artifice", "Subversion"},
-shaman = {"Primality", "Shamanism", "Naturalism", "Experimentation", "Alchemy", "Botany"},
-monk = {"Tekura", "Kaido", "Telepathy"},
-zealot = {"Zeal", "Purification", "Psionics", "Brutality", "Ravaging", "Egotism"},
-infiltrator = {"Assassination", "Subterfuge", "Hypnosis"},
-shifter = {"Ferality", "Shapeshifting", "Vocalizing"},
-wayfarer = {"Tenacity", "Wayfaring", "Fury"},
-templar = {"Battlefury", "Righteousness", "Bladefire", "Chirography", "Riving", "Manifestation"},
-carnifex = {"Savagery", "Deathlore", "Warhounds", "Warding", "Ancestry", "Communion"},
-bard = {"Songcalling", "Performance", "Weaving"},
-predator = {"Knifeplay", "Predation", "Beastmastery"},
-siderealist = {"Astranomia", "Crystalism", "Ostension"},
+  ascendril = { "Elemancy", "Arcanism", "Thaumaturgy", "Humourism", "Hematurgy", "Esoterica" },
+  sciomancer = { "Sciomancy", "Sorcery", "Gravitation", "Malediction", "Runecarving", "Sporulation" },
+  indorani = { "Necromancy", "Tarot", "Domination", "Hyalincuru", "Contracts", "Oneiromancy" },
+  praenomen = { "Corpus", "Mentis", "Sanguis", "Ascendance", "Dictum", "Discipline" },
+  archivist = { "Geometrics", "Numerology", "Bioessence", "Cultivation", "Enlightenment", "Voidgazing" },
+  teradrim = { "Terramancy", "Animation", "Desiccation", "Wavebreaking", "Inundation", "Synthesis" },
+  luminary = { "Spirituality", "Devotion", "Illumination", "Tectonics", "Apocalyptia", "Subjugation" },
+  sentinel = { "Dhuriv", "Woodlore", "Tracking", "Shadowdancing", "Artifice", "Subversion" },
+  shaman = { "Primality", "Shamanism", "Naturalism", "Experimentation", "Alchemy", "Botany" },
+  monk = { "Tekura", "Kaido", "Telepathy" },
+  zealot = { "Zeal", "Purification", "Psionics", "Brutality", "Ravaging", "Egotism" },
+  infiltrator = { "Assassination", "Subterfuge", "Hypnosis" },
+  shifter = { "Ferality", "Shapeshifting", "Vocalizing" },
+  wayfarer = { "Tenacity", "Wayfaring", "Fury" },
+  templar = { "Battlefury", "Righteousness", "Bladefire", "Chirography", "Riving", "Manifestation" },
+  carnifex = { "Savagery", "Deathlore", "Warhounds", "Warding", "Ancestry", "Communion" },
+  bard = { "Songcalling", "Performance", "Weaving" },
+  predator = { "Knifeplay", "Predation", "Beastmastery" },
+  siderealist = { "Astranomia", "Crystalism", "Ostension" },
 }
+

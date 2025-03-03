@@ -233,7 +233,6 @@ aff_numb_arms = {state = "healed", effect = "", cures = {}, assess = false, time
 aff_numbed_skin = {state = "healed", effect = "", cures = {}, assess = false, timer = createStopWatch()},
 aff_oiled = {state = "healed", effect = "", cures = {}, assess = false, timer = createStopWatch()},
 aff_omen = {state = "healed", effect = "", cures = {}, assess = false, timer = createStopWatch()},
-aff_pacifism = {state = "healed", effect = "", cures = {herb = "bellwort", tree = "send", focus = "send"}, assess = false, timer = createStopWatch()},
 aff_paranoia = {state = "healed", effect = "", cures = {herb = "ash", tree = "send", focus = "send"}, assess = false, timer = createStopWatch()},
 aff_patterns = {state = "healed", effect = "", cures = {}, assess = false, timer = createStopWatch()},
 aff_peace = {state = "healed", effect = "", cures = {herb = "bellwort", tree = "send", focus = "send"}, assess = false, timer = createStopWatch()},
