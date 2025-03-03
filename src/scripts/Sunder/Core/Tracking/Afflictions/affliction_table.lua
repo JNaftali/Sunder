@@ -195,7 +195,7 @@ snd.afflictions = {
   aff_lifebane                   = { state = "healed", effect = "", cures = {}, assess = false, timer = createStopWatch() },
   aff_lightwound                 = { state = "healed", effect = "extra bleeding", cures = { salve = "mending to body" }, assess = false, timer = createStopWatch() },
   aff_limp_veins                 = { state = "healed", effect = "", cures = { herb = "kelp", tree = "send" }, assess = false, timer = createStopWatch() },
-  aff_loneliness                 = { state = "healed", effect = "", cures = { herb = "lobelia", tree = "send", focus = "send" }, assess = false, timer = createStopWatch() },
+  aff_loneliness                 = { state = "healed", effect = "", cures = { herb = "eucrasia", tree = "send", focus = "send" }, assess = false, timer = createStopWatch() },
   aff_lovers_effect              = { state = "healed", effect = "", cures = { herb = "bellwort", tree = "send", focus = "send" }, assess = false, timer = createStopWatch() },
   aff_magic_fire                 = { state = "healed", effect = "ablaze mask aff", cures = { salve = "mending" }, assess = false, timer = createStopWatch() },
   aff_magic_weakness             = { state = "healed", effect = "", cures = {}, assess = false, timer = createStopWatch() },

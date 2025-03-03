@@ -448,7 +448,6 @@ snd.cures = {
     "egocentric",
     "masochism",
     "agoraphobia",
-    "loneliness",
     "berserking",
     "vertigo",
     "claustrophobia",
@@ -497,6 +496,7 @@ snd.cures = {
     "echoes",
     "hollow",
     "narcolepsy",
+    "loneliness",
     "perplexed",
     "self_loathing"
   },
