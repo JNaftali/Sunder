@@ -119,7 +119,6 @@ snd.priorities =
   -- "aff_peace",
   -- "aff_lovers_effect",
   -- "aff_superstition",
-  -- "aff_generosity",
   -- "aff_justice",
   -- "aff_egocentric",
   -- "aff_commitment_fear",
@@ -699,4 +698,3 @@ snd.priorities =
   "def_boneshaking",
   "def_consciousness",
 }
-

@@ -171,7 +171,6 @@ snd.mental_affs = {
   "lovers_effect",
   "laxity",
   "hatred",
-  "generosity",
   "claustrophobia",
   "vertigo",
   "faintness",
@@ -305,4 +304,3 @@ snd.weapon_types = {
   "tower",
   "shield",
 }
-

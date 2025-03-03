@@ -28,7 +28,6 @@ function snd.rage_check()
   "aff_lovers_effect",
   "aff_laxity",
   "aff_superstition",
-  "aff_generosity",
   "aff_justice",
   "aff_magnanimity",}
   
