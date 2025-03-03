@@ -4203,8 +4203,6 @@ snd.all_class_attacks = {
 
   ["Enlightenment"] = {
 
-    Impel = function(target)
-    end,
     Turmoil = function(target)
       snd.target_got("dementia")
       snd.target_got("paranoia")
