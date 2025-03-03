@@ -1321,7 +1321,7 @@ snd.all_class_attacks = {
     end,
     Falter = function(target, shadowprice)
       if snd.checkAff("dizziness") then snd.target_got("dementia") end
-      if snd.checkAff("weariness") then snd.target_got("exhausted") end
+      if snd.checkAff("weariness") then snd.target_got("crippled") end
     end,
     Shadowbrand = function(target, conditional)
       if conditional == "Shadowprice" or conditional == "end" then
@@ -3820,7 +3820,7 @@ snd.all_class_attacks = {
     end,
     Anathemise = function(target, spiritpact)
       if snd.checkAff("dizziness") then snd.target_got("dementia") end
-      if snd.checkAff("weariness") then snd.target_got("exhausted") end
+      if snd.checkAff("weariness") then snd.target_got("crippled") end
     end,
     Preymark = function(target, conditional)
       if conditional == "Spiritpact" or conditional == "end" then
