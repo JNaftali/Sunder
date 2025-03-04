@@ -471,10 +471,6 @@
     "highlightBG": "#ffff00",
     "patterns": [
       {
-        "pattern": "^(\\w+) lapses into a state of unconsciousness\\.$",
-        "type": "regex"
-      },
-      {
         "pattern": "^(\\w+)'s eyes flutter closed and .+ slumps to the ground, unconscious\\.$",
         "type": "regex"
       },
@@ -498,6 +494,10 @@
     "highlightFG": "#ff0000",
     "highlightBG": "#ffff00",
     "patterns": [
+      {
+        "pattern": "^(\\w+) lapses into a state of unconsciousness\\.$",
+        "type": "regex"
+      },
       {
         "pattern": "^The surging elemancy does its terrifying work as (\\w+) loses consciousness\\.$",
         "type": "regex"
