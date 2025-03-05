@@ -466,7 +466,7 @@ snd.defenses = {
     defense = "greenheart",
     type = "normal",
     effect = "Tree Tattoo is sped up",
-    balance = setmetatable({ balanceequilibriumtake = "outc greenink" .. snd.sep .. "wayfare greenheart on" },
+    balance = setmetatable({},
       {
         __index = function(
             t, k)
