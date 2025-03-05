@@ -1,222 +1,250 @@
 [
-       {
-              "name": "Holy Light Affliction",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^Terror consumes (\\w+) as the pitiless light inspires (self-pity|sadness|hubris|commitment fear) in .* heart.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^(\\w+) glances around nervously as .* (self-pity|sadness|hubris|commitment fear) anxiety settles in\\.$",
-                            "type": "regex"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "Exsanguinate",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^(\\w+) looks horrified as .* skin begins to weep with vivid red blood.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^(\\w+) screams as .* veins burst open spilling precious life blood to the ground.$",
-                            "type": "regex"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "remorse symptom",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^(\\w+)'s terrible remorse instills certainty of purpose in your mind.$",
-                            "type": "regex"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "Contrition symptom",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^The weight of (\\w+)'s contrition suffuses your body with righteous vigour.$",
-                            "type": "regex"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "black bile got",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^(\\w+)'s body turns sickly as \\w+ skin takes on a yellow shade\\.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^Motes of light pulse beneath (\\w+)'s skin, .+ veins twisting oddly as the scouring incandescence wreaks havoc upon .+ insides.$",
-                            "type": "regex"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "black bile fired",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^(\\w+)'s skin turns a sickly colour and black bile seeps from \\w+ mouth\\.$",
-                            "type": "regex"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "manifest",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "You concentrate on regaining your physical form, the unbounded reach of ascended conscious narrowing",
-                            "type": "startOfLine"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "Used Deliver",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^You use Ascendance Deliver on (\\w+).$",
-                            "type": "regex"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "Rune activation",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^You place your palms together, willing the rune placed on (\\w+)'s soul to activate\\.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^You declare that all shall know of (\\w+)'s villainy, and incite the brand you have placed to consume.$",
-                            "type": "regex"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "Pariah / Runed used or times up",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^You feel the rune placed on (\\w+)'s soul grow weaker before dispersing in a plume of foul smoke.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^The brand of the pariah you had placed upon (\\w+) fades from your awareness.$",
-                            "type": "regex"
-                     }
-              ],
-              "script": "if matches[2] == snd.target  or matches[2] == \"yourself\" then\n\tsnd.runeused = false\nend"
-       }
+  {
+    "name": "Holy Light Hubris",
+    "patterns": [
+      {
+        "pattern": "^Defiant in the face of a crusader's light, (\\w+) adopts an expression of utmost hubris\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^Mania manifests in (\\w+)'s eyes as .+ achieves new heights of hubris\\.$",
+        "type": "regex"
+      }
+    ]
+  },
+  {
+    "name": "Holy Light Sadness",
+    "patterns": [
+      {
+        "pattern": "^The glorious light moves (\\w+) to tears with its majesty, filling .+ heart with sadness\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^(\\w+) trembles as newfound sadness compels tears from .+ eyes\\.$",
+        "type": "regex"
+      }
+    ]
+  },
+  {
+    "name": "Holy Light Merciful",
+    "patterns": [
+      {
+        "pattern": "^Cowed by lightborn majesty, (\\w+) adopts a merciful demeanour\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^(\\w+) trembles as newfound sadness compels tears from .+ eyes\\.$",
+        "type": "regex"
+      }
+    ]
+  },
+  {
+    "name": "Holy Light Selfpity",
+    "patterns": [
+      {
+        "pattern": "^Pitiless light commands contrition from (\\w+), .+ heart burdened by self\\-pity\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "Weary with woe, (\\w+) heaves a sigh as .+ self\\-pity settles in\\.",
+        "type": "regex"
+      }
+    ]
+  },
+  {
+    "name": "Exsanguinate",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^(\\w+) looks horrified as .* skin begins to weep with vivid red blood.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^(\\w+) screams as .* veins burst open spilling precious life blood to the ground.$",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "remorse symptom",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^(\\w+)'s terrible remorse instills certainty of purpose in your mind.$",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "Contrition symptom",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^The weight of (\\w+)'s contrition suffuses your body with righteous vigour.$",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "black bile got",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^(\\w+)'s body turns sickly as \\w+ skin takes on a yellow shade\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^Motes of light pulse beneath (\\w+)'s skin, .+ veins twisting oddly as the scouring incandescence wreaks havoc upon .+ insides.$",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "black bile fired",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^(\\w+)'s skin turns a sickly colour and black bile seeps from \\w+ mouth\\.$",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "manifest",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "You concentrate on regaining your physical form, the unbounded reach of ascended conscious narrowing",
+        "type": "startOfLine"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "Used Deliver",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^You use Ascendance Deliver on (\\w+).$",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "Rune activation",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^You place your palms together, willing the rune placed on (\\w+)'s soul to activate\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^You declare that all shall know of (\\w+)'s villainy, and incite the brand you have placed to consume.$",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "Pariah / Runed used or times up",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^You feel the rune placed on (\\w+)'s soul grow weaker before dispersing in a plume of foul smoke.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^The brand of the pariah you had placed upon (\\w+) fades from your awareness.$",
+        "type": "regex"
+      }
+    ],
+    "script": "if matches[2] == snd.target  or matches[2] == \"yourself\" then\n\tsnd.runeused = false\nend"
+  }
 ]
