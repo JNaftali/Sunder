@@ -2454,6 +2454,10 @@ snd.all_class_attacks = {
 
     Halt = function(target, boosted)
       snd.target_got("lethargy")
+      if boosted then
+        snd.target_got("immobility")
+        snd.affTimers.start("immobility", 5, true)
+      end
     end,
 
     Exhaust = function(target, boosted)
