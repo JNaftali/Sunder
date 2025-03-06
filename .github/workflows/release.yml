@@ -23,21 +23,13 @@ jobs:
       - name: Build Project
         run: nix build --out-link result
 
-      - name: Archive Build Artifacts
-        run: |
-          mkdir -p artifacts
-          cp -r result/* artifacts/
-          # Check if Sunder.xml exists and copy it to artifacts
-          if [ -f Sunder.xml ]; then
-            cp Sunder.xml artifacts/
-          fi
-          tar -czf release.tar.gz -C artifacts .
-
       - name: Upload Build Artifacts
         uses: actions/upload-artifact@v4
         with:
           name: release-artifacts
-          path: release.tar.gz
+          path: |
+            result/Sunder.mpackage
+            result/Sunder.xml
 
   release:
     needs: build
@@ -54,7 +46,7 @@ jobs:
         with:
           tag_name: latest
           files: |
-            release.tar.gz
-            artifacts/Sunder.xml
+            Sunder.mpackage
+            Sunder.xml
           generate_release_notes: true
           token: ${{ secrets.GITHUB_TOKEN }}
