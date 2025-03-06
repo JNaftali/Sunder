@@ -33,7 +33,7 @@
         "type": "regex"
       },
       {
-        "pattern": "^(\\w+) trembles as newfound sadness compels tears from .+ eyes\\.$",
+        "pattern": "^(\\w+) frets as .+ eyes flit to and fro, a merciful hesitation restraining .+ demeanour\\.$",
         "type": "regex"
       }
     ]
