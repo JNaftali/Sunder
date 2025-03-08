@@ -1,20 +1,19 @@
 [
-       {
-              "name": "defense table",
-              "isActive": "yes",
-              "script": "",
-              "isFolder": "no"
-       },
-       {
-              "name": "give/take defenses",
-              "isActive": "yes",
-              "script": "local formDefs = {\n\tdef_adherent_form = true,\n\tdef_seraph_form = true,\n\tdef_aetherial_form = true,\n\tdef_titan_form = true,\n\tdef_glacian_form = true,\n\tdef_nocturn_form = true,\n\tdef_sagani_form = true,\n\tdef_chaos_form = true,\n\tdef_astral_form = true,\n  def_tiarna_form = true,\n}\n\nlocal function check200(defense)\n  if formDefs[defense] then\n    sendGMCP(\"Char.Skills.get\")\n    send(\"\")\n  end\nend\n\nfunction snd.def_check()\n for i in pairs(snd.defenses) do\n  if i == \"def_speed\" or i == \"def_rebounding\" or i == \"def_deafness\" or i == \"def_fangbarrier\" then\n   if snd.defenses[i].state == \"waiting\" and getStopWatchTime(snd.defenses[i].timer) \u003e= 10 then\n    snd.def_timeout(i)\n   end\n  elseif snd.defenses[i].state == \"waiting\" and getStopWatchTime(snd.defenses[i].timer) \u003e 2 then\n   snd.def_timeout(i)\n  end\n end\nend\n\nfunction snd.def_timeout(defense)\n snd.defenses[defense].state = \"down\"\n snd.message(\"[Resetting: \u003cwhite\u003e\"..defense..\"\u003cbrown\u003e]\", \"reset\")\nend\n\nfunction snd.def_gain(defense)\n--  deleteLine()\n snd.message(\"You: \u003cgreen\u003eGAIN \u003cwhite\u003e\"..defense..\".\", \"defense\")\n if not string.find(defense, \"def_\") then\n  defense = \"def_\"..defense\n end\n check200(defense)\n x = stopStopWatch(snd.defenses[defense].timer)\n-- resetStopWatch(snd.defenses[defense].timer)\n snd.def_have(defense)\n snd.defenses[defense].timer = createStopWatch()\nend\n\nfunction snd.def_have(defense)\n if not string.find(defense, \"def_\") then\n  defense = \"def_\"..defense\n end\n snd.defenses[defense].state = \"deffed\"\n if snd.less_defs~= nil then\n   for i in pairs(snd.less_defs) do\n    if snd.less_defs[i] == defense then\n     snd.defenses[defense].needit = false\n     table.remove(snd.less_defs, i)\n    end\n   end\n  end\nend\n\nfunction snd.def_def(defense)\n if snd.toggles.gags then \n  deleteLine()\n end\n if snd.defenses[\"def_\"..defense].type == \"normal\" then\n  cecho(\"\u003cwhite\u003e\\n\"..defense)\n else\n  cecho(\"\u003c\"..snd.defenses[\"def_\"..defense].type..\"\u003e\\n\"..defense)\n end\n if not string.find(defense, \"def_\") then\n  defense = \"def_\"..defense\n end\n echo(\" \"..snd.defenses[defense].effect)\n snd.def_have(defense)\nend\n\nfunction snd.def_take(defense)\n if not string.find(defense, \"def_\") then\n  defense = \"def_\"..defense\n end\n check200(defense)\n if snd.defenses[defense].state == \"deffed\" then\n--  deleteLine()\n  snd.message(\"You: \u003cred\u003eLOSE \u003cwhite\u003e\"..defense..\".\", \"defense\")\n end\n snd.def_remove(defense)\nend\n\nfunction snd.def_remove(defense)\n if not string.find(defense, \"def_\") then\n  defense = \"def_\"..defense\n end\n if snd.defenses[defense].state ~= \"waiting\" then\n  snd.defenses[defense].state = \"down\"\n end\nend",
-              "isFolder": "no"
-       },
-       {
-              "name": "most defenses",
-              "isActive": "yes",
-              "script": "",
-              "isFolder": "no"
-       }
+  {
+    "name": "defense table",
+    "isActive": "yes",
+    "script": "",
+    "isFolder": "no"
+  },
+  {
+    "name": "give take defenses",
+    "isActive": "yes",
+    "isFolder": "no"
+  },
+  {
+    "name": "most defenses",
+    "isActive": "yes",
+    "script": "",
+    "isFolder": "no"
+  }
 ]
