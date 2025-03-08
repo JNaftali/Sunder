@@ -1,140 +1,137 @@
 [
-       {
-              "name": "balance",
-              "isActive": "yes",
-              "script": "",
-              "isFolder": "no"
-       },
-       {
-              "name": "tattoo",
-              "isActive": "yes",
-              "script": "",
-              "isFolder": "no"
-       },
-       {
-              "name": "eat",
-              "isActive": "yes",
-              "script": "",
-              "isFolder": "no"
-       },
-       {
-              "name": "drink",
-              "isActive": "yes",
-              "script": "",
-              "isFolder": "no"
-       },
-       {
-              "name": "herb",
-              "isActive": "yes",
-              "script": "",
-              "isFolder": "no"
-       },
-       {
-              "name": "vial",
-              "isActive": "yes",
-              "script": "",
-              "isFolder": "no"
-       },
-       {
-              "name": "salve",
-              "isActive": "yes",
-              "script": "",
-              "isFolder": "no"
-       },
-       {
-              "name": "elixir",
-              "isActive": "yes",
-              "script": "",
-              "isFolder": "no"
-       },
-       {
-              "name": "moss",
-              "isActive": "yes",
-              "script": "",
-              "isFolder": "no"
-       },
-       {
-              "name": "writhe",
-              "isActive": "yes",
-              "script": "",
-              "isFolder": "no"
-       },
-       {
-              "name": "concentrate",
-              "isActive": "yes",
-              "script": "",
-              "isFolder": "no"
-       },
-       {
-              "name": "other",
-              "isActive": "yes",
-              "script": "",
-              "isFolder": "no"
-       },
-       {
-              "name": "smoke",
-              "isActive": "yes",
-              "script": "",
-              "isFolder": "no"
-       },
-       {
-              "name": "stand",
-              "isActive": "yes",
-              "script": "",
-              "isFolder": "no"
-       },
-       {
-              "name": "fitness",
-              "isActive": "yes",
-              "script": "",
-              "isFolder": "no"
-       },
-       {
-              "name": "purge / annul",
-              "isActive": "yes",
-              "script": "purge_threshold = 2\n\nfunction snd.purge_check()\n-- Attempt to purge if don't have paralysis and have at least 2 curable physical affs.\n  if snd.balance.purge and not snd.waiting.purge and not snd.have_aff(\"paralysis\") then\n    local purgable = {}\n    \n    for _, aff in pairs(snd.physical_affs) do\n      if snd.have_aff(aff) and aff ~= \"paralysis\" then\n        local i, _ = string.find(aff, \"_crippled\")\n        if i then\n          local s = string.sub(aff, 0, i - 1)\n          if snd.afflictions[\"aff_\"..s..\"_broken\"].state == \"healed\" then\n            table.insert(purgable, aff)\n          end\n        else\n          table.insert(purgable, aff)\n        end\n      end\n    end\n    \n    if #purgable \u003e= purge_threshold then\n      return true\n    else\n      return false\n    end\n  end\nend\n\nfunction snd.do_purge()\n  \n      if snd.class == \"Carnifex\" then\n        snd.send(\"soul purge\")\n        echo(\"(soul purge)\")\n      else\n        snd.send(\"ancest annul\")\n        echo(\"(ancest annul)\")\n      end\n      \n      snd.last_type = \"purge\"\n      snd.last_item = \"purge\"\n      snd.waiting.purge = true\n      tempTimer(snd.delay(), [[snd.waiting.purge = false]])\nend\n",
-              "isFolder": "no"
-       },
-       {
-              "name": "shrugging",
-              "isActive": "yes",
-              "script": "",
-              "isFolder": "no"
-       },
-       {
-              "name": "dome",
-              "isActive": "yes",
-              "script": "",
-              "isFolder": "no"
-       },
-       {
-              "name": "rage",
-              "isActive": "yes",
-              "script": "",
-              "isFolder": "no"
-       },
-       {
-              "name": "purify / succour",
-              "isActive": "yes",
-              "script": "purify_threshold = 2\n\nfunction snd.purify_check()\n-- Attempt to purge if don't have paralysis and have at least 2 curable physical affs.\n  if snd.balance.purify and not snd.waiting.purify and not snd.have_aff(\"paralysis\") then\n    local purifiable = {}\n    \n    for _, aff in pairs(snd.physical_affs) do\n      if snd.have_aff(aff) and aff ~= \"paralysis\" then\n        local i, _ = string.find(aff, \"_crippled\")\n        if i then\n          local s = string.sub(aff, 0, i - 1)\n          if snd.afflictions[\"aff_\"..s..\"_broken\"].state == \"healed\" then\n            table.insert(purifiable, aff)\n          end\n        else\n          table.insert(purifiable, aff)\n        end\n      end\n    end\n    \n    if #purifiable \u003e= purify_threshold then\n      return true\n    else\n      return false\n    end\n  end\nend\n\nfunction snd.do_purify()\n\n     if snd.class == \"Praenomen\" then\n        snd.send(\"purify blood\")\n        echo(\"(purify)\")\n      else\n        snd.send(\"succour\")\n        echo(\"(succour)\")\n      end\n      \n    snd.last_type = \"purify\"\n    snd.last_item = \"purify\"\n\tsnd.waiting.purify = true\n  tempTimer(snd.delay(), [[snd.waiting.purify = false]])\nend\n",
-              "isFolder": "no"
-       },
-       {
-              "name": "panacea / subvert",
-              "isActive": "yes",
-              "script": "function snd.panacea_check()\n  if snd.balance.panacea and not snd.waiting.panacea and not (snd.have_aff(\"paresis\") or snd.have_aff(\"paralysis\")) then\n    if snd.panacea_override then\n      return snd.panacea_override()\n    end\n    if snd.checksomeSelfAffs({\"asthma\",\"slickness\",\"anorexia\",\"impatience\"},2) then\n      return true\n    end\n    if snd.have_aff(\"impatience\") and snd.checksomeSelfAffs(snd.mental_affs, 3) then\n      return true\n    end\n  end\n  return false\nend\n\nfunction snd.do_panacea()\n  \n      if snd.class == \"Shaman\" then\n        snd.send(\"nature panacea\")\n        echo(\"(nature panacea)\")\n      else\n        snd.send(\"botany subvert\")\n        echo(\"(botany subvert)\")        \n      end\n      \n      snd.last_type = \"panacea\"\n      snd.last_item = \"panacea\"\n      snd.waiting.panacea = true\n      tempTimer(snd.delay(), [[snd.waiting.panacea = false]])\nend\n",
-              "isFolder": "no"
-       },
-       {
-              "name": "Diagnose",
-              "isActive": "yes",
-              "script": "",
-              "isFolder": "no"
-       },
-       {
-              "name": "Barbed arrows",
-              "isActive": "yes",
-              "script": "",
-              "isFolder": "no"
-       }
+  {
+    "name": "balance",
+    "isActive": "yes",
+    "script": "",
+    "isFolder": "no"
+  },
+  {
+    "name": "tattoo",
+    "isActive": "yes",
+    "script": "",
+    "isFolder": "no"
+  },
+  {
+    "name": "eat",
+    "isActive": "yes",
+    "script": "",
+    "isFolder": "no"
+  },
+  {
+    "name": "drink",
+    "isActive": "yes",
+    "script": "",
+    "isFolder": "no"
+  },
+  {
+    "name": "herb",
+    "isActive": "yes",
+    "script": "",
+    "isFolder": "no"
+  },
+  {
+    "name": "vial",
+    "isActive": "yes",
+    "script": "",
+    "isFolder": "no"
+  },
+  {
+    "name": "salve",
+    "isActive": "yes",
+    "script": "",
+    "isFolder": "no"
+  },
+  {
+    "name": "elixir",
+    "isActive": "yes",
+    "script": "",
+    "isFolder": "no"
+  },
+  {
+    "name": "moss",
+    "isActive": "yes",
+    "script": "",
+    "isFolder": "no"
+  },
+  {
+    "name": "writhe",
+    "isActive": "yes",
+    "script": "",
+    "isFolder": "no"
+  },
+  {
+    "name": "concentrate",
+    "isActive": "yes",
+    "script": "",
+    "isFolder": "no"
+  },
+  {
+    "name": "other",
+    "isActive": "yes",
+    "script": "",
+    "isFolder": "no"
+  },
+  {
+    "name": "smoke",
+    "isActive": "yes",
+    "script": "",
+    "isFolder": "no"
+  },
+  {
+    "name": "stand",
+    "isActive": "yes",
+    "script": "",
+    "isFolder": "no"
+  },
+  {
+    "name": "fitness",
+    "isActive": "yes",
+    "script": "",
+    "isFolder": "no"
+  },
+  {
+    "name": "purge annul",
+    "isActive": "yes",
+    "isFolder": "no"
+  },
+  {
+    "name": "shrugging",
+    "isActive": "yes",
+    "script": "",
+    "isFolder": "no"
+  },
+  {
+    "name": "dome",
+    "isActive": "yes",
+    "script": "",
+    "isFolder": "no"
+  },
+  {
+    "name": "rage",
+    "isActive": "yes",
+    "script": "",
+    "isFolder": "no"
+  },
+  {
+    "name": "purify succour",
+    "isActive": "yes",
+    "isFolder": "no"
+  },
+  {
+    "name": "panacea subvert",
+    "isActive": "yes",
+    "isFolder": "no"
+  },
+  {
+    "name": "Diagnose",
+    "isActive": "yes",
+    "script": "",
+    "isFolder": "no"
+  },
+  {
+    "name": "Barbed arrows",
+    "isActive": "yes",
+    "script": "",
+    "isFolder": "no"
+  }
 ]
