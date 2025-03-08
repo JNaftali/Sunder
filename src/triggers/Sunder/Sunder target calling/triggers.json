@@ -1,264 +1,262 @@
 [
-       {
-              "name": "Deaths",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "100",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^You have slain (\\w+)\\.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^(\\w+) has been slain by (\\w+)\\.$",
-                            "type": "regex"
-                     }
-              ],
-              "script": "",
-              "children": [
-                     {
-                            "name": "Rebirth effects",
-                            "isActive": "yes",
-                            "isFolder": "no",
-                            "multiline": "no",
-                            "multilineDelta": "0",
-                            "matchall": "no",
-                            "filter": "no",
-                            "fireLength": "0",
-                            "highlight": "no",
-                            "highlightFG": "#ff0000",
-                            "highlightBG": "#ffff00",
-                            "patterns": [
-                                   {
-                                          "pattern": "^(\\w+) uses Illumination Rebirth\\.$",
-                                          "type": "regex"
-                                   },
-                                   {
-                                          "pattern": "^(\\w+) uses Tattoos Starburst\\.$",
-                                          "type": "regex"
-                                   },
-                                   {
-                                          "pattern": "^(\\w+) uses Purification Resurgence\\.$",
-                                          "type": "regex"
-                                   },
-                                   {
-                                          "pattern": "^(\\w+) uses Deathlore Substitute\\.$",
-                                          "type": "regex"
-                                   },
-                                   {
-                                          "pattern": "^(\\w+) uses Necromancy Soulcage\\.$",
-                                          "type": "regex"
-                                   },
-                                   {
-                                          "pattern": "^(\\w+) uses Oneiromancy Remembrance\\.$",
-                                          "type": "regex"
-                                   }
-                            ],
-                            "script": ""
-                     },
-                     {
-                            "name": "death prompt",
-                            "isActive": "yes",
-                            "isFolder": "no",
-                            "multiline": "no",
-                            "multilineDelta": "0",
-                            "matchall": "no",
-                            "filter": "no",
-                            "fireLength": "0",
-                            "highlight": "no",
-                            "highlightFG": "#ff0000",
-                            "highlightBG": "#ffff00",
-                            "patterns": [
-                                   {
-                                          "pattern": "",
-                                          "type": "prompt"
-                                   }
-                            ],
-                            "script": ""
-                     }
-              ]
-       },
-       {
-              "name": "Target no longer available",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^You can find no such target as '(\\w+)'\\.$",
-                            "type": "regex"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "Target list",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^\\(Web\\)\\: (\\w+) says, \"Target list\\: (.+)\\.\"$",
-                            "type": "regex"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "Target Priority",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^\\(Web\\)\\: (\\w+) says, \"Target priority\\: (\\w+) (\\d+)\\.\"$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^\\(Web\\)\\: (\\w+) says, \"Target priority\\: (\\w+)\\.\"$",
-                            "type": "regex"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "Unable to hit target ( ice/web/etc wall or not next to us)",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "A massive wall blocks your dagger.",
-                            "type": "exactMatch"
-                     },
-                     {
-                            "pattern": "You don't see any such player in an adjacent location.",
-                            "type": "exactMatch"
-                     }
-              ],
-              "script": "if not snd.toggles.calling then return end\n\nlocal who = snd.target:title()\n\nif table.contains(snd.targeting.list, who) then\n\tsnd.get_new_target()\nend"
-       },
-       {
-              "name": "Cleared Target List",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^\\(Web\\)\\: (\\w+) says, \"Target list cleared\\.\"$",
-                            "type": "regex"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "dome/prismatic on target",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^Your attack is repelled by the dome of ylem protecting (\\w+).$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^Your attack is repelled by the prismatic barrier surrounding (\\w+)\\.$",
-                            "type": "regex"
-                     }
-              ],
-              "script": "if matches[2] == snd.target then\n  local who = matches[2]:title()\n  local count = 1\n  if not snd.illusion_found then\n    if table.contains(snd.targeting.list, who) then\n      local pos = table.index_of(snd.targeting.list, who) or nil\n      for k, v in ipairs(snd.targeting.list) do\n        if\n          table.contains(snd.players_here, who) and\n          table.contains(snd.players_here, v) and\n          k \u003e table.index_of(snd.targeting.list, who)\n        then\n          snd.setTarget(v)\n          break\n        end\n      end\n    else\n      table.remove(snd.players_here, table.index_of(snd.players_here, who))\n      snd.get_new_target()\n    end\n  end\nend"
-       },
-       {
-              "name": "Autocall targets to web if asked",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^\\(Web\\)\\: (\\w+) says, \"Targets\\?\\\"$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^\\(Web\\)\\: (\\w+) says, \"Target list\\?\\\"$",
-                            "type": "regex"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "Remove Target",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^\\(Web\\)\\: (\\w+) says, \"Target removed\\: (\\w+).\"$",
-                            "type": "regex"
-                     }
-              ],
-              "script": ""
-       }
+  {
+    "name": "Deaths",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "100",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^You have slain (\\w+)\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^(\\w+) has been slain by (\\w+)\\.$",
+        "type": "regex"
+      }
+    ],
+    "script": "",
+    "children": [
+      {
+        "name": "Rebirth effects",
+        "isActive": "yes",
+        "isFolder": "no",
+        "multiline": "no",
+        "multilineDelta": "0",
+        "matchall": "no",
+        "filter": "no",
+        "fireLength": "0",
+        "highlight": "no",
+        "highlightFG": "#ff0000",
+        "highlightBG": "#ffff00",
+        "patterns": [
+          {
+            "pattern": "^(\\w+) uses Illumination Rebirth\\.$",
+            "type": "regex"
+          },
+          {
+            "pattern": "^(\\w+) uses Tattoos Starburst\\.$",
+            "type": "regex"
+          },
+          {
+            "pattern": "^(\\w+) uses Purification Resurgence\\.$",
+            "type": "regex"
+          },
+          {
+            "pattern": "^(\\w+) uses Deathlore Substitute\\.$",
+            "type": "regex"
+          },
+          {
+            "pattern": "^(\\w+) uses Necromancy Soulcage\\.$",
+            "type": "regex"
+          },
+          {
+            "pattern": "^(\\w+) uses Oneiromancy Remembrance\\.$",
+            "type": "regex"
+          }
+        ],
+        "script": ""
+      },
+      {
+        "name": "death prompt",
+        "isActive": "yes",
+        "isFolder": "no",
+        "multiline": "no",
+        "multilineDelta": "0",
+        "matchall": "no",
+        "filter": "no",
+        "fireLength": "0",
+        "highlight": "no",
+        "highlightFG": "#ff0000",
+        "highlightBG": "#ffff00",
+        "patterns": [
+          {
+            "pattern": "",
+            "type": "prompt"
+          }
+        ],
+        "script": ""
+      }
+    ]
+  },
+  {
+    "name": "Target no longer available",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^You can find no such target as '(\\w+)'\\.$",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "Target list",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^\\(Web\\)\\: (\\w+) says, \"Target list\\: (.+)\\.\"$",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "Target Priority",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^\\(Web\\)\\: (\\w+) says, \"Target priority\\: (\\w+) (\\d+)\\.\"$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\(Web\\)\\: (\\w+) says, \"Target priority\\: (\\w+)\\.\"$",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "Unable to hit target",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "A massive wall blocks your dagger.",
+        "type": "exactMatch"
+      },
+      {
+        "pattern": "You don't see any such player in an adjacent location.",
+        "type": "exactMatch"
+      }
+    ]
+  },
+  {
+    "name": "Cleared Target List",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^\\(Web\\)\\: (\\w+) says, \"Target list cleared\\.\"$",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "dome or prismatic on target",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^Your attack is repelled by the dome of ylem protecting (\\w+).$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^Your attack is repelled by the prismatic barrier surrounding (\\w+)\\.$",
+        "type": "regex"
+      }
+    ]
+  },
+  {
+    "name": "Autocall targets to web if asked",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^\\(Web\\)\\: (\\w+) says, \"Targets\\?\\\"$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\(Web\\)\\: (\\w+) says, \"Target list\\?\\\"$",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "Remove Target",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^\\(Web\\)\\: (\\w+) says, \"Target removed\\: (\\w+).\"$",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  }
 ]

@@ -1,6 +1,6 @@
 [
   {
-    "name": "Globes Complete",
+    "name": "rend",
     "isActive": "yes",
     "isFolder": "no",
     "multiline": "no",
@@ -13,78 +13,18 @@
     "highlightBG": "#ffff00",
     "patterns": [
       {
-        "pattern": "^The illusionary globes spinning around (\\w+) flare in size, then crash into (.*) body.$",
-        "type": "regex"
-      }
-    ],
-    "script": ""
-  },
-  {
-    "name": "Runeband Triggering",
-    "isActive": "yes",
-    "isFolder": "no",
-    "multiline": "no",
-    "multilineDelta": "0",
-    "matchall": "no",
-    "filter": "no",
-    "fireLength": "0",
-    "highlight": "no",
-    "highlightFG": "#ff0000",
-    "highlightBG": "#ffff00",
-    "patterns": [
-      {
-        "pattern": "^The shifting runes within the band around (\\w+) capture (.*) attention.$",
-        "type": "regex"
-      }
-    ],
-    "script": ""
-  },
-  {
-    "name": "Runeband Reverse",
-    "isActive": "yes",
-    "isFolder": "no",
-    "multiline": "no",
-    "multilineDelta": "0",
-    "matchall": "no",
-    "filter": "no",
-    "fireLength": "0",
-    "highlight": "no",
-    "highlightFG": "#ff0000",
-    "highlightBG": "#ffff00",
-    "patterns": [
-      {
-        "pattern": "^The brilliant rune bands encircling (\\w+) reverse their pattern, changing its spin.$",
-        "type": "regex"
-      }
-    ],
-    "script": ""
-  },
-  {
-    "name": "Runeband Ending",
-    "isActive": "yes",
-    "isFolder": "no",
-    "multiline": "no",
-    "multilineDelta": "0",
-    "matchall": "no",
-    "filter": "no",
-    "fireLength": "0",
-    "highlight": "no",
-    "highlightFG": "#ff0000",
-    "highlightBG": "#ffff00",
-    "patterns": [
-      {
-        "pattern": "^The shifting band of runes around (\\w+) has crumbled in your absence.$",
+        "pattern": "^(\\w+) begins to bleed vivid red blood from the lacerations by the blade.$",
         "type": "regex"
       },
       {
-        "pattern": "^The shifting band of runes around (\\w+) crumbles into motes of light.$",
+        "pattern": "^Flesh rended into ribbons, vivid red blood pools from the lacerations caused by the blade\\.$",
         "type": "regex"
       }
     ],
     "script": ""
   },
   {
-    "name": "Bladestorm Ending",
+    "name": "cripple body",
     "isActive": "yes",
     "isFolder": "no",
     "multiline": "no",
@@ -97,14 +37,14 @@
     "highlightBG": "#ffff00",
     "patterns": [
       {
-        "pattern": "^The final dagger plunges down from the skies and into (\\w+), sinking into flesh.$",
+        "pattern": "^As .+ strikes, a surge of energy cascades along it, striking (\\w+)('s|') body\\.$",
         "type": "regex"
       }
     ],
     "script": ""
   },
   {
-    "name": "Bladestorm Inactive Gone",
+    "name": "cripple legs",
     "isActive": "yes",
     "isFolder": "no",
     "multiline": "no",
@@ -117,13 +57,113 @@
     "highlightBG": "#ffff00",
     "patterns": [
       {
-        "pattern": "Your daggers held within the sky vanish into wisps of smoke.",
-        "type": "exactMatch"
+        "pattern": "^As .+ strikes, a surge of energy cascades along it, striking (\\w+)('s|') legs\\.$",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "disrupt body",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^A flash of energy cascades down .+, disrupting (\\w+)('s|') balance\\.$",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "disrupt mind",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^A flash of energy cascades down .+, disrupting (\\w+)('s|') equilibrium\\.$",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "conviction",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^As .+ strikes, sparks of energy fizzle across (\\w+)('s|') body as .+ defences are reduced\\.$",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "vorpal confirmation",
+    "isActive": "no",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^Shimmering with vorpal power, .+ directs .+ at (\\w+), and .+ is struck by something unseen\\.$",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "lightning aneda epilepsy",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^The shock leaves (\\w+) twitching sporadically\\.$",
+        "type": "regex"
       }
     ]
   },
   {
-    "name": "Soundblast Aff",
+    "name": "no conviction active",
     "isActive": "yes",
     "isFolder": "no",
     "multiline": "no",
@@ -136,38 +176,18 @@
     "highlightBG": "#ffff00",
     "patterns": [
       {
-        "pattern": "^(\\w+) clutches .+ ears in terror, visibly shaken by the sound.$",
-        "type": "regex"
-      }
-    ],
-    "script": ""
-  },
-  {
-    "name": "Globes - Runner Bonus (Better) (Do later)",
-    "isActive": "no",
-    "isFolder": "no",
-    "multiline": "yes",
-    "multilineDelta": "0",
-    "matchall": "no",
-    "filter": "no",
-    "fireLength": "0",
-    "highlight": "no",
-    "highlightFG": "#ff0000",
-    "highlightBG": "#ffff00",
-    "patterns": [
-      {
-        "pattern": "^(\\w+) leaves to the .+\\.$",
+        "pattern": "^Without conviction, your \\w+ empowerment fails to affect (\\w+).$",
         "type": "regex"
       },
       {
-        "pattern": "^Zipping through the air, an illusionary globe flies into .+ open hand.$",
+        "pattern": "^Your strike fails to affect \\w+, absent the mark of bimre\\.$",
         "type": "regex"
       }
     ],
     "script": ""
   },
   {
-    "name": "Globes - Runner Bonus",
+    "name": "Flared got",
     "isActive": "yes",
     "isFolder": "no",
     "multiline": "no",
@@ -180,34 +200,14 @@
     "highlightBG": "#ffff00",
     "patterns": [
       {
-        "pattern": "^Zipping through the air, an illusionary globe from (\\w+) flies into your open hand.$",
+        "pattern": "^As (.*) strikes (\\w+), there is a bright flash of light and (\\w+) begins to glow brightly.$",
         "type": "regex"
       }
     ],
     "script": ""
   },
   {
-    "name": "Globe Completion",
-    "isActive": "no",
-    "isFolder": "no",
-    "multiline": "no",
-    "multilineDelta": "0",
-    "matchall": "no",
-    "filter": "no",
-    "fireLength": "0",
-    "highlight": "no",
-    "highlightFG": "#ff0000",
-    "highlightBG": "#ffff00",
-    "patterns": [
-      {
-        "pattern": "^The final globe burns itself into (\\w+)'s thoughts as it fades into obscurity.$",
-        "type": "regex"
-      }
-    ],
-    "script": ""
-  },
-  {
-    "name": "Blackstar Received",
+    "name": "Flared cured",
     "isActive": "yes",
     "isFolder": "no",
     "multiline": "no",
@@ -220,14 +220,14 @@
     "highlightBG": "#ffff00",
     "patterns": [
       {
-        "pattern": "^Drawn together in a ripple-like smear, the black light shapes itself into a small star upon (\\w+)\\.$",
+        "pattern": "^The glow surrounding (\\w+) vanishes suddenly\\.$",
         "type": "regex"
       }
     ],
     "script": ""
   },
   {
-    "name": "Blackstar Fade",
+    "name": "Battlecry deafness",
     "isActive": "yes",
     "isFolder": "no",
     "multiline": "no",
@@ -240,14 +240,14 @@
     "highlightBG": "#ffff00",
     "patterns": [
       {
-        "pattern": "^The black star upon (\\w+) fades from view.$",
+        "pattern": "^(\\w+) grimaces, but appears unaffected by the battlecry\\.$",
         "type": "regex"
       }
     ],
     "script": ""
   },
   {
-    "name": "Impetus Up",
+    "name": "battlecry bonk",
     "isActive": "yes",
     "isFolder": "no",
     "multiline": "no",
@@ -260,51 +260,7 @@
     "highlightBG": "#ffff00",
     "patterns": [
       {
-        "pattern": "^You wave your hand over .+, it now glowing with a black light.$",
-        "type": "regex"
-      }
-    ],
-    "script": ""
-  },
-  {
-    "name": "Impetus Down",
-    "isActive": "yes",
-    "isFolder": "no",
-    "multiline": "no",
-    "multilineDelta": "0",
-    "matchall": "no",
-    "filter": "no",
-    "fireLength": "0",
-    "highlight": "no",
-    "highlightFG": "#ff0000",
-    "highlightBG": "#ffff00",
-    "patterns": [
-      {
-        "pattern": "ceases to glow with black light\\.$",
-        "type": "regex"
-      }
-    ],
-    "script": ""
-  },
-  {
-    "name": "Impetus Fade",
-    "isActive": "yes",
-    "isFolder": "no",
-    "multiline": "no",
-    "multilineDelta": "0",
-    "matchall": "no",
-    "filter": "no",
-    "fireLength": "0",
-    "highlight": "no",
-    "highlightFG": "#ff0000",
-    "highlightBG": "#ffff00",
-    "patterns": [
-      {
-        "pattern": "^The cut wound upon (\\w+) turns into black motes that disperse.$",
-        "type": "regex"
-      },
-      {
-        "pattern": "^(\\w+)'s open wound transforms to motes of sickly black that soon disperse.$",
+        "pattern": "^(\\w+) falls to \\w+ knees and clutches \\w+ ears as the shaft of sound strikes\\w+\\.$",
         "type": "regex"
       }
     ],

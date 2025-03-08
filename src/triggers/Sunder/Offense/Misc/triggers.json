@@ -1,418 +1,417 @@
 [
-       {
-              "name": "lust tarot",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^(\\w+) uses Hyalincuru Favor on you\\.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^(\\w+) uses Tarot Lust on you\\.$",
-                            "type": "regex"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "death",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^(\\w+) has been slain by (\\w+)\\.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^(\\w+) walks in divine grace\\. You may not harm \\w+\\.$",
-                            "type": "regex"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "stop attacking",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "Vibrant essence streams forth from the floor, signaling the end of combat.",
-                            "type": "exactMatch"
-                     },
-                     {
-                            "pattern": "You currently walk in divine grace and may neither be harmed nor harm another. To leave this state of protection, you may REJECT GRACE.",
-                            "type": "exactMatch"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "starburst",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^(\\w+) has burst back to life after falling to .+\\.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^(\\w+) uses Deathlore Substitute\\.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^(\\w+) uses Necromancy Soulcage\\.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^\\w+ uses? Spirituality Absolve \\(soulcage\\) on (\\w+)\\.$",
-                            "type": "regex"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "Replicate fixer",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^\\w+ uses (Sorcery|Arcanism|Runecarving|Esoterica|Astranomia) Replicate\\.$",
-                            "type": "regex"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "Default cureset",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "You are no longer using a firstaid priority set.",
-                            "type": "exactMatch"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "cureset switch",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^You will now use the (\\w+) firstaid priority set\\.$",
-                            "type": "regex"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "sometimes un-spam",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^You will now target the .+ of your opponent with your \\w+ arm\\.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^You will now target attacks with your \\w+ arm wherever you see an opening\\.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "You see no 'body' to take.",
-                            "type": "exactMatch"
-                     },
-                     {
-                            "pattern": "You see no 'husk' to take.",
-                            "type": "exactMatch"
-                     },
-                     {
-                            "pattern": "You have cleared your axes queue.",
-                            "type": "exactMatch"
-                     },
-                     {
-                            "pattern": "You are not wielding a handaxe in either of your hands.",
-                            "type": "exactMatch"
-                     },
-                     {
-                            "pattern": "You have cleared your eqbal queue.",
-                            "type": "exactMatch"
-                     },
-                     {
-                            "pattern": "You see no 'remains' to take.",
-                            "type": "exactMatch"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "3p lust",
-              "isActive": "no",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^\\w+ quickly flings a tarot card at (\\w+), whose eyes light up\\.$",
-                            "type": "regex"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "brazier",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^(\\w+) is violently ripped from your location by a magical summoning\\.$",
-                            "type": "regex"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "Accursed 3p",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^(\\w+) cries out in agonized horror, tortured by an unseen curse.",
-                            "type": "regex"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "Enabling Some Things on Login",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "Password correct. Welcome to Aetolia.",
-                            "type": "exactMatch"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "Loyals Attacking",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^You order a hellcat to kill (\\w+).$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^You order a (\\w+) spirit to kill (\\w+).$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^A (\\w+) spirit is already hostile towards (\\w+).$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^You order (.*) to kill (\\w+).$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^A (\\w+) is already hostile towards (\\w+).$",
-                            "type": "regex"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "Loyals Not Attacking",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "You order a hellcat to assume a passive stance.",
-                            "type": "exactMatch"
-                     },
-                     {
-                            "pattern": "^Your spirit familiar morphs into the form of a (\\w+) spirit\\.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^You order a (\\w+) spirit to assume a passive stance.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "They all seem to settle down.",
-                            "type": "exactMatch"
-                     },
-                     {
-                            "pattern": "^You order (a|an|the) (\\w+) to assume a passive stance.$",
-                            "type": "regex"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "Target Oblivion",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^A deathly song rings within your ears, the dolent notes of (\\w+) swarming your thoughts, and causing your eyes to droop with its somnolent effect.$",
-                            "type": "regex"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "Warning - Collapse / Omophagia",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^(\\w+) uses? Sporulation Omophagia.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^(\\w+) uses? Gravitation Collapse.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "The living morass expands further, enfolding more of its surroundings into the reach of its impending feast of frenzy.",
-                            "type": "exactMatch"
-                     },
-                     {
-                            "pattern": "The keening THWUM rhythmically emanating from a destabilizing singularity grows in volume.",
-                            "type": "exactMatch"
-                     }
-              ],
-              "script": "if matches[2] then\n  snd.send(\"wt Collapse/Omophagia damage incoming from \"..matches[2]..\" at v\"..gmcp.Room.Info.num)\nelse\n  snd.send(\"wt Collapse/Omophagia damage incoming at v\"..gmcp.Room.Info.num)\nend"
-       }
+  {
+    "name": "lust tarot",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^(\\w+) uses Hyalincuru Favor on you\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^(\\w+) uses Tarot Lust on you\\.$",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "death",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^(\\w+) has been slain by (\\w+)\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^(\\w+) walks in divine grace\\. You may not harm \\w+\\.$",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "stop attacking",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "Vibrant essence streams forth from the floor, signaling the end of combat.",
+        "type": "exactMatch"
+      },
+      {
+        "pattern": "You currently walk in divine grace and may neither be harmed nor harm another. To leave this state of protection, you may REJECT GRACE.",
+        "type": "exactMatch"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "starburst",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^(\\w+) has burst back to life after falling to .+\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^(\\w+) uses Deathlore Substitute\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^(\\w+) uses Necromancy Soulcage\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ uses? Spirituality Absolve \\(soulcage\\) on (\\w+)\\.$",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "Replicate fixer",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^\\w+ uses (Sorcery|Arcanism|Runecarving|Esoterica|Astranomia) Replicate\\.$",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "Default cureset",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "You are no longer using a firstaid priority set.",
+        "type": "exactMatch"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "cureset switch",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^You will now use the (\\w+) firstaid priority set\\.$",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "sometimes un-spam",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^You will now target the .+ of your opponent with your \\w+ arm\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^You will now target attacks with your \\w+ arm wherever you see an opening\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "You see no 'body' to take.",
+        "type": "exactMatch"
+      },
+      {
+        "pattern": "You see no 'husk' to take.",
+        "type": "exactMatch"
+      },
+      {
+        "pattern": "You have cleared your axes queue.",
+        "type": "exactMatch"
+      },
+      {
+        "pattern": "You are not wielding a handaxe in either of your hands.",
+        "type": "exactMatch"
+      },
+      {
+        "pattern": "You have cleared your eqbal queue.",
+        "type": "exactMatch"
+      },
+      {
+        "pattern": "You see no 'remains' to take.",
+        "type": "exactMatch"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "3p lust",
+    "isActive": "no",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^\\w+ quickly flings a tarot card at (\\w+), whose eyes light up\\.$",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "brazier",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^(\\w+) is violently ripped from your location by a magical summoning\\.$",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "Accursed 3p",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^(\\w+) cries out in agonized horror, tortured by an unseen curse.",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "Enabling Some Things on Login",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "Password correct. Welcome to Aetolia.",
+        "type": "exactMatch"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "Loyals Attacking",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^You order a hellcat to kill (\\w+).$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^You order a (\\w+) spirit to kill (\\w+).$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^A (\\w+) spirit is already hostile towards (\\w+).$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^You order (.*) to kill (\\w+).$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^A (\\w+) is already hostile towards (\\w+).$",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "Loyals Not Attacking",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "You order a hellcat to assume a passive stance.",
+        "type": "exactMatch"
+      },
+      {
+        "pattern": "^Your spirit familiar morphs into the form of a (\\w+) spirit\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^You order a (\\w+) spirit to assume a passive stance.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "They all seem to settle down.",
+        "type": "exactMatch"
+      },
+      {
+        "pattern": "^You order (a|an|the) (\\w+) to assume a passive stance.$",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "Target Oblivion",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^A deathly song rings within your ears, the dolent notes of (\\w+) swarming your thoughts, and causing your eyes to droop with its somnolent effect.$",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "Warning Collapse Omophagia",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^(\\w+) uses? Sporulation Omophagia.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^(\\w+) uses? Gravitation Collapse.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "The living morass expands further, enfolding more of its surroundings into the reach of its impending feast of frenzy.",
+        "type": "exactMatch"
+      },
+      {
+        "pattern": "The keening THWUM rhythmically emanating from a destabilizing singularity grows in volume.",
+        "type": "exactMatch"
+      }
+    ]
+  }
 ]

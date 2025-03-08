@@ -1,42 +1,41 @@
 [
-       {
-              "name": "Tempo Hit Confirmation (No Limb)",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^\\w+ dances? forward and thrusts? .+\\ deep into (\\w+).$",
-                            "type": "regex"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "Tempo Hit Confirmation (w/ Limb)",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^\\w+ dances? forward and thrusts? .+\\ deep into (\\w+)'s (\\w+).$",
-                            "type": "regex"
-                     }
-              ],
-              "script": "if matches[2] == snd.target then\n  snd.last_hit_limb = matches[3]\n  snd.last_limb_dmg = 3.155\n  snd.took_limb_dmg(snd.last_hit_limb, snd.last_limb_dmg)\nif matches[2] == snd.target then\n  snd.onHit2({\"Parry\", \"Rebounding\", \"Dodge\"}, \"Bard\")\nend\nend"
-       }
+  {
+    "name": "Tempo Hit Confirmation (No Limb)",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^\\w+ dances? forward and thrusts? .+\\ deep into (\\w+).$",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "Tempo Hit Confirmation with Limb",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^\\w+ dances? forward and thrusts? .+\\ deep into (\\w+)'s (\\w+).$",
+        "type": "regex"
+      }
+    ]
+  }
 ]

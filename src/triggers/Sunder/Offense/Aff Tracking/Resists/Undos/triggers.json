@@ -1,402 +1,401 @@
 [
-       {
-              "name": "resisted",
-              "isActive": "no",
-              "isFolder": "no",
-              "multiline": "yes",
-              "multilineDelta": "1",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^You discern that a layer of (\\w+) has rubbed off your \\w+\\.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "1",
-                            "type": "spacer"
-                     },
-                     {
-                            "pattern": "^You discern that (\\w+) has resisted the (\\w+) affliction\\.$",
-                            "type": "regex"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "resisted venom",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^(\\w+)'s? face flushes as .* body purges the (\\w+) venom\\.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^The countercurrent coating (\\w+)'s skin wicks away (\\w+) before it can take.$",
-                            "type": "regex"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "chaos lord resist",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "yes",
-              "multilineDelta": "2",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^The crackling chaotic energies surrounding (\\w+)'s? body absorb the affliction\\.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "1",
-                            "type": "spacer"
-                     },
-                     {
-                            "pattern": "^You discern that (\\w+) has resisted the (\\w+) affliction\\.$",
-                            "type": "regex"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "undo in general",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^You discern that (\\w+) has resisted the (.+) affliction\\.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^(\\w+)'s? galeward protects .+ from the (\\w+) venom\\.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^(\\w+)'s? waterward protects .+ from the (\\w+) venom\\.$",
-                            "type": "regex"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "Sunder Parry",
-              "isActive": "no",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^(\\w+) parries the attack on .* with a deft maneuver\\.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^(\\w+) guards the attack on .*\\.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^(\\w+) steps into the attack on .*, grabs .+ arm and twists it\\.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^With a free hand, (\\w+) fends off the attack on \\w+ .+\\.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^With a predatory growl, (\\w+) opposes the attack on [a-z ]+, denying it purchase\\.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^Foreseeing the baited attack on .+, (\\w+)'s hook streaks out, denying the strike.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^(\\w+) parries the attack to \\w+ .+, pushing \\w+ back\\.$",
-                            "type": "regex"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "Sunder Dodge",
-              "isActive": "no",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^Stepping quickly out of the way, (\\w+) dodges the attack\\.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^(\\w+) twists and turns \\w+ body, dodging the attack.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^Shifting \\w+ body, (\\w+) weaves out of harm at the last moment\\.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^You strike clumsily at (\\w+), completely missing .+ with .+\\.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^\\w+ strikes clumsily at (\\w+) with .+, completely missing \\w+\\.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^Your vision blurs as you strike at (\\w+) and miss with .+\\.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^\\w+ blinks and rubs \\w+ eye as .+ misses (\\w+) with .+\\.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^\\w+ misses (\\w+) with .+ amid the frantic fray.",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^The dart misses (\\w+)!$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^(\\w+) slips out of reach before \\w+ can touch \\w+\\.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^You miss (\\w+) with .+ as \\w+ slips effortlessly out of reach\\.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^\\w+ misses with .+ as (\\w+) slips effortlessly out of reach\\.$",
-                            "type": "regex"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "Sunder Rebounding",
-              "isActive": "no",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^The attack rebounds back onto \\w+\\!$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^The attack rebounds away from \\w+ aura!$",
-                            "type": "regex"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "Lycan limb break resist",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^(\\w+) looks mildly stressed in pain, but .+ (\\w+ \\w+) endures\\.$",
-                            "type": "regex"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "Elder shaman proc resistance",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "yes",
-              "multilineDelta": "3",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^(\\w+) summons the will of the Elder Shaman to resist delusion.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^You discern that (\\w+) has resisted the (\\w+) affliction\\.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^You discern that (\\w+) has been afflicted with (\\w+)\\.$",
-                            "type": "regex"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "finesse undo",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^(\\w+) stops short as .+ comes upon (\\w+)'s rebounding aura and deftly pulls away.$",
-                            "type": "regex"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "Generic Miss",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^(\\w+)'s strike is wide and misses completely\\.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^(You)r strike is wide and misses completely\\.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^(You)r damaged torso twinges as you heave",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^(You)r blurry vision inhibits your accuracy as you miss\\.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^(You)r swing falls short of its target\\.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^(\\w+) strikes? out clumsily and miss(?:es)? \\w+ mark\\.$",
-                            "type": "regex"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "200/reflection undo",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^Effortlessly dismissing the assault, (\\w+)'s helix of air whirls in a final defiant typhoon\\.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^The corona's searing light devours the attack on (\\w+) before consuming itself in the process, dissipating amidst a plume of black smoke\\.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^The aegis of the cosmos upon (\\w+) sears away the assault, deliquescing to naught\\.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^A reflection of (\\w+) blinks out of existence\\.$",
-                            "type": "regex"
-                     }
-              ],
-              "script": "if matches[2] == snd.target and snd.getting_hit == snd.target then\n  \n  if #snd.last_affs \u003e= 1 then\n    if snd.last_affs[1] == \"blaze\" or snd.last_affs[1] == \"wasi\" then\n      snd.used.rebounding = true\n    else\n      for i in pairs(snd.last_affs) do\n       snd.target_cured(snd.last_affs[i])\n      end\n    end\n  else\n    for _, aff in pairs(snd.recent_affs) do\n      snd.target_cured(aff)\n    end\n    snd.recent_affs = {}\n  end\n  \n  if snd.last_hit_limb ~= \"none\" and snd.last_limb_dmg ~= 0 then\n    snd.took_limb_dmg(snd.last_hit_limb, -snd.last_limb_dmg)\n    snd.last_hit_limb = \"none\"\n    snd.last_limb_dmg = 0\n  end\n  \n  if snd.skill_being_used == \"Overhand\" or snd.skill_being_used == \"Breach\" then\n    snd.lev_gone = false\n  end\n  \n  if snd.using_both_hands == 1 then table.insert(snd.maybe_affs, 1, snd.last_affs[1]) end  \n\nend"
-       },
-       {
-              "name": "Insulation stripped",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^The insulation around (\\w+) has been frozen stiff by the cold.$",
-                            "type": "regex"
-                     }
-              ],
-              "script": ""
-       }
+  {
+    "name": "resisted",
+    "isActive": "no",
+    "isFolder": "no",
+    "multiline": "yes",
+    "multilineDelta": "1",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^You discern that a layer of (\\w+) has rubbed off your \\w+\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "1",
+        "type": "spacer"
+      },
+      {
+        "pattern": "^You discern that (\\w+) has resisted the (\\w+) affliction\\.$",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "resisted venom",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^(\\w+)'s? face flushes as .* body purges the (\\w+) venom\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^The countercurrent coating (\\w+)'s skin wicks away (\\w+) before it can take.$",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "chaos lord resist",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "yes",
+    "multilineDelta": "2",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^The crackling chaotic energies surrounding (\\w+)'s? body absorb the affliction\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "1",
+        "type": "spacer"
+      },
+      {
+        "pattern": "^You discern that (\\w+) has resisted the (\\w+) affliction\\.$",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "undo in general",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^You discern that (\\w+) has resisted the (.+) affliction\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^(\\w+)'s? galeward protects .+ from the (\\w+) venom\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^(\\w+)'s? waterward protects .+ from the (\\w+) venom\\.$",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "Sunder Parry",
+    "isActive": "no",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^(\\w+) parries the attack on .* with a deft maneuver\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^(\\w+) guards the attack on .*\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^(\\w+) steps into the attack on .*, grabs .+ arm and twists it\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^With a free hand, (\\w+) fends off the attack on \\w+ .+\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^With a predatory growl, (\\w+) opposes the attack on [a-z ]+, denying it purchase\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^Foreseeing the baited attack on .+, (\\w+)'s hook streaks out, denying the strike.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^(\\w+) parries the attack to \\w+ .+, pushing \\w+ back\\.$",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "Sunder Dodge",
+    "isActive": "no",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^Stepping quickly out of the way, (\\w+) dodges the attack\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^(\\w+) twists and turns \\w+ body, dodging the attack.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^Shifting \\w+ body, (\\w+) weaves out of harm at the last moment\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^You strike clumsily at (\\w+), completely missing .+ with .+\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ strikes clumsily at (\\w+) with .+, completely missing \\w+\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^Your vision blurs as you strike at (\\w+) and miss with .+\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ blinks and rubs \\w+ eye as .+ misses (\\w+) with .+\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ misses (\\w+) with .+ amid the frantic fray.",
+        "type": "regex"
+      },
+      {
+        "pattern": "^The dart misses (\\w+)!$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^(\\w+) slips out of reach before \\w+ can touch \\w+\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^You miss (\\w+) with .+ as \\w+ slips effortlessly out of reach\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ misses with .+ as (\\w+) slips effortlessly out of reach\\.$",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "Sunder Rebounding",
+    "isActive": "no",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^The attack rebounds back onto \\w+\\!$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^The attack rebounds away from \\w+ aura!$",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "Lycan limb break resist",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^(\\w+) looks mildly stressed in pain, but .+ (\\w+ \\w+) endures\\.$",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "Elder shaman proc resistance",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "yes",
+    "multilineDelta": "3",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^(\\w+) summons the will of the Elder Shaman to resist delusion.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^You discern that (\\w+) has resisted the (\\w+) affliction\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^You discern that (\\w+) has been afflicted with (\\w+)\\.$",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "finesse undo",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^(\\w+) stops short as .+ comes upon (\\w+)'s rebounding aura and deftly pulls away.$",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "Generic Miss",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^(\\w+)'s strike is wide and misses completely\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^(You)r strike is wide and misses completely\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^(You)r damaged torso twinges as you heave",
+        "type": "regex"
+      },
+      {
+        "pattern": "^(You)r blurry vision inhibits your accuracy as you miss\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^(You)r swing falls short of its target\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^(\\w+) strikes? out clumsily and miss(?:es)? \\w+ mark\\.$",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "200 or reflection undo",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^Effortlessly dismissing the assault, (\\w+)'s helix of air whirls in a final defiant typhoon\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^The corona's searing light devours the attack on (\\w+) before consuming itself in the process, dissipating amidst a plume of black smoke\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^The aegis of the cosmos upon (\\w+) sears away the assault, deliquescing to naught\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^A reflection of (\\w+) blinks out of existence\\.$",
+        "type": "regex"
+      }
+    ]
+  },
+  {
+    "name": "Insulation stripped",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^The insulation around (\\w+) has been frozen stiff by the cold.$",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  }
 ]

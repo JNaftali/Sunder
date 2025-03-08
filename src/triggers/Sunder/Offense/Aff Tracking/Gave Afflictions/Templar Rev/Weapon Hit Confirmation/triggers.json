@@ -1,0 +1,1089 @@
+[
+  {
+    "name": "longsword attacks",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^Advancing with a quick step, \\w+ twists .+ into (\\w+)\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ punctures (\\w+) with a swift jab of [a-z ]+\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ scores (\\w+) deeply with a blow from .+\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ catches (\\w+) with an upswing of .+\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ wounds (\\w+) with a wide strike of .+\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ messily hacks into (\\w+) with .+\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ attacks, ripping a furrow in (\\w+) with .+\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ lays (\\w+) open with a descending chop from .+\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ cruelly stabs .+ deep into (\\w+)\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ slices across (\\w+) with the edge of .+\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ wounds (\\w+) with a diagonal swipe of .+\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ neatly slashes (\\w+) with .+\\.$",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "shortsword attacks",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^\\w+ carves into (\\w+) with .+\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^Thrusting .+ forward, .+ skewers (\\w+)\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^With a sharp pass of .+, .+ scores (\\w+)\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^Bringing about .+,.+ slashes into (\\w+)\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ hacks open (\\w+) with .+\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^Slicing sideways with .+, \\w+ cuts into (\\w+)\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^Cutting with precision, .+ strikes (\\w+) with .+\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ lacerates (\\w+) with a swing of .+\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ steps in quickly, wounding (\\w+) with .+\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ swipe .+ across (\\w+), gashing .+\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^Lunging in, .+ stabs (\\w+) with .+\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ punctures (\\w+) with a quick jab of .+\\.$",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "falchion",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^\\w+ neatly pierces (\\w+) with .+\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ gashes open (\\w+) with a flick of .+\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^With a sharp jab, .+ buries .+ into (\\w+)\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ quickly strikes (\\w+) with .+\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ drives .+ into (\\w+) with a quick thrust\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ lacerates (\\w+) with a swing of .+\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ nimbly cuts into (\\w+) with .+\\.$",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "trident attacks",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^\\w+ slashes into (\\w+) wickedly with .+\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ rams .+ hard into (\\w+)\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ jaggedly rends (\\w+) with .+\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ gouges into (\\w+) with .+ prongs\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ deeply punctures (\\w+) with .+\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ sharply jabs (\\w+) with .+\\.$",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "sarissa attacks",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^\\w+ quickly strikes (\\w+) with .+\\.$",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "broadsword attacks",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^\\w+ slashes hard into (\\w+) with .+\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ shears across (\\w+) with the wide edge of .+\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ plows into (\\w+) with a powerful jab of .+\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ presses in, ripping (\\w+) asunder with .+\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ gouges (\\w+) with a powerful stroke of .+\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ slams the end of .+ deep into (\\w+)\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ bites into (\\w+) with a solid swipe of .+\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ rends (\\w+) mercilessly with a blow from .+\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ batters (\\w+) with a strong upswing of .+\\.$",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "battleaxe attacks",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^[A-Za-z\\' ]+ moves in a wicked blur as \\w+ buries it in (\\w+)\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^Whirling .+ around .+ \\w+ body, \\w+ chops fiercely into (\\w+)\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^Charging forward, \\w+ hews into (\\w+) with .+\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^With a diagonal slash, \\w+ cleaves into (\\w+) with .+\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ sweeps .+ before \\w+, brutally carving into (\\w+)\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^Leaping in, \\w+ rips (\\w+) open with .+\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^With a violent upward swing, \\w+ mangles (\\w+) with .+\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^With an arcing blow, \\w+ swing at (\\w+) with .+\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ cuts open (\\w+) with an overhead slash from .+\\.$",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "rapier attacks",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^\\w+ drives .+ into (\\w+) with a quick thrust\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ nimbly cuts into (\\w+) with .+\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ neatly pierces (\\w+) with .+\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^With a sharp jab, \\w+ buries .+ into (\\w+)\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ gashes open (\\w+) with a flick of .+\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ lacerates (\\w+) with a swing of .+\\.$",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "flyssa attacks",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^\\w+ gashes open (\\w+) with a flick of .+\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ drives .+ into (\\w+) with a quick thrust\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ lacerates (\\w+) with a swing of .+\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ quickly strikes (\\w+) with .+\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ neatly pierces (\\w+) with .+\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^With a sharp jab, \\w+ buries .+ into (\\w+)\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ nimbly cuts into (\\w+) with .+\\.$",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "spear attacks",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^\\w+ throws .+ weight behind .+, driving it into (\\w+)\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ punctures (\\w+) with .+\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^Thrusting forward, .+ drives .+ into (\\w+)\\.$",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "scimitar attacks",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^\\w+ chops harshly into (\\w+) with .+\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ lunges in, rending (\\w+) with .+\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ carves up (\\w+) with .+\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ cuts sharply with .+, wounding (\\w+)\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ scores (\\w+) with an agile jab of .+\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ thrusts with the point of .+, biting deeply into (\\w+)\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ drives .+, gashing open (\\w+)\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^Throwing \\w+self forward, \\w+ hacks into (\\w+) with .+\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ wickedly drags the curve of .+ across (\\w+)\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ catches (\\w+) with an arcing swing of .+\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^Angling .+, \\w+ viciously sticks (\\w+)\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ attacks (\\w+) with a neat slice, .+ biting into \\w+\\.$",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "clumsiness is the worst",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^\\w+ strikes? clumsily at (\\w+) with .+\\, completely missing .+\\.$",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "mace attacks",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^\\w+ lays? powerfully into (\\w+)'s (.+) with a swing of .+\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ brutally batters? (\\w+)'s (.+) with .+\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ slams? .+ down on (\\w+)'s (.+), \\w+ flesh giving under the blow\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ brings? .+ crashing down on (\\w+)'s (.+) with a sickening crunch\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^Numbing force behind the blow, \\w+ pounds? (\\w+)'s (.+) with .+\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ quickly bash(?:es)? (\\w+)'s (.+) with .+\\.$",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "morningstar attacks",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^Whirling .+, \\w+ pulps? (\\w+)'s (.+)'s flesh with a blow\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ clobbers? (\\w+)'s (.+) with a wild swing of .+\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ lays? into (\\w+)'s (.+) with a crushing strike from .+\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^Building momentum with .+, \\w+ smashe?s? it down on (\\w+)'s (.+)\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ violently crushe?s? (\\w+)'s (.+) with a circling blow of .+\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "falls upon (\\w+)'s (.+) as \\w+ brings? it crashing down\\.$",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "flail attacks",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^With a vicious whirl, \\w+ bashe?s? (\\w+)'s (.+) with .+\\.",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ slams? the ends of .+ into (\\w+)'s (.+), mutilating \\w+ flesh\\.",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ maims? (\\w+)'s (.+) with a sideways swipe of .+\\.",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ swings? .+, bringing the balls crashing down on (\\w+)'s (.+)\\.",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ mangles? (\\w+)'s (.+) with a downward blow from .+\\.",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ tears? (\\w+)'s (.+) asunder with a sweeping crush of a .+\\.",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "Cudgel",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^\\w+ lift .+ overhead and brings? it down with a shattering blow onto (\\w+)'s (.+).$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^Aiming the broad end of .+ at (\\w+)'s (.+), \\w+ jabs? forward.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^With a broad sweep of .+, \\w+ brings? a crushing blow onto (\\w+)'s (.+).$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^Raising .+ high, \\w+ swings? forward at (\\w+)'s (.+), crushing flesh.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^Swinging through the air toward (\\w+)'s (.+) with .+, \\w+ draws? lines of blood.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^Gripping both hands over the grip of .+, \\w+ slams? it forcefully into (\\w+)'s (.+).$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ strikes? (\\w+)'s (.+) with a quick but powerful blow from .+.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^Holding .+ straight in front of .+, \\w+ bashe?s? the end into (\\w+)'s (.+).$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^With a downward, diagonal strike, \\w+ cuts a brutal gash into (\\w+)'s (.+) with .+\\.$",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "bastard",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^\\w+ steps? in with .+ ready, slashing open (\\w+)\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ massacres? (\\w+) with a vengeful swipe of .+\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ carves? up (\\w+) with .+\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ takes? apart (\\w+) with a strong cut from .+\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ assaults? (\\w+), skewering .+ with .+\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ steps? in with .+ ready, slashing open (\\w+)\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^With an arcing slice, \\w+ sinks? .+ into (\\w+)\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ throws? momentum behind .+, cleanly stabbing (\\w+)\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ slams? .+'s edge into (\\w+), bracing against the impact\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ charges? forward, hacking (/w+) asunder with .+\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ neatly swings? .+, ripping into (/w+)\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^Lifting up .+, \\w+ swings? brutally downward at (\\w+)\\.$",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "falx glaive",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^\\w+ scores? (\\w+) with a wild blow from .+\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ viciously skewers? (\\w+) with a thrust from .+\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^Cutting forcefully, \\w+ rends? (\\w+) with .+\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^With a brutal swipe of .+, \\w+ rips? up (/w+)\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^Swinging .+ in a powerful arc, \\w+ tears? into (\\w+)\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^Lancing forward, \\w+ drives? .+ into (\\w+)\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^With a powerful jab, \\w+ gouges? into (\\w+) with .+\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ hacks? into (\\w+) ruthlessly with .+\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^Slicing downward with .+, \\w+ carves? (\\w+) open\\.$",
+        "type": "regex"
+      }
+    ]
+  },
+  {
+    "name": "warhammer",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^Lifting up .+, \\w+ slams? it into (\\w+)'s (.+) with numbing force\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^Winding up, \\w+ brutally smashe?s? .+ into (\\w+)'s (.+)\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ crushe?s? (\\w+)'s (.+) beneath a mighty overhead blow from .+\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ sends? (\\w+)'s (.+) reeling with a mighty strike from .+\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ steps? in, gruesomely smashing up (\\w+)'s (.+) with .+\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ mutilates? (\\w+)'s (.+) with a vengeful blow from .+\\.$",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "manta",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^Determined to punish (\\w+), \\w+ raises? .+ and slices? .+ open.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ ruthlessly censures? (\\w+), cutting into .+ flesh with .+.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^Disgust limns .+ features as .+ assails? (\\w+) with .+.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^Driving .+ forward, \\w+ hacks? at (\\w+) without mercy.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^Opting for lenience, \\w+ grazes? (\\w+) with the end of .+.$",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "gladius",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^\\w+ hack open (\\w+) with .+\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ hacks open (\\w+) with .+\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ punctures (\\w+) with a swift jab of [a-z ]+\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ puncture (\\w+) with a swift jab of [a-z ]+\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^With a sharp pass of .+, .+ scores (\\w+)\\.$",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "Scythe",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "yes",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^\\w+ extends into a lunging arc, assaulting (\\w+) with .+\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^Spinning .+ around himself, \\w+ gashes open (\\w+)\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ draws back .+ before viciously slicing (\\w+)\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ messily tears up (\\w+) with a strike from .+\\.$",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "Darts",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^(\\w+) flinches as the small dart pierces \\w+ skin\\.$",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "Estoc",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^\\w+ jabs? .+ forward, driving it forcefully into (\\w+)\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ lunges? forward, jabbing .+ sharply into (\\w+)\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ thrusts? sharply with .+, striking (\\w+) with pinpoint accuracy\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^Driving downward with .+, \\w+ scores? a deep wound on (\\w+)\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ hacks? downward with .+, landing a heavy blow on (\\w+)\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ hacks? brutally at (\\w+) with .+, cutting through .+ defenses\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^With a swift swing of .+, \\w+ cleaves? deeply into (\\w+)\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ swings? .+ swiftly from above, driving the blade downward into (\\w+) with crushing force\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ swings? .+ in a precise arc, slicing a clean cut across (\\w+)\\.$",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "Templar Scythe",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^\\w+ attacks (\\w+) with a reaping blow of .+\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^With a sweeping slash of .+, \\w+ wounds (\\w+)\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^Whirling .+, \\w+ carves open (\\w+)\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ rips open (\\w+) with a cut from .+\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ hacks up (\\w+) with a strike from .+\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ drives .+ downward into (\\w+)\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^Swinging .+ in a curving blow, \\w+ wounds (\\w+)\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^Bracing .+, \\w+ scores (\\w+) with an arcing slice\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ pulls .+ into an upswing, splitting (\\w+) open\\.$",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  }
+]

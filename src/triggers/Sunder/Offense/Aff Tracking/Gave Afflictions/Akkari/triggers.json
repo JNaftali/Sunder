@@ -224,7 +224,7 @@
     "script": ""
   },
   {
-    "name": "Pariah / Runed used or times up",
+    "name": "Pariah Runed used or times up",
     "isActive": "yes",
     "isFolder": "no",
     "multiline": "no",
@@ -244,7 +244,6 @@
         "pattern": "^The brand of the pariah you had placed upon (\\w+) fades from your awareness.$",
         "type": "regex"
       }
-    ],
-    "script": "if matches[2] == snd.target  or matches[2] == \"yourself\" then\n\tsnd.runeused = false\nend"
+    ]
   }
 ]

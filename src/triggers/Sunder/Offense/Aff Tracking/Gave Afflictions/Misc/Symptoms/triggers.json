@@ -440,7 +440,7 @@
     "script": ""
   },
   {
-    "name": "Chill/Freezing",
+    "name": "Chill Freezing",
     "isActive": "yes",
     "isFolder": "no",
     "multiline": "no",
@@ -488,8 +488,7 @@
         "pattern": "^Terror overcomes (\\w+) as the frost forms over \\w+ completely\\.$",
         "type": "regex"
       }
-    ],
-    "script": "if matches[2] == snd.target then\n  snd.target_got(\"cold\")\n  if snd.toggles.atkecho and snd.toggles.gags then\n   deleteLine()\n   snd.message(\"Chilled: \"..matches[2]..\".\")\n  end\nelseif snd.toggles.nontargetgags and snd.toggles.gags then\n  deleteFull()\nend\n"
+    ]
   },
   {
     "name": "Stupidity",
