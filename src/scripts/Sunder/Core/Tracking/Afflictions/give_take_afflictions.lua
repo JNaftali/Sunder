@@ -1,6 +1,6 @@
 --- @module core
 
---- I have no clue.
+--- This function checks afflictions that have been marked as "waiting" and applies their afflicted status if they meet that criteria.
 -- @function snd.aff_check
 function snd.aff_check()
   for i in pairs(snd.afflictions) do
