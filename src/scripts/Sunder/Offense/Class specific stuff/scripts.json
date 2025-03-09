@@ -1,74 +1,71 @@
 [
-       {
-              "name": "Archivist aff picking",
-              "isActive": "yes",
-              "script": "",
-              "isFolder": "no"
-       },
-       {
-              "name": "Voidseer aff picking",
-              "isActive": "yes",
-              "script": "",
-              "isFolder": "no"
-       },
-       {
-              "name": "Sentinel Scripts and Tables",
-              "isActive": "yes",
-              "script": "",
-              "isFolder": "no"
-       },
-       {
-              "name": "Executor Scripts and Tables",
-              "isActive": "yes",
-              "script": "",
-              "isFolder": "no"
-       },
-       {
-              "name": "Indorani/Oneiromancer card table",
-              "isActive": "yes",
-              "script": "--Nested tables incase someone wants to add a devil y/n field to cards and change picking based on it, though so few use it that it may not come to fruition.\nsnd.cardshapes =\n  {\n    indorani =\n      {\n        stupidity = {card = \"moon\"},\n        confusion = {card = \"moon\"},\n        epilepsy = {card = \"moon\"},\n        anorexia = {card = \"moon\"},\n        berserking = {card = \"moon\"},\n        weariness = {card = \"moon\"},\n        impatience = {card = \"moon\"},\n        recklessness = {card = \"moon\"},\n        perplexed = {card = \"sun\"},\n        asthma = {card = \"sun\"},\n        clumsiness = {card = \"sun\"},\n        vomiting = {card = \"sun\"},\n        lethargy = {card = \"sun\"},\n        sensitivity = {card = \"sun\"},\n        hearing = {card = \"sun\"},\n        hypersomnia = {card = \"sun\"},\n        migraine = {card = \"sun\"},\n        superstition = {card = \"sun\"},\n        prone = {card = \"hangedman\"},\n        writhe_ropes = {card = \"hangedman\"},\n        justice = {card = \"justice\"},\n        lovers_effect = {card = \"lovers\"},\n        wheel = {card = \"wheel\"},\n        slickness = {card = \"adder\"},\n        haemophilia = {card = \"adder\"},\n        aeon = {card = \"aeon\"},\n        shyness = {card = \"adder\"},\n        allergies = {card = \"adder\"},\n        peace = {card = \"adder\"},\n        paresis = {card = \"adder\"},\n        slickness = {card = \"adder\"},\n        stuttering = {card = \"adder\"},\n        blurry_vision = {card = \"adder\"},\n        deadening = {card = \"adder\"},\n        disfigurement = {card = \"adder\"},\n        squelched = {card = \"adder\"},\n      },\n    oneiromancer =\n      {\n        stupidity = {card = \"hypercube\"},\n        confusion = {card = \"hypercube\"},\n        epilepsy = {card = \"hypercube\"},\n        anorexia = {card = \"hypercube\"},\n        berserking = {card = \"hypercube\"},\n        weariness = {card = \"hypercube\"},\n        impatience = {card = \"hypercube\"},\n        recklessness = {card = \"hypercube\"},\n        perplexed = {card = \"sphere\"},\n        asthma = {card = \"sphere\"},\n        clumsiness = {card = \"sphere\"},\n        vomiting = {card = \"sphere\"},\n        lethargy = {card = \"sphere\"},\n        sensitivity = {card = \"sphere\"},\n        hearing = {card = \"sphere\"},\n        hypersomnia = {card = \"sphere\"},\n        migraine = {card = \"sphere\"},\n        superstition = {card = \"sphere\"},\n        prone = {card = \"wreath\"},\n        writhe_ropes = {card = \"wreath\"},\n        justice = {card = \"knight\"},\n        lovers_effect = {card = \"heart\"},\n        wheel = {card = \"cardinal\"},\n        slickness = {card = \"diamond\"},\n        haemophilia = {card = \"diamond\"},\n        aeon = {card = \"hourglass\"},\n        despair = {card = \"phantasmagoria\"},\n        shyness = {card = \"diamond\"},\n        allergies = {card = \"diamond\"},\n        peace = {card = \"diamond\"},\n        paresis = {card = \"diamond\"},\n        slickness = {card = \"diamond\"},\n        stuttering = {card = \"diamond\"},\n        blurry_vision = {card = \"diamond\"},\n        deadening = {card = \"diamond\"},\n        disfigurement = {card = \"diamond\"},\n        squelched = {card = \"diamond\"},\n      },\n  }",
-              "isFolder": "no"
-       },
-       {
-              "name": "Bard attack stuff",
-              "isActive": "yes",
-              "script": "",
-              "isFolder": "no"
-       },
-       {
-              "name": "Akkari Attack Stuff",
-              "isActive": "yes",
-              "script": "",
-              "isFolder": "no"
-       },
-       {
-              "name": "Scourge Affs (Sciomancer and Runecarver)",
-              "isActive": "yes",
-              "script": "",
-              "isFolder": "no"
-       },
-       {
-              "name": "Monk Stuff",
-              "isActive": "yes",
-              "script": "",
-              "isFolder": "no"
-       },
-       {
-              "name": "Teradrim/Tidesage stuff",
-              "isActive": "yes",
-              "script": "local mirrors = {\n    ram = \"gutsmash\",\n    crest = \"facesmash\",\n    clobber = \"batter\",  \n    pitch = \"furor\",\n    buckle = \"fracture\",\n    gybe = \"skullbash\",\n    wreck = \"pulp\",\n    crack = \"slam\",\n  }\nlocal attackDamage = {\n  gutsmash = 12,\n  facesmash = 13,\n  batter = 13.75,\n  furor = 7.8,\n  fracture = 12,\n  skullbash = 16,\n  pulp = 9.47,\n  slam = 10,\n  barrage1 = 4,\n  barrage2 = 3.5,\n  barrage3 = 3.06\n}\n--you and limb are used for crunching theoretical damage.\n--you should be true if you're the one hitting, limb should be the limb if you're calculating fracture\nfunction snd.calcTeradrimLimbDamage(skill, you, limb)  \n  local attack = mirrors[skill] or skill\n  local damage = attackDamage[attack]\n  if attack == \"fracture\" then\n    damage = damage + 4 * math.min(3, snd.limb_bruising[(limb or snd.last_hit_limb)])\n  end\n  if snd.hitting == \"You\" or you then\n    if snd.toggles.targetrune then\n      damage = damage *1.05\n    end\n    if snd.runemarkMajor == \"red\" then\n      damage = damage * 1.25\n    elseif snd.runemarkMajor == \"blue\" then\n      damage = damage * 0.75\n    end\n    if snd.runemarkMinor == \"red\" and attack == \"fracture\" then\n      damage = damage * 1.08\n    end\n  end\n  return round(damage,2)\nend",
-              "isFolder": "no"
-       },
-       {
-              "name": "Predator",
-              "isActive": "yes",
-              "script": "",
-              "isFolder": "no"
-       },
-       {
-              "name": "Zealot/ravager",
-              "isActive": "yes",
-              "script": "snd.zealotChainMap = {\n  sore_ankle = \"anklepin\",\n  stuttering = \"jawcrack\",\n  backstrain = \"descent\",\n  sore_wrist = \"wristlash\",\n  whiplash = \"uprise\",\n}\n\nsnd.ravagerChainMap = {\n  sore_ankle = \"hobble\",\n  stuttering = \"slug\",\n  backstrain = \"flog\",\n  sore_wrist = \"maim\",\n  whiplash = \"whiplash\",\n}",
-              "isFolder": "no"
-       }
+  {
+    "name": "Archivist aff picking",
+    "isActive": "yes",
+    "script": "",
+    "isFolder": "no"
+  },
+  {
+    "name": "Voidseer aff picking",
+    "isActive": "yes",
+    "script": "",
+    "isFolder": "no"
+  },
+  {
+    "name": "Sentinel Scripts and Tables",
+    "isActive": "yes",
+    "script": "",
+    "isFolder": "no"
+  },
+  {
+    "name": "Executor Scripts and Tables",
+    "isActive": "yes",
+    "script": "",
+    "isFolder": "no"
+  },
+  {
+    "name": "Indorani Oneiromancer card table",
+    "isActive": "yes",
+    "isFolder": "no"
+  },
+  {
+    "name": "Bard attack stuff",
+    "isActive": "yes",
+    "script": "",
+    "isFolder": "no"
+  },
+  {
+    "name": "Akkari Attack Stuff",
+    "isActive": "yes",
+    "script": "",
+    "isFolder": "no"
+  },
+  {
+    "name": "Scourge Affs (Sciomancer and Runecarver)",
+    "isActive": "yes",
+    "script": "",
+    "isFolder": "no"
+  },
+  {
+    "name": "Monk Stuff",
+    "isActive": "yes",
+    "script": "",
+    "isFolder": "no"
+  },
+  {
+    "name": "Teradrim Tidesage stuff",
+    "isActive": "yes",
+    "isFolder": "no"
+  },
+  {
+    "name": "Predator",
+    "isActive": "yes",
+    "script": "",
+    "isFolder": "no"
+  },
+  {
+    "name": "Zealot ravager",
+    "isActive": "yes",
+    "isFolder": "no"
+  }
 ]
