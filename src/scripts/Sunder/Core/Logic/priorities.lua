@@ -442,6 +442,7 @@ snd.priorities =
   "def_redoubt",
   "def_gravechill",
   "def_vengeance",
+  "def_deathaura",
   "def_hierophant",
   "def_chariot",
   "def_crane",
