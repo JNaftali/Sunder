@@ -1,0 +1,1 @@
+if hasSkill("MindseyeTattoo") then snd.send("touch mindseye") end
