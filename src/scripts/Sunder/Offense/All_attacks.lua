@@ -1140,6 +1140,9 @@ snd.all_class_attacks = {
     Effusion = function(target)
       snd.target_got("effused_blood")
     end,
+    Seize = function(target)
+      snd.target_got("loneliness")
+    end,
   },
 
   --Archivist
@@ -3416,6 +3419,9 @@ snd.all_class_attacks = {
     end,
     Exsanguinate = function(target)
       snd.target_got("effused_blood")
+    end,
+    Inquisition = function(target)
+      snd.target_got("loneliness")
     end,
   },
 
