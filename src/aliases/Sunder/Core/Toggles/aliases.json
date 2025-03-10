@@ -1,5 +1,3 @@
-[
-       {
               "name": "lighting",
               "isActive": "yes",
               "regex": "^(lgt|toggle lighting|toggle pipes)$",
@@ -161,10 +159,9 @@
               "isFolder": "no"
        },
        {
-              "name": "Purge/Purify/Panacea",
+              "name": "Purge Purify Panacea",
               "isActive": "yes",
               "regex": "^pon$",
-              "script": "if snd.class == \"Praenomen\" or snd.class == \"Akkari\" then\n\tsnd.toggle(\"purify\")\nelseif snd.class == \"Carnifex\" or snd.class == \"Warden\" then\n\tsnd.toggle(\"purge\")\nelseif snd.class == \"Shaman\" or snd.class == \"Alchemist\" then\n\tsnd.toggle(\"panacea\")\nelse\n  cecho(\"\\nYou have no purging ability for your class that needs to be turned on.\")\nend",
               "isFolder": "no"
        },
        {
@@ -196,10 +193,9 @@
               "isFolder": "no"
        },
        {
-              "name": "target rune for tidesage/teradrim",
+              "name": "target rune for tidesage teradrim",
               "isActive": "yes",
               "regex": "^toggle targetrune$",
-              "script": "snd.toggles.targetrune = not snd.toggles.targetrune\nif snd.toggles.targetrune then\n  cecho(\"\u003cred\u003eWill now factor in targeting rune for tidesage/teradrim limb damage.\")\nelse\n  cecho(\"\u003cred\u003eWill no longer factor in targeting rune for tidesage/teradrim limb damage.\")\nend",
               "isFolder": "no"
        },
        {

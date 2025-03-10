@@ -1,262 +1,261 @@
 [
-       {
-              "name": "broke",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^(\\w+)'s? (.+) breaks from all the damage\\.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^(\\w+)'s? (.+) is shredded into meaty ribbons\\.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^(\\w+) grows sluggish, .+ (head) marred with trauma\\.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^(\\w+) shudders from the discomfort suffered to .+ (torso)\\.$",
-                            "type": "regex"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "mangled",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^(\\w+)'s? (.+) has been (?:beaten|torn) into uselessness\\.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^(\\w+) groans loudly, clutching .+ mangled and bloodied (head)\\.$",
-                            "type": "regex"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "mending",
-              "isActive": "no",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^(?:You sense )?(\\w+) presses a mending poultice against .+ (head|torso|right leg|left leg|right arm|left arm|skin|legs|arms), rubbing the poultice into .+ flesh\\.$",
-                            "type": "regex"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "restoration",
-              "isActive": "no",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^(?:You sense )?(\\w+) presses a restoration poultice against (the )?\\w+ (head|torso|right leg|left leg|right arm|left arm), rubbing the poultice into (the )?\\w+ flesh\\.$",
-                            "type": "regex"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "Prone w/leg breaks",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^(\\w+)'s legs give way as .+ (.+) breaks.$",
-                            "type": "regex"
-                     }
-              ],
-              "script": "if matches[2] == snd.target then\n   snd.target_got(\"fallen\")\n   snd.target_got(\"right_leg_crippled\")\n   snd.target_got(\"left_leg_crippled\")\nelseif snd.toggles.nontargetgags and snd.toggles.gags then\n  deleteFull()\nend\n"
-       },
-       {
-              "name": "3P limb breaks from random sources",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^The crone withers (\\w+)'s ([a-z ]+) into uselessness\\.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^A .* golem reaches out and seizes (\\w+)'s ([a-z ]+) in its powerful grip, pulling and twisting until the bone snaps\\.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^\\w+ reaches out to grab (\\w+)'s ([a-z ]+), and it shrivels away\\.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^You hear the sharp snap of bone as .* rends (\\w+)'s ([a-z ]+)\\.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^\\w+ spins .+ flail in a blazing arc towards (\\w+)'s ([a-z ]+), crushing it\\.$ ",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^You find that (\\w+)'s ([a-z ]+) is already shriveled\\.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^You quickly adjust the momentum of your flail, smashing it into (\\w+)'s ([a-z ]+)\\.$",
-                            "type": "regex"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "bruising",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^Your strikes cause (\\w+) bruising on (\\w+)'s (.+)\\.$",
-                            "type": "regex"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "Regenerate",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^(\\w+) becomes flushed as .+ heals with quickened haste.$",
-                            "type": "regex"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "Angel sear proc",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^A burst of colorful steam rises from (\\w+)'s skin with sudden surprise\\.$",
-                            "type": "regex"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "Soothing",
-              "isActive": "no",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^(\\w+) presses a soothing poultice against (the )?\\w+ (.+), rubbing the poultice into (the )?\\w+ flesh\\.$",
-                            "type": "regex"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "dislocate proc",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^The prolonged dislocation of (\\w+)'s (.+) has exacerbated the injury\\.$",
-                            "type": "regex"
-                     }
-              ],
-              "script": ""
-       }
+  {
+    "name": "broke",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^(\\w+)'s? (.+) breaks from all the damage\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^(\\w+)'s? (.+) is shredded into meaty ribbons\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^(\\w+) grows sluggish, .+ (head) marred with trauma\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^(\\w+) shudders from the discomfort suffered to .+ (torso)\\.$",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "mangled",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^(\\w+)'s? (.+) has been (?:beaten|torn) into uselessness\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^(\\w+) groans loudly, clutching .+ mangled and bloodied (head)\\.$",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "mending",
+    "isActive": "no",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^(?:You sense )?(\\w+) presses a mending poultice against .+ (head|torso|right leg|left leg|right arm|left arm|skin|legs|arms), rubbing the poultice into .+ flesh\\.$",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "restoration",
+    "isActive": "no",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^(?:You sense )?(\\w+) presses a restoration poultice against (the )?\\w+ (head|torso|right leg|left leg|right arm|left arm), rubbing the poultice into (the )?\\w+ flesh\\.$",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "Prone w leg breaks",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^(\\w+)'s legs give way as .+ (.+) breaks.$",
+        "type": "regex"
+      }
+    ]
+  },
+  {
+    "name": "3P limb breaks from random sources",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^The crone withers (\\w+)'s ([a-z ]+) into uselessness\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^A .* golem reaches out and seizes (\\w+)'s ([a-z ]+) in its powerful grip, pulling and twisting until the bone snaps\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ reaches out to grab (\\w+)'s ([a-z ]+), and it shrivels away\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^You hear the sharp snap of bone as .* rends (\\w+)'s ([a-z ]+)\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ spins .+ flail in a blazing arc towards (\\w+)'s ([a-z ]+), crushing it\\.$ ",
+        "type": "regex"
+      },
+      {
+        "pattern": "^You find that (\\w+)'s ([a-z ]+) is already shriveled\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^You quickly adjust the momentum of your flail, smashing it into (\\w+)'s ([a-z ]+)\\.$",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "bruising",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^Your strikes cause (\\w+) bruising on (\\w+)'s (.+)\\.$",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "Regenerate",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^(\\w+) becomes flushed as .+ heals with quickened haste.$",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "Angel sear proc",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^A burst of colorful steam rises from (\\w+)'s skin with sudden surprise\\.$",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "Soothing",
+    "isActive": "no",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^(\\w+) presses a soothing poultice against (the )?\\w+ (.+), rubbing the poultice into (the )?\\w+ flesh\\.$",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "dislocate proc",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^The prolonged dislocation of (\\w+)'s (.+) has exacerbated the injury\\.$",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  }
 ]

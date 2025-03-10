@@ -1,72 +1,71 @@
 [
-       {
-              "name": "mount",
-              "isActive": "yes",
-              "regex": "^mnt$",
-              "script": "",
-              "isFolder": "no"
-       },
-       {
-              "name": "dismount",
-              "isActive": "yes",
-              "regex": "^dm$",
-              "script": "",
-              "isFolder": "no"
-       },
-       {
-              "name": "shield tattoo",
-              "isActive": "yes",
-              "regex": "^ts$",
-              "script": "",
-              "isFolder": "no"
-       },
-       {
-              "name": "wield none",
-              "isActive": "yes",
-              "regex": "^wnon$",
-              "script": "",
-              "isFolder": "no"
-       },
-       {
-              "name": "directions",
-              "isActive": "yes",
-              "regex": "^(n|e|s|w|ne|nw|se|sw|in|up?|out|o|d|down)$",
-              "script": "",
-              "isFolder": "no"
-       },
-       {
-              "name": "group",
-              "isActive": "yes",
-              "regex": "^grp (.*)$",
-              "script": "",
-              "isFolder": "no"
-       },
-       {
-              "name": "Landmarks w/descriptions",
-              "isActive": "yes",
-              "regex": "^snd landmarks$",
-              "script": "snd.landmarks_descs =\n  {\n    {\"tear\", \"The tear of Lleis\"},\n    {\"orrery\", \"The Celestial Orrery\"},\n    {\n      \"Tara, Cosmina, Derryk, Sylvos, Tiber, Gladius, Gloom, Derban, Grothgar, Grollum, Smirnick, Smythe, Helfga, Naggamantex, Glixx, Quelzar, Sisters, Hecuba\",\n      \"Fengard Mobs\",\n    },\n    {\"Tellimerius, Broondac, Belmith, Marcello, Axel, Makkali, Mamba, Tolonar, Wyvern\", \"Milestone mobs\"},\n    {\"hg\", \"Outside the Hunting Grounds\"},\n    {\"Nighteye, Claw, Shade, Staghelm, Silence, Rose, Ivory, Rowan, HGShrine\", \"Approximate locations of hunting grounds items.\"},\n    {\"herolt\", \"Herolt's quiz\"},\n    {\"farkle\", \"The permanent farkle table\"},\n    {\"lineconnect\", \"The game of Line Connect\"},\n    {\"poker\", \"The poker table in esterport\"},\n    {\"safari\", \"Giovelli's Safari\"},\n    {\"boggard\", \"Boggard in esterport. Takes black ylem.\"},\n    {\"staging\", \"Where your city gathers for combat.\"},\n    {\"training\", \"Your city's training room.\"},\n    {\"epicurean\", \"The epicurean academy.\"},\n    {\"sgs\", \"The Siroccian Geological Society.\"},\n  }\nfor _, landmark in ipairs(snd.landmarks_descs) do\n  cecho(\"\\n\u003csandy_brown\u003e\" .. string.title(landmark[1]) .. \": \u003caquamarine\u003e\" .. landmark[2])\nend",
-              "isFolder": "no"
-       },
-       {
-              "name": "landmarks",
-              "isActive": "yes",
-              "regex": "^pt (.+)$",
-              "script": "",
-              "isFolder": "no"
-       },
-       {
-              "name": "Landmark goto",
-              "isActive": "yes",
-              "regex": "^lgo (.+)$",
-              "script": "",
-              "isFolder": "no"
-       },
-       {
-              "name": "walkarea",
-              "isActive": "yes",
-              "regex": "^walkarea$",
-              "script": "",
-              "isFolder": "no"
-       }
+  {
+    "name": "mount",
+    "isActive": "yes",
+    "regex": "^mnt$",
+    "script": "",
+    "isFolder": "no"
+  },
+  {
+    "name": "dismount",
+    "isActive": "yes",
+    "regex": "^dm$",
+    "script": "",
+    "isFolder": "no"
+  },
+  {
+    "name": "shield tattoo",
+    "isActive": "yes",
+    "regex": "^ts$",
+    "script": "",
+    "isFolder": "no"
+  },
+  {
+    "name": "wield none",
+    "isActive": "yes",
+    "regex": "^wnon$",
+    "script": "",
+    "isFolder": "no"
+  },
+  {
+    "name": "directions",
+    "isActive": "yes",
+    "regex": "^(n|e|s|w|ne|nw|se|sw|in|up?|out|o|d|down)$",
+    "script": "",
+    "isFolder": "no"
+  },
+  {
+    "name": "group",
+    "isActive": "yes",
+    "regex": "^grp (.*)$",
+    "script": "",
+    "isFolder": "no"
+  },
+  {
+    "name": "Landmarks with descriptions",
+    "isActive": "yes",
+    "regex": "^snd landmarks$",
+    "isFolder": "no"
+  },
+  {
+    "name": "landmarks",
+    "isActive": "yes",
+    "regex": "^pt (.+)$",
+    "script": "",
+    "isFolder": "no"
+  },
+  {
+    "name": "Landmark goto",
+    "isActive": "yes",
+    "regex": "^lgo (.+)$",
+    "script": "",
+    "isFolder": "no"
+  },
+  {
+    "name": "walkarea",
+    "isActive": "yes",
+    "regex": "^walkarea$",
+    "script": "",
+    "isFolder": "no"
+  }
 ]

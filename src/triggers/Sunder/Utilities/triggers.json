@@ -126,7 +126,7 @@
     "script": ""
   },
   {
-    "name": "Faster Water Movement w/mmap",
+    "name": "Faster Water Movement w mmap",
     "isActive": "yes",
     "isFolder": "no",
     "multiline": "no",
@@ -142,8 +142,7 @@
         "pattern": "There's water ahead of you. You'll have to swim to make it through.",
         "type": "exactMatch"
       }
-    ],
-    "script": "mmp.swim()"
+    ]
   },
   {
     "name": "speedwalk automount",

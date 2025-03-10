@@ -9,7 +9,7 @@ function M.create_script_file_from_json(opts)
   local script = json:match('"script": "(.*)"')
 
   -- Convert name to underscore format and remove forward slashes
-  name = name:gsub("/", ""):gsub("%s+", "_"):gsub("[^a-zA-Z0-9_]", "")
+  name = name:gsub("/", "_"):gsub("%s+", "_"):gsub("[^a-zA-Z0-9_]", "")
   local filename = name .. '.lua'
 
   -- Get the current directory where the JSON file is located

@@ -1,144 +1,143 @@
 [
-       {
-              "name": "mindnet in/out",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^(\\w+) has (entered|left) the area\\.$",
-                            "type": "regex"
-                     }
-              ],
-              "script": "snd.alertnessHit(matches[3], matches[2], \"mindnet\")"
-       },
-       {
-              "name": "mindnet on",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "You cast an invisible mind net out into the distance, allowing it to settle about the surrounding land.",
-                            "type": "exactMatch"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "mindnet off",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "You cease concentration and your mind net vanishes.",
-                            "type": "exactMatch"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "fullsense",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "200",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "You seek out all mental presences within your reach:",
-                            "type": "exactMatch"
-                     }
-              ],
-              "script": "",
-              "children": [
-                     {
-                            "name": "fullsense end",
-                            "isActive": "yes",
-                            "isFolder": "no",
-                            "multiline": "no",
-                            "multilineDelta": "0",
-                            "matchall": "no",
-                            "filter": "no",
-                            "fireLength": "0",
-                            "highlight": "no",
-                            "highlightFG": "#ff0000",
-                            "highlightBG": "#ffff00",
-                            "patterns": [
-                                   {
-                                          "pattern": "return isPrompt()",
-                                          "type": "lua"
-                                   }
-                            ],
-                            "script": ""
-                     },
-                     {
-                            "name": "scent line",
-                            "isActive": "yes",
-                            "isFolder": "no",
-                            "multiline": "no",
-                            "multilineDelta": "0",
-                            "matchall": "no",
-                            "filter": "no",
-                            "fireLength": "0",
-                            "highlight": "no",
-                            "highlightFG": "#ff0000",
-                            "highlightBG": "#ffff00",
-                            "patterns": [
-                                   {
-                                          "pattern": "^You sense (\\w+) at (.+)\\.$",
-                                          "type": "regex"
-                                   }
-                            ],
-                            "script": ""
-                     }
-              ]
-       },
-       {
-              "name": "mind glance",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^You glance through your telepathic bond and out of (\\w+)'s? eyes\\.$",
-                            "type": "regex"
-                     }
-              ],
-              "script": ""
-       }
+  {
+    "name": "mindnet in out",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^(\\w+) has (entered|left) the area\\.$",
+        "type": "regex"
+      }
+    ]
+  },
+  {
+    "name": "mindnet on",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "You cast an invisible mind net out into the distance, allowing it to settle about the surrounding land.",
+        "type": "exactMatch"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "mindnet off",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "You cease concentration and your mind net vanishes.",
+        "type": "exactMatch"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "fullsense",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "200",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "You seek out all mental presences within your reach:",
+        "type": "exactMatch"
+      }
+    ],
+    "script": "",
+    "children": [
+      {
+        "name": "fullsense end",
+        "isActive": "yes",
+        "isFolder": "no",
+        "multiline": "no",
+        "multilineDelta": "0",
+        "matchall": "no",
+        "filter": "no",
+        "fireLength": "0",
+        "highlight": "no",
+        "highlightFG": "#ff0000",
+        "highlightBG": "#ffff00",
+        "patterns": [
+          {
+            "pattern": "return isPrompt()",
+            "type": "lua"
+          }
+        ],
+        "script": ""
+      },
+      {
+        "name": "scent line",
+        "isActive": "yes",
+        "isFolder": "no",
+        "multiline": "no",
+        "multilineDelta": "0",
+        "matchall": "no",
+        "filter": "no",
+        "fireLength": "0",
+        "highlight": "no",
+        "highlightFG": "#ff0000",
+        "highlightBG": "#ffff00",
+        "patterns": [
+          {
+            "pattern": "^You sense (\\w+) at (.+)\\.$",
+            "type": "regex"
+          }
+        ],
+        "script": ""
+      }
+    ]
+  },
+  {
+    "name": "mind glance",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^You glance through your telepathic bond and out of (\\w+)'s? eyes\\.$",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  }
 ]

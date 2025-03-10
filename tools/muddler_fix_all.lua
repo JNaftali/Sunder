@@ -22,7 +22,7 @@ function M.create_script_files_from_json(opts)
     local script = obj.script
 
     -- Convert name to underscore format and remove forward slashes
-    name = name:gsub("/", ""):gsub("%s+", "_"):gsub("[^a-zA-Z0-9_]", "")
+    name = name:gsub("/", "_"):gsub("%s+", "_"):gsub("[^a-zA-Z0-9_]", "")
     local filename = name .. '.lua'
 
     -- Get the current directory where the JSON file is located
@@ -32,10 +32,10 @@ function M.create_script_files_from_json(opts)
     local file_path = dir .. '/' .. filename
 
     -- Modify script special chars
-    script = script:gsub("\\n", "\n")    -- Replace \n with actual newline
-        :gsub("\\t", "\t")               -- Replace \t with actual tab
-        :gsub("\\\"", "\"")              -- Replace \" with actual "
-        :gsub("\\\\", "\\")              -- Replace \\ with actual backslash
+    script = script:gsub("\\n", "\n") -- Replace \n with actual newline
+        :gsub("\\t", "\t")            -- Replace \t with actual tab
+        :gsub("\\\"", "\"")           -- Replace \" with actual "
+        :gsub("\\\\", "\\")           -- Replace \\ with actual backslash
 
     -- Open the file for writing (create it if it doesn't exist)
     local file = io.open(file_path, "w")
