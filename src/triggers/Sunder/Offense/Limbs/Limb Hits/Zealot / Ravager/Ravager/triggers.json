@@ -1,138 +1,132 @@
 [
-       {
-              "name": "Haymaker Hit Confirmation",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "yes",
-              "multilineDelta": "2",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "(^Lurching forward with violent momentum, \\w+ slams? \\w+ fist into (\\w+)'s gut without mercy\\.$|^Your fist collides with (\\w+) but carries little momentum, barely a fraction of your true strength\\.$)",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "(^The sheer force of .+ haymaker strikes at (\\w+)'s organs, causing a massive internal bleed\\.$|^Lacking sufficient force, your blow causes only minor wounding\\.$)",
-                            "type": "regex"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "Rampage affs",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^(\\w+) gasps in pain, \\w+ (.+) shattering under the assault\\.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^(\\w+) doubles over as \\w+ ribs crack under the remorseless strike\\.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^(\\w+)'s throat seizes up from the force of the blow\\.$",
-                            "type": "regex"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "Ravager Rebound",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^Rebounding with aggres?sive agility, (\\w+) forces \\w+ back to \\w+ feet.$",
-                            "type": "regex"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "Welt proc (Ravager)",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^(\\w+) winces as the contusion plaguing \\w+ (.+) throbs from duress\\.",
-                            "type": "regex"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "Branding / Infernal Seal Ablaze",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^The Infernal Seal upon (\\w+) flares sharply, setting \\w+ ablaze.$",
-                            "type": "regex"
-                     }
-              ],
-              "script": "if matches[2] == snd.target then\n  snd.target_got(\"ablaze\")  \n  if snd.checkAff(\"ablaze\")  then\n    snd.flamestack = snd.flamestack + 1\n  end\nend \nif (snd.class == \"Zealot\" or snd.class == \"Ravager\") and matches[2] == snd.target and snd.flamestack \u003e 0 then\n  cecho(\"\\n\"..snd.target..\" Now has \u003clight_goldenrod\u003e\"..snd.flamestack..\"\u003cdodger_blue\u003e stacks of intensity\")\nend"
-       },
-       {
-              "name": "Branding / Infernal Shroud",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^The Infernal Seal on (\\w+)'s chest releases a shower of holy flame, blanketing the air about \\w+ with a burning shroud\\.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^Flames creep up (\\w+)'s magical shield from within, \\w+ burning shroud consuming it in an instant\\.$",
-                            "type": "regex"
-                     }
-              ],
-              "script": "if matches[2] == snd.target then\n  snd.target_got(\"infernal_seal\")\n  snd.target_got(\"infernal_shroud\")\n  tempTimer(125, [[snd.target_cured(\"infernal_seal\")]])\n  tempTimer(125, [[snd.target_cured(\"infernal_shroud\")]])\n  snd.target_got(\"ablaze\")\nend \nif (snd.class == \"Zealot\" or snd.class == \"Ravager\") and matches[2] == snd.target and snd.flamestack \u003e 0 then\n  cecho(\"\\n\"..snd.target..\" Now has \u003clight_goldenrod\u003e\"..snd.flamestack..\"\u003cdodger_blue\u003e stacks of intensity\")\nend"
-       }
+  {
+    "name": "Haymaker Hit Confirmation",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "yes",
+    "multilineDelta": "2",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "(^Lurching forward with violent momentum, \\w+ slams? \\w+ fist into (\\w+)'s gut without mercy\\.$|^Your fist collides with (\\w+) but carries little momentum, barely a fraction of your true strength\\.$)",
+        "type": "regex"
+      },
+      {
+        "pattern": "(^The sheer force of .+ haymaker strikes at (\\w+)'s organs, causing a massive internal bleed\\.$|^Lacking sufficient force, your blow causes only minor wounding\\.$)",
+        "type": "regex"
+      }
+    ]
+  },
+  {
+    "name": "Rampage affs",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^(\\w+) gasps in pain, \\w+ (.+) shattering under the assault\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^(\\w+) doubles over as \\w+ ribs crack under the remorseless strike\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^(\\w+)'s throat seizes up from the force of the blow\\.$",
+        "type": "regex"
+      }
+    ]
+  },
+  {
+    "name": "Ravager Rebound",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^Rebounding with aggres?sive agility, (\\w+) forces \\w+ back to \\w+ feet.$",
+        "type": "regex"
+      }
+    ]
+  },
+  {
+    "name": "Welt proc (Ravager)",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^(\\w+) winces as the contusion plaguing \\w+ (.+) throbs from duress\\.",
+        "type": "regex"
+      }
+    ]
+  },
+  {
+    "name": "Branding Infernal Seal Ablaze",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^The Infernal Seal upon (\\w+) flares sharply, setting \\w+ ablaze.$",
+        "type": "regex"
+      }
+    ]
+  },
+  {
+    "name": "Branding Infernal Shroud",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^The Infernal Seal on (\\w+)'s chest releases a shower of holy flame, blanketing the air about \\w+ with a burning shroud\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^Flames creep up (\\w+)'s magical shield from within, \\w+ burning shroud consuming it in an instant\\.$",
+        "type": "regex"
+      }
+    ]
+  }
 ]
