@@ -1,33 +1,37 @@
 [
-       {
-              "name": "^sunder help directory$",
-              "isActive": "yes",
-              "regex": "^sunder help find my profile$",
-              "script": "",
-              "isFolder": "no"
-       },
-       {
-              "name": "Main Index",
-              "isActive": "yes",
-              "script": "",
-              "isFolder": "yes"
-       },
-       {
-              "name": "Bashing helpfiles",
-              "isActive": "yes",
-              "script": "",
-              "isFolder": "yes"
-       },
-       {
-              "name": "Utility helpfiles",
-              "isActive": "yes",
-              "script": "",
-              "isFolder": "yes"
-       },
-       {
-              "name": "Offense/defense helpfiles",
-              "isActive": "yes",
-              "script": "",
-              "isFolder": "yes"
-       }
+  {
+    "name": "^sunder help directory$",
+    "isActive": "yes",
+    "regex": "^sunder help find my profile$",
+    "script": "",
+    "isFolder": "no"
+  },
+  {
+    "name": "Main Index",
+    "isActive": "yes",
+    "script": "",
+    "isFolder": "yes"
+  },
+  {
+    "name": "Bashing helpfiles",
+    "isActive": "yes",
+    "script": "",
+    "isFolder": "yes"
+  },
+  {
+    "name": "Utility helpfiles",
+    "isActive": "yes",
+    "script": "",
+    "isFolder": "yes"
+  },
+  {
+    "name": "Offense/defense helpfiles",
+    "isActive": "yes",
+    "script": "",
+    "isFolder": "yes"
+  },
+  {
+    "name": "Sunder version",
+    "regex": "^sunder version$"
+  }
 ]
