@@ -57,6 +57,6 @@ jobs:
           files: |
             Sunder.mpackage
             Sunder.xml
-          generate_release_notes: false
+          generate_release_notes: true
           make_latest: true
           token: ${{ secrets.GITHUB_TOKEN }}
