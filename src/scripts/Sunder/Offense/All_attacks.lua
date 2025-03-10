@@ -133,7 +133,7 @@ snd.all_class_attacks = {
       end
     end,
     Heatwave = function(target)
-      snd.target_got("berserking")
+      snd.target_got("mania")
       snd.target_got("hallucinations")
     end,
     Sear = function(target)
@@ -275,7 +275,7 @@ snd.all_class_attacks = {
     end,
 
     Deprival = function(target)
-      snd.target_got("merciful")
+      snd.target_got("mercy")
       snd.target_got("dementia")
       snd.target_got("paranoia")
     end,
@@ -418,7 +418,7 @@ snd.all_class_attacks = {
     end,
 
     Boast = function(target)
-      snd.target_got("merciful")
+      snd.target_got("mercy")
       snd.target_got("dementia")
       snd.target_got("paranoia")
     end,
@@ -583,7 +583,7 @@ snd.all_class_attacks = {
     end,
     Heartbreaker = function(target)
       snd.last_hit_limb = "torso"
-      table.insert(snd.maybe_affs, "heartflutter")
+      table.insert(snd.maybe_affs, "arrhythmia")
       snd.onHit2({ "Dodge", "Parry", "Rebounding" }, "Sentinel")
     end,
     Twirl = function(target)
@@ -685,7 +685,7 @@ snd.all_class_attacks = {
         ["direwolf"] = "claustrophobia",
         ["raloth"] = "agoraphobia",
         ["crocodile"] = "loneliness",
-        ["cockatrice"] = "berserking",
+        ["cockatrice"] = "mania",
       }
       snd.target_got(daunt_list[animal])
     end,
@@ -811,12 +811,12 @@ snd.all_class_attacks = {
 
     Infest      = function(target, boosted)
       if not boosted then
-        snd.target_got("infested")
+        snd.target_got("infestation")
       end
     end,
     Spines      = function(target, boosted)
       if not boosted then
-        snd.target_got("blighted")
+        snd.target_got("blight")
       end
     end,
     Overload    = function(target, boosted)
@@ -959,7 +959,7 @@ snd.all_class_attacks = {
       snd.target_got("fallen")
     end,
     Lovers = function(target)
-      snd.target_got("lovers_effect")
+      snd.target_got("infatuation")
     end,
 
     Aeon = function(target)
@@ -1063,8 +1063,8 @@ snd.all_class_attacks = {
     Masochism = function(target)
       snd.target_got("masochism")
     end,
-    Lovers = function(target)
-      snd.target_got("lovers_effect")
+    Infatuation = function(target)
+      snd.target_got("infatuation")
     end,
     Loneliness = function(target)
       snd.target_got("loneliness")
@@ -1081,8 +1081,8 @@ snd.all_class_attacks = {
     Dementia = function(target)
       snd.target_got("dementia")
     end,
-    Berserking = function(target)
-      snd.target_got("berserking")
+    Mania = function(target)
+      snd.target_got("mania")
     end,
     Indifference = function(target)
       snd.target_got("indifference")
@@ -1109,7 +1109,7 @@ snd.all_class_attacks = {
   ["Sanguis"] = {
 
     Curse = function(target)
-      snd.target_got("blood_curse")
+      snd.target_got("psychosis")
     end,
 
     Spew = function(target)
@@ -1130,7 +1130,7 @@ snd.all_class_attacks = {
     end,
 
     Poison = function(target)
-      snd.target_got("blood_poison")
+      snd.target_got("sepsis")
     end,
 
     Rune = function(target)
@@ -1157,17 +1157,17 @@ snd.all_class_attacks = {
     end,
 
     Circle = function(target)
-      local t = { "merciful", "masochism", "berserking", "recklessness" } -- initialize table with circle affs
-      for _, v in pairs(t) do                                             -- iterate circle affs
-        if not snd.checkAff(v) then                                       -- check if they have it
-          snd.target_got(v)                                               -- if they don't have it, add it
-          break                                                           -- if we added an aff, break out of the loop
-        end                                                               -- end if
-      end                                                                 -- end for
+      local t = { "mercy", "masochism", "mania", "recklessness" } -- initialize table with circle affs
+      for _, v in pairs(t) do                                     -- iterate circle affs
+        if not snd.checkAff(v) then                               -- check if they have it
+          snd.target_got(v)                                       -- if they don't have it, add it
+          break                                                   -- if we added an aff, break out of the loop
+        end                                                       -- end if
+      end                                                         -- end for
     end,
 
     Triangle = function(target)
-      local t = { "laxity", "lovers_effect", "peace", "magnanimity" }
+      local t = { "laxity", "infatuation", "peace", "magnanimity" }
       for _, v in pairs(t) do
         if not snd.checkAff(v) then
           snd.target_got(v)
@@ -1518,7 +1518,7 @@ snd.all_class_attacks = {
   ["Animation"] = {
     Heartpunch = function(target)
       if snd.reboundingTimer then killTimer(snd.reboundingTimer) end
-      snd.target_got("heartflutter")
+      snd.target_got("arrhythmia")
     end,
     Rip = function(target, limb)
       if limb == "torso" then
@@ -1530,7 +1530,7 @@ snd.all_class_attacks = {
     end,
     Wrack = function(target)
       snd.target_got("paresis")
-      snd.target_got("heartflutter")
+      snd.target_got("arrhythmia")
     end,
     Shout = function(target)
       snd.target_got("blurry_vision")
@@ -1687,7 +1687,7 @@ snd.all_class_attacks = {
   ["Synthesis"] = {
     Trammel = function(target)
       if snd.reboundingTimer then killTimer(snd.reboundingTimer) end
-      snd.target_got("heartflutter")
+      snd.target_got("arrhythmia")
     end,
     Squeeze = function(target, limb)
       if limb == "torso" then
@@ -1699,7 +1699,7 @@ snd.all_class_attacks = {
     end,
     Chime = function(target)
       snd.target_got("paresis")
-      snd.target_got("heartflutter")
+      snd.target_got("arrhythmia")
     end,
     Concuss = function(target)
       snd.target_got("blurry_vision")
@@ -1872,7 +1872,7 @@ snd.all_class_attacks = {
 
     Poisonclaw = function(target)
       if snd.checkAff("blisters") then
-        snd.target_got("limp_veins")
+        snd.target_got("hypotension")
       else
         snd.target_got("blisters")
       end
@@ -1886,10 +1886,10 @@ snd.all_class_attacks = {
       end
     end,
     Stare = function(target)
-      if snd.checkAff("berserking") then
+      if snd.checkAff("mania") then
         snd.target_got("impairment")
       else
-        snd.target_got("berserking")
+        snd.target_got("mania")
       end
     end,
 
@@ -2338,7 +2338,7 @@ snd.all_class_attacks = {
         ["ringing"] = "ringing_ears",
         ["blurring"] = "blurry_vision",
         ["debilitating"] = "weariness",
-        ["berserking"] = "berserking",
+        ["enraging"] = "mania",
         ["angry"] = "hatred",
         --["disturbing"] = "disrupted",
         ["befuddling"] = "confusion",
@@ -2461,7 +2461,7 @@ snd.all_class_attacks = {
     end,
 
     Exhaust = function(target, boosted)
-      snd.target_got("exhausted")
+      snd.target_got("exhaustion")
     end,
 
     Expunge = function(target, boosted)
@@ -2756,15 +2756,15 @@ snd.all_class_attacks = {
       end
     end,
     Inciter = function(target)
-      if snd.checkAff("berserking") then
+      if snd.checkAff("mania") then
         snd.target_got("impairment")
       else
-        snd.target_got("berserking")
+        snd.target_got("mania")
       end
     end,
     Toxicologist = function(target)
       if snd.checkAff("blisters") then
-        snd.target_got("limp_veins")
+        snd.target_got("hypotension")
       else
         snd.target_got("blisters")
       end
@@ -2914,7 +2914,7 @@ snd.all_class_attacks = {
       end
     end,
     Vent = function(target)
-      snd.target_got("berserking")
+      snd.target_got("mania")
       snd.target_got("hallucinations")
     end,
     Fault = function(target)
@@ -2998,7 +2998,7 @@ snd.all_class_attacks = {
       snd.target_got("fallen")
     end,
     Heart = function(target)
-      snd.target_got("lovers_effect")
+      snd.target_got("infatuation")
     end,
 
     Hourglass = function(target)
@@ -3093,9 +3093,9 @@ snd.all_class_attacks = {
       snd.target_got("self_loathing")
     end,
 
-    -- Seduce does nothing w/o happiness induce or scantily-clad, and the lovers_effect has a confirmation line for that. Not sure we need below.
+    -- Seduce does nothing w/o happiness induce or scantily-clad, and the infatuation has a confirmation line for that. Not sure we need below.
     --  Seduce = function(target)
-    --            snd.target_got("lovers_effect")
+    --            snd.target_got("infatuation")
     --            end,
 
     Quip = function(target)
@@ -3114,7 +3114,7 @@ snd.all_class_attacks = {
 
     Crackshot = function(target)
       snd.target_got("dizziness")
-      snd.target_got("perplexed")
+      snd.target_got("perplexity")
     end,
 
     Hiltblow = function(target)
@@ -3188,12 +3188,12 @@ snd.all_class_attacks = {
 
     Infiltrative = function(target, boosted) --0 fabled
       if not boosted then
-        snd.target_got("infested")
+        snd.target_got("infestation")
       end
     end,
     Pathogen     = function(target, boosted) --66 fabled
       if not boosted then
-        snd.target_got("blighted")
+        snd.target_got("blight")
       end
     end,
     Electroshock = function(target, boosted) --66 adept
@@ -3338,8 +3338,8 @@ snd.all_class_attacks = {
     Loneliness = function(target)
       snd.target_got("loneliness")
     end,
-    Lovers = function(target)
-      snd.target_got("lovers_effect")
+    Infatuation = function(target)
+      snd.target_got("infatuation")
     end,
     Epilepsy = function(target)
       snd.target_got("epilepsy")
@@ -3353,8 +3353,8 @@ snd.all_class_attacks = {
     Dementia = function(target)
       snd.target_got("dementia")
     end,
-    Berserking = function(target)
-      snd.target_got("berserking")
+    Mania = function(target)
+      snd.target_got("mania")
     end,
     Indifference = function(target)
       snd.target_got("indifference")
@@ -3388,7 +3388,7 @@ snd.all_class_attacks = {
     end,
 
     Anathema = function(target)
-      snd.target_got("blood_curse")
+      snd.target_got("psychosis")
     end,
 
     Attend = function(target)
@@ -3408,7 +3408,7 @@ snd.all_class_attacks = {
     end,
 
     Bane = function(target)
-      snd.target_got("blood_poison")
+      snd.target_got("sepsis")
     end,
     Pariah = function(target)
       snd.target_got("blood_rune")
@@ -4088,7 +4088,7 @@ snd.all_class_attacks = {
     Pheromones =
         function(target)
           snd.setPredatorVenom()
-          snd.target_got("lovers_effect")
+          snd.target_got("infatuation")
         end,
     Pindown =
         function(target, fail)
@@ -4161,18 +4161,18 @@ snd.all_class_attacks = {
         snd.all_class_attacks.Cultivation.Fear(target)
       end
     end,
-    Disgust = function(target)                                            --circle
-      local t = { "merciful", "masochism", "berserking", "recklessness" } -- initialize table with circle affs
-      for _, v in pairs(t) do                                             -- iterate circle affs
-        if not snd.checkAff(v) then                                       -- check if they have it
-          snd.target_got(v)                                               -- if they don't have it, add it
-          break                                                           -- if we added an aff, break out of the loop
-        end                                                               -- end if
-      end                                                                 -- end for
+    Disgust = function(target)                                    --circle
+      local t = { "mercy", "masochism", "mania", "recklessness" } -- initialize table with circle affs
+      for _, v in pairs(t) do                                     -- iterate circle affs
+        if not snd.checkAff(v) then                               -- check if they have it
+          snd.target_got(v)                                       -- if they don't have it, add it
+          break                                                   -- if we added an aff, break out of the loop
+        end                                                       -- end if
+      end                                                         -- end for
     end,
 
     Joy = function(target) --triangle
-      local t = { "laxity", "lovers_effect", "peace", "magnanimity" }
+      local t = { "laxity", "infatuation", "peace", "magnanimity" }
       for _, v in pairs(t) do
         if not snd.checkAff(v) then
           snd.target_got(v)
@@ -4287,7 +4287,7 @@ snd.all_class_attacks = {
       snd.onHit2({ "Dodge", "Parry", "Rebounding" }, "Sentinel")
     end,
     Desolate = function(target)
-      table.insert(snd.maybe_affs, "heartflutter")
+      table.insert(snd.maybe_affs, "arrhythmia")
       snd.onHit2({ "Dodge", "Parry", "Rebounding" }, "Sentinel")
     end,
     Ruse = function(target)
@@ -4385,7 +4385,7 @@ snd.all_class_attacks = {
         ["darkhound"] = "claustrophobia",
         ["brutaliser"] = "agoraphobia",
         ["eviscerator"] = "loneliness",
-        ["terrifier"] = "berserking",
+        ["terrifier"] = "mania",
       }
       snd.target_got(accost_list[animal])
     end,
@@ -4506,7 +4506,7 @@ snd.all_class_attacks = {
             snd.affTimers.start("muddled", 8.5)
           elseif vibe == "Disorientation" then
             if snd.checkAff("epilepsy") then
-              snd.target_got("berserking")
+              snd.target_got("mania")
             else
               snd.target_got("epilepsy")
             end

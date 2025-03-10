@@ -20,45 +20,71 @@ if snd.class == "Akkari" then
       local extraaff = "amnesia"
       if snd.target_locked() then
         snd.primary_aff =
-          {
-            "sight",
-            "writhe_transfix",
-            "paresis",
-            "stupidity",
-            "anorexia",
-            "asthma",
-            "slickness",
-            "no_paste",
-            "blood_curse",
-            "black_bile",
-          }
+        {
+          "sight",
+          "writhe_transfix",
+          "paresis",
+          "stupidity",
+          "anorexia",
+          "asthma",
+          "slickness",
+          "no_paste",
+          "psychosis",
+          "black_bile",
+        }
       else
         --  "effused_blood",
         -- "blood_rune",
         snd.primary_aff =
-          {
-            "paresis",
-            "stupidity",
-            "anorexia",
-            "asthma",
-            "slickness",
-            "no_paste",
-            "blood_curse",
-            "black_bile",
-          }
+        {
+          "paresis",
+          "stupidity",
+          "anorexia",
+          "asthma",
+          "slickness",
+          "no_paste",
+          "psychosis",
+          "black_bile",
+        }
       end
       if snd.target_locked() then
         snd.secondary_aff =
+        {
+          "impatience",
+          "confusion",
+          "indifference",
+          "stupidity",
+          "confusion",
+          "epilepsy",
+          "mania",
+          "sight",
+          "infatuation",
+          "peace",
+          "recklessness",
+          "dementia",
+          "paranoia",
+          "anorexia",
+          "vertigo",
+          "masochism",
+          "agoraphobia",
+          "amnesia",
+        }
+      else
+        if
+            snd.cureset == "archivist" or
+            snd.cureset == "shaman" or
+            snd.cureset == "ascendril" or
+            snd.cureset == "Sciomancer"
+        then
+          snd.secondary_aff =
           {
+            "stupidity",
             "impatience",
             "confusion",
-            "indifference",
-            "stupidity",
-            "confusion",
             "epilepsy",
-            "berserking",
+            "mania",
             "sight",
-            "lovers",
+            "infatuation",
             "peace",
             "recklessness",
             "dementia",
@@ -67,66 +93,40 @@ if snd.class == "Akkari" then
             "vertigo",
             "masochism",
             "agoraphobia",
+            "indifference",
             "amnesia",
           }
-      else
-        if
-          snd.cureset == "archivist" or
-          snd.cureset == "shaman" or
-          snd.cureset == "ascendril" or
-          snd.cureset == "Sciomancer"
-        then
-          snd.secondary_aff =
-            {
-              "stupidity",
-              "impatience",
-              "confusion",
-              "epilepsy",
-              "berserking",
-              "sight",
-              "lovers",
-              "peace",
-              "recklessness",
-              "dementia",
-              "paranoia",
-              "anorexia",
-              "vertigo",
-              "masochism",
-              "agoraphobia",
-              "indifference",
-              "amnesia",
-            }
         else
           snd.secondary_aff =
-            {
-              "stupidity",
-              "impatience",
-              "epilepsy",
-              "berserking",
-              "sight",
-              "lovers",
-              "confusion",
-              "peace",
-              "recklessness",
-              "dementia",
-              "paranoia",
-              "anorexia",
-              "vertigo",
-              "masochism",
-              "agoraphobia",
-              "indifference",
-              "amnesia",
-            }
+          {
+            "stupidity",
+            "impatience",
+            "epilepsy",
+            "mania",
+            "sight",
+            "infatuation",
+            "confusion",
+            "peace",
+            "recklessness",
+            "dementia",
+            "paranoia",
+            "anorexia",
+            "vertigo",
+            "masochism",
+            "agoraphobia",
+            "indifference",
+            "amnesia",
+          }
         end
       end
-      snd.akkari_lovers(snd.secondary_aff)
+
       snd.akkari_host()
       snd.akkari_attend()
       for i in pairs(snd.primary_aff) do
         --   and not (snd.used.rebounding and table.isMember(snd.censure_affs, snd.primary_aff[i]))
         if
-          not snd.checkAff(snd.primary_aff[i]) and
-          not (snd.primary_aff[i] == "paresis" and snd.checkAff("paralysis"))
+            not snd.checkAff(snd.primary_aff[i]) and
+            not (snd.primary_aff[i] == "paresis" and snd.checkAff("paralysis"))
         then
           if not table.contains(gashaff, snd.primary_aff[i]) then
             table.insert(gashaff, snd.primary_aff[i])
@@ -136,22 +136,22 @@ if snd.class == "Akkari" then
       if table.isMember(snd.censure_affs, gashaff[1]) then
         if gashaff[1] == "sight" then
           pattack =
-            "wipe left" ..
-            snd.sep ..
-            "censure " ..
-            snd.target ..
-            " lenient " ..
-            snd.effects[gashaff[1]] ..
-            snd.sep
+              "wipe left" ..
+              snd.sep ..
+              "censure " ..
+              snd.target ..
+              " lenient " ..
+              snd.effects[gashaff[1]] ..
+              snd.sep
         else
           pattack =
-            "wipe left" ..
-            snd.sep ..
-            "censure " ..
-            snd.target ..
-            " " ..
-            snd.effects[gashaff[1]] ..
-            snd.sep
+              "wipe left" ..
+              snd.sep ..
+              "censure " ..
+              snd.target ..
+              " " ..
+              snd.effects[gashaff[1]] ..
+              snd.sep
         end
         fcall = "Afflicting " .. snd.target .. ": " .. snd.effects[gashaff[1]] .. " "
       elseif table.isMember(snd.akkari_bal_affs, gashaff[1]) then
@@ -167,11 +167,11 @@ if snd.class == "Akkari" then
       end
       for i in pairs(snd.secondary_aff) do
         if
-          not (
-            snd.checkAff(snd.secondary_aff[i]) or
-            snd.secondary_aff[i] == gashaff[1] or
-            (gashaff[1] == "sight" and snd.secondary_aff[1] == "hearing")
-          )
+            not (
+              snd.checkAff(snd.secondary_aff[i]) or
+              snd.secondary_aff[i] == gashaff[1] or
+              (gashaff[1] == "sight" and snd.secondary_aff[1] == "hearing")
+            )
         then
           if not table.contains(touse, snd.secondary_aff[i]) then
             table.insert(touse, snd.secondary_aff[i])
@@ -203,7 +203,7 @@ if snd.class == "Akkari" then
         sattack = "spirit attend " .. snd.target .. snd.sep
       elseif touse[1] == "hearing" then
         sattack = "spirit attend " .. snd.target .. snd.sep
-      elseif touse[1] == "blood_poison" then
+      elseif touse[1] == "sepsis" then
         sattack = "spirit bane " .. snd.target .. snd.sep
       else
         if (touse[2] == "hearing" or touse[2] == "sight") then
@@ -245,30 +245,30 @@ if snd.class == "Akkari" then
         string = "denounce " .. snd.target .. " corruption" .. snd.sep .. sattack
         fcall = ""
       elseif
-        snd.checkAff("impatience") and
-        snd.checksomeAffs({"sadness", "confusion"}, 2) and
-        gmcp.Char.Status.spec == "Naarak" and
-        not snd.checkAff("blood_curse")
+          snd.checkAff("impatience") and
+          snd.checksomeAffs({ "sadness", "confusion" }, 2) and
+          gmcp.Char.Status.spec == "Naarak" and
+          not snd.checkAff("psychosis")
       then
         string = "spirit anathema " .. snd.target
         fcall = ""
         scall = ""
       elseif
-        gmcp.Char.Status.spec == "Naarak" and
-        snd.can_inquisition and
-        (
+          gmcp.Char.Status.spec == "Naarak" and
+          snd.can_inquisition and
           (
-            snd.aff_count_mental() == 12 or
-            (snd.checkAff("blood_curse") and snd.aff_count_mental() == 10)
-          ) or
-          (
-            snd.checkAff("blood_rune") and
             (
-              snd.aff_count_mental() == 9 or
-              (snd.checkAff("blood_curse") and snd.aff_count_mental() == 7)
+              snd.aff_count_mental() == 12 or
+              (snd.checkAff("psychosis") and snd.aff_count_mental() == 10)
+            ) or
+            (
+              snd.checkAff("blood_rune") and
+              (
+                snd.aff_count_mental() == 9 or
+                (snd.checkAff("psychosis") and snd.aff_count_mental() == 7)
+              )
             )
           )
-        )
       then
         string = "spirit inquisition " .. snd.target
         fcall = ""

@@ -88,7 +88,7 @@ if snd.class == "Ravager" then
       string = "touch hammer " .. snd.target
     elseif not snd.checkAff("indifference") then
       string = "ego inadequacy "..snd.target
-    elseif not snd.checksomeAffs({"dementia","paranoia","merciful"},1) then
+    elseif not snd.checksomeAffs({"dementia","paranoia","mercy"},1) then
       string = "ego boast "..snd.target
     else
         if snd.checksomeAffs({"left_leg_broken","right_leg_broken"},1) and not snd.checkAff("fallen") then

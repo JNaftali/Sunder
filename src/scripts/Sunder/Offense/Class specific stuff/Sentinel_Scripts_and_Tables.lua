@@ -1,69 +1,69 @@
 snd.dhuriv_affs =
-  {
-    "impatience",
-    "destroyed_throat",
-    "heartflutter",
-    "confusion",
-    "lethargy",
-    "fallen",
-    "impairment",
-    "reave",
-    "claustrophobia",
-    "agoraphobia",
-    "loneliness",
-    "berserking",
-    "frozen",
-    "shivering",
-    "ambush",
-    "epilepsy",
-    "laxity",
-  }
+{
+  "impatience",
+  "destroyed_throat",
+  "arrhythmia",
+  "confusion",
+  "lethargy",
+  "fallen",
+  "impairment",
+  "reave",
+  "claustrophobia",
+  "agoraphobia",
+  "loneliness",
+  "mania",
+  "frozen",
+  "shivering",
+  "ambush",
+  "epilepsy",
+  "laxity",
+}
 snd.dhuriv_first =
-  {
-    "reave",
-    "slash",
-    "twirl",
-    "weaken",
-    "trip",
-    "slam",
-    "crosscut",
-    "throatcrush",
-    "daunt",
-    "icewyrm",
-    "ambush",
-  }
-snd.dhuriv_second = {"stab", "heartbreaker", "gouge", "thrust", "flourish"}
+{
+  "reave",
+  "slash",
+  "twirl",
+  "weaken",
+  "trip",
+  "slam",
+  "crosscut",
+  "throatcrush",
+  "daunt",
+  "icewyrm",
+  "ambush",
+}
+snd.dhuriv_second = { "stab", "heartbreaker", "gouge", "thrust", "flourish" }
 snd.dhuriv_attacks =
-  {
-    reave = "reave",
-    impatience = "gouge",
-    destroyed_throat = "throatcrush",
-    heartflutter = "heartbreaker",
-    confusion = "twirl",
-    lethargy = "weaken left leg",
-    fallen = "trip",
-    epilepsy = "slam",
-    laxity = "slam",
-    impairment = "crosscut",
-    claustrophobia = "daunt",
-    agoraphobia = "daunt",
-    loneliness = "daunt",
-    berserking = "daunt",
-    frozen = "icewyrm",
-    frigid = "icewyrm",
-    shivering = "icewyrm",
-    ambush = "ambush",
-  }
+{
+  reave = "reave",
+  impatience = "gouge",
+  destroyed_throat = "throatcrush",
+  arrhythmia = "heartbreaker",
+  confusion = "twirl",
+  lethargy = "weaken left leg",
+  fallen = "trip",
+  epilepsy = "slam",
+  laxity = "slam",
+  impairment = "crosscut",
+  claustrophobia = "daunt",
+  agoraphobia = "daunt",
+  loneliness = "daunt",
+  mania = "daunt",
+  frozen = "icewyrm",
+  frigid = "icewyrm",
+  shivering = "icewyrm",
+  ambush = "ambush",
+}
 snd.daunt_animals =
-  {
-    ["claustrophobia"] = "order direwolf daunt ",
-    ["agoraphobia"] = "order raloth daunt ",
-    ["loneliness"] = "order crocodile daunt ",
-    ["berserking"] = "order cockatrice daunt ",
-    ["frozen"] = "order icewyrm icebreath ",
-    ["frigid"] = "order icewyrm icebreath ",
-    ["shivering"] = "order icewyrm icebreath ",
-  }
+{
+  ["claustrophobia"] = "order direwolf daunt ",
+  ["agoraphobia"] = "order raloth daunt ",
+  ["loneliness"] = "order crocodile daunt ",
+  ["mania"] = "order cockatrice daunt ",
+  ["frozen"] = "order icewyrm icebreath ",
+  ["frigid"] = "order icewyrm icebreath ",
+  ["shivering"] = "order icewyrm icebreath ",
+}
 
 function Sentinel_Attack_Choice(giving, left, right)
   -- requires to be sent a list of affs and 2 variables for
@@ -76,12 +76,12 @@ function Sentinel_Attack_Choice(giving, left, right)
   -- used for when we choose a daunt aff
   ----------An example of how you might change your aff list. If current offense mode is mental affs, we want to make sure
   ----------they have impatience, so check if they have impatience and paresis. If no to both, add paresis to top of stack.
-  if not snd.checksomeAffs({"paresis", "impatience"}, 1) and snd.current_offense == "SentMental" then
+  if not snd.checksomeAffs({ "paresis", "impatience" }, 1) and snd.current_offense == "SentMental" then
     table.insert(giving, 1, "paresis")
   end
   if snd.current_offense == "SentVLock" then
     local missing = snd.missingAff("asthma/slickness", "/")
-    if #missing == 0 and snd.no_parry() and snd.checksomeAffs({"weariness", "clumsiness", "hypochondria"}, 1) then
+    if #missing == 0 and snd.no_parry() and snd.checksomeAffs({ "weariness", "clumsiness", "hypochondria" }, 1) then
       table.insert(giving, 1, "destroyed_throat")
     end
     if not snd.checkAff("destroyed_throat") and snd.checkAff("anorexia") then
@@ -121,16 +121,16 @@ function Sentinel_Attack_Choice(giving, left, right)
             left = giving[i]
           end
         elseif
-          not snd.checkAff(giving[i]) and
-          not table.contains(snd.dhuriv_second, snd.dhuriv_attacks[v])
+            not snd.checkAff(giving[i]) and
+            not table.contains(snd.dhuriv_second, snd.dhuriv_attacks[v])
         then
           left = v
         end
       end
-      
+
       if right == "none" then
-        if not right_venom_only and table.contains(snd.dhuriv_first, snd.dhuriv_attacks[v]) 
-        and table.contains(snd.effects, left) and left ~= "paresis" and v ~= "destroyed_throat" then
+        if not right_venom_only and table.contains(snd.dhuriv_first, snd.dhuriv_attacks[v])
+            and table.contains(snd.effects, left) and left ~= "paresis" and v ~= "destroyed_throat" then
           right = left
           left = v
         elseif not right_venom_only and table.contains(snd.dhuriv_second, snd.dhuriv_attacks[v]) then

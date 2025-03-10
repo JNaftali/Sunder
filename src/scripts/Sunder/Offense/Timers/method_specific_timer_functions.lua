@@ -10,7 +10,7 @@ function snd.track_focus(target)
   if target:lower() == snd.target:lower() then
     snd.timers.focus.start = getEpoch()
     local limit = 5
-    if snd.checkAff("mental_disruption") then
+    if snd.checkAff("delirium") then
       limit = 10
     elseif snd.checkAff("mental_fatigue") then
       limit = 7

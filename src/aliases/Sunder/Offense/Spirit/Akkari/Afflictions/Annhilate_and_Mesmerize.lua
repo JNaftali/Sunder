@@ -20,7 +20,7 @@ if snd.class == "Akkari" then
     snd.giving_whisper =
       {
         "impatience",
-        "lovers",
+        "infatuation",
         "stupidity",
         "anorexia",
         "confusion",
@@ -32,7 +32,6 @@ if snd.class == "Akkari" then
         "masochism",
         "paranoia",
       }
-    snd.akkari_lovers(snd.giving_whisper)
     if not snd.loyalsattacking then
       string = string .. "order loyals kill " .. snd.target .. snd.sep
     end

@@ -82,12 +82,12 @@ function snd.target_locked()
   end
 
   if snd.checksomeAffs({ "slickness", "burnt_skin" }, 1) and snd.checksomeAffs({ "paresis", "asthma", "anorexia" }, 3)
-      and snd.checksomeAffs({ "stupidity", "impatience", "muddled", "egocentric" }, 1) then
+      and snd.checksomeAffs({ "stupidity", "impatience", "muddled", "egocentrism" }, 1) then
     return true
   end
 
   if snd.checkAff("slough") and snd.checkAff("paresis") and
-      ((snd.checkAff("anorexia", 1) and snd.checksomeAffs({ "stupidity", "impatience", "muddled", "egocentric" }, 1)) or
+      ((snd.checkAff("anorexia", 1) and snd.checksomeAffs({ "stupidity", "impatience", "muddled", "egocentrism" }, 1)) or
         snd.checkAff("destroyed_throat"))
   then
     return true
@@ -95,7 +95,7 @@ function snd.target_locked()
 
   if (snd.checksomeAffs({ "paresis", "tree_seared", "faulted", "frozen" }, 1) or snd.checksomeAffs({ "left_arm_crippled", "right_arm_crippled" }, 2)) and --can't tree
       (snd.checksomeAffs({ "asthma", "slickness" }, 2) or snd.checkAff("slough")) and                                                                     --can't apply, and can't smoke if can't apply is through slickness.
-      ((snd.checkAff("anorexia") and snd.checksomeAffs({ "stupidity", "impatience", "muddled", "egocentric" }, 1)) or
+      ((snd.checkAff("anorexia") and snd.checksomeAffs({ "stupidity", "impatience", "muddled", "egocentrism" }, 1)) or
         snd.checkAff("destroyed_throat"))                                                                                                                 --can't eat, and if via anorexia, can't be focused off
   then
     return true
@@ -154,7 +154,7 @@ function snd.no_parry()
     "uncon",
   }
   if snd.class == "Sentinel" or snd.class == "Executor" then
-    table.insert(noparryaffs, "heartflutter")
+    table.insert(noparryaffs, "arrhythmia")
   end
   if snd.cureset == "zealot" then
     table.insert(noparryaffs, "paresis")
@@ -238,10 +238,10 @@ function snd.venomEffect(venom)
       aff = "crippled"
     end
   elseif venom == "disrupt" then
-    if snd.checkAff("physical_disruption") then
-      aff = "mental_disruption"
+    if snd.checkAff("extravasation") then
+      aff = "delirium"
     else
-      aff = "physical_disruption"
+      aff = "extravasation"
     end
   else
     for i in pairs(snd.effects) do
@@ -268,9 +268,7 @@ end
 
 function snd.affNameCheck(aff)
   local affs_to_change = {
-    ["heart flutter"] = "heartflutter",
-    ["self-pity"] = "self_pity",
-    ["lovers"] = "lovers_effect",
+    ["self_pity"] = "self_pity",
     ["crippled left leg"] = "left_leg_crippled",
     ["crippled right leg"] = "right_leg_crippled",
     ["crippled left arm"] = "left_arm_crippled",
@@ -337,4 +335,3 @@ function snd.loban_no_more(text)
 
   return new_word
 end
-

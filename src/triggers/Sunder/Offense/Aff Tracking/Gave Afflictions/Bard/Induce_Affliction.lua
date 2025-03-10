@@ -1,6 +1,6 @@
 local emotion_affs = {
   sadness = "shyness",
-  happiness = "perplexed",
+  happiness = "perplexity",
   surprise = "dizziness",
   anger = "hatred",
   stress = "masochism",

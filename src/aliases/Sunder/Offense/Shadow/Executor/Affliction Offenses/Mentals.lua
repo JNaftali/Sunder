@@ -21,7 +21,7 @@ function snd.attack_function()
   "left_leg_crippled",
   "right_leg_crippled",
   "anorexia",
-  "heartflutter",
+  "arrhythmia",
   "sight",
   "hearing",
   "sensitivity",
@@ -80,7 +80,7 @@ function snd.attack_function()
 			end
 		end
 
-		if snd.checksomeAffs({"confusion", "left_leg_crippled", "right_leg_crippled", "fallen", "heartflutter"}, 5) then
+		if snd.checksomeAffs({"confusion", "left_leg_crippled", "right_leg_crippled", "fallen", "arrhythmia"}, 5) then
 			string = "ringblade terminate "..snd.target
 		end
 		

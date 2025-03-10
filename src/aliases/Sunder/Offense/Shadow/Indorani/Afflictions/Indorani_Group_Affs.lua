@@ -3,7 +3,7 @@ if snd.class == "Indorani" then
   snd.giving = {
   "asthma",
   --"aeon",
-  "perplexed",
+  "perplexity",
   "impatience",
   "clumsiness",
   "weariness",

@@ -11,9 +11,9 @@ function snd.attack_function() -- defining this function is how we tell sunder w
  
  if snd.rhythm then
     snd.giving = {
-    "perplexed",
+    "perplexity",
     "self_loathing",
-    "berserking",
+    "mania",
     "dazed",
     
      }    
@@ -37,7 +37,7 @@ function snd.attack_function() -- defining this function is how we tell sunder w
   "anorexia",
   "weariness",
   "misery",
-  "perplexed",
+  "perplexity",
   "dizziness",
   "recklessness",
   --"voyria",

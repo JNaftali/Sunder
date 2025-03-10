@@ -27,7 +27,7 @@ if snd.class == "Tidesage" then
         end
       -- Let's get slough going to limit usage of poultices.
       elseif not snd.checkAff("slough") and hasSkill("Terrors") then -- slough prevents poultices from being applied, like slickness
-        -- Let's try to give heartflutter and stun if we can. 
+        -- Let's try to give arrhythmia and stun if we can. 
         -- If we have apparition, let's give some affs and damage torso.
         -- If all else fails, let's just give those affs.
         if (snd.balance.earthenwill and hasSkill("Engulf")) and (apparition >= 5 and hasSkill("Apparition")) and hasSkill("Ram") then

@@ -81,8 +81,8 @@ function snd.attack_function()
 				string = "shadow mark numbness "..snd.target
 			end
 		-- they already have numbness, let's move on
-		elseif (snd.checkAff("anorexia") or snd.checkAff("allergies") or snd.checkAff("vomiting") or snd.checkAff("mental_disruption")) 
-						and not snd.checkAff("thin_blood") then
+		elseif (snd.checkAff("anorexia") or snd.checkAff("allergies") or snd.checkAff("vomiting") or snd.checkAff("delirium")) 
+						and not snd.checkAff("dyscrasia") then
 			if snd.used.paste then
 				string = "quickwield left whip"..snd.sep.."flay "..snd.target.." fangbarrier"
 				snd.flayingfang = true

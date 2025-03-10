@@ -14,7 +14,7 @@ function snd.calc.writhetime()
     end
   end
   local time = 2 + (.7 * physcount)
-  if snd.checkAff("physical_disruption") then
+  if snd.checkAff("extravasation") then
     time = time + 1
   end
   return time
@@ -35,13 +35,13 @@ function snd.calc.crescentcutMultiplier()
     end
   end
   --broken legs
-  for _, limb in pairs({"right leg", "left leg", "left arm", "right arm"}) do
+  for _, limb in pairs({ "right leg", "left leg", "left arm", "right arm" }) do
     if snd.limb_status[limb] ~= "healed" then
       multi = multi + .35
     end
   end
   --broken/mangled head or torso
-  for _, limb in pairs({"head", "torso"}) do
+  for _, limb in pairs({ "head", "torso" }) do
     if snd.limb_status[limb] == "mangled" then
       multi = multi + .8
     elseif snd.limb_status[limb] == "broken" then

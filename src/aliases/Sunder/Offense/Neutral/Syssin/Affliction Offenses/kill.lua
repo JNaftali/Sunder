@@ -14,10 +14,10 @@ if snd.class == "Infiltrator" then
   }
   snd.starting_attack()
   function snd.attack_function()
-    local string = ""          -- this will populate with our attack
-    local call = ""            -- this will be for affliction calling
-    local touse = {}           -- this will store the affs we still want to hit with
-    local tohit = {}           -- this will store the effects from touse
+    local string = ""             -- this will populate with our attack
+    local call = ""               -- this will be for affliction calling
+    local touse = {}              -- this will store the affs we still want to hit with
+    local tohit = {}              -- this will store the effects from touse
     local extraaff = "delphinium" -- what to use if we used everything else
     -- and how far away we are from a lock
     local missing = snd.missingAff("stupidity/paresis/anorexia/asthma/slickness", "/")
@@ -33,9 +33,9 @@ if snd.class == "Infiltrator" then
         "paresis",
         "clumsiness",
         "asthma",
-        "shyness", -- to keep impatience stuck, this buries it
+        "shyness",   -- to keep impatience stuck, this buries it
         "slickness",
-        "anorexia", -- work harder on the lock than buffer affs, while hypnosis is going
+        "anorexia",  -- work harder on the lock than buffer affs, while hypnosis is going
         "stupidity", -- not as important, since we're running impatience
         --"vomiting",
         "allergies",
@@ -53,7 +53,7 @@ if snd.class == "Infiltrator" then
         "asthma",
         "paresis",
         --"squelched",
-        "shyness", -- to bury impatience once hypno fires
+        "shyness",   -- to bury impatience once hypno fires
         --"vomiting", -- stick these two early, to bury scytherus
         "allergies", -- this being the second
         "slickness",
@@ -68,7 +68,7 @@ if snd.class == "Infiltrator" then
       }
     end
     if not snd.waiting.queue then -- make sure not to spam
-      if not snd.can_arms() then -- this means we have at least one broken arm
+      if not snd.can_arms() then  -- this means we have at least one broken arm
         -- so we'll have to bedazzle instead of dstab
         string = "bedazzle " .. snd.target
       elseif not snd.checkAff("numbed_skin") then
@@ -81,7 +81,7 @@ if snd.class == "Infiltrator" then
           string = "shadow mark numbness " .. snd.target
         end
         -- they already have numbness, let's move on
-      elseif (snd.checkAff("anorexia") or snd.checkAff("allergies") or snd.checkAff("vomiting") or snd.checkAff("mental_disruption")) and not snd.checkAff("thin_blood") then
+      elseif (snd.checkAff("anorexia") or snd.checkAff("allergies") or snd.checkAff("vomiting") or snd.checkAff("delirium")) and not snd.checkAff("dyscrasia") then
         if snd.used.paste then
           string = "quickwield left whip" .. snd.sep .. "flay " .. snd.target .. " fangbarrier"
           snd.flayingfang = true
@@ -116,11 +116,11 @@ if snd.class == "Infiltrator" then
         if snd.used.shield or snd.used.rebounding then
           -- we can use a venom with flay if we're flaying shield
           string = "quickwield left whip" ..
-          snd.sep .. "wipe left" .. snd.sep .. "envenom whip with " .. tohit[1] .. snd.sep .. "flay " .. snd.target
+              snd.sep .. "wipe left" .. snd.sep .. "envenom whip with " .. tohit[1] .. snd.sep .. "flay " .. snd.target
           call = "wt Afflicting " .. snd.target .. ": " .. tohit[1]
         else -- otherwise, we don't need to flay - go full ham!
           string = "quickwield left dirk" ..
-          snd.sep .. "wipe left" .. snd.sep .. "dstab " .. snd.target .. " " .. tohit[2] .. " " .. tohit[1]
+              snd.sep .. "wipe left" .. snd.sep .. "dstab " .. snd.target .. " " .. tohit[2] .. " " .. tohit[1]
           call = "wt Afflicting " .. snd.target .. ": " .. tohit[2] .. ", " .. tohit[1]
         end
       end
@@ -131,17 +131,17 @@ if snd.class == "Infiltrator" then
       if snd.hypno == "open" or snd.hypno == "none" then
         -- 'open' means they're ready for suggestions, 'none' means we haven't started yet
         -- either way, we're going to suggest something now
-        if #snd.hypno_stack >= snd.last_hypno + 1 then  -- we still have more in the hypno_stack
-          snd.hyp = snd.last_hypno + 1                  -- move on to the next thing
-          if snd.hypno == "none" then                   -- if we haven't hypnotised yet
+        if #snd.hypno_stack >= snd.last_hypno + 1 then               -- we still have more in the hypno_stack
+          snd.hyp = snd.last_hypno + 1                               -- move on to the next thing
+          if snd.hypno == "none" then                                -- if we haven't hypnotised yet
             string = string .. snd.sep .. "hypnotise " .. snd.target -- do that first
           end
           -- append the suggestion to our attack string
           string = string .. snd.sep .. "suggest " .. snd.target .. " " .. snd.hypno_stack[snd.hyp]
-        elseif snd.hypno == "open" then -- we're at the end of the (hypno) line, and they're not sealed yet
+        elseif snd.hypno == "open" then          -- we're at the end of the (hypno) line, and they're not sealed yet
           string = "seal " .. snd.target .. " 3" -- so seal them up
         end
-      elseif snd.hypno == "running" then -- we have an active hypnosis going
+      elseif snd.hypno == "running" then         -- we have an active hypnosis going
         -- just append hypnotise so we don't miss when it ends
         string = string .. snd.sep .. "hypnotise " .. snd.target
       end
@@ -169,4 +169,3 @@ if snd.class == "Infiltrator" then
 
   snd.attack_function()
 end
-

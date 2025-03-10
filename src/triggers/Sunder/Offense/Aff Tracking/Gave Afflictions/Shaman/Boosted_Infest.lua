@@ -1,3 +1,4 @@
 if matches[2] == snd.target then
-	snd.target_got("infested")
+  snd.target_got("infestation")
 end
+

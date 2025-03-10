@@ -3,7 +3,7 @@ if snd.class == "Oneiromancer" then
     {
       "asthma",
       --"aeon",
-      "perplexed",
+      "perplexity",
       "impatience",
       "clumsiness",
       "weariness",

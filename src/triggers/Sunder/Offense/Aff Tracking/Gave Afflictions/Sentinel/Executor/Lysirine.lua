@@ -1,10 +1,10 @@
 if matches[2] == snd.target then
   if snd.checkAff("paresis") then
-    snd.target_got("heartflutter")
+    snd.target_got("arrhythmia")
   else
-      snd.target_got("paresis")
+    snd.target_got("paresis")
   end
-    if snd.checkAff("impatience") then
+  if snd.checkAff("impatience") then
     snd.target_got("hallucinations")
   else
     snd.target_got("impatience")
@@ -15,3 +15,4 @@ if matches[2] == snd.target then
     snd.target_got("confusion")
   end
 end
+

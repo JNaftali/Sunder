@@ -8,7 +8,7 @@ if snd.class == "Akkari" then
     local call = ""
 
     snd.giving_whisper = {
-      "lovers",
+      "infatuation",
       "impatience",
       "recklessness",
       "stupidity",
@@ -17,7 +17,7 @@ if snd.class == "Akkari" then
       "confusion",
       "epilepsy",
       "anorexia",
-      "berserking",
+      "mania",
       "vertigo",
       "dementia",
       "peace",
@@ -25,7 +25,6 @@ if snd.class == "Akkari" then
       "indifference",
 
     }
-    snd.akkari_lovers(snd.giving_whisper)
 
     snd.scythe_gash = {
       "paresis",
@@ -64,20 +63,20 @@ if snd.class == "Akkari" then
         call = "wt Afflicting " .. snd.target .. ": " .. touse[1] .. snd.sep .. ", " .. touse[2]
       else
         string = "wipe weapon" ..
-        snd.sep ..
-        "censure " ..
-        snd.target ..
-        " " ..
-        snd.effects[gashaff[1]] .. " lenient" .. snd.sep .. "dictate " ..
-        touse[1] .. " " .. touse[2] .. " " .. snd.target .. snd.sep
+            snd.sep ..
+            "censure " ..
+            snd.target ..
+            " " ..
+            snd.effects[gashaff[1]] .. " lenient" .. snd.sep .. "dictate " ..
+            touse[1] .. " " .. touse[2] .. " " .. snd.target .. snd.sep
         call = "wt Afflicting " .. snd.target ..
-        ": " .. snd.effects[gashaff[1]] .. ". Whispering: " .. touse[1] .. ", " .. touse[2]
+            ": " .. snd.effects[gashaff[1]] .. ". Whispering: " .. touse[1] .. ", " .. touse[2]
       end
     end
 
     if snd.toggles.affcalling and not snd.target_gone and (call ~= nil or call ~= "") then
       string = call .. snd.sep ..
-      "contemplate " .. snd.target .. snd.sep .. "order loyals attack " .. snd.target .. snd.sep .. string
+          "contemplate " .. snd.target .. snd.sep .. "order loyals attack " .. snd.target .. snd.sep .. string
     end
 
     if string ~= snd.last_attack and not snd.waiting.queue then
@@ -90,4 +89,3 @@ if snd.class == "Akkari" then
 
   snd.attack_function()
 end
-

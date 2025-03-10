@@ -1,7 +1,7 @@
 if snd.class == "Akkari" then
   snd.giving_whisper =
     {
-      "lovers",
+      "infatuation",
       "impatience",
       "stupidity",
       "recklessness",
@@ -9,14 +9,14 @@ if snd.class == "Akkari" then
       "anorexia",
       "confusion",
       "dementia",
-      "berserking",
+      "mania",
       "masochism",
       "peace",
       "vertigo",
       "indifference",
       "agoraphobia",
     }
-  snd.akkari_lovers(snd.giving_whisper)
+  
   snd.starting_attack()
 
   function snd.attack_function()

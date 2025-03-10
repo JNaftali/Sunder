@@ -1,10 +1,10 @@
 if snd.class == "Infiltrator" then
   snd.starting_attack()
   function snd.attack_function()
-    local string = ""          -- this will populate with our attack
-    local call = ""            -- this will be for affliction calling
-    local touse = {}           -- this will store the affs we still want to hit with
-    local tohit = {}           -- this will store the effects from touse
+    local string = ""             -- this will populate with our attack
+    local call = ""               -- this will be for affliction calling
+    local touse = {}              -- this will store the affs we still want to hit with
+    local tohit = {}              -- this will store the effects from touse
     local extraaff = "delphinium" -- what to use if we used everything else
     -- and how far away we are from a lock
     local missing = snd.missingAff("stupidity/paresis/anorexia/asthma/slickness", "/")
@@ -26,7 +26,7 @@ if snd.class == "Infiltrator" then
         "hearing",
         "sensitivity",
         --"squelched",
-        "shyness", -- to bury impatience once hypno fires
+        "shyness",   -- to bury impatience once hypno fires
         --"vomiting", -- stick these two early, to bury scytherus
         "allergies", -- this being the second
         --"haemophilia",
@@ -37,12 +37,12 @@ if snd.class == "Infiltrator" then
       }
     end
     if not snd.waiting.queue then -- make sure not to spam
-      if not snd.can_arms() then -- this means we have at least one broken arm
+      if not snd.can_arms() then  -- this means we have at least one broken arm
         -- so we'll have to bedazzle instead of dstab
         string = "bedazzle " .. snd.target
         -- let's move on
-      elseif (snd.checkAff("anorexia") or snd.checkAff("allergies") or snd.checkAff("vomiting") or snd.checkAff("mental_disruption"))
-          and not snd.checkAff("thin_blood") then
+      elseif (snd.checkAff("anorexia") or snd.checkAff("allergies") or snd.checkAff("vomiting") or snd.checkAff("delirium"))
+          and not snd.checkAff("dyscrasia") then
         if snd.used.paste then
           string = "quickwield left whip" .. snd.sep .. "flay " .. snd.target .. " fangbarrier"
           snd.flayingfang = true
@@ -80,11 +80,11 @@ if snd.class == "Infiltrator" then
         elseif snd.used.shield or snd.used.rebounding then
           -- we can use a venom with flay if we're flaying shield
           string = "quickwield left whip" ..
-          snd.sep .. "wipe left" .. snd.sep .. "envenom whip with " .. tohit[1] .. snd.sep .. "flay " .. snd.target
+              snd.sep .. "wipe left" .. snd.sep .. "envenom whip with " .. tohit[1] .. snd.sep .. "flay " .. snd.target
           call = "wt Afflicting " .. snd.target .. ": " .. tohit[1]
         else -- otherwise, we don't need to flay - go full ham!
           string = "quickwield left dirk" ..
-          snd.sep .. "wipe left" .. snd.sep .. "dstab " .. snd.target .. " " .. tohit[2] .. " " .. tohit[1]
+              snd.sep .. "wipe left" .. snd.sep .. "dstab " .. snd.target .. " " .. tohit[2] .. " " .. tohit[1]
           call = "wt Afflicting " .. snd.target .. ": " .. tohit[2] .. ", " .. tohit[1]
         end
       end
@@ -115,4 +115,3 @@ if snd.class == "Infiltrator" then
 
   snd.attack_function()
 end
-

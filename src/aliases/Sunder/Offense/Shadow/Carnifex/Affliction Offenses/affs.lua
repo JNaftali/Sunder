@@ -18,7 +18,7 @@ if snd.class == "Carnifex" then
   snd.hound_queue = {
     "mark",
     "dizziness",
-    "berserking",
+    "mania",
     "weariness",
     "impairment",
   }

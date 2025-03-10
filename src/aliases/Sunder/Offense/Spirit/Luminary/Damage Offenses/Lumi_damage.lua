@@ -1,5 +1,5 @@
 if snd.class == "Luminary" then
-  snd.giving_battle = {"impatience", "sensitivity","vertigo", "stupidity", "self_pity", "berserking", "migraine", "anorexia"}
+  snd.giving_battle = {"impatience", "sensitivity","vertigo", "stupidity", "self_pity", "mania", "migraine", "anorexia"}
   snd.giving_chasten =
     {
       "hypochondria",

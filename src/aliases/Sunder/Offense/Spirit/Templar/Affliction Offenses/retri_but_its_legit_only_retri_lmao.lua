@@ -21,8 +21,8 @@ function snd.attack_function()
 		if snd.target_locked() then
 			snd.giving = {
 			"crippled",
-			"mental_disruption",
-			"physical_disruption",
+			"delirium",
+			"extravasation",
 			"crippled_body",
 			"sensitivity",
 			"clumsiness",
@@ -33,8 +33,8 @@ function snd.attack_function()
 			snd.giving = {
 			"conviction",
 			"crippled",
-			"mental_disruption",
-			"physical_disruption",
+			"delirium",
+			"extravasation",
 			"crippled_body",
 			--deathblow!
 			"weariness",
@@ -47,7 +47,7 @@ function snd.attack_function()
 			}
 		end
 		-- first and foremost, check if we can retri!
-		if snd.checksomeAffs({"paralysis", "crippled_body", "mental_disruption","physical_disruption" },4) then
+		if snd.checksomeAffs({"paralysis", "crippled_body", "delirium","extravasation" },4) then
 			string = "retribution "..snd.target
 		else -- if not...
 			-- see if we can lock this round, in any of three possible ways

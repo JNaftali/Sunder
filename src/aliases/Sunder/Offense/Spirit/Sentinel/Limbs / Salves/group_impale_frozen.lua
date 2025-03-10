@@ -90,7 +90,7 @@ function snd.attack_function()
 			end
 		end
 
-		if snd.checksomeAffs({"confusion", "left_leg_crippled", "right_leg_crippled", "fallen", "heartflutter"}, 5) then
+		if snd.checksomeAffs({"confusion", "left_leg_crippled", "right_leg_crippled", "fallen", "arrhythmia"}, 5) then
 			string = "dhuriv spinecut "..snd.target
 		end
 		

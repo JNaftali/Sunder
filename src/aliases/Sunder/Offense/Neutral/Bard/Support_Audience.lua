@@ -7,9 +7,9 @@ if snd.class == "Bard" then       -- We're a super awesome badass bard, obv
 
       if snd.rhythm then
         snd.giving = {
-          "perplexed",
+          "perplexity",
           "self_loathing",
-          "berserking",
+          "mania",
           "dazed",
 
         }
@@ -23,7 +23,7 @@ if snd.class == "Bard" then       -- We're a super awesome badass bard, obv
           "asthma",
           "slickness",
           "anorexia",
-          "perplexed",
+          "perplexity",
           "shyness",
           "dizziness",
           "weariness",
@@ -151,4 +151,3 @@ if snd.class == "Bard" then       -- We're a super awesome badass bard, obv
 
   snd.attack_function() -- make sure to actually send the attack once on use!
 end
-

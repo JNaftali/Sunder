@@ -18,7 +18,7 @@ if snd.class == "Warden" then
   snd.hound_queue = {
     "mark",
     "dizziness",
-    "berserking",
+    "mania",
     "weariness",
     "impairment",
   }

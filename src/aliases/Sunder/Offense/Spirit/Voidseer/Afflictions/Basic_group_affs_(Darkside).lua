@@ -27,7 +27,7 @@ function snd.attack_function()
 			snd.giving = {
 			"laxity",
 			"faintness",
-			"berserking",
+			"mania",
 			"recklessness",
 			"masochism",
 			"magnanimity",

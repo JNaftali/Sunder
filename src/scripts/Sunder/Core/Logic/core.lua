@@ -4,7 +4,7 @@
 -- This is the heart of everything. It gets run at every prompt.
 -- @function snd.core
 function snd.core()
-  if snd.toggles.active and not snd.waiting.lighting and snd.can_cast() and snd.not_aff("perplexed") and snd.not_aff("paresis") then
+  if snd.toggles.active and not snd.waiting.lighting and snd.can_cast() and snd.not_aff("perplexity") and snd.not_aff("paresis") then
     local commandSent = false
     for pipe, isEmpty in pairs(snd.emptypipes) do
       if isEmpty then

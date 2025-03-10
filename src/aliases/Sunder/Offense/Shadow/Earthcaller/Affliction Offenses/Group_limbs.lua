@@ -1,9 +1,9 @@
 if snd.class == "Earthcaller" then
   local limbList = {"left leg", "right leg", "left arm", "right arm"}
-  local battleStack = {"impatience", "berserking", "stupidity", "sensitivity", "vertigo", "self-pity", "migraine"}
+  local battleStack = {"impatience", "mania", "stupidity", "sensitivity", "vertigo", "self_pity", "migraine"}
   local chastenStack = {"anorexia", "recklessness", "justice", "stupidity", "self_loathing", "paranoia", "hypochondria", "lethargy"}
   local overwhelmChasten = {"recklessness", "anorexia", "justice", "stupidity", "self_loathing", "paranoia", "hypochondria", "lethargy"}
-  local overwhelmBattle = {"sensitivity", "impatience", "berserking", "stupidity", "vertigo", "self-pity", "migraine"}
+  local overwhelmBattle = {"sensitivity", "impatience", "mania", "stupidity", "vertigo", "self_pity", "migraine"}
   
   local function getAff(stack)
     for _, aff in ipairs(stack) do
