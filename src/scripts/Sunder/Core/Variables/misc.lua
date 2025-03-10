@@ -125,7 +125,6 @@ snd.physical_affs = {
   "ringing_ears",
   "lethargy",
   "sepsis",
-  "psychosis",
   "crippled_throat",
   "slough",
   "disfigurement",
