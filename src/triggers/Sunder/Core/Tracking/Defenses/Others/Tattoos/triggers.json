@@ -1,82 +1,81 @@
 [
-       {
-              "name": "Tattoos begin",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^You have the following tattoos\\:",
-                            "type": "regex"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "What tattoos you rockin'?",
-              "isActive": "no",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^(.+)$",
-                            "type": "regex"
-                     }
-              ],
-              "script": "\n\nlocal possible_skills = {\n  \"Firefly\",\n  \"Moss\",\n  \"Feather\",\n  \"Shield\",\n  \"Mindseye\",\n  \"Hammer\",\n  \"Cloak\",\n  \"Bell\",\n  \"Crystal\",\n  \"Wand\",\n  \"Moon\",\n  \"Cloud\",\n  \"Starburst\",\n  \"Armour\",\n  \"Boar\",\n  \"Flower\",\n  \"Web\",\n  \"Tentacle\",\n  \"Flame\",\n  \"Hourglass\",\n  \"Owl\",\n  \"Brazier\",\n  \"Prism\",\n  \"Anchor\",\n  \"Book\",\n  \"Tree\",\n  \"Mountain\",\n  \"Chameleon\",\n}\n\nfor _, v in pairs(possible_skills) do\n  if string.find(matches[2], v) and not table.isMember(snd.skills.tattoos_on_me, v..\"Tattoo\") then\n   table.insert(snd.skills.tattoos_on_me, v..\"Tattoo\")\n  end\nend"
-       },
-       {
-              "name": "Tattoos end",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "",
-                            "type": "prompt"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "Tattoo used up",
-              "isActive": "no",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^A (\\w+) tattoo fades from view and disappears\\.$",
-                            "type": "regex"
-                     }
-              ],
-              "script": ""
-       }
+  {
+    "name": "Tattoos begin",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^You have the following tattoos\\:",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "What tattoos you rockin",
+    "isActive": "no",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^(.+)$",
+        "type": "regex"
+      }
+    ]
+  },
+  {
+    "name": "Tattoos end",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "",
+        "type": "prompt"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "Tattoo used up",
+    "isActive": "no",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^A (\\w+) tattoo fades from view and disappears\\.$",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  }
 ]
