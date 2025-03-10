@@ -1,262 +1,262 @@
 [
-       {
-              "name": "Allergies from Mutagen / Revelation",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^Skin flushing a deep red, (\\w+) looks upon .+ in disbelief.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^(\\w+) cringes as a dark red rash spreads painfully across .+ skin.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^(\\w+) wheezes loudly as .+ body weakens under the stress, most of .+ skin now dark red.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^Skin flushing a deep red, (\\w+) issues a mournful wail.$",
-                            "type": "regex"
-                     }
-              ],
-              "script": "if matches[2] == snd.target then\n snd.target_got(\"allergies\")\nend"
-       },
-       {
-              "name": "Addiction from Mutagen / Revelation",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^Growing unfocused, a perverse addiction settles over (\\w+).$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^(\\w+)'s hands begin to shake as .+ turns restless.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^(\\w+) casts \\w+ gaze to and fro in search of addictive sedatives and curatives.$",
-                            "type": "regex"
-                     }
-              ],
-              "script": "if matches[2] == snd.target then\n snd.target_got(\"addiction\")\nend"
-       },
-       {
-              "name": "Lethargy from Mutagen / Revelation",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^(\\w+) slows, energy draining from \\w+ as \\w+ struggles to move.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^(\\w+) slows to a halt as hopeless lethargy grips \\w+ limbs.$",
-                            "type": "regex"
-                     }
-              ],
-              "script": "if matches[2] == snd.target then\n snd.target_got(\"lethargy\")\nend"
-       },
-       {
-              "name": "Blisters from Mutagen / Revelation",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^(\\w+)'s skin blisters virulently, sacs of pus and blood bulging from \\w+ frame.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^(\\w+)'s flesh flakes and chips as horrific blisters arise upon \\w+ flesh.$",
-                            "type": "regex"
-                     }
-              ],
-              "script": "if matches[2] == snd.target then\n snd.target_got(\"blisters\")\nend"
-       },
-       {
-              "name": "Weariness from Mutagen / Revelation",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^Stumbling, (\\w+)'s musculature withers and frays where \\w+ stands.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^Stumbling, (\\w+) looks down to see \\w+ musculature withering before \\w+ very eyes.$",
-                            "type": "regex"
-                     }
-              ],
-              "script": "if matches[2] == snd.target then\n\tsnd.target_got(\"weariness\")\nend"
-       },
-       {
-              "name": "Impairment from Mutagen / Revelation",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^(\\w+)'s body contorts, warping into a subtle yet unrecognizable configuration.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^Existential horror contorts (\\w+)'s visage, its chill twisting at \\w+ physique.$",
-                            "type": "regex"
-                     }
-              ],
-              "script": "if matches[2] == snd.target then\n\tsnd.target_got(\"impairment\")\nend"
-       },
-       {
-              "name": "Mutagen / Revelation Cured",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^The mutagen placed upon (\\w+) has expired, its lifespan complete.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^The mutagen placed upon (\\w+) has expired, too far from you.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^The maddening revelations placed within (\\w+)'s mind expire, too far away from your psychic influence.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^The maddening revelations within (\\w+)'s mind reach their end, their lifespan complete.$",
-                            "type": "regex"
-                     }
-              ],
-              "script": "if matches[2] == snd.target then\n \tsnd.target_cured(\"mutagen\")\n\tsnd.my_mutagen = false\n\tsnd.their_mutagen = false\nend"
-       },
-       {
-              "name": "Nexus / Kismet Proc",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^Your mutagen leaps from you to (\\w+), crackling through the air.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^Mass hysteria pours forth from you alike to a river, sowing eldritch truth within (\\w+)'s mind.$",
-                            "type": "regex"
-                     }
-              ],
-              "script": "if matches[2] == snd.target then\n\tif snd.class == \"Archivist\" then\n    snd.send(\"qeb bio advance\")\n  elseif snd.class == \"Voidseer\" then\n    snd.send(\"qeb void advance\")\n  end\nend"
-       },
-       {
-              "name": "Sadness from Mutagen / Revelation",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^Melancholy settles upon (\\w+)\\.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^(\\w+) cries out and sways on \\w+ feet as visions assail \\w+ mind.$",
-                            "type": "regex"
-                     }
-              ],
-              "script": "if matches[2] == snd.target then\n\tsnd.target_got(\"sadness\")\nend"
-       },
-       {
-              "name": "Masochism from Mutagen / Revelation",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^(\\w+) gives a laugh, a strange glint rising into \\w+ eyes.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^(\\w+) barks out a harsh laugh, mad glee reflected within \\w+ eyes.$",
-                            "type": "regex"
-                     }
-              ],
-              "script": "if matches[2] == snd.target then\n\tsnd.target_got(\"masochism\")\nend"
-       }
+  {
+    "name": "Allergies from Mutagen / Revelation",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^Skin flushing a deep red, (\\w+) looks upon .+ in disbelief.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^(\\w+) cringes as a dark red rash spreads painfully across .+ skin.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^(\\w+) wheezes loudly as .+ body weakens under the stress, most of .+ skin now dark red.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^Skin flushing a deep red, (\\w+) issues a mournful wail.$",
+        "type": "regex"
+      }
+    ],
+    "script": "if matches[2] == snd.target then\n snd.target_got(\"allergies\")\nend"
+  },
+  {
+    "name": "Addiction from Mutagen / Revelation",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^Growing unfocused, a perverse addiction settles over (\\w+).$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^(\\w+)'s hands begin to shake as .+ turns restless.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^(\\w+) casts \\w+ gaze to and fro in search of addictive sedatives and curatives.$",
+        "type": "regex"
+      }
+    ],
+    "script": "if matches[2] == snd.target then\n snd.target_got(\"addiction\")\nend"
+  },
+  {
+    "name": "Lethargy from Mutagen / Revelation",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^(\\w+) slows, energy draining from \\w+ as \\w+ struggles to move.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^(\\w+) slows to a halt as hopeless lethargy grips \\w+ limbs.$",
+        "type": "regex"
+      }
+    ],
+    "script": "if matches[2] == snd.target then\n snd.target_got(\"lethargy\")\nend"
+  },
+  {
+    "name": "Blisters from Mutagen / Revelation",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^(\\w+)'s skin blisters virulently, sacs of pus and blood bulging from \\w+ frame.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^(\\w+)'s flesh flakes and chips as horrific blisters arise upon \\w+ flesh.$",
+        "type": "regex"
+      }
+    ],
+    "script": "if matches[2] == snd.target then\n snd.target_got(\"blisters\")\nend"
+  },
+  {
+    "name": "Weariness from Mutagen / Revelation",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^Stumbling, (\\w+)'s musculature withers and frays where \\w+ stands.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^Stumbling, (\\w+) looks down to see \\w+ musculature withering before \\w+ very eyes.$",
+        "type": "regex"
+      }
+    ],
+    "script": "if matches[2] == snd.target then\n\tsnd.target_got(\"weariness\")\nend"
+  },
+  {
+    "name": "Impairment from Mutagen / Revelation",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^(\\w+)'s body contorts, warping into a subtle yet unrecognizable configuration.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^Existential horror contorts (\\w+)'s visage, its chill twisting at \\w+ physique.$",
+        "type": "regex"
+      }
+    ],
+    "script": "if matches[2] == snd.target then\n\tsnd.target_got(\"impairment\")\nend"
+  },
+  {
+    "name": "Mutagen / Revelation Cured",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^The mutagen placed upon (\\w+) has expired, its lifespan complete.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^The mutagen placed upon (\\w+) has expired, too far from you.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^The maddening revelations placed within (\\w+)'s mind expire, too far away from your psychic influence.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^The maddening revelations within (\\w+)'s mind reach their end, their lifespan complete.$",
+        "type": "regex"
+      }
+    ],
+    "script": "if matches[2] == snd.target then\n \tsnd.target_cured(\"mutagen\")\n\tsnd.my_mutagen = false\n\tsnd.their_mutagen = false\nend"
+  },
+  {
+    "name": "Nexus / Kismet Proc",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^Your mutagen leaps from you to (\\w+), crackling through the air.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^Mass hysteria pours forth from you alike to a river, sowing eldritch truth within (\\w+)'s mind.$",
+        "type": "regex"
+      }
+    ],
+    "script": "if matches[2] == snd.target then\n\tif snd.class == \"Archivist\" then\n    snd.send(\"qeb bio advance\")\n  elseif snd.class == \"Voidseer\" then\n    snd.send(\"qeb void advance\")\n  end\nend"
+  },
+  {
+    "name": "Sadness from Mutagen / Revelation",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^Melancholy settles upon (\\w+)\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^(\\w+) cries out and sways on \\w+ feet as visions assail \\w+ mind.$",
+        "type": "regex"
+      }
+    ],
+    "script": "if matches[2] == snd.target then\n\tsnd.target_got(\"sadness\")\nend"
+  },
+  {
+    "name": "Masochism from Mutagen / Revelation",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^(\\w+) gives a laugh, a strange glint rising into \\w+ eyes.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^(\\w+) barks out a harsh laugh, mad glee reflected within \\w+ eyes.$",
+        "type": "regex"
+      }
+    ],
+    "script": "if matches[2] == snd.target then\n\tsnd.target_got(\"masochism\")\nend"
+  }
 ]
