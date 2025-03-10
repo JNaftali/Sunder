@@ -105,11 +105,11 @@
     "name": "Disperse Presences",
     "patterns": [
       {
-        "pattern": "The bone dust reveals \\w+ at (.*) with \\d+ health and \\d+ mana\\.",
+        "pattern": "^The bone dust reveals \\w+ at (.*) with \\d+ health and \\d+ mana\\.$",
         "type": "regex"
       },
       {
-        "pattern": "\\w+ senses \\w+ at (.*) with \\d+ health and \\d+ mana\\.",
+        "pattern": "^\\w+ senses \\w+ at (.*) with \\d+ health and \\d+ mana\\.$",
         "type": "regex"
       }
     ]
@@ -118,7 +118,7 @@
     "name": "eyeseek",
     "patterns": [
       {
-        "pattern": "The Night Eye pendant tells you,\"I sense that \\w+ .* and is at (.*)\"\\.",
+        "pattern": "^The Night Eye pendant tells you,\"I sense that \\w+ .* and is at (.*)\"\\.$",
         "type": "regex"
       }
     ]
