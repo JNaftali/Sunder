@@ -1,0 +1,87 @@
+[
+  {
+    "name": "general deaths",
+    "isActive": "no",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "The Hall of the Underking.",
+        "type": "exactMatch"
+      },
+      {
+        "pattern": "Before the Soul Mirror.",
+        "type": "exactMatch"
+      },
+      {
+        "pattern": "Traversing the Void",
+        "type": "startOfLine"
+      },
+      {
+        "pattern": "Blackness.",
+        "type": "exactMatch"
+      },
+      {
+        "pattern": "A strange and desolate mire.",
+        "type": "exactMatch"
+      }
+    ]
+  },
+  {
+    "name": "Starburst",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "yes",
+    "multilineDelta": "1",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "You use Tattoos Starburst.",
+        "type": "exactMatch"
+      },
+      {
+        "pattern": "return snd.illusionChecks.abilityGate()",
+        "type": "lua"
+      },
+      {
+        "pattern": "Your starburst tattoo flares as the world is momentarily tinted red.",
+        "type": "regex"
+      }
+    ]
+  },
+  {
+    "name": "Vampire Akkari death",
+    "isActive": "no",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "Stricken, you collapse to the ground. Unable to maintain the composure of your physical form any longer, you feel your body shrivel and wither away as you revert to your mistform.",
+        "type": "exactMatch"
+      },
+      {
+        "pattern": "Defeated, your physical form collapses like a dead weight upon the ground. Holy light",
+        "type": "startOfLine"
+      }
+    ]
+  }
+]
