@@ -1,694 +1,566 @@
 [
-       {
-              "name": "survey",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^You discern that you are standing in (.*)\\.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^You stand, brilliantly illuminated, within (.*)\\.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^You are standing (.+)\\.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^You are plumbing the depths of (.+)\\.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^You discern that you are standing amidst the twisted expanse of (.+)\\.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^You discern you are delving (.+)\\.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^You stand within the destroyed remnants of (.+)\\.$",
-                            "type": "regex"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "deathblow",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^The final blow proves too much for (.*), who expires, pitifully\\.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^(.*) pales and then fall to the ground, a look of surprise etched on .+ face\\.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^(.*) gives a last, feeble gasp as .+ windpipe is crushed\\.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^(.*) stiffens and drops dead as the venom proves too much for .+ system\\.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^With so much force behind the final blow, (.*) expires in a brutalized mess\\.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^The mighty blow utterly destroys (.*), splitting .+ apart messily\\.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^Having slain (.+), you retrieve the corpse.$",
-                            "type": "regex"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "no ih",
-              "isActive": "no",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "There is nothing here.",
-                            "type": "exactMatch"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "ylem",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "Your vision distorts briefly, light scattering subtly as ylem energy diffuses into the surrounding atmosphere.",
-                            "type": "exactMatch"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "chaos worm",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "A swirling portal of chaos opens, spits out a worm, then vanishes.",
-                            "type": "exactMatch"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "reanimated dwarfs",
-              "isActive": "no",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^(.*) shakes and stirs, .+ decaying limbs rattling in a cacaphonous clatter as .+ form is enveloped in a turgid green miasma\\. Slowly but surely .+ rises from the ground, a low snarl forming in the back of .+ throat as .+ prepares for another attack\\.$",
-                            "type": "regex"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "amalgamation",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "An amalgamation of corpses's flesh writhes and wriggles as a piece of it falls off. The piece of flesh congeals into a single creature, regenerating at an alarming speed as it reforms into a miniature version of itself.",
-                            "type": "exactMatch"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "amalgamation insta",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "An amalgamation of corpses's multiple eyes scan the area, finding singularity with you, and an unearthly scream echoes forth from within an amalgamation of corpses, the pain of the once-innocent lives used to create the abomination, now twisted into blind wrath. An amalgamation of corpses charges at you, determined to add a new victim!",
-                            "type": "exactMatch"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "elemental",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "yes",
-              "highlightFG": "#00ff7f",
-              "highlightBG": "#000000",
-              "patterns": [
-                     {
-                            "pattern": "You concentrate on the raw elemental energy flowing about your body, coalescing some of its potential into a massive elemental.",
-                            "type": "exactMatch"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "resummon",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "You have slain a massive elemental.",
-                            "type": "exactMatch"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "gorgon",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "The gorgon is preparing to petrify you! AVERT your gaze.",
-                            "type": "exactMatch"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "angel",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "A flower of white light blooms in the air beside a solemn luminary, and a shimmering figure emerges from within.",
-                            "type": "exactMatch"
-                     },
-                     {
-                            "pattern": "Your attempt to attack a solemn luminary simply bounces off a guardian angel's protective shield, leaving him unscathed.",
-                            "type": "exactMatch"
-                     },
-                     {
-                            "pattern": "A flower of white light blooms in the air beside Bright-eyed Amarane, and a shimmering figureemerges from within.",
-                            "type": "exactMatch"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "no mist",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "There is no ylem energy mist in this location to absorb.",
-                            "type": "exactMatch"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "exp trigger",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^Experience Gained\\: (.*) \\((.+?)\\) \\[total\\: (.*)\\]$",
-                            "type": "regex"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "Rubble Walk Delay",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "You slowly clamber over the rubble in your path.",
-                            "type": "exactMatch"
-                     },
-                     {
-                            "pattern": "Your labored breathing intesifies as you slowly move.",
-                            "type": "exactMatch"
-                     },
-                     {
-                            "pattern": "You lash out frantically as you begin to slowly fight your way ",
-                            "type": "startOfLine"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "Survivor auto attack",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^(A|An) .+ enters the arena, looking for blood.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^A horde of aberrations and otherworldly entities escape from within the pustulent swarm!$",
-                            "type": "regex"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "Counterattack active",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "braces and prepares to make a counterattack.$",
-                            "type": "regex"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "Push Devastating",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^An? (.+) readies to deliver a devastating blow!$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^An? (.+) continues preparing to unleash a devastating blow!$",
-                            "type": "regex"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "Punisher",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "looks prepared to punish those who trifle with it.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "charges suddenly into you, painfully shattering your defenses!$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "is battle-hardened.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "looks prepared to punish those who trifle with him.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "looks prepared to punish those who trifle with her.$",
-                            "type": "regex"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "Probed",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^(It|He|She|They) (weighs about|(is|are) strangely weightless\\.)",
-                            "type": "regex"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "Counterattack Off",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "ceases preparing to counter.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^You knock .+ out of .+ countering preparation with raw power\\!$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "lashes out with a sudden counter attack!$",
-                            "type": "regex"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "Got the mist",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^You raise your gauntlet, extending your fingers and allowing the latent ylem around you to absorb into the reserve chambers\\.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^The light around you slowly ceases to refract as the ylem energy dissipates into your surroundings\\.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^With a deliberate motion, \\w+ extends \\w+ gauntlet into the air, causing a ripple of distortion as the ylem energy surrounding you is harnessed\\.$",
-                            "type": "regex"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "No mist",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "There is no ylem energy mist in this location to absorb.",
-                            "type": "exactMatch"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "Apothecary mob dead.",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^The last \\w+ has fallen! .+ has been wiped out!$",
-                            "type": "regex"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "Followbashing",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "yes",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^(\\w+) uses .+? on .+\\.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "return snd.illusionChecks.abilityGate()",
-                            "type": "lua"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "Followbashing 2",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "yes",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^(\\w+) uses (\\w+ \\w+)\\.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "return snd.illusionChecks.abilityGate()",
-                            "type": "lua"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "No such target",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^You can find no such target as '(\\d+)'\\.$",
-                            "type": "regex"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "Reanimation",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^.+ shakes and stirs, \\w+ decaying limbs rattling in a cacophonous clatter as \\w+ form is enveloped in a turgid green miasma. Slowly but surely \\w+ rises from the ground, a low snarl forming in the back of \\w+ throat as \\w+ prepares for another attack\\.$",
-                            "type": "regex"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "Slain something",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^Having slain (.+), \\w+ retrieves? the corpse\\.$",
-                            "type": "regex"
-                     }
-              ],
-              "script": ""
-       }
+  {
+    "name": "survey",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^You discern that you are standing in (.*)\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^You stand, brilliantly illuminated, within (.*)\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^You are standing (.+)\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^You are plumbing the depths of (.+)\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^You discern that you are standing amidst the twisted expanse of (.+)\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^You discern you are delving (.+)\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^You stand within the destroyed remnants of (.+)\\.$",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "deathblow",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^The final blow proves too much for (.*), who expires, pitifully\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^(.*) pales and then fall to the ground, a look of surprise etched on .+ face\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^(.*) gives a last, feeble gasp as .+ windpipe is crushed\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^(.*) stiffens and drops dead as the venom proves too much for .+ system\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^With so much force behind the final blow, (.*) expires in a brutalized mess\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^The mighty blow utterly destroys (.*), splitting .+ apart messily\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^Having slain (.+), you retrieve the corpse.$",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "no ih",
+    "isActive": "no",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "There is nothing here.",
+        "type": "exactMatch"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "ylem",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "Your vision distorts briefly, light scattering subtly as ylem energy diffuses into the surrounding atmosphere.",
+        "type": "exactMatch"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "chaos worm",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "A swirling portal of chaos opens, spits out a worm, then vanishes.",
+        "type": "exactMatch"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "reanimated dwarfs",
+    "isActive": "no",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^(.*) shakes and stirs, .+ decaying limbs rattling in a cacaphonous clatter as .+ form is enveloped in a turgid green miasma\\. Slowly but surely .+ rises from the ground, a low snarl forming in the back of .+ throat as .+ prepares for another attack\\.$",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "amalgamation",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "An amalgamation of corpses's flesh writhes and wriggles as a piece of it falls off. The piece of flesh congeals into a single creature, regenerating at an alarming speed as it reforms into a miniature version of itself.",
+        "type": "exactMatch"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "amalgamation insta",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "An amalgamation of corpses's multiple eyes scan the area, finding singularity with you, and an unearthly scream echoes forth from within an amalgamation of corpses, the pain of the once-innocent lives used to create the abomination, now twisted into blind wrath. An amalgamation of corpses charges at you, determined to add a new victim!",
+        "type": "exactMatch"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "elemental",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "yes",
+    "highlightFG": "#00ff7f",
+    "highlightBG": "#000000",
+    "patterns": [
+      {
+        "pattern": "You concentrate on the raw elemental energy flowing about your body, coalescing some of its potential into a massive elemental.",
+        "type": "exactMatch"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "resummon",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "You have slain a massive elemental.",
+        "type": "exactMatch"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "gorgon",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "The gorgon is preparing to petrify you! AVERT your gaze.",
+        "type": "exactMatch"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "angel",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "A flower of white light blooms in the air beside a solemn luminary, and a shimmering figure emerges from within.",
+        "type": "exactMatch"
+      },
+      {
+        "pattern": "Your attempt to attack a solemn luminary simply bounces off a guardian angel's protective shield, leaving him unscathed.",
+        "type": "exactMatch"
+      },
+      {
+        "pattern": "A flower of white light blooms in the air beside Bright-eyed Amarane, and a shimmering figureemerges from within.",
+        "type": "exactMatch"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "no mist",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "There is no ylem energy mist in this location to absorb.",
+        "type": "exactMatch"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "exp trigger",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^Experience Gained\\: (.*) \\((.+?)\\) \\[total\\: (.*)\\]$",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "Rubble Walk Delay",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "You slowly clamber over the rubble in your path.",
+        "type": "exactMatch"
+      },
+      {
+        "pattern": "Your labored breathing intesifies as you slowly move.",
+        "type": "exactMatch"
+      },
+      {
+        "pattern": "You lash out frantically as you begin to slowly fight your way ",
+        "type": "startOfLine"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "Survivor auto attack",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^(A|An) .+ enters the arena, looking for blood.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^A horde of aberrations and otherworldly entities escape from within the pustulent swarm!$",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "Got the mist",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^You raise your gauntlet, extending your fingers and allowing the latent ylem around you to absorb into the reserve chambers\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^The light around you slowly ceases to refract as the ylem energy dissipates into your surroundings\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^With a deliberate motion, \\w+ extends \\w+ gauntlet into the air, causing a ripple of distortion as the ylem energy surrounding you is harnessed\\.$",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "No mist",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "There is no ylem energy mist in this location to absorb.",
+        "type": "exactMatch"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "Apothecary mob dead.",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^The last \\w+ has fallen! .+ has been wiped out!$",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "Followbashing",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "yes",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^(\\w+) uses .+? on .+\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "return snd.illusionChecks.abilityGate()",
+        "type": "lua"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "Followbashing 2",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "yes",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^(\\w+) uses (\\w+ \\w+)\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "return snd.illusionChecks.abilityGate()",
+        "type": "lua"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "No such target",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^You can find no such target as '(\\d+)'\\.$",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "Reanimation",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^.+ shakes and stirs, \\w+ decaying limbs rattling in a cacophonous clatter as \\w+ form is enveloped in a turgid green miasma. Slowly but surely \\w+ rises from the ground, a low snarl forming in the back of \\w+ throat as \\w+ prepares for another attack\\.$",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "Slain something",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^Having slain (.+), \\w+ retrieves? the corpse\\.$",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  }
 ]

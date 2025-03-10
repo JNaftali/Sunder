@@ -1,1 +1,0 @@
-snd.counterattack_active = true
