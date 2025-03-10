@@ -1,334 +1,320 @@
 [
-       {
-              "name": "Geometrics Invert / Cultivation Cordon",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^You use Geometrics Invert on .+\\.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^You use Cultivation Cordon on .+\\.$",
-                            "type": "regex"
-                     }
-              ],
-              "script": "snd.geoinvert = true"
-       },
-       {
-              "name": "Geo Invert and Trace Off / Cultivation Cordon and Vine Off",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^You use Cultivation Cordon \\(end\\) on .+\\.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^You use Geometrics Invert \\(end\\) on .+\\.$",
-                            "type": "regex"
-                     }
-              ],
-              "script": "snd.geoinvert = false\nsnd.geotrace = false\nif snd.class == \"Archivist\" then\n  snd.send(\"qeb incite lens\")\nelseif snd.class == \"Voidseer\" then\n  snd.send(\"qeb foment longing\")\nend"
-       },
-       {
-              "name": "Geo Trace On / Cultivation Vine On",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^You use Geometrics Trace on .+\\.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^You use Cultivation Vine on .+\\.$",
-                            "type": "regex"
-                     }
-              ],
-              "script": "snd.geotrace = true"
-       },
-       {
-              "name": "No Token or Bud Down",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^Your .+ must be placed upon the ground first.$",
-                            "type": "regex"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "Madness / Turmoil Available",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "You may inflict madness upon another once again.",
-                            "type": "exactMatch"
-                     },
-                     {
-                            "pattern": "You may sow turmoil within another's mind once more.",
-                            "type": "exactMatch"
-                     }
-              ],
-              "script": "snd.balance.madness = true"
-       },
-       {
-              "name": "Madness/ Turmoil Not Ready",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "You may not inflict madness upon another so soon.",
-                            "type": "exactMatch"
-                     },
-                     {
-                            "pattern": "You may not visit turmoil upon someone's mind again so soon.",
-                            "type": "exactMatch"
-                     }
-              ],
-              "script": "snd.balance.madness = false"
-       },
-       {
-              "name": "Empower / Affirm Ready",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "Your mind is now capable of empowering a new number.",
-                            "type": "exactMatch"
-                     },
-                     {
-                            "pattern": "Your awakened soul soars, once more capable of chakral affirmation.",
-                            "type": "exactMatch"
-                     }
-              ],
-              "script": "snd.empowerready = true"
-       },
-       {
-              "name": "Empower / Affirm Type",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^You empower the number (.+) to act upon its sphere of influence.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^Serene light strobes within your mind as you affirm the (\\w+) chakra with additional focus.$",
-                            "type": "regex"
-                     }
-              ],
-              "script": "snd.empowertype = matches[2]\nsnd.empowerready = false"
-       },
-       {
-              "name": "No Token / Bud",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^You hold no \"token\".$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^You hold no \"bud\".$",
-                            "type": "regex"
-                     }
-              ],
-              "script": "if snd.class == \"Archivist\" then\n  snd.send(\"qeb incite lens\")\nelseif snd.class == \"Voidseer\" then\n  snd.send(\"qeb foment longing\")\nend"
-       },
-       {
-              "name": "No Token or Bud",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^You hold no \\\"(\\d+)\\\".$",
-                            "type": "regex"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "Ethereal / Disjoint",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "You use Voidgazing Disjoint.",
-                            "type": "exactMatch"
-                     },
-                     {
-                            "pattern": "You swiftly unlace the primal threads anchoring your form to existence, disjointing you from reality.",
-                            "type": "exactMatch"
-                     },
-                     {
-                            "pattern": "You have gained the ethereal defence.",
-                            "type": "exactMatch"
-                     }
-              ],
-              "script": "--snd.def_def(\"ethereal\")\nsnd.balance.ethereal = true"
-       },
-       {
-              "name": "Ethereal / Disjoint Done",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "Your body loses its ethereal form as the essence wears off.",
-                            "type": "exactMatch"
-                     },
-                     {
-                            "pattern": "Your ethereal defence has been stripped.",
-                            "type": "exactMatch"
-                     }
-              ],
-              "script": "--snd.def_remove(\"ethereal\")\nsnd.balance.ethereal = false"
-       },
-       {
-              "name": "Knitting / Alleviate Start",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "You use Bioessence Knitting.",
-                            "type": "exactMatch"
-                     },
-                     {
-                            "pattern": "You use Voidgazing Alleviate.",
-                            "type": "exactMatch"
-                     }
-              ],
-              "script": "snd.knit = true"
-       },
-       {
-              "name": "Knitting / Alleviate  Done",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "Your flesh twitches for a moment and then all is still.",
-                            "type": "exactMatch"
-                     },
-                     {
-                            "pattern": "Something at the core of your being finds absolute stillness.",
-                            "type": "exactMatch"
-                     }
-              ],
-              "script": "snd.knit = false"
-       }
+  {
+    "name": "Geometrics Invert Cultivation Cordon",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^You use Geometrics Invert on .+\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^You use Cultivation Cordon on .+\\.$",
+        "type": "regex"
+      }
+    ]
+  },
+  {
+    "name": "Geo Invert and Trace Off Cultivation Cordon and Vine Off",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^You use Cultivation Cordon \\(end\\) on .+\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^You use Geometrics Invert \\(end\\) on .+\\.$",
+        "type": "regex"
+      }
+    ]
+  },
+  {
+    "name": "Geo Trace On Cultivation Vine On",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^You use Geometrics Trace on .+\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^You use Cultivation Vine on .+\\.$",
+        "type": "regex"
+      }
+    ]
+  },
+  {
+    "name": "Madness Turmoil Available",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "You may inflict madness upon another once again.",
+        "type": "exactMatch"
+      },
+      {
+        "pattern": "You may sow turmoil within another's mind once more.",
+        "type": "exactMatch"
+      }
+    ]
+  },
+  {
+    "name": "Madness Turmoil Not Ready",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "You may not inflict madness upon another so soon.",
+        "type": "exactMatch"
+      },
+      {
+        "pattern": "You may not visit turmoil upon someone's mind again so soon.",
+        "type": "exactMatch"
+      }
+    ]
+  },
+  {
+    "name": "Empower Affirm Ready",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "Your mind is now capable of empowering a new number.",
+        "type": "exactMatch"
+      },
+      {
+        "pattern": "Your awakened soul soars, once more capable of chakral affirmation.",
+        "type": "exactMatch"
+      }
+    ]
+  },
+  {
+    "name": "Empower Affirm Type",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^You empower the number (.+) to act upon its sphere of influence.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^Serene light strobes within your mind as you affirm the (\\w+) chakra with additional focus.$",
+        "type": "regex"
+      }
+    ]
+  },
+  {
+    "name": "No Token Bud",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^You hold no \"token\".$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^You hold no \"bud\".$",
+        "type": "regex"
+      }
+    ]
+  },
+  {
+    "name": "No Token or Bud Down",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^Your .+ must be placed upon the ground first.$",
+        "type": "regex"
+      }
+    ]
+  },
+  {
+    "name": "No Token or Bud",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^You hold no \"(d+)\".$",
+        "type": "regex"
+      }
+    ]
+  },
+  {
+    "name": "Ethereal Disjoint",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "You use Voidgazing Disjoint.",
+        "type": "exactMatch"
+      },
+      {
+        "pattern": "You swiftly unlace the primal threads anchoring your form to existence, disjointing you from reality.",
+        "type": "exactMatch"
+      },
+      {
+        "pattern": "You have gained the ethereal defence.",
+        "type": "exactMatch"
+      }
+    ]
+  },
+  {
+    "name": "Ethereal Disjoint Done",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "Your body loses its ethereal form as the essence wears off.",
+        "type": "exactMatch"
+      },
+      {
+        "pattern": "Your ethereal defence has been stripped.",
+        "type": "exactMatch"
+      }
+    ]
+  },
+  {
+    "name": "Knitting Alleviate Start",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "You use Bioessence Knitting.",
+        "type": "exactMatch"
+      },
+      {
+        "pattern": "You use Voidgazing Alleviate.",
+        "type": "exactMatch"
+      }
+    ]
+  },
+  {
+    "name": "Knitting Alleviate  Done",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "Your flesh twitches for a moment and then all is still.",
+        "type": "exactMatch"
+      },
+      {
+        "pattern": "Something at the core of your being finds absolute stillness.",
+        "type": "exactMatch"
+      }
+    ]
+  }
 ]
