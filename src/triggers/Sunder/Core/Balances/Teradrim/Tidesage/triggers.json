@@ -76,7 +76,7 @@
     ]
   },
   {
-    "name": "Earthenwill / Engulf True",
+    "name": "Earthenwill Engulf True",
     "patterns": [
       {
         "pattern": "You may once again strengthen your will.",
@@ -90,11 +90,10 @@
         "pattern": "You may once again work in tandem with your elemental.",
         "type": "exactMatch"
       }
-    ],
-    "script": "snd.balance.earthenwill = true"
+    ]
   },
   {
-    "name": "Earthenwill / Engulf False",
+    "name": "Earthenwill Engulf False",
     "patterns": [
       {
         "pattern": "Your imbue_will defence has been stripped.",
@@ -112,8 +111,7 @@
         "pattern": "You cannot coordinate with your elemental again so soon.",
         "type": "exactMatch"
       }
-    ],
-    "script": "snd.balance.earthenwill = false"
+    ]
   },
   {
     "name": "Golem Call",
@@ -125,7 +123,7 @@
     ]
   },
   {
-    "name": "Stoneblast/riptide",
+    "name": "Stoneblast riptide",
     "patterns": [
       {
         "pattern": "^The stones rip apart (\\w+)'s (\\w+) defence\\.$",
@@ -135,8 +133,7 @@
         "pattern": "^The riptide washes away (\\w+)'s (\\w+) defence\\.$",
         "type": "regex"
       }
-    ],
-    "script": "if matches[2] == snd.target then\n  snd.used.rebounding = false\n  if matches[3] ~= \"rebounding\" then\n    snd.used.shield = false\n  end\nend"
+    ]
   },
   {
     "name": "Rattle",
@@ -152,7 +149,7 @@
     ]
   },
   {
-    "name": "Rattle  back",
+    "name": "Rattle back",
     "patterns": [
       {
         "pattern": "Your elemental has recovered from its former reprisal and may enact another, should opportunity present.",

@@ -1,0 +1,1 @@
+snd.firefist_cooldown = true
