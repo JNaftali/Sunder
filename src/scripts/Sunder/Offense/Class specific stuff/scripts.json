@@ -2,25 +2,21 @@
   {
     "name": "Archivist aff picking",
     "isActive": "yes",
-    "script": "",
     "isFolder": "no"
   },
   {
     "name": "Voidseer aff picking",
     "isActive": "yes",
-    "script": "",
     "isFolder": "no"
   },
   {
     "name": "Sentinel Scripts and Tables",
     "isActive": "yes",
-    "script": "",
     "isFolder": "no"
   },
   {
     "name": "Executor Scripts and Tables",
     "isActive": "yes",
-    "script": "",
     "isFolder": "no"
   },
   {
@@ -31,25 +27,21 @@
   {
     "name": "Bard attack stuff",
     "isActive": "yes",
-    "script": "",
     "isFolder": "no"
   },
   {
     "name": "Akkari Attack Stuff",
     "isActive": "yes",
-    "script": "",
     "isFolder": "no"
   },
   {
     "name": "Scourge Affs (Sciomancer and Runecarver)",
     "isActive": "yes",
-    "script": "",
     "isFolder": "no"
   },
   {
     "name": "Monk Stuff",
     "isActive": "yes",
-    "script": "",
     "isFolder": "no"
   },
   {
@@ -60,7 +52,6 @@
   {
     "name": "Predator",
     "isActive": "yes",
-    "script": "",
     "isFolder": "no"
   },
   {
