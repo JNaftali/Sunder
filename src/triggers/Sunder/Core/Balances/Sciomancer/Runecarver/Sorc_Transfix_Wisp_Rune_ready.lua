@@ -1,0 +1,1 @@
+snd.balance.sorcery_transfix = true
