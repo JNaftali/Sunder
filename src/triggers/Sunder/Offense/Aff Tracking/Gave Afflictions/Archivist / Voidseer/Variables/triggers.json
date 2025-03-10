@@ -1,218 +1,211 @@
 [
-       {
-              "name": "Retrieval of Token / Bud",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^You form the Lens within your mind and squeeze a wooden (.*) through space and into your hand.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^You evoke immense, all-consuming desiderium, its poignancy drawing (.*) back to you in a shower of shimmering motes.$",
-                            "type": "regex"
-                     }
-              ],
-              "script": "snd.geoinvert = false\nsnd.geotrace = false"
-       },
-       {
-              "name": "Conjoin / Subtlety Cooldown",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "You may conjoin the shapes once more.",
-                            "type": "exactMatch"
-                     },
-                     {
-                            "pattern": "You may once more employ psychic subtlety.",
-                            "type": "exactMatch"
-                     }
-              ],
-              "script": "snd.conjoincd = false"
-       },
-       {
-              "name": "Conjoin / Subtlety Not Ready",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "The recognition you had of the world geometries finally escapes you.",
-                            "type": "exactMatch"
-                     },
-                     {
-                            "pattern": "You already practice psychic subtlety",
-                            "type": "exactMatch"
-                     },
-                     {
-                            "pattern": "Your focus fades as your psychic subtlety comes to an end.",
-                            "type": "exactMatch"
-                     }
-              ],
-              "script": "snd.conjoin = false"
-       },
-       {
-              "name": "Conjoin / Subtlety Hit",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "You unify the geometries of the world within your mind, gaining fleeting recognition of their infinite potential.",
-                            "type": "exactMatch"
-                     },
-                     {
-                            "pattern": "You use Cultivation Subtlety.",
-                            "type": "exactMatch"
-                     },
-                     {
-                            "pattern": "You enforce stoic dispassion upon your mien, your thoughts clouding the inside of your seeing stone.",
-                            "type": "exactMatch"
-                     }
-              ],
-              "script": "snd.conjoin = true\nsnd.conjoincd = true"
-       },
-       {
-              "name": "snd reset unravel",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^(\\w+) is already weak in mind and body. A simple nudge unravels .+ mortal form completely\\.$",
-                            "type": "regex"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "No bioessence",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "You do not possess the energy to perform that feat.",
-                            "type": "exactMatch"
-                     },
-                     {
-                            "pattern": "You lack the necessary insight, seer.",
-                            "type": "exactMatch"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "Empowered / Affirmed Already",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "You have already empowered that number.",
-                            "type": "exactMatch"
-                     },
-                     {
-                            "pattern": "That chakral point is already affirmed by your will, sage.",
-                            "type": "exactMatch"
-                     }
-              ],
-              "script": "snd.empowerready = false"
-       },
-       {
-              "name": "Crescent / Misery Due",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^(\\w+) blinks rapidly, rubbing .+ eyes\\.$",
-                            "type": "regex"
-                     }
-              ],
-              "script": "snd.crescentable = true\nsnd.target_cured(\"blackout\")"
-       },
-       {
-              "name": "No Crescent / Misery Due",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^(\\w+) grips (.*) skull in pain, clenching (.*) eyes shut\\.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^(\\w+)'s expression contorts into abject misery, tears welling within .+ eyes.$",
-                            "type": "regex"
-                     }
-              ],
-              "script": "if matches[2] == snd.target then\n  snd.crescentable = false\n  snd.target_got(\"blackout\")\nend\n"
-       }
+  {
+    "name": "Retrieval of Token Bud",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^You form the Lens within your mind and squeeze a wooden (.*) through space and into your hand.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^You evoke immense, all-consuming desiderium, its poignancy drawing (.*) back to you in a shower of shimmering motes.$",
+        "type": "regex"
+      }
+    ]
+  },
+  {
+    "name": "Conjoin Subtlety Cooldown",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "You may conjoin the shapes once more.",
+        "type": "exactMatch"
+      },
+      {
+        "pattern": "You may once more employ psychic subtlety.",
+        "type": "exactMatch"
+      }
+    ]
+  },
+  {
+    "name": "Conjoin Subtlety Not Ready",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "The recognition you had of the world geometries finally escapes you.",
+        "type": "exactMatch"
+      },
+      {
+        "pattern": "You already practice psychic subtlety",
+        "type": "exactMatch"
+      },
+      {
+        "pattern": "Your focus fades as your psychic subtlety comes to an end.",
+        "type": "exactMatch"
+      }
+    ]
+  },
+  {
+    "name": "Conjoin Subtlety Hit",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "You unify the geometries of the world within your mind, gaining fleeting recognition of their infinite potential.",
+        "type": "exactMatch"
+      },
+      {
+        "pattern": "You use Cultivation Subtlety.",
+        "type": "exactMatch"
+      },
+      {
+        "pattern": "You enforce stoic dispassion upon your mien, your thoughts clouding the inside of your seeing stone.",
+        "type": "exactMatch"
+      }
+    ]
+  },
+  {
+    "name": "snd reset unravel",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^(\\w+) is already weak in mind and body. A simple nudge unravels .+ mortal form completely\\.$",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "No bioessence",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "You do not possess the energy to perform that feat.",
+        "type": "exactMatch"
+      },
+      {
+        "pattern": "You lack the necessary insight, seer.",
+        "type": "exactMatch"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "Empowered Affirmed Already",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "You have already empowered that number.",
+        "type": "exactMatch"
+      },
+      {
+        "pattern": "That chakral point is already affirmed by your will, sage.",
+        "type": "exactMatch"
+      }
+    ]
+  },
+  {
+    "name": "Crescent Misery Due",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^(\\w+) blinks rapidly, rubbing .+ eyes\\.$",
+        "type": "regex"
+      }
+    ]
+  },
+  {
+    "name": "No Crescent Misery Due",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^(\\w+) grips (.*) skull in pain, clenching (.*) eyes shut\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^(\\w+)'s expression contorts into abject misery, tears welling within .+ eyes.$",
+        "type": "regex"
+      }
+    ]
+  }
 ]

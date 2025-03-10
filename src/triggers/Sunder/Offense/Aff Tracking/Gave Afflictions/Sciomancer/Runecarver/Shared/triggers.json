@@ -1,50 +1,48 @@
 [
-       {
-              "name": "Sciomancy Repay / Maldeiction Obeisance",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "You use Sciomancy Repay.",
-                            "type": "exactMatch"
-                     },
-                     {
-                            "pattern": "You use Malediction Obeisance.",
-                            "type": "exactMatch"
-                     }
-              ],
-              "script": "snd.repay = snd.repay + 1\nsnd.repay_timers = snd.repay_timers or {}\nlocal index = #snd.repay_timers + 1\nlocal time = 12\nif snd.have_aff(\"laxity\") then\n  time = time + 2\nend\nlocal command = function()\n                  if snd.repay \u003e 0 then\n                    snd.repay = snd.repay - 1\n                  end\n                  snd.repay_timers[index] = nil\n                  snd.core()\n                end\n                \nsnd.repay_timers[index] = {timer = tempTimer(time, command), command = command}"
-       },
-       {
-              "name": "Syncopate tracking for repay",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "yes",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^\\w+ uses Numerology Syncopate on you\\.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "return snd.illusionChecks.abilityGate()",
-                            "type": "lua"
-                     }
-              ],
-              "script": ""
-       }
+  {
+    "name": "Sciomancy Repay Malediction Obeisance",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "You use Sciomancy Repay.",
+        "type": "exactMatch"
+      },
+      {
+        "pattern": "You use Malediction Obeisance.",
+        "type": "exactMatch"
+      }
+    ]
+  },
+  {
+    "name": "Syncopate tracking for repay",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "yes",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^\\w+ uses Numerology Syncopate on you\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "return snd.illusionChecks.abilityGate()",
+        "type": "lua"
+      }
+    ]
+  }
 ]
