@@ -1,3 +1,4 @@
 if matches[2] == snd.target then
-  snd.target_cured("impede")
+  snd.target_cured("impeded")
 end
+

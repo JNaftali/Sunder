@@ -1359,7 +1359,7 @@ snd.all_class_attacks = {
       end
     end,
     Impede = function(target)
-      snd.target_got("impede")
+      snd.target_got("impeded")
     end,
     Grip = function(target)
       snd.target_got("paresis")
