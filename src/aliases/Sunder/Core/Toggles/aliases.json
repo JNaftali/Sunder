@@ -1,264 +1,266 @@
-              "name": "lighting",
-              "isActive": "yes",
-              "regex": "^(lgt|toggle lighting|toggle pipes)$",
-              "script": "",
-              "isFolder": "no"
-       },
-       {
-              "name": "on",
-              "isActive": "yes",
-              "regex": "^sndon$",
-              "script": "",
-              "isFolder": "no"
-       },
-       {
-              "name": "off",
-              "isActive": "yes",
-              "regex": "^sndoff$",
-              "script": "",
-              "isFolder": "no"
-       },
-       {
-              "name": "calling",
-              "isActive": "yes",
-              "regex": "^(tcl|toggle calling)$",
-              "script": "",
-              "isFolder": "no"
-       },
-       {
-              "name": "affcalling",
-              "isActive": "yes",
-              "regex": "^(acl|toggle affcalling)$",
-              "script": "",
-              "isFolder": "no"
-       },
-       {
-              "name": "gallop",
-              "isActive": "yes",
-              "regex": "^(tgl|toggle gallop)$",
-              "script": "",
-              "isFolder": "no"
-       },
-       {
-              "name": "newb basher",
-              "isActive": "yes",
-              "regex": "^(tnewb|toggle newbie)$",
-              "script": "",
-              "isFolder": "no"
-       },
-       {
-              "name": "parry",
-              "isActive": "yes",
-              "regex": "^(tpry|toggle parry)$",
-              "script": "",
-              "isFolder": "no"
-       },
-       {
-              "name": "static parry",
-              "isActive": "yes",
-              "regex": "(?i)^sp(ll|rl|ra|la|h|t|a)$",
-              "script": "",
-              "isFolder": "no"
-       },
-       {
-              "name": "attack echoes",
-              "isActive": "yes",
-              "regex": "^(tatk|toggle attack echo)$",
-              "script": "",
-              "isFolder": "no"
-       },
-       {
-              "name": "listening",
-              "isActive": "yes",
-              "regex": "^ls (.+)$",
-              "script": "",
-              "isFolder": "no"
-       },
-       {
-              "name": "rockharvest",
-              "isActive": "yes",
-              "regex": "^(tr|toggle rockharvest)$",
-              "script": "",
-              "isFolder": "no"
-       },
-       {
-              "name": "lightning",
-              "isActive": "yes",
-              "regex": "^(tlgt|toggle lightning)$",
-              "script": "",
-              "isFolder": "no"
-       },
-       {
-              "name": "dash",
-              "isActive": "yes",
-              "regex": "^(tds|toggle dash)$",
-              "script": "",
-              "isFolder": "no"
-       },
-       {
-              "name": "Chameleon",
-              "isActive": "yes",
-              "regex": "^(tcm|toggle chameleon)$",
-              "script": "",
-              "isFolder": "no"
-       },
-       {
-              "name": "Questing",
-              "isActive": "yes",
-              "regex": "^toggle questing$",
-              "script": "",
-              "isFolder": "no"
-       },
-       {
-              "name": "Ylem Goggles",
-              "isActive": "yes",
-              "regex": "^toggle goggles$",
-              "script": "",
-              "isFolder": "no"
-       },
-       {
-              "name": "Goggle level",
-              "isActive": "yes",
-              "regex": "^(mygoggles|mygoggles (\\d+))$",
-              "script": "",
-              "isFolder": "no"
-       },
-       {
-              "name": "Dome auto use",
-              "isActive": "yes",
-              "regex": "^toggle dome$",
-              "script": "",
-              "isFolder": "no"
-       },
-       {
-              "name": "Auto check plants",
-              "isActive": "yes",
-              "regex": "^toggle plants$",
-              "script": "",
-              "isFolder": "no"
-       },
-       {
-              "name": "Cobra bashing",
-              "isActive": "yes",
-              "regex": "^toggle cobra$",
-              "script": "",
-              "isFolder": "no"
-       },
-       {
-              "name": "Gag non target curing",
-              "isActive": "yes",
-              "regex": "^toggle non target gagging$",
-              "script": "",
-              "isFolder": "no"
-       },
-       {
-              "name": "auto reject lust",
-              "isActive": "yes",
-              "regex": "^toggle reject$",
-              "script": "",
-              "isFolder": "no"
-       },
-       {
-              "name": "Purge Purify Panacea",
-              "isActive": "yes",
-              "regex": "^pon$",
-              "isFolder": "no"
-       },
-       {
-              "name": "Prism Bashing",
-              "isActive": "yes",
-              "regex": "^prism$",
-              "script": "",
-              "isFolder": "no"
-       },
-       {
-              "name": "Enrich Bashing",
-              "isActive": "yes",
-              "regex": "^prism$",
-              "script": "",
-              "isFolder": "no"
-       },
-       {
-              "name": "Hidden afflictions diagnose count",
-              "isActive": "yes",
-              "regex": "(?i)^diagaffs(?: (\\d+))?$",
-              "script": "",
-              "isFolder": "no"
-       },
-       {
-              "name": "Chameleon Targets",
-              "isActive": "yes",
-              "regex": "(?i)^chamtargets (.+)$",
-              "script": "",
-              "isFolder": "no"
-       },
-       {
-              "name": "target rune for tidesage teradrim",
-              "isActive": "yes",
-              "regex": "^toggle targetrune$",
-              "isFolder": "no"
-       },
-       {
-              "name": "^toggle alerts$",
-              "isActive": "yes",
-              "regex": "^toggle alerts$",
-              "script": "",
-              "isFolder": "no"
-       },
-       {
-              "name": "set 200 race",
-              "isActive": "yes",
-              "regex": "^toggle ascendant (\\w+)$",
-              "script": "",
-              "isFolder": "no"
-       },
-       {
-              "name": "Set your mount",
-              "isActive": "yes",
-              "regex": "^snd mount (\\d+)$",
-              "script": "",
-              "isFolder": "no"
-       },
-       {
-              "name": "Toggle predator Laesan bashing",
-              "isActive": "yes",
-              "regex": "^toggle laesan(?: (on|off))?$",
-              "script": "",
-              "isFolder": "no"
-       },
-       {
-              "name": "Automount",
-              "isActive": "yes",
-              "regex": "^toggle automount$",
-              "script": "",
-              "isFolder": "no"
-       },
-       {
-              "name": "Safelistening",
-              "isActive": "yes",
-              "regex": "^snd safelistening$",
-              "script": "",
-              "isFolder": "no"
-       },
-       {
-              "name": "Bashing target calling",
-              "isActive": "yes",
-              "regex": "^bcl$",
-              "script": "",
-              "isFolder": "no"
-       },
-       {
-              "name": "Mono mode",
-              "isActive": "yes",
-              "regex": "^monomode (on|off|calling)$",
-              "script": "",
-              "isFolder": "no"
-       },
-       {
-              "name": "^wan$",
-              "isActive": "yes",
-              "regex": "^wan$",
-              "script": "",
-              "isFolder": "no"
-       }
+[
+  {
+    "name": "lighting",
+    "isActive": "yes",
+    "regex": "^(lgt|toggle lighting|toggle pipes)$",
+    "script": "",
+    "isFolder": "no"
+  },
+  {
+    "name": "on",
+    "isActive": "yes",
+    "regex": "^sndon$",
+    "script": "",
+    "isFolder": "no"
+  },
+  {
+    "name": "off",
+    "isActive": "yes",
+    "regex": "^sndoff$",
+    "script": "",
+    "isFolder": "no"
+  },
+  {
+    "name": "calling",
+    "isActive": "yes",
+    "regex": "^(tcl|toggle calling)$",
+    "script": "",
+    "isFolder": "no"
+  },
+  {
+    "name": "affcalling",
+    "isActive": "yes",
+    "regex": "^(acl|toggle affcalling)$",
+    "script": "",
+    "isFolder": "no"
+  },
+  {
+    "name": "gallop",
+    "isActive": "yes",
+    "regex": "^(tgl|toggle gallop)$",
+    "script": "",
+    "isFolder": "no"
+  },
+  {
+    "name": "newb basher",
+    "isActive": "yes",
+    "regex": "^(tnewb|toggle newbie)$",
+    "script": "",
+    "isFolder": "no"
+  },
+  {
+    "name": "parry",
+    "isActive": "yes",
+    "regex": "^(tpry|toggle parry)$",
+    "script": "",
+    "isFolder": "no"
+  },
+  {
+    "name": "static parry",
+    "isActive": "yes",
+    "regex": "(?i)^sp(ll|rl|ra|la|h|t|a)$",
+    "script": "",
+    "isFolder": "no"
+  },
+  {
+    "name": "attack echoes",
+    "isActive": "yes",
+    "regex": "^(tatk|toggle attack echo)$",
+    "script": "",
+    "isFolder": "no"
+  },
+  {
+    "name": "listening",
+    "isActive": "yes",
+    "regex": "^ls (.+)$",
+    "script": "",
+    "isFolder": "no"
+  },
+  {
+    "name": "rockharvest",
+    "isActive": "yes",
+    "regex": "^(tr|toggle rockharvest)$",
+    "script": "",
+    "isFolder": "no"
+  },
+  {
+    "name": "lightning",
+    "isActive": "yes",
+    "regex": "^(tlgt|toggle lightning)$",
+    "script": "",
+    "isFolder": "no"
+  },
+  {
+    "name": "dash",
+    "isActive": "yes",
+    "regex": "^(tds|toggle dash)$",
+    "script": "",
+    "isFolder": "no"
+  },
+  {
+    "name": "Chameleon",
+    "isActive": "yes",
+    "regex": "^(tcm|toggle chameleon)$",
+    "script": "",
+    "isFolder": "no"
+  },
+  {
+    "name": "Questing",
+    "isActive": "yes",
+    "regex": "^toggle questing$",
+    "script": "",
+    "isFolder": "no"
+  },
+  {
+    "name": "Ylem Goggles",
+    "isActive": "yes",
+    "regex": "^toggle goggles$",
+    "script": "",
+    "isFolder": "no"
+  },
+  {
+    "name": "Goggle level",
+    "isActive": "yes",
+    "regex": "^(mygoggles|mygoggles (\\d+))$",
+    "script": "",
+    "isFolder": "no"
+  },
+  {
+    "name": "Dome auto use",
+    "isActive": "yes",
+    "regex": "^toggle dome$",
+    "script": "",
+    "isFolder": "no"
+  },
+  {
+    "name": "Auto check plants",
+    "isActive": "yes",
+    "regex": "^toggle plants$",
+    "script": "",
+    "isFolder": "no"
+  },
+  {
+    "name": "Cobra bashing",
+    "isActive": "yes",
+    "regex": "^toggle cobra$",
+    "script": "",
+    "isFolder": "no"
+  },
+  {
+    "name": "Gag non target curing",
+    "isActive": "yes",
+    "regex": "^toggle non target gagging$",
+    "script": "",
+    "isFolder": "no"
+  },
+  {
+    "name": "auto reject lust",
+    "isActive": "yes",
+    "regex": "^toggle reject$",
+    "script": "",
+    "isFolder": "no"
+  },
+  {
+    "name": "Purge Purify Panacea",
+    "isActive": "yes",
+    "regex": "^pon$",
+    "isFolder": "no"
+  },
+  {
+    "name": "Prism Bashing",
+    "isActive": "yes",
+    "regex": "^prism$",
+    "script": "",
+    "isFolder": "no"
+  },
+  {
+    "name": "Enrich Bashing",
+    "isActive": "yes",
+    "regex": "^prism$",
+    "script": "",
+    "isFolder": "no"
+  },
+  {
+    "name": "Hidden afflictions diagnose count",
+    "isActive": "yes",
+    "regex": "(?i)^diagaffs(?: (\\d+))?$",
+    "script": "",
+    "isFolder": "no"
+  },
+  {
+    "name": "Chameleon Targets",
+    "isActive": "yes",
+    "regex": "(?i)^chamtargets (.+)$",
+    "script": "",
+    "isFolder": "no"
+  },
+  {
+    "name": "target rune for tidesage teradrim",
+    "isActive": "yes",
+    "regex": "^toggle targetrune$",
+    "isFolder": "no"
+  },
+  {
+    "name": "^toggle alerts$",
+    "isActive": "yes",
+    "regex": "^toggle alerts$",
+    "script": "",
+    "isFolder": "no"
+  },
+  {
+    "name": "set 200 race",
+    "isActive": "yes",
+    "regex": "^toggle ascendant (\\w+)$",
+    "script": "",
+    "isFolder": "no"
+  },
+  {
+    "name": "Set your mount",
+    "isActive": "yes",
+    "regex": "^snd mount (\\d+)$",
+    "script": "",
+    "isFolder": "no"
+  },
+  {
+    "name": "Toggle predator Laesan bashing",
+    "isActive": "yes",
+    "regex": "^toggle laesan(?: (on|off))?$",
+    "script": "",
+    "isFolder": "no"
+  },
+  {
+    "name": "Automount",
+    "isActive": "yes",
+    "regex": "^toggle automount$",
+    "script": "",
+    "isFolder": "no"
+  },
+  {
+    "name": "Safelistening",
+    "isActive": "yes",
+    "regex": "^snd safelistening$",
+    "script": "",
+    "isFolder": "no"
+  },
+  {
+    "name": "Bashing target calling",
+    "isActive": "yes",
+    "regex": "^bcl$",
+    "script": "",
+    "isFolder": "no"
+  },
+  {
+    "name": "Mono mode",
+    "isActive": "yes",
+    "regex": "^monomode (on|off|calling)$",
+    "script": "",
+    "isFolder": "no"
+  },
+  {
+    "name": "^wan$",
+    "isActive": "yes",
+    "regex": "^wan$",
+    "script": "",
+    "isFolder": "no"
+  }
 ]
