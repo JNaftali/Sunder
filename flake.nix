@@ -52,6 +52,7 @@
             nativeBuildInputs = with pkgs; [
               lua51Packages.lua
               lua51Packages.ldoc
+              lua51Packages.luacheck
             ];
 
             buildPhase = ''
