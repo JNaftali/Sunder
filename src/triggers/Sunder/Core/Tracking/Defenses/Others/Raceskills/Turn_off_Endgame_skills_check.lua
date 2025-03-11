@@ -1,1 +1,2 @@
-disableTrigger("Which endgame skills you got?")
+disableTrigger("Which endgame skills you got")
+

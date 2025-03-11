@@ -1,2 +1,3 @@
 snd.skills.raceskills = {}
-enableTrigger("Which endgame skills you got?")
+enableTrigger("Which endgame skills you got")
+

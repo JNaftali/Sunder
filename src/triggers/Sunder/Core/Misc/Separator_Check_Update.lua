@@ -1,2 +1,2 @@
 snd.sep = matches[2]
-disableTrigger("Separator Check/Update")
+disableTrigger("Separator Check Update")

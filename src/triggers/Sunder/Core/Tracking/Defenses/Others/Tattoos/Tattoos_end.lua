@@ -1,1 +1,2 @@
-disableTrigger("What tattoos you rockin'?")
+disableTrigger("What tattoos you rockin")
+
