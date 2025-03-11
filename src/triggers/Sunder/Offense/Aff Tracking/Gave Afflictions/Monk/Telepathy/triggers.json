@@ -141,27 +141,17 @@
   },
   {
     "name": "successful mindlock",
-    "isActive": "yes",
-    "isFolder": "no",
-    "multiline": "no",
-    "multilineDelta": "0",
-    "matchall": "no",
-    "filter": "no",
-    "fireLength": "0",
-    "highlight": "no",
-    "highlightFG": "#ff0000",
-    "highlightBG": "#ffff00",
     "patterns": [
       {
-        "pattern": "^Your telepathic efforts are successful, and the mind of (\\w+) is locked with your own.$",
+        "pattern": "^Your telepathic efforts are successful, and the mind of (\\w+) is locked with your own\\.$",
         "type": "regex"
       },
       {
-        "pattern": "You smile in satisfaction as you continue to manipulate the will of (\\w+).",
+        "pattern": "^You smile in satisfaction as you continue to manipulate the will of (\\w+)\\.$",
         "type": "regex"
       },
       {
-        "pattern": "^Your control is starting to slip, and you are quite certain that (\\w+) is aware of an intrusive presence in \\w+ mind.$",
+        "pattern": "^Your control is starting to slip, and you are quite certain that (\\w+) is aware of an intrusive presence in \\w+ mind\\.$",
         "type": "regex"
       }
     ],
@@ -189,16 +179,6 @@
   },
   {
     "name": "lost mindlock",
-    "isActive": "yes",
-    "isFolder": "no",
-    "multiline": "no",
-    "multilineDelta": "0",
-    "matchall": "no",
-    "filter": "no",
-    "fireLength": "0",
-    "highlight": "no",
-    "highlightFG": "#ff0000",
-    "highlightBG": "#ffff00",
     "patterns": [
       {
         "pattern": "The mental cord snaps(.+)",
@@ -209,7 +189,7 @@
         "type": "exactMatch"
       },
       {
-        "pattern": "You dissolve the mindlock, severing all telepathic connections between you and \\w+.",
+        "pattern": "^You dissolve the mindlock, severing all telepathic connections between you and \\w+\\.$",
         "type": "regex"
       }
     ],
@@ -337,27 +317,16 @@
   },
   {
     "name": "Mind Push",
-    "isActive": "yes",
-    "isFolder": "no",
-    "multiline": "no",
-    "multilineDelta": "0",
-    "matchall": "no",
-    "filter": "no",
-    "fireLength": "0",
-    "highlight": "no",
-    "highlightFG": "#ff0000",
-    "highlightBG": "#ffff00",
     "patterns": [
       {
-        "pattern": "You muster your will and pass one of your afflictions into (\\w+).",
+        "pattern": "^You muster your will and pass one of your afflictions into (\\w+)\\.$",
         "type": "regex"
       },
       {
-        "pattern": "You are unable to push an affliction to (\\w+).",
+        "pattern": "^You are unable to push an affliction to (\\w+)\\.$",
         "type": "regex"
       }
-    ],
-    "script": ""
+    ]
   },
   {
     "name": "Blackout balance return",
@@ -393,7 +362,7 @@
     "highlightBG": "#ffff00",
     "patterns": [
       {
-        "pattern": "You use Telepathy Blackout on (\\w+).",
+        "pattern": "^You use Telepathy Blackout on (\\w+)\\.$",
         "type": "regex"
       },
       {

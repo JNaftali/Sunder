@@ -46,7 +46,7 @@
         "type": "regex"
       },
       {
-        "pattern": "Weary with woe, (\\w+) heaves a sigh as .+ self\\-pity settles in\\.",
+        "pattern": "^Weary with woe, (\\w+) heaves a sigh as .+ self\\-pity settles in\\.$",
         "type": "regex"
       }
     ]
