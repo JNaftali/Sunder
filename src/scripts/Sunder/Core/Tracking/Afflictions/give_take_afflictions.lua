@@ -154,13 +154,12 @@ function snd.aff_remove(affliction)
   if not string.find(affliction, "aff_") then
     affliction = "aff_" .. affliction
   end
-  if snd.afflictions[affliction].cures.writhe ~= nil then
-    --  snd.status.writhing = false
-  end
-  snd.afflictions[affliction].state = "healed"
-  if not snd.defer_ui_update then
-    raiseEvent("sunder_my_affs_updated")
-    raiseEvent("sunder_my_limbs_updated")
+  if snd.afflictions[affliction].state ~= "healed" then
+    snd.afflictions[affliction].state = "healed"
+    if not snd.defer_ui_update then
+      raiseEvent("sunder_my_affs_updated")
+      raiseEvent("sunder_my_limbs_updated")
+    end
   end
 end
 
