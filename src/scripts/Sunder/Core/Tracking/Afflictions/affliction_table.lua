@@ -1,16 +1,4 @@
 snd.afflictions = {
-  aff_health_75                  = { state = "healed", cures = { elixir = "health" }, assess = false, timer = createStopWatch() },
-  aff_health_55                  = { state = "healed", cures = { elixir = "health" }, assess = false, timer = createStopWatch() },
-  aff_health_35                  = { state = "healed", cures = { elixir = "health" }, assess = false, timer = createStopWatch() },
-  aff_health_10                  = { state = "healed", cures = { elixir = "health" }, assess = false, timer = createStopWatch() },
-  aff_mana_75                    = { state = "healed", cures = { elixir = "mana" }, assess = false, timer = createStopWatch() },
-  aff_mana_55                    = { state = "healed", cures = { elixir = "mana" }, assess = false, timer = createStopWatch() },
-  aff_mana_35                    = { state = "healed", cures = { elixir = "mana" }, assess = false, timer = createStopWatch() },
-  aff_mana_10                    = { state = "healed", cures = { elixir = "mana" }, assess = false, timer = createStopWatch() },
-  aff_health_low                 = { state = "healed", cures = { moss = "send" }, assess = false, timer = createStopWatch() },
-  aff_mana_low                   = { state = "healed", cures = { moss = "send" }, assess = false, timer = createStopWatch() },
-  aff_bleeding                   = { state = "healed", cures = { clot = "send" }, assess = false, timer = createStopWatch() },
-
   aff_oblivion                   = { state = "healed", effect = "Death unless you interrupt the bard", cures = {}, assess = false, timer = createStopWatch() },
 
   aff_shock                      = { state = "healed", effect = "less mobility", cures = {}, assess = false, timer = createStopWatch() },
