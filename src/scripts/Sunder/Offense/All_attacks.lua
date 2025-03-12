@@ -672,10 +672,10 @@ snd.all_class_attacks = {
       end
     end,
     Pierce = function(target)
-      enableTrigger("Dhuriv Pierce/Sever")
+      enableTrigger("Dhuriv Pierce Sever")
     end,
     Sever = function(target)
-      enableTrigger("Dhuriv Pierce/Sever")
+      enableTrigger("Dhuriv Pierce Sever")
     end,
   },
 
@@ -4378,10 +4378,10 @@ snd.all_class_attacks = {
       end
     end,
     Incise = function(target)
-      enableTrigger("Dhuriv Pierce/Sever")
+      enableTrigger("Dhuriv Pierce Sever")
     end,
     Dissever = function(target)
-      enableTrigger("Dhuriv Pierce/Sever")
+      enableTrigger("Dhuriv Pierce Sever")
     end,
   },
 
