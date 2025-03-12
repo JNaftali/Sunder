@@ -39,6 +39,10 @@
       {
         "pattern": "^You stand within the destroyed remnants of (.+)\\.$",
         "type": "regex"
+      },
+      {
+        "pattern": "^You discern that you are standing amidst the winding ruins of (.+).$",
+        "type": "regex"
       }
     ],
     "script": ""

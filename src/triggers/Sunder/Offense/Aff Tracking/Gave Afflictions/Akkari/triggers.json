@@ -29,7 +29,7 @@
     "name": "Holy Light Merciful",
     "patterns": [
       {
-        "pattern": "^Cowed by lightborn majesty, (\\w+) adopts a merciful demeanour\\.$",
+        "pattern": "^Cowed by lightborn majesty, (\\w+) adopts a demeanor filled with mercy\\.$",
         "type": "regex"
       },
       {
@@ -42,11 +42,11 @@
     "name": "Holy Light Selfpity",
     "patterns": [
       {
-        "pattern": "^Pitiless light commands contrition from (\\w+), .+ heart burdened by self\\-pity\\.$",
+        "pattern": "^Pitiless light commands contrition from (\\w+), .+ heart burdened by self pity\\.$",
         "type": "regex"
       },
       {
-        "pattern": "^Weary with woe, (\\w+) heaves a sigh as .+ self\\-pity settles in\\.$",
+        "pattern": "^Weary with woe, (\\w+) heaves a sigh as .+ self pity settles in\\.$",
         "type": "regex"
       }
     ]
