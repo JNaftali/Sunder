@@ -37,7 +37,7 @@ function snd.took_limb_dmg(limb, amount, restoration)
       snd.last_limb_dmg = amount
     end
     if restoration then --resto apply
-      snd.limb_dmg[limb] = snd.limb_dmg[limb] + math.min(0, amount + 2 * snd.fleshbaneStacks)
+      snd.limb_dmg[limb] = snd.limb_dmg[limb] + math.min(-0.01, amount + 2 * snd.fleshbaneStacks)
       if snd.fleshbaneTimer then killTimer(snd.fleshbaneTimer) end
       snd.fleshbaneStacks = 0
     else
@@ -630,4 +630,3 @@ end
 function snd.bruisingEcho(limb, gain)
   cecho((gain and " <green>" or " <red>") .. limb .. " bruised " .. snd.limb_bruising[limb])
 end
-
