@@ -133,15 +133,15 @@
     "highlightBG": "#ffff00",
     "patterns": [
       {
-        "pattern": "You reel frantically against",
+        "pattern": "You reel frantically against the fish's bulk, trying to bring it closer to you.",
         "type": "exactMatch"
       },
       {
-        "pattern": "You guide the pole to one side, leading the fighting creature",
+        "pattern": "You guide the pole to one side, leading the fighting creature on the other end in an attempt to tire it out.",
         "type": "exactMatch"
       },
       {
-        "pattern": "With a fluid flick of your wrist, you loose the fishhook",
+        "pattern": "With a fluid flick of your wrist, you loose the fishhook from its holding place and cast your line into the water.",
         "type": "exactMatch"
       },
       {
