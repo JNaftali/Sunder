@@ -19,7 +19,7 @@ function snd.login()
     if snd.class == "Archivist" then send("empower jhako") end
     if snd.class == "Voidseer" then send("affirm branch") end
 
-    enableTrigger("Separator Check/Update")
+    enableTrigger("Separator Check Update")
     send("config separator", false)
 
     tempTimer(1, function() raiseEvent("sunder_login") end)
