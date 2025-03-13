@@ -1,3 +1,5 @@
+--- @submodule core
+
 snd.class_list = {
   { class = "Akkari",       func = function(current) snd.akkari_bash() end },
   { class = "Alchemist",    func = function(current) snd.alchemist_bash() end },
@@ -33,12 +35,17 @@ snd.class_list = {
   { class = "None",         func = function(current) snd.none_bash() end }, --200
 }
 
+--- This just checks to see if shield is deffed.
+-- Probably will remove, this seems redundant
+-- @function snd.shield_check
 function snd.shield_check()
   if snd.defenses.def_shield_tattoo.state ~= "deffed" then
     return true
   end
 end
 
+--- Bashing function, picks attacks based on your class.
+-- @functioon snd.bashing_function
 function snd.bashing_function()
   if not snd.room_clear then
     return
@@ -48,49 +55,26 @@ function snd.bashing_function()
     if not snd.bashing.targeted then
       snd.runBasher()
     else
-      battack = "none"                                 -- set attack to none
-      if not snd.counterattack_active then             -- if the npc isn't counter attacking (tcanna/drakkum/torturer), then check class skills
-        for k, v in pairs(snd.class_list) do
-          if snd.class_list[k].class == snd.class then -- check current class to class bash list above
-            battack =
-            ""                                         -- set attack from 'none' to "" so it can be set in the class basher, will provide error if it can't get a class ability
-            if snd[v.class:lower() .. "_bash_override"] then
-              snd[v.class:lower() .. "_bash_override"]()
-            else
-              v.func()                                              -- set attack from class basher
-            end
-            if snd.have_aff("shock") and hasSkill("Overdrive") then -- let's use overdrive if we have shock, adds to new class bashing attack line
-              battack = "overdrive" .. snd.sep .. battack .. snd.sep .. "recoup" .. snd.sep
-            elseif snd.pushattack then                              -- if they are a pushable npc (tcanna/drakuum/torturer) and we know we can shove, do it first
-              battack = "push " .. snd.bashing.target .. snd.sep .. "recoup" .. snd.sep
-              snd.pushattack = false
-            end
-          end
-        end
-      else -- if they're counter attacking, let's not do anything
-        battack = ""
+      battack = ""
+      local class = snd.class:lower()
+      if snd[class .. "_bash_override"] then
+        snd[class .. "_bash_override"]()                                      --try bashing override first
+      elseif snd[class .. "_bash"] then
+        snd[class .. "_bash"]()                                               --check for/use stock bashing function
+      else
+        battack = "kill " .. snd.target                                       --if no bashing function exists, default to kill
+      end
+      if snd.have_aff("shock") and hasSkill("Overdrive") then                 -- let's use overdrive if we have shock, adds to new class bashing attack line
+        battack = "overdrive" .. snd.sep .. battack .. snd.sep
       end
 
-      -- if snd.probed then -- If a npc is probed, move along
-      -- else -- else, in three areas that have advanced bashing, probe the npc to see if they are a punisher
-      -- if gmcp.Room.Info.area == "Tcanna Island" or gmcp.Room.Info.area == "Drakuum"  or gmcp.Room.Info.area == "the Torturers' Caverns" then
-      -- battack = "probe "..snd.bashing.target..snd.sep..battack..snd.sep -- we're probing here and then attacking from above
-      -- end -- note, this is just to make sure you don't get owned by shielding on punisher type npcs
-      -- end
-      -- if tonumber(gmcp.Char.Vitals.bleeding) > 500 and hasSkill("Clotting") then -- if you are bleeding a lot and can clot, clot with your attack
-      -- mp = 100*(gmcp.Char.Vitals.mp/gmcp.Char.Vitals.maxmp)
-      -- if mp >= 50 then
-      -- battack = "clot 500"..snd.sep..battack..snd.sep
-      -- end
-      -- end
+      if tonumber(snd.toggles.gauntlet_level) >= 2 then battack = battack .. snd.sep .. "absorb ylem" end -- if you have a level 2 gauntlet, auto-absorb
 
-      if tonumber(snd.toggles.gauntlet_level) >= 2 then battack = battack .. snd.sep .. "absorb ylem" end       -- if you have a level 2 gauntlet, auto-absorb
-
-      if battack == "" and (snd.counterattack_active or not snd.defenses.def_reflection.state == "deffed") then -- if the basher couldn't change battack to something from your class, it will give an error
+      if battack == "" and snd.defenses.def_reflection.state ~= "deffed" then                             -- if the basher couldn't change battack to something from your class, it will give an error
         echo("\nTried to bash, no class ability set.")
-      elseif battack ~= snd.last_attack and not snd.ylem_check then                                             -- if your battack isn't the same as your last attempted attack, and you aren't trying to capture ylem
-        snd.last_attack = battack                                                                               -- ATTACK
-        if battack ~= "none" then                                                                               -- if for some reason it's none as your attack, stand
+      elseif battack ~= snd.last_attack and not snd.ylem_check then                                       -- if your battack isn't the same as your last attempted attack, and you aren't trying to capture ylem
+        snd.last_attack = battack                                                                         -- ATTACK
+        if battack ~= "none" then                                                                         -- if for some reason it's none as your attack, stand
           snd.send("qeb stand" .. snd.sep .. snd.last_attack)
         end
         snd.waiting.queue = true

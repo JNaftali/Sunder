@@ -1,28 +1,18 @@
 [
   {
     "name": "Mending Vivify False",
-    "isActive": "yes",
-    "isFolder": "no",
-    "multiline": "no",
-    "multilineDelta": "0",
-    "matchall": "no",
-    "filter": "no",
-    "fireLength": "0",
-    "highlight": "no",
-    "highlightFG": "#ff0000",
-    "highlightBG": "#ffff00",
     "patterns": [
       {
-        "pattern": "^You utter a low hiss from exertion as you will the power of your blood to repair the wounds your undead body has sustained.$",
-        "type": "regex"
+        "pattern": "You utter a low hiss from exertion as you will the power of your blood to repair the wounds your undead body has sustained.",
+        "type": "exactMatch"
       },
       {
         "pattern": "Blood cannot be called upon to repair your walking corpse again so soon.",
         "type": "exactMatch"
       },
       {
-        "pattern": "^Flushed with the bounty of purest, unadulterated life, you exert your will to expend your vitality in a surge which knits your flesh in an instant.$",
-        "type": "regex"
+        "pattern": "Flushed with the bounty of purest, unadulterated life, you exert your will to expend your vitality in a surge which knits your flesh in an instant.",
+        "type": "exactMatch"
       },
       {
         "pattern": "You may not invoke the vitality of your lifeforce again quite yet.",
@@ -32,16 +22,6 @@
   },
   {
     "name": "Mending Vivify True",
-    "isActive": "yes",
-    "isFolder": "no",
-    "multiline": "no",
-    "multilineDelta": "0",
-    "matchall": "no",
-    "filter": "no",
-    "fireLength": "0",
-    "highlight": "no",
-    "highlightFG": "#ff0000",
-    "highlightBG": "#ffff00",
     "patterns": [
       {
         "pattern": "You may mend your body once more.",
@@ -55,16 +35,6 @@
   },
   {
     "name": "Purify Succour False",
-    "isActive": "yes",
-    "isFolder": "no",
-    "multiline": "no",
-    "multilineDelta": "0",
-    "matchall": "no",
-    "filter": "no",
-    "fireLength": "0",
-    "highlight": "no",
-    "highlightFG": "#ff0000",
-    "highlightBG": "#ffff00",
     "patterns": [
       {
         "pattern": "Your blood boils and you let out a mighty roar of defiance.",

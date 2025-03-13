@@ -1,206 +1,196 @@
 [
-       {
-              "name": "Not correct essence (Archivist and Voidseer)",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "You are not contemplating the correct essence.",
-                            "type": "exactMatch"
-                     },
-                     {
-                            "pattern": "You have yet to bloom the proper chakra.",
-                            "type": "exactMatch"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "Spheres stop",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^You are attuned to the music of the spheres.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^Finally, your heart stops racing as your soul cries in harmony with the heavens themselves.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "You are already contemplating the music of the spheres.",
-                            "type": "exactMatch"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "Erudition stop",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "You imagine the existential enormity of the Prime Material",
-                            "type": "startOfLine"
-                     },
-                     {
-                            "pattern": "You have gained the erudition defence.",
-                            "type": "exactMatch"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "Spheres start",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "yes",
-              "multilineDelta": "1",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "You use Numerology Spheres.",
-                            "type": "exactMatch"
-                     },
-                     {
-                            "pattern": "You begin to channel the music of the spheres.",
-                            "type": "startOfLine"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "Edurition start",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "yes",
-              "multilineDelta": "1",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "You use Enlightenment Erudition.",
-                            "type": "exactMatch"
-                     },
-                     {
-                            "pattern": "You focus upon the boundaries of your",
-                            "type": "startOfLine"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "Spheres Inbetween",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "Your body begins to sway as the incomprehensible",
-                            "type": "startOfLine"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "Erudition Inbetween",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "Worldly desires and emotions fall away",
-                            "type": "startOfLine"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "Spheres Broke",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "The music of the spheres fades, leaving you weak and unsteady.",
-                            "type": "exactMatch"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "Erudition Broke",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "Your eruditious awareness falters and crumbles away, leaving spiritual agony in its place.",
-                            "type": "exactMatch"
-                     }
-              ],
-              "script": ""
-       }
+  {
+    "name": "Not correct essence (Archivist and Voidseer)",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "You are not contemplating the correct essence.",
+        "type": "exactMatch"
+      },
+      {
+        "pattern": "You have yet to bloom the proper chakra.",
+        "type": "exactMatch"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "Spheres stop",
+    "patterns": [
+      {
+        "pattern": "You are attuned to the music of the spheres.",
+        "type": "exactMatch"
+      },
+      {
+        "pattern": "Finally, your heart stops racing as your soul cries in harmony with the heavens themselves.",
+        "type": "exactMatch"
+      },
+      {
+        "pattern": "You are already contemplating the music of the spheres.",
+        "type": "exactMatch"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "Erudition stop",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "You imagine the existential enormity of the Prime Material",
+        "type": "startOfLine"
+      },
+      {
+        "pattern": "You have gained the erudition defence.",
+        "type": "exactMatch"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "Spheres start",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "yes",
+    "multilineDelta": "1",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "You use Numerology Spheres.",
+        "type": "exactMatch"
+      },
+      {
+        "pattern": "You begin to channel the music of the spheres.",
+        "type": "startOfLine"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "Edurition start",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "yes",
+    "multilineDelta": "1",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "You use Enlightenment Erudition.",
+        "type": "exactMatch"
+      },
+      {
+        "pattern": "You focus upon the boundaries of your",
+        "type": "startOfLine"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "Spheres Inbetween",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "Your body begins to sway as the incomprehensible",
+        "type": "startOfLine"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "Erudition Inbetween",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "Worldly desires and emotions fall away",
+        "type": "startOfLine"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "Spheres Broke",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "The music of the spheres fades, leaving you weak and unsteady.",
+        "type": "exactMatch"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "Erudition Broke",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "Your eruditious awareness falters and crumbles away, leaving spiritual agony in its place.",
+        "type": "exactMatch"
+      }
+    ],
+    "script": ""
+  }
 ]

@@ -79,24 +79,14 @@
 
   {
     "name": "Zenith Delirium Coming",
-    "isActive": "yes",
-    "isFolder": "no",
-    "multiline": "no",
-    "multilineDelta": "0",
-    "matchall": "no",
-    "filter": "no",
-    "fireLength": "0",
-    "highlight": "no",
-    "highlightFG": "#ff0000",
-    "highlightBG": "#ffff00",
     "patterns": [
       {
         "pattern": "You are already reaching towards your zenith.",
         "type": "exactMatch"
       },
       {
-        "pattern": "^Your eyes flash with light as you hone your focus, sinking into the wellspring of spirit within you.$",
-        "type": "regex"
+        "pattern": "Your eyes flash with light as you hone your focus, sinking into the wellspring of spirit within you.",
+        "type": "exactMatch"
       },
       {
         "pattern": "You use Purification Zenith.",
@@ -307,16 +297,6 @@
   },
   {
     "name": "Zenith Delirium Ready",
-    "isActive": "yes",
-    "isFolder": "no",
-    "multiline": "no",
-    "multilineDelta": "0",
-    "matchall": "no",
-    "filter": "no",
-    "fireLength": "0",
-    "highlight": "no",
-    "highlightFG": "#ff0000",
-    "highlightBG": "#ffff00",
     "patterns": [
       {
         "pattern": "Soulfire burns in your veins, your thoughts consumed utterly by sweet, agonising delirium.",
@@ -327,8 +307,8 @@
         "type": "exactMatch"
       },
       {
-        "pattern": "^Drawing the currents of fire and spirit through your being, your power reaches a calm, trembling zenith, ready to be unleashed in your attacks.$",
-        "type": "regex"
+        "pattern": "Drawing the currents of fire and spirit through your being, your power reaches a calm, trembling zenith, ready to be unleashed in your attacks.",
+        "type": "exactMatch"
       },
       {
         "pattern": "You have reached your zenith!",

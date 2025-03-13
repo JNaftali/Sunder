@@ -1,2 +1,3 @@
 snd.skills.tattoos_on_me = {}
-enableTrigger("What tattoos you rockin'?")
+enableTrigger("What tattoos you rockin")
+
