@@ -105,13 +105,6 @@
     "isFolder": "no"
   },
   {
-    "name": "Questing",
-    "isActive": "yes",
-    "regex": "^toggle questing$",
-    "script": "",
-    "isFolder": "no"
-  },
-  {
     "name": "Ylem Goggles",
     "isActive": "yes",
     "regex": "^toggle goggles$",

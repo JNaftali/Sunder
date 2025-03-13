@@ -1,58 +1,51 @@
 [
-       {
-              "name": "Questing Help File",
-              "isActive": "yes",
-              "regex": "^(S|s)under (H|h)elp (q|Q)uesting$",
-              "script": "",
-              "isFolder": "no"
-       },
-       {
-              "name": "Who Help File",
-              "isActive": "yes",
-              "regex": "^(S|s)under (H|h)elp (w|W)ho$",
-              "script": "",
-              "isFolder": "no"
-       },
-       {
-              "name": "Vermin Help File",
-              "isActive": "yes",
-              "regex": "^(S|s)under (H|h)elp (v|V)ermin$",
-              "script": "",
-              "isFolder": "no"
-       },
-       {
-              "name": "Fluidcache Help File",
-              "isActive": "yes",
-              "regex": "^(S|s)under (H|h)elp (F|f)luidcache$",
-              "script": "",
-              "isFolder": "no"
-       },
-       {
-              "name": "Shop Help File",
-              "isActive": "yes",
-              "regex": "^(S|s)under (H|h)elp (S|s)hops$",
-              "script": "",
-              "isFolder": "no"
-       },
-       {
-              "name": "Fishing Help File",
-              "isActive": "yes",
-              "regex": "^(S|s)under (H|h)elp (F|f)ishing$",
-              "script": "",
-              "isFolder": "no"
-       },
-       {
-              "name": "Name database help file",
-              "isActive": "yes",
-              "regex": "^(S|s)under (H|h)elp (P|p)(B|b)$",
-              "script": "",
-              "isFolder": "no"
-       },
-       {
-              "name": "Sunder Utilities Index",
-              "isActive": "yes",
-              "regex": "^(S|s)under (H|h)elp (U|u)tilities$",
-              "script": "",
-              "isFolder": "no"
-       }
+  {
+    "name": "Who Help File",
+    "isActive": "yes",
+    "regex": "^(S|s)under (H|h)elp (w|W)ho$",
+    "script": "",
+    "isFolder": "no"
+  },
+  {
+    "name": "Vermin Help File",
+    "isActive": "yes",
+    "regex": "^(S|s)under (H|h)elp (v|V)ermin$",
+    "script": "",
+    "isFolder": "no"
+  },
+  {
+    "name": "Fluidcache Help File",
+    "isActive": "yes",
+    "regex": "^(S|s)under (H|h)elp (F|f)luidcache$",
+    "script": "",
+    "isFolder": "no"
+  },
+  {
+    "name": "Shop Help File",
+    "isActive": "yes",
+    "regex": "^(S|s)under (H|h)elp (S|s)hops$",
+    "script": "",
+    "isFolder": "no"
+  },
+  {
+    "name": "Fishing Help File",
+    "isActive": "yes",
+    "regex": "^(S|s)under (H|h)elp (F|f)ishing$",
+    "script": "",
+    "isFolder": "no"
+  },
+  {
+    "name": "Name database help file",
+    "isActive": "yes",
+    "regex": "^(S|s)under (H|h)elp (P|p)(B|b)$",
+    "script": "",
+    "isFolder": "no"
+  },
+  {
+    "name": "Sunder Utilities Index",
+    "isActive": "yes",
+    "regex": "^(S|s)under (H|h)elp (U|u)tilities$",
+    "script": "",
+    "isFolder": "no"
+  }
 ]

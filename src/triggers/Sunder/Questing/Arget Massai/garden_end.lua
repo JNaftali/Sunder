@@ -1,1 +1,0 @@
-setTriggerStayOpen("mountain garden", 0)
