@@ -1,10 +1,10 @@
 {
        "package": "Sunder",
-       "title": "",
-       "description": "",
+       "title": "Sunder",
+       "description": "Aetolia's Primere System",
        "version": "8.0.0",
        "author": "",
-       "icon": "",
+       "icon": "logo.png",
        "dependencies": "",
        "outputFile": true
 }
