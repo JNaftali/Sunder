@@ -256,7 +256,6 @@ snd.priorities =
   "def_irongrip",
   "def_vigor",
   "def_divert_melee",
-  "def_dodge_melee",
   "def_waterwalking",
   "def_flame_tattoo",
   "def_fearless",

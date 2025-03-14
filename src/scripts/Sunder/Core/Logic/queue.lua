@@ -69,6 +69,9 @@ function snd.do_queue()
       if snd.toggles.parrying and snd.offense_loaded then -- remove the offense_loaded check if you want it to always parry
         snd.parry()
       end
+      if (snd.toggles.bashing and snd.bashing_loaded) or (snd.offense_loaded) then
+        snd.dodge()
+      end
       if ((hasSkill("Purge") and snd.class == "Carnifex") or (hasSkill("Annul") and snd.class == "Warden")) and snd.purge_check() then
         table.insert(snd.queue, "purge")
       end

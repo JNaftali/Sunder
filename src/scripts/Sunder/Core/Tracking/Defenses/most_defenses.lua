@@ -1,9 +1,9 @@
-snd.defenses_list =  {
+snd.defenses_list = {
   ["Your hands are gripping your wielded items tightly."] = "irongrip",
   ["You are utilising a careful, trained grip on your weapons."] = "gripping",
   ["Your senses are magically heightened."] = "mindseye",
   ["You are diverting melee attacks."] = "divert_melee",
-  ["You are surrounded by a cloak of protection."] = "cloak_tattoo", 
+  ["You are surrounded by a cloak of protection."] = "cloak_tattoo",
   ["You are utilising your bodily control to make yourself more fit."] = "fitness",
   ["You are blind."] = "blindness",
   ["You are deaf."] = "deafness",
@@ -19,7 +19,6 @@ snd.defenses_list =  {
   ["Your sense of time is heightened, and your reactions are speeded."] = "speed",
   ["You are insulated against the harsh cold."] = "caloric",
   ["You are protected from hand-held weapons with an aura of rebounding."] = "rebounding",
-  ["You are dodging melee attacks."] = "dodge_melee",
   ["Your vision is heightened to see in the dark."] = "nightsight",
   ["Your mind is filled with clarity."] = "clarity",
   ["You are completely fearless."] = "fearless",
@@ -122,11 +121,11 @@ snd.defenses_list =  {
   ["Your flail imbued with the raw force of the desert."] = "erosion",
   ["Your arms have been bound in stone."] = "stonebind",
   ["You have imbued the fury of the Earthen into your flail."] = "imbue_stonefury",
---  ["You are channeling the will of the Earthen."] = "imbue_will",
+  --  ["You are channeling the will of the Earthen."] = "imbue_will",
   ["You are focusing your energy into sweltering your sands."] = "sand_swelter",
   ["You can feel the earth parting through your feet."] = "footfeel",
   ["You are in tune with the water currents below."] = "currents",
-  
+
   ["Gnashing your tongue, your mouth salivates with fluid."] = "salivate",
   ["Your coat of fur has been thickened."] = "thickfur",
   ["You are bracing from attacks."] = "bracing",
@@ -290,7 +289,7 @@ snd.defenses_list =  {
   ["The Warden's blessing preserves you."] = "hex_preservation",
   ["Phantasmal ironbark girds your form."] = "ironbark",
   ["You are feeling quite selfish."] = "selfishness",
-  ["You are overwhelmed by a blood rage."] =  "bloodrage",
+  ["You are overwhelmed by a blood rage."] = "bloodrage",
   ["You have flooded your undead body with warm, pulsating lifeblood."] = "deluge",
   ["Shadows are gathered around your arm, waiting to defend you."] = "shadowblow",
   ["You stalk the night as a predator."] = "stalking",
@@ -304,10 +303,10 @@ snd.defenses_list =  {
   ["You have enacted the Oath of Tranquility."] = "oath_tranquility",
   ["You have enacted the Oath of the Primeval."] = "oath_primeval",
   ["You have enacted the Oath of the Rhythm."] = "oath_rhythm",
-  
+
   ["You have used great guile to conceal yourself."] = "hiding",
   ["You are focusing on catching arrows."] = "arrow_catching",
-  
+
   ["The blight spreads wherever you may roam."] = "blightbringer",
   ["You are recalling the discipline of Field Studies."] = "discipline_fieldstudies",
   ["You are recalling the discipline of Compounding."] = "discipline_compounding",
@@ -316,16 +315,16 @@ snd.defenses_list =  {
   ["You are recalling the discipline of Procedure & Protocol."] = "discipline_pnp",
   ["You are recalling the discipline of Biology."] = "discipline_biology",
   ["You are recalling the discipline of Chemistry."] = "discipline_chemistry",
-  
+
   ["You are projecting your will through your sand."] = "projection",
   ["You are concentrating on maintaining a sure foot."] = "surefooted",
   ["You are attuned to disturbances within your sand domain."] = "disturbances",
   ["Sand is softening your footsteps."] = "sand_conceal",
   ["You are moving with increased momentum."] = "momentum",
-  
+
   ["Your blood is boiling."] = "boilingblood",
   ["Your will is unbending."] = "unbending",
-  
+
   ["You are returning thrown weapons to your hand."] = "returning",
   --Adherent
   ["You are protected by an Adherent's barrier."] = "adherent_barrier",
@@ -341,7 +340,7 @@ snd.defenses_list =  {
   ["You are wreaking ruination on those around you."] = "adherent_ruination",
   ["You are inflicting vengeance against your enemies."] = "adherent_avengement",
   ["You are wreathed in a storm of acid rain."] = "adherent_acid",
-  
+
   --Glacian
   ["You have transfigured your physiology; you are a Glacian."] = "glacian_form",
   ["A cloak of midnight is protecting you."] = "glacian_penumbra",
@@ -351,7 +350,7 @@ snd.defenses_list =  {
   ["You are wreathed in an aura of twilight."] = "glacian_twilight",
   ["Your shadow is absorbing attacks in your stead."] = "glacian_adumbration",
   ["Your shadow will come to your aid when needed."] = "glacian_adumbration_stored",
-  
+
   --Tiarna
   ["You are surrounded by a bulwark of the wilds."] = "tiarna_bulwark",
   ["You are wreathed in a verdant haze of Dia'ruian ruin."] = "tiarna_ruin",
@@ -361,7 +360,7 @@ snd.defenses_list =  {
   ["Nature's shelter will come to your rescue."] = "tiarna_shelter_stored",
   ["You are attuned to the Grove of Isolation."] = "tiarna_store",
   ["The savage fury of the wilds will echo your attacks."] = "tiarna_chimerism",
-  
+
   --Aetherial
   ["The bastion of Tharbar and Shenna is with you."] = "aetherial_bastion",
   ["The presence of Izu-Ari is bolstering your fortunes."] = "aetherial_presence",
@@ -371,7 +370,7 @@ snd.defenses_list =  {
   ["Sekhtet's protective band will come to your aid."] = "aetherial_band_stored",
   ["You are attuned to Agorra, the celestial marketplace."] = "aetherial_store",
   ["You have arisen to the form of an Aetherial."] = "aetherial_form",
-  
+
   --Seraph
   ["You are a Seraph; a holy warrior of Rahiela."] = "seraph_form",
   ["You are protected by a golden halo."] = "seraph_halo",
@@ -381,7 +380,7 @@ snd.defenses_list =  {
   ["Your wings are touched by the twin parhelion."] = "seraph_parhelion",
   ["A corona will protect you in your hour of need."] = "seraph_corona_stored",
   ["Your soul is pledged to the Solar Enclave."] = "seraph_store",
-  
+
   --Titan
   ["Your crackling aura strikes at your foes."] = "titan_disruption",
   ["Your core has awoken, granting you the full mantle of the Titan."] = "titan_form",
@@ -391,7 +390,7 @@ snd.defenses_list =  {
   ["A jittering remnant of ley-light stands nearby."] = "titan_remnant",
   ["A remnant of ley-light will come to your rescue."] = "titan_remnant_stored",
   ["You have stored away a part of your soul deep within the leylines."] = "titan_store",
-  
+
   --Astral
   ["The sickly virulence of chaos spills from you."] = "astral_chaosspores",
   ["You are protected by the waves of the dreamtide."] = "astral_dreamtide",
@@ -401,7 +400,7 @@ snd.defenses_list =  {
   ["The duality of indigo is mirroring your actions."] = "astral_recursion",
   ["Orange light wreathes you in a fiery shield."] = "astral_refulgence",
   ["You are attuned to the boughs of the worldflower."] = "astral_store",
-  
+
   --Nocturn
   ["A layer of hardened blood protects your body in a sanguine shield."] = "nocturn_bloodcoat",
   ["Your blood double mimics your attacks."] = "nocturn_double",
@@ -411,7 +410,7 @@ snd.defenses_list =  {
   ["Your shadow readies itself to take the next attack against you."] = "nocturn_shadow",
   ["Your shadow moves autonomously, ready to protect you at the right moment."] = "nocturn_shadow_stored",
   ["You have imbued the sanguine realm with your presence."] = "nocturn_store",
-  
+
   --sagani
   ["You are wreathed in the storm's fury: all will suffer."] = "sagani_epicentre",
   ["You exist as a Sagani; a coalescion of elements given form."] = "sagani_form",
@@ -421,7 +420,7 @@ snd.defenses_list =  {
   ["Arcane similitude renders you twice as effective."] = "sagani_similitude",
   ["You are attuned to your locus of elements."] = "sagani_store",
   ["A wall of stone is encircling you."] = "sagani_wall",
-  
+
   --chaos
   ["Your chaotic energy strikes at your foes."] = "chaos_entropy",
   ["An illusory figment of Chaos stands next to you."] = "chaos_figment",
@@ -431,9 +430,9 @@ snd.defenses_list =  {
   ["You are extending your Chaotic aura to others."] = "chaos_presence",
   ["You are surrounded by a shroud of Chaos."] = "chaos_shroud",
   ["You have stored away a part of your soul in the safety of Chaos."] = "chaos_store",
-  
+
   --Predator
-  
+
   ["You are using careful footwork to keep space from foes."] = "spacing",
   ["You are hiding your identity with a mask."] = "masked",
   ["You are parrying all attacks that are targeted at your limbs."] = "trueparry",
@@ -450,7 +449,7 @@ snd.defenses_list =  {
   ["You have heightened your awareness of those targeting you."] = "culmination",
 
   ["You are attuned to revivals."] = "lifesense",
-  
+
   --Executor
   ["Atramentous shadow girds your physical form."] = "girded",
   ["Your bloodlust keeps you afloat in the heat of battle."] = "bloodlust",
@@ -462,7 +461,7 @@ snd.defenses_list =  {
   ["Grit and bravery inspirit your confidence."] = "inspirited",
   ["You are prepared to somersault away from danger."] = "somersault",
   ["Your litheness keeps you on your feet."] = "lithe",
-  
+
   --Voidseer
   ["You are practicing sagacious erudition."] = "erudition",
   ["Synergy unifies your body and mind."] = "synergism",
@@ -471,44 +470,44 @@ snd.defenses_list =  {
   ["Chakral energy girds your mind."] = "withstand",
   ["You are surpassing your mortal limits."] = "vitalise",
   ["Forbidden occultism informs your every move."] = "occultism",
-  
+
   ["Your physical form is partly ethereal."] = "ethereal",
-  
+
   ["Your weapons flow through the air."] = "iyedlo",
   ["Your weapons will flow like water."] = "waterflow",
   ["Your form is softened by ghostly ephemerality."] = "diminution",
-  
+
   ["Your boar tattoo is being empowered."] = "empowered_boar",
-  
+
   ["You are surrounded by a shimmering, charged sphere."] = "capacitance",
   ["Your next fire spell is hasted with speed."] = "afterburn",
   ["Your hands glow with heat and flame."] = "fireburst",
-  
+
   ["Your throat is filled with roiling black fire."] = "blackfire",
   ["Your yellow bile sorcery is enhanced with sickly power."] = "roil",
   ["You have accumulated energy to impede your foes."] = "impediment",
-  
+
   ["You may sense those who are near death."] = "tapestry",
   ["You are able to sense those close to death."] = "morisensus",
   ["You are watching the trees for signs of movement."] = "treewatch",
   ["You are aware of movement in the skies."] = "skywatch",
-  
+
   ["You are heavily focused on close combat."] = "closecombat",
-  
+
   ["Your howls are shaking the bones of your victims."] = "boneshaking",
-  
+
   --Siderealist
   ["Your vitals are enhanced by the cobalt light of the stars."] = "blueshift",
   ["You are drawing cosmic will into your body."] = "luminesce",
   ["You have gained foresight against harm."] = "foresight",
   ["You are gathering cosmic energy in one hand."] = "centrum",
   ["You are enfolded by miniature stars of gleaming light."] = "stargleam",
-  
-  
+
+
   ["You are maintaining consciousness at all times."] = "consciousness",
-  
+
   ["You stand within a prismatic barrier."] = "barrier",
-  
+
   ["Ylem will increase your wealth."] = "manipulation_wealth",
 
   ["You are diffused by a white mist."] = "white_orb",
@@ -518,4 +517,4 @@ snd.defenses_list =  {
   ["You are diffused by a green mist."] = "green_orb",
 
 }
- 
+
