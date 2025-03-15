@@ -4,6 +4,7 @@
 -- This is the heart of everything. It gets run at every prompt.
 -- @function snd.core
 function snd.core()
+  if not gmcp.Char then return end -- temporary patch for not running system until logged in
   if snd.toggles.active and not snd.waiting.lighting and snd.can_cast() and snd.not_aff("perplexity") and snd.not_aff("paresis") then
     local commandSent = false
     for pipe, isEmpty in pairs(snd.emptypipes) do
