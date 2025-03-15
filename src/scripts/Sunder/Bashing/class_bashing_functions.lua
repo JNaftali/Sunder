@@ -62,19 +62,21 @@ function snd.bashing_function()
       elseif snd[class .. "_bash"] then
         snd[class .. "_bash"]()                                               --check for/use stock bashing function
       else
-        battack = "kill " .. snd.target                                       --if no bashing function exists, default to kill
+        battack = "kill " .. snd.bashing.target                               --if no bashing function exists, default to kill
       end
       if snd.have_aff("shock") and hasSkill("Overdrive") then                 -- let's use overdrive if we have shock, adds to new class bashing attack line
         battack = "overdrive" .. snd.sep .. battack .. snd.sep
       end
+      if snd.toggles.parrying and snd.toparry ~= "none" and snd.toparry ~= snd.parrying then
+        battack = "parry " .. snd.toparry .. snd.sep .. battack
+      end
+      if tonumber(snd.toggles.gauntlet_level) >= 2 then battack = battack .. snd.sep .. "absorb ylem" end       -- if you have a level 2 gauntlet, auto-absorb
 
-      if tonumber(snd.toggles.gauntlet_level) >= 2 then battack = battack .. snd.sep .. "absorb ylem" end -- if you have a level 2 gauntlet, auto-absorb
-
-      if battack == "" and snd.defenses.def_reflection.state ~= "deffed" then                             -- if the basher couldn't change battack to something from your class, it will give an error
+      if battack == "" and (snd.counterattack_active or not snd.defenses.def_reflection.state == "deffed") then -- if the basher couldn't change battack to something from your class, it will give an error
         echo("\nTried to bash, no class ability set.")
-      elseif battack ~= snd.last_attack and not snd.ylem_check then                                       -- if your battack isn't the same as your last attempted attack, and you aren't trying to capture ylem
-        snd.last_attack = battack                                                                         -- ATTACK
-        if battack ~= "none" then                                                                         -- if for some reason it's none as your attack, stand
+      elseif battack ~= snd.last_attack and not snd.ylem_check then                                             -- if your battack isn't the same as your last attempted attack, and you aren't trying to capture ylem
+        snd.last_attack = battack                                                                               -- ATTACK
+        if battack ~= "none" then                                                                               -- if for some reason it's none as your attack, stand
           snd.send("qeb stand" .. snd.sep .. snd.last_attack)
         end
         snd.waiting.queue = true
@@ -126,8 +128,12 @@ function snd.alchemist_bash()
           snd.sep .. "experiment reconfigure tumefactive" .. snd.sep .. "order experiment follow me" .. snd.sep
     end
   else
-    battack = "experiment recall" .. snd.sep ..
-        "order experiment passive" .. snd.sep .. "order experiment follow me" .. snd.sep
+    if gmcp.Char.Vitals.elevation ~= "flying" then
+      battack = "experiment recall" .. snd.sep ..
+          "order experiment passive" .. snd.sep .. "order experiment follow me" .. snd.sep
+    else
+      battack = ""
+    end
   end
 
   if hp <= 40 and snd.shield_check() then
@@ -560,7 +566,11 @@ function snd.shaman_bash()
       battack = "order spirit passive" .. snd.sep .. "familiar morph bear" .. snd.sep .. "order spirit follow me"
     end
   else
-    battack = "familiar recall" .. snd.sep .. "order spirit passive" .. snd.sep .. "order spirit follow me"
+    if gmcp.Char.Vitals.elevation ~= "flying" then
+      battack = "familiar recall" .. snd.sep .. "order spirit passive" .. snd.sep .. "order spirit follow me"
+    else
+      battack = ""
+    end
   end
 
   if hp <= 40 and snd.shield_check() then

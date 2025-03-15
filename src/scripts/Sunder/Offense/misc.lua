@@ -77,22 +77,6 @@ end
 -- @function snd.target_locked
 -- @return boolean
 function snd.target_locked()
-  if snd.checksomeAffs({ "slickness", "burnt_skin" }, 1) and snd.checksomeAffs({ "paresis", "asthma", "destroyed_throat" }, 3) then
-    return true
-  end
-
-  if snd.checksomeAffs({ "slickness", "burnt_skin" }, 1) and snd.checksomeAffs({ "paresis", "asthma", "anorexia" }, 3)
-      and snd.checksomeAffs({ "stupidity", "impatience", "muddled", "egocentrism" }, 1) then
-    return true
-  end
-
-  if snd.checkAff("slough") and snd.checkAff("paresis") and
-      ((snd.checkAff("anorexia", 1) and snd.checksomeAffs({ "stupidity", "impatience", "muddled", "egocentrism" }, 1)) or
-        snd.checkAff("destroyed_throat"))
-  then
-    return true
-  end
-
   if (snd.checksomeAffs({ "paresis", "tree_seared", "faulted", "frozen" }, 1) or snd.checksomeAffs({ "left_arm_crippled", "right_arm_crippled" }, 2)) and --can't tree
       (snd.checksomeAffs({ "asthma", "slickness" }, 2) or snd.checkAff("slough")) and                                                                     --can't apply, and can't smoke if can't apply is through slickness.
       ((snd.checkAff("anorexia") and snd.checksomeAffs({ "stupidity", "impatience", "muddled", "egocentrism" }, 1)) or
@@ -155,9 +139,6 @@ function snd.no_parry()
   }
   if snd.class == "Sentinel" or snd.class == "Executor" then
     table.insert(noparryaffs, "arrhythmia")
-  end
-  if snd.cureset == "zealot" then
-    table.insert(noparryaffs, "paresis")
   end
   if snd.checksomeAffs(noparryaffs, 1) then no_parry = true end
 
