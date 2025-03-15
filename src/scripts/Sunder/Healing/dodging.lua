@@ -14,9 +14,8 @@ function snd.dodge()
     tododge = "melee"
   end
 
-  if tododge ~= "none" and tododge ~= snd.current_dodge and snd.full_balance() and not snd.waiting.dodge then
+  if tododge ~= "none" and tododge ~= snd.current_dodge and not snd.waiting.dodge then
     snd.send("dodge " .. tododge)
-    snd.current_dodge = tododge
   end
   snd.waiting.dodge = true
   tempTimer(snd.delay(), [[snd.waiting.dodge = false]])

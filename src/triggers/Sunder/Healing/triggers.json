@@ -1,46 +1,62 @@
 [
-       {
-              "name": "necromancy shrivel",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "2",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^(\\w+) uses Necromancy Shrivel \\((arms|legs)\\) on you\\.$",
-                            "type": "regex"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "Reckless check",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "You focus your mind intently on curing your mental maladies.",
-                            "type": "exactMatch"
-                     },
-                     {
-                            "pattern": "You tactfully will your body to clot some of its open wounds.",
-                            "type": "exactMatch"
-                     }
-              ],
-              "script": ""
-       }
+  {
+    "name": "necromancy shrivel",
+    "patterns": [
+      {
+        "pattern": "^(\\w+) uses Necromancy Shrivel \\((arms|legs)\\) on you\\.$",
+        "type": "regex"
+      }
+    ]
+  },
+  {
+    "name": "Reckless check",
+    "patterns": [
+      {
+        "pattern": "You focus your mind intently on curing your mental maladies.",
+        "type": "exactMatch"
+      },
+      {
+        "pattern": "You tactfully will your body to clot some of its open wounds.",
+        "type": "exactMatch"
+      }
+    ]
+  },
+  {
+    "name": "Dodging",
+    "patterns": [
+      {
+        "pattern": "^You are dodging (\\w+) attacks\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^You are already dodging (\\w+) attacks\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^You begin to focus your efforts on dodging (\\w+) attacks\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^You are dodging (\\w+) attacks\\.$",
+        "type": "regex"
+      }
+    ]
+  },
+  {
+    "name": "Dodging down",
+    "patterns": [
+      {
+        "pattern": "You cease your attempts to dodge attacks.",
+        "type": "exactMatch"
+      },
+      {
+        "pattern": "You cease your attempts to divert attacks.",
+        "type": "exactMatch"
+      },
+      {
+        "pattern": "^You begin to focus your efforts on diverting damage from (\\w+) attacks\\.$",
+        "type": "regex"
+      }
+    ]
+  }
 ]
