@@ -1,0 +1,2 @@
+--- Handle GMCP for Sunder related functions
+-- @module gmcp
