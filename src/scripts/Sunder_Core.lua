@@ -303,6 +303,21 @@ function snd.off()
   send(" ")
 end
 
+--- Mounting.
+-- Recalls and quickmounts your saved mount
+-- @function snd.mount
+function snd.mount()
+  snd.send("qeb recall " .. snd.toggles.mount .. snd.sep .. "recall mount" .. snd.sep .. "quickmount " ..
+    snd.toggles.mount)
+end
+
+--- Dismounting.
+-- Dismounts and orders mount to follow
+-- @function snd.dismount
+function snd.dismount()
+  snd.send("qeb qdmount" .. snd.sep .. "order " .. snd.toggles.mount .. " follow me")
+end
+
 --- Event registrations.
 -- Here is where all Core events are registered for.
 -- @section events
