@@ -6,6 +6,41 @@ npb.loc = getMudletHomeDir() .. "/phonebook.lua"
 sndNDB = sndNDB or {}
 npb.config_version = 2
 
+--- @section initialization
+
+--- Configures the configuration.
+-- This function shouldn't be called by the end user, use npb.init instead
+-- @function npb.init_config
+-- @see npb.init
+function npb.init_config()
+  npb.load()
+  npb.t.config = npb.t.config or {}
+  npb.t.config.colors = {
+    bloodloch = "firebrick",
+    spinesreach = "medium_purple",
+    duiran = "lawn_green",
+    enorian = "gold",
+    rogues = "a_brown",
+    divine = "hot_pink",
+  }
+  npb.t.guess_from_clans = true
+  npb.t.people = npb.t.people or {}
+  npb.t.config_version = 2
+  npb.save()
+end
+
+--- Creates the config and sanity checks config versioning.
+-- @function npb.init
+function npb.init()
+  npb.load()
+  if npb.t.config_version == npb.config_version then
+    return
+  end
+  npb.init_config()
+end
+
+--- @section persistence
+
 --- Save phonebook database.
 -- @function npb.save
 function npb.save()
@@ -23,6 +58,8 @@ function npb.load(force)
     table.load(npb.loc, npb.t)
   end
 end
+
+--- @section mappings
 
 --- This table contains a list of cities and their associated clans
 -- @fixme switch the order of this table
@@ -53,35 +90,21 @@ npb.city_guess = {
   ["The Side Line"] = "enorian",
 }
 
-
---- Fetch the characters.json from the API
--- @function npb.getOnlineCharacters
-function npb.getOnlineCharacters()
-  getHTTP("api.aetolia.com/characters.json")
-end
-
---- Handle response from the API request
--- @function npb.handleResponse
--- @see nbp.getOnlineCharacters
-function npb.handleResponse(_, url, body)
-  if url == "https://api.aetolia.com/characters.json" or url == "http://api.aetolia.com/characters.json" then
-    local data = yajl.to_value(body)
-    if npb.qws then
-      npb.qws = false
-      local people = {}
-      for _, person in pairs(data.characters) do
-        table.insert(people, person.name)
-      end
-      npb.qwsorted(people)
-    end
-  end
-end
-
-snd.registerEvent("PhonebookAPI", "sysGetHttpDone", npb.handleResponse)
-
 --- Order used later to iterate over organizations
 -- @table npb.order
 npb.order = { "Bloodloch", "Duiran", "Enorian", "Spinesreach", "Rogues", "Divine" }
+
+--- @section utilities
+
+function npb.color_person(who, city)
+  npb.init()
+  if npb.t.config.colors[city] then
+    return npb.t.config.colors[city]
+  end
+
+  return npb.t.config.colors.rogues
+end
+
 local function newLine()
   moveCursorEnd()
   if getCurrentLine() ~= "" then
@@ -141,6 +164,83 @@ function npb.qwsorted(people)
   moveCursorEnd()
 end
 
+-- @section people_management
+
+function npb.add_person(person, person_data, force)
+  if npb.t.people[person] and npb.t.people[person].locked and not force then return end
+
+  npb.t.people[person] = person_data
+  npb.add_highlight(person)
+end
+
+function npb.update_person(person, person_data, force)
+  if npb.t.people[person].locked and not force then return end
+
+  npb.t.people[person] = person_data
+  npb.add_highlight(person)
+end
+
+function npb.add_or_update_person(person, person_data, force)
+  npb.init()
+  if npb.t.people[person] then
+    npb.update_person(person, person_data, force)
+  else
+    npb.add_person(person, person_data, force)
+  end
+  npb.save()
+end
+
+function npb.add_people(people)
+  npb.init()
+  for _, person in pairs(people) do
+    npb.add_person(person.name, person)
+  end
+  npb.save()
+end
+
+--- @section aetolia_api_integration
+
+--- Fetch the characters.json from the API
+-- @function npb.getOnlineCharacters
+function npb.getOnlineCharacters()
+  getHTTP("api.aetolia.com/characters.json")
+end
+
+--- Handle response from the API request
+-- @function npb.handleResponse
+-- @see nbp.getOnlineCharacters
+function npb.handleResponse(_, url, body)
+  if url == "https://api.aetolia.com/characters.json" or url == "http://api.aetolia.com/characters.json" then
+    local data = yajl.to_value(body)
+    if npb.qws then
+      npb.qws = false
+      local people = {}
+      for _, person in pairs(data.characters) do
+        table.insert(people, person.name)
+      end
+      npb.qwsorted(people)
+    end
+  end
+end
+
+snd.registerEvent("PhonebookAPI", "sysGetHttpDone", npb.handleResponse)
+
+--- @section highlighting
+
+function npb.enable()
+  npb.init()
+  npb.enabled = true
+  sndNDB.highlightNames = true
+  npb.enable_highlights()
+end
+
+function npb.disable()
+  npb.init()
+  npb.enabled = false
+  sndNDB.highlightNames = false
+  npb.disable_highlights()
+end
+
 --- Function to disable player highlighting
 -- @function npb.disable_highlights
 function npb.disable_highlights()
@@ -170,7 +270,7 @@ function npb.enable_highlights()
   end
 
   -- neri: make sure we collect garbage again
-  collectgarbage()
+  collectgarbage("restart")
 end
 
 --- Add highlight to a persons name
@@ -257,40 +357,7 @@ function npb.do_highlight(name, color)
   end
 end
 
---- People management functions
--- @section people management
-
-function npb.add_person(person, person_data, force)
-  if npb.t.people[person] and npb.t.people[person].locked and not force then return end
-
-  npb.t.people[person] = person_data
-  npb.add_highlight(person)
-end
-
-function npb.update_person(person, person_data, force)
-  if npb.t.people[person].locked and not force then return end
-
-  npb.t.people[person] = person_data
-  npb.add_highlight(person)
-end
-
-function npb.add_or_update_person(person, person_data, force)
-  npb.init()
-  if npb.t.people[person] then
-    npb.update_person(person, person_data, force)
-  else
-    npb.add_person(person, person_data, force)
-  end
-  npb.save()
-end
-
-function npb.add_people(people)
-  npb.init()
-  for _, person in pairs(people) do
-    npb.add_person(person.name, person)
-  end
-  npb.save()
-end
+--- @section honour_parsing
 
 function npb.honour_person(name)
   npb.honour_data = { name = name:title() }
@@ -362,59 +429,7 @@ function npb.echo(args)
   cecho("\n<a_darkgreen>[<turquoise>NPB<a_darkgreen>]<reset>:" .. args)
 end
 
---- Configures the configuration.
--- This function shouldn't be called by the end user, use npb.init instead
--- @function npb.init_config
--- @see npb.init
-function npb.init_config()
-  npb.load()
-  npb.t.config = npb.t.config or {}
-  npb.t.config.colors = {
-    bloodloch = "firebrick",
-    spinesreach = "medium_purple",
-    duiran = "lawn_green",
-    enorian = "gold",
-    rogues = "a_brown",
-    divine = "hot_pink",
-  }
-  npb.t.guess_from_clans = true
-  npb.t.people = npb.t.people or {}
-  npb.t.config_version = 2
-  npb.save()
-end
-
---- Creates the config and sanity checks config versioning.
--- @function npb.init
-function npb.init()
-  npb.load()
-  if npb.t.config_version == npb.config_version then
-    return
-  end
-  npb.init_config()
-end
-
-function npb.color_person(who, city)
-  npb.init()
-  if npb.t.config.colors[city] then
-    return npb.t.config.colors[city]
-  end
-
-  return npb.t.config.colors.rogues
-end
-
-function npb.enable()
-  npb.init()
-  npb.enabled = true
-  sndNDB.highlightNames = true
-  npb.enable_highlights()
-end
-
-function npb.disable()
-  npb.init()
-  npb.enabled = false
-  sndNDB.highlightNames = false
-  npb.disable_highlights()
-end
+--- @section sndNDB
 
 function sndNDB_getColour(name)
   if not sndNDB_Exists(name) then
