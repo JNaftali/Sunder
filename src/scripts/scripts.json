@@ -1,8 +1,44 @@
 [
-       {
-              "name": "Sunder",
-              "isActive": "yes",
-              "script": "",
-              "isFolder": "yes"
-       }
+  {
+    "name": "Sunder Core"
+  },
+  {
+    "name": "Sunder GMCP"
+  },
+  {
+    "name": "Sunder Vars"
+  },
+  {
+    "name": "Sunder Phonebook"
+  },
+  {
+    "name": "Sunder Bashing"
+  },
+  {
+    "name": "Sunder Healing"
+  },
+  {
+    "name": "Sunder Fishing"
+  },
+  {
+    "name": "Sunder PK"
+  },
+  {
+    "name": "Sunder Settings"
+  },
+  {
+    "name": "Sunder Ylem"
+  },
+  {
+    "name": "Sunder Map"
+  },
+  {
+    "name": "Sunder Color Extensions"
+  },
+  {
+    "name": "Sunder",
+    "isActive": "yes",
+    "script": "",
+    "isFolder": "yes"
+  }
 ]

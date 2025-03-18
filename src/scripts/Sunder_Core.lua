@@ -4,6 +4,9 @@
 --- Sunder root namespace
 -- @table snd
 snd = snd or {}
+snd.skills = snd.skills or {}
+snd.skills.tattoos_on_me = snd.skills.tattoos_on_me or {}
+snd.skills.raceskills = snd.skills.raceskills or {}
 
 --- Register event handlers under the Sunder namespace
 -- Please use this instead of registerAnonymousEventHandler when you want to register an event that extends Sunder functionality
@@ -322,3 +325,797 @@ end
 -- Here is where all Core events are registered for.
 -- @section events
 snd.registerEvent("SunderLogin", "gmcp.Char.Name", snd.login)
+
+--- Set some alternate defenses for classes that use the same defense name
+-- @function class_catch
+function class_catch()
+  if snd.class == "Luminary" then
+    snd.defenses.def_constitution = snd.alternative_class_defenses.Luminary_constitution
+    snd.defenses.def_insulation = snd.alternative_class_defenses.Luminary_insulation
+  end
+
+  if snd.class == "Earthcaller" then
+    snd.defenses.def_constitution = snd.alternative_class_defenses.Earthcaller_constitution
+    snd.defenses.def_insulation = snd.alternative_class_defenses.Earthcaller_insulation
+  end
+
+  if snd.class == "Monk" then
+    snd.defenses.def_constitution = snd.alternative_class_defenses.Monk_constitution
+  end
+
+  if snd.class == "Infiltrator" then
+    snd.defenses.def_shroud = snd.alternative_class_defenses.Infiltrator_shroud
+  end
+
+  if snd.class == "Carnifex" then
+    snd.defenses.def_shroud = snd.alternative_class_defenses.Carnifex_shroud
+  end
+
+  if snd.class == "Warden" then
+    snd.defenses.def_shroud = snd.alternative_class_defenses.Warden_shroud
+    snd.defenses.def_fearless = snd.alternative_class_defenses.Warden_fearless
+  end
+
+  if snd.class == "Indorani" then
+    snd.defenses.def_shroud = snd.alternative_class_defenses.Indorani_shroud
+  end
+
+  if snd.class == "Oneiromancer" then
+    snd.defenses.def_shroud = snd.alternative_class_defenses.Oneiromancer_shroud
+  end
+
+  if snd.class == "Revenant" then
+    snd.defenses.def_maingauche = snd.alternative_class_defenses.Revenant_maingauche
+  end
+
+  if snd.class == "Ascendril" then
+    snd.defenses.def_empowered_boar = snd.alternative_class_defenses.Ascendril_empowered_boar
+  end
+
+  if snd.class == "Bloodborn" then
+    snd.defenses.def_empowered_boar = snd.alternative_class_defenses.Bloodborn_empowered_boar
+  end
+
+  if snd.class == "Sciomancer" then
+    snd.defenses.def_empowered_moon = snd.alternative_class_defenses.Sciomancer_empowered_moon
+  end
+
+  if snd.class == "Runecarver" then
+    snd.defenses.def_empowered_moon = snd.alternative_class_defenses.Runecarver_empowered_moon
+  end
+
+  if snd.class == "Akkari" then
+    snd.defenses.def_stalking = snd.alternative_class_defenses.Akkari_stalking
+    snd.defenses.def_hiding = snd.alternative_class_defenses.Akkari_hiding
+  end
+
+  if snd.class == "Praenomen" then
+    snd.defenses.def_stalking = snd.alternative_class_defenses.Praenomen_stalking
+    snd.defenses.def_hiding = snd.alternative_class_defenses.Praenomen_hiding
+  end
+  if snd.class == "Shapeshifter" then
+    snd.defenses.def_celerity = snd.alternative_class_defenses.Shapeshifter_celerity
+  else
+    snd.defenses.def_celerity = snd.alternative_class_defenses.Vampire_celerity
+  end
+  if hasSkill("Insomnia") then
+    snd.defenses.def_insomnia = snd.alternative_class_defenses.Skill_insomnia
+  end
+
+
+  if snd.assumed_class ~= nil then return end
+  local stats = gmcp.Char.Vitals.charstats
+  for i, v in ipairs(stats) do
+    stat = string.split(v, ": ")
+    if stat[1] == "Class" then
+      snd.class = stat[2]
+    end
+  end
+end
+
+--- Toggle a toggle
+-- @function snd.toggle
+-- @param toggle string toggle to toggle
+function snd.toggle(toggle)
+  if snd.toggles[toggle] then
+    snd.toggles[toggle] = false
+    snd.message(string.title(toggle) .. " <red>OFF<white>!", "toggle")
+    if toggle == "chameleon" then
+      snd.defenses["def_chameleon"].needit = false
+    end
+  else
+    snd.toggles[toggle] = true
+    snd.message(string.title(toggle) .. " <green>ON<white>!", "toggle")
+    if toggle == "chameleon" then
+      snd.defenses["def_chameleon"].needit = true
+    end
+  end
+
+  raiseEvent("sunder_update_toggles")
+
+  send(" ")
+end
+
+--- Priority list for queue actions.
+-- @table snd.method_priority
+snd.method_priority = {
+  { balance = "special",                func = function(current) snd.do_special(current) end },
+  { balance = "balanceneed",            func = function(current) snd.do_balance_need(current) end },
+  { balance = "equilibriumneed",        func = function(current) snd.do_equilibrium_need(current) end },
+  { balance = "balanceequilibrium",     func = function(current) snd.do_balance_equilibrium_need(current) end },
+
+  { balance = "reject",                 func = function(current) snd.do_reject(current) end },
+  { balance = "concentrate",            func = function(current) snd.do_concentrate(current) end },
+  { balance = "drink",                  func = function(current) snd.do_drink(current) end },
+  { balance = "vial",                   func = function(current) snd.do_vial(current) end },
+  { balance = "eat",                    func = function(current) snd.do_eat(current) end },
+  { balance = "smoke",                  func = function(current) snd.do_smoke(current) end },
+  { balance = "herb",                   func = function(current) snd.do_herb(current) end },
+  { balance = "salve",                  func = function(current) snd.do_salve(current) end },
+  { balance = "elixir",                 func = function(current) snd.do_elixir(current) end },
+  { balance = "moss",                   func = function(current) snd.do_moss(current) end },
+  { balance = "clot",                   func = function(current) snd.do_clot(current) end },
+  { balance = "stand",                  func = function(current) snd.do_stand(current) end },
+  { balance = "writhe",                 func = function(current) snd.do_writhe(current) end },
+  { balance = "focus",                  func = function(current) snd.do_focus(current) end },
+  { balance = "tree",                   func = function(current) snd.do_tree(current) end },
+
+  { balance = "tattoo",                 func = function(current) snd.do_tattoo(current) end },
+  { balance = "balancetake",            func = function(current) snd.do_balance_take(current) end },
+  { balance = "equilibriumtake",        func = function(current) snd.do_equilibrium_take(current) end },
+  { balance = "needybalancetake",       func = function(current) snd.do_needy_balance_take(current) end },
+  { balance = "needyequilibriumtake",   func = function(current) snd.do_needy_equilibrium_take(current) end },
+  { balance = "balanceequilibriumtake", func = function(current) snd.do_balance_equilibrium_take(current) end }
+}
+
+--- Priority list of all actions.
+-- @table snd.priorities
+snd.priorities =
+{
+  "lighting",
+  "def_speed",
+  "fitness",
+  "shrugging",
+  "purge",
+  "purify",
+  "panacea",
+  "rage",
+  "dome",
+  "def_safeguard",
+  "def_mindseye",
+  "def_miasma",
+  "def_warmth",
+  "def_cloak_tattoo",
+  "diagnose",
+  "barbed_arrow",
+  "attack",
+  "embedded_dagger",
+  "def_acuity",
+  "def_thirdeye",
+  "def_blindness",
+  "def_deafness",
+  "def_skywatch",
+  "def_treewatch",
+  "def_kola",
+  "def_waterbreathing",
+  "def_deathsight",
+  "def_insomnia",
+  "def_spheres",
+  "def_earthenform",
+  "def_permafrost",
+  "def_focalmark",
+  "def_alacrity",
+  "def_red_orb",
+  "def_blue_orb",
+  "def_green_orb",
+  "def_yellow_orb",
+  "def_white_orb",
+  "def_chameleon",
+  "loot",
+  "queue",
+  "bashing",
+  "moving",
+  "def_luminesce",
+  "def_blueshift",
+  "def_stargleam",
+  "def_foresight",
+  "def_closecombat",
+  "def_dauntless",
+  "def_unbending",
+  "def_boilingblood",
+  "def_insulation",
+  "def_lifesense",
+  "def_gripping",
+  "def_irongrip",
+  "def_vigor",
+  "def_divert_melee",
+  "def_waterwalking",
+  "def_flame_tattoo",
+  "def_fearless",
+  "def_recklessness",
+  "def_soulharvest",
+  "def_soulthirst",
+  "def_soul_fortify",
+  "def_soul_fracture",
+  "def_soul_body",
+  "def_weathering",
+  "def_bodyheat",
+  "def_metabolize",
+  "def_endurance",
+  "def_thickhide",
+  "def_corner",
+  "def_salivate",
+  "def_harden",
+  "def_lightshield",
+  "def_heatshield",
+  "def_inspiration",
+  "def_battlehymn",
+  "def_potence_strength",
+  "def_potence_constitution",
+  "def_potence_intelligence",
+  "def_potence_dexterity",
+  "def_ascetic",
+  "def_ardour_constitution",
+  "def_ardour_strength",
+  "def_ardour_dexterity",
+  "def_ardour_intelligence",
+  "def_relentless",
+  "def_resolved",
+  "def_acuity",
+  "def_transience",
+  "def_retaliation",
+  "def_suppressed",
+  "def_entrench",
+  "def_fireblock",
+  "def_smothering",
+  "def_toughness",
+  "def_resistance",
+  "def_warding",
+  "def_corpus_warding",
+  "def_finesse",
+  "def_weaving",
+  "def_shadowsight",
+  "def_ghost",
+  "def_hiding",
+  "def_shroud",
+  "def_shadowslip",
+  "def_vinculum",
+  "def_ruthlessness",
+  "def_impenetrable",
+  "def_criticality",
+  "def_unfinished",
+  "def_exhilarate",
+  "def_reflexes",
+  "def_contempt",
+  "def_velocity",
+  "def_untouchable",
+  "def_inflated",
+  "def_ironskin",
+  "def_fortify",
+  "def_countercurrent",
+  "def_rigor",
+  "def_shadow_engulf",
+  "def_shadow_mantle",
+  "def_blurring",
+  "def_frost",
+  "def_arcane",
+  "def_venom",
+  "def_levitation",
+  "def_caloric",
+  "def_fangbarrier",
+  "def_rebounding",
+  "def_density",
+  "def_nightsight",
+  "def_clarity",
+  "def_vitality",
+  "def_regeneration",
+  "def_constitution",
+  "def_split_mind",
+  "def_immunity",
+  "def_boosted_regen",
+  "def_soulmask",
+  "def_maingauche",
+  "def_pacing",
+  "def_soulcage",
+  "def_heatsight",
+  "def_reveling",
+  "def_herculeanrage",
+  "def_initiative",
+  "def_barkskin",
+  "def_conceal",
+  "def_hardiness",
+  "def_flexibility",
+  "def_lifesap",
+  "def_maskedscent",
+  "def_linked",
+  "def_oneness",
+  "def_eclipse",
+  "def_sublimation",
+  "def_ameliorate",
+  "def_catabolism",
+  "def_blindsense",
+  "def_greenheart",
+  "def_endure",
+  "def_mountaineer",
+  "def_dustcoat",
+  "def_resilience",
+  "def_desolation",
+  "def_circulation",
+  "def_concentrate",
+  "def_shadowblow",
+  "def_blurred",
+  "def_elusion",
+  "def_deathlink",
+  "def_potence",
+  "def_celerity",
+  "def_lifescent",
+  "def_lifevision",
+  "def_stalking",
+  "def_entwine",
+  "def_devilpact",
+  "def_currents",
+  "def_footfeel",
+  "def_ricochet",
+  "def_twinsoul",
+  "def_earth_resonance",
+  "def_stonebind",
+  "def_erosion",
+  "def_imbue_stonefury",
+  "def_sand_swelter",
+  "def_sealegs",
+  "def_wavebreaking",
+  "def_tideflux",
+  "def_lifebond",
+  "def_shore_leave",
+  "def_encrusted",
+  "def_expose_brume",
+  "def_expose_rime",
+  "def_sirensong",
+  "def_panoptic",
+  "def_fog_obscure",
+  "def_fluctuations",
+  "def_arcaneskin",
+  "def_countercurrent",
+  "def_missiles",
+  "def_firefist",
+  "def_tempered_body",
+  "def_lipreading",
+  "def_swagger",
+  "def_deflection",
+  "def_discharge",
+  "def_resurgence",
+  "def_haste",
+  "def_litheness",
+  "def_disunion",
+  "def_wrath",
+  "def_bending",
+  "def_mindspark",
+  "def_spiritbond",
+  "def_protection",
+  "def_shaman_spiritsight",
+  "def_lifebloom",
+  "def_shaman_warding",
+  "def_insight",
+  "def_foreststride",
+  "def_overwatch",
+  "def_hypersight",
+  "def_defiance",
+  "def_glaciation",
+  "def_remembrance",
+  "def_redoubt",
+  "def_gravechill",
+  "def_vengeance",
+  "def_deathaura",
+  "def_hierophant",
+  "def_chariot",
+  "def_crane",
+  "def_faerie",
+  "def_cloud",
+  "def_fan",
+  "def_intoxication",
+  "def_battleflow",
+  "def_ancest_victory",
+  "def_invocation",
+  "def_ancest_blessing_safeguard",
+  "def_ancestral_bolster",
+  "def_homage",
+  "def_cruelty",
+  "def_intervention",
+  "def_displacement",
+  "def_severity",
+  "def_roaring",
+  "aff_magic_fire",
+  "def_sheath",
+  "def_charisma",
+  "def_euphonia",
+  "def_discordance",
+  "def_halfbeat",
+  "def_soul_spiritsight",
+  "def_aurora",
+  "def_equipoise",
+  "def_stretching",
+  "def_destiny",
+  "def_interposition",
+  "def_obfuscation",
+  "def_cognisance",
+  "def_resuscitation",
+  "def_conduit_crutch",
+  "def_soulcage",
+  "def_victimise",
+  "def_empowered_moon",
+  "def_empowered_boar",
+  "def_panoply",
+  "def_forestall",
+  "def_prowess",
+  "def_hex_stalk",
+  "def_hex_preservation",
+  "def_ironbark",
+  "def_selfishness",
+  "def_bloodrage",
+  "def_transcendence",
+  "def_featherstep",
+  "def_rot_carpet",
+  "def_warding_rigor",
+  "def_greenfoot",
+  "def_oath_durdalis",
+  "def_oath_forestwalker",
+  "def_oath_blade",
+  "def_oath_shaman",
+  "def_oath_tranquility",
+  "def_oath_primeval",
+  "def_oath_rhythm",
+
+  "def_trepidation",
+  "def_holylight",
+
+  "def_blightbringer",
+  "def_discipline_fieldstudies",
+  "def_discipline_compounding",
+  "def_discipline_research",
+  "def_discipline_experimentation",
+  "def_discipline_pnp",
+  "def_discipline_biology",
+  "def_discipline_chemistry",
+
+  "def_influence_phantasm",
+  "def_congeal_phantasm",
+  "def_leech_phantasm",
+  "def_claw_phantasm",
+  "def_mire_phantasm",
+  "def_choke_phantasm",
+  "def_wail_phantasm",
+  "def_absorb_phantasm",
+  "def_siphon_phantasm",
+  "def_symbiosis_phantasm",
+
+  "def_influence_chimera",
+  "def_congeal_chimera",
+  "def_leech_chimera",
+  "def_claw_chimera",
+  "def_mire_chimera",
+  "def_choke_chimera",
+  "def_wail_chimera",
+  "def_absorb_chimera",
+  "def_siphon_chimera",
+  "def_symbiosis_chimera",
+
+  "def_accuracy_aura",
+  "def_protection_aura",
+  "def_healing_aura",
+  "def_purity_aura",
+  "def_justice_aura",
+  "def_pestilence_aura",
+  "def_spellbane_aura",
+  "def_cleansing_aura",
+  "def_meditation_aura",
+  "def_redemption_aura",
+
+  "def_accuracy_blessing",
+  "def_protection_blessing",
+  "def_healing_blessing",
+  "def_purity_blessing",
+  "def_justice_blessing",
+  "def_pestilence_blessing",
+  "def_spellbane_blessing",
+  "def_cleansing_blessing",
+  "def_meditation_blessing",
+  "def_redemption_blessing",
+
+  "def_sand_conceal",
+  "def_projection",
+  "def_surefooted",
+  "def_disturbances",
+
+  "def_returning",
+
+  --200 stuffs
+
+  "def_adherent_barrier",
+  "def_adherent_presence",
+  "def_adherent_mortalfire",
+  "def_adherent_mortalfire_stored",
+  "def_adherent_synchroneity",
+
+  "def_adherent_avengement",
+  "def_adherent_turmoil",
+  "def_adherent_malevolence",
+  "def_adherent_ruination",
+  "def_adherent_indomitable",
+  "def_adherent_acid",
+
+  "def_glacian_penumbra",
+  "def_glacian_presence",
+  "def_glacian_silhouette",
+  "def_glacian_twilight",
+  "def_glacian_adumbration",
+  "def_glacian_adumbration_stored",
+
+  "def_tiarna_bulwark",
+  "def_tiarna_ruin",
+  "def_tiarna_presence",
+  "def_tiarna_shelter",
+  "def_tiarna_shelter_stored",
+  "def_tiarna_chimerism",
+
+  "def_aetherial_bastion",
+  "def_aetherial_presence",
+  "def_aetherial_band",
+  "def_aetherial_band_stored",
+  "def_aetherial_agility",
+  "def_aetherial_torment",
+
+  "def_seraph_presence",
+  "def_seraph_radiate",
+  "def_seraph_corona",
+  "def_seraph_corona_stored",
+  "def_seraph_parhelion",
+  "def_seraph_halo",
+
+  "def_titan_disruption",
+  "def_titan_irradiance",
+  "def_titan_multicore",
+  "def_titan_presence",
+  "def_titan_remnant",
+  "def_titan_remnant_stored",
+
+  "def_astral_chaosspores",
+  "def_astral_dreamtide",
+  "def_astral_dreamtide_stored",
+  "def_astral_presence",
+  "def_astral_recursion",
+  "def_astral_refulgence",
+
+  "def_nocturn_bloodcoat",
+  "def_nocturn_double",
+  "def_nocturn_haze",
+  "def_nocturn_presence",
+  "def_nocturn_shadow",
+  "def_nocturn_shadow_stored",
+
+  "def_sagani_epicentre",
+  "def_sagani_helix",
+  "def_sagani_helix_stored",
+  "def_sagani_presence",
+  "def_sagani_similitude",
+  "def_sagani_wall",
+
+  "def_chaos_entropy",
+  "def_chaos_figment",
+  "def_chaos_figment_stored",
+  "def_chaos_fork",
+  "def_chaos_presence",
+  "def_chaos_shroud",
+
+  "def_catching",
+  "def_phalanx",
+  "def_anthem",
+  "def_rallied",
+  "def_bolstered_morale",
+
+  --predator
+  "def_spacing",
+  "def_masked",
+  "def_trueparry",
+  "def_bladesurge",
+  "def_absorption",
+  "def_secondwind",
+  "def_windwalking",
+  "def_preserval",
+  "def_whitesight",
+  "def_aversion",
+  "def_defang",
+  "def_culmination",
+
+  --Executor
+  "def_girded",
+  "def_bloodlust",
+  "def_stoicism",
+  "def_limberness",
+  "def_deception",
+  "def_bounding",
+  "def_efficiency",
+  "def_coagulation",
+  "def_lithe",
+
+  --Voidseer
+  "def_vitalise",
+  "def_erudition",
+  "def_synergism",
+  "def_kismet",
+  "def_introspection",
+  "def_withstand",
+  "def_occultism",
+
+  "def_diminution",
+  "def_putrefaction",
+  "def_tapestry",
+  "def_morisensus",
+
+  --Wayfarer
+  "def_axe_obstruct",
+  "def_brutality",
+
+  "def_boneshaking",
+  "def_consciousness",
+}
+
+--- Parse GMCP for skills.
+-- Loads your skills into snd.skills, additionally adds tattoos on your body and your racial skills
+-- @function parse_skillsets
+function parse_skillsets()
+  local tattoos = {}
+  local racials = {}
+  if snd.skills.tattoos_on_me ~= nil then
+    tattoos = snd.skills.tattoos_on_me
+  end
+  if snd.skills.raceskills ~= nil then
+    racials = snd.skills.raceskills
+  end
+
+  snd.skills = {}
+
+  snd.skills.raceskills = racials
+  snd.skills.tattoos_on_me = tattoos
+
+  for _, set in ipairs(gmcp.Char.Skills.Groups) do
+    local skills = string.format("Char.Skills.Get %s", yajl.to_string({ group = set.name }))
+    sendGMCP(skills)
+  end
+  send("\n")
+end
+
+--- Check to see if you have a skill.
+-- Pretty simple, this checks gmcp to see if your character knows a specific skill. You can input the skill name and optionally which skill tree it belongs to.
+-- @function hasSkill
+-- @param skill string of the skill to check
+-- @param tree string of the skilltree to check in
+-- @return boolean
+function hasSkill(skill, tree)
+  if not snd.skills then return false end
+
+  if skill == "Generic" or skill == "Goggle" then return true end
+
+  if snd.assumed_class ~= nil then return true end
+
+  if tree then
+    if snd.skills[tree:lower()] and table.contains(snd.skills[tree:lower()], skill) then
+      return true
+    else
+      return false
+    end
+  else
+    if table.contains(snd.skills, skill) then
+      return true
+    else
+      return false
+    end
+  end
+end
+
+--- Unknown
+-- Unsure about this one, it isn't called anywhere in the system that I can see
+-- @function populate_skills
+function populate_skills()
+  local group = gmcp.Char.Skills.List.group
+  local list = gmcp.Char.Skills.List.list
+  local newlist = {}
+  for i, val in ipairs(list) do
+    list[i] = val:gsub("* ", "")
+  end
+
+  if group then
+    if not snd.skills then snd.skills = {} end
+    snd.skills[group] = list
+  end
+end
+
+--- Table containing the default race skills.
+-- The tsol'aa field seems like it doesn't want to properly format but it is
+-- there, it's referenced by ["Tsol'aa"]. Stupid races with apostrophes
+-- @field Arborean
+-- @field Arqeshi
+-- @field Atavian
+-- @field Djeirani
+-- @field Dwarf
+-- @field Grecht
+-- @field Gnome
+-- @field Grook
+-- @field Harpy
+-- @field Human
+-- @field Horkval
+-- @field Imp
+-- @field Kelki
+-- @field Kobold
+-- @field Minotaur
+-- @field Mhun
+-- @field Nazetu
+-- @field Ogre
+-- @field Orc
+-- @field Rajamala
+-- @field Troll
+-- @field Xoran
+-- @table snd.defaultRaceskills
+snd.defaultRaceskills = {
+  Arborean = { "Photosynth", "Hardy", "Enroot" },
+  Arqeshi = { "Trawling", "Willful", "Ice Breathing" },
+  Atavian = { "Deep Sleeper", "Hover", "Flight" },
+  Djeirani = { "Meditator", "Antivenin", "Subversion" },
+  Dwarf = { "Alcohol Consumer", "Tremor Sense", "Goldluck" },
+  Grecht = { "Deep Sleeper", "Bodyheat", "Flight" },
+  Gnome = { "Small Size", "Willful", "Arcanist" },
+  Grook = { "Aquatic", "Scholar", "Arcanist" },
+  Harpy = { "Nesting", "Shrieking", "Flight" },
+  Human = { "Deep Sleeper", "Blood Reserves", "Moderate" },
+  Horkval = { "Clicking", "Hardy", "Leap" },
+  Imp = { "Hover", "Heatsight", "Mischief" },
+  Kelki = { "Aquatic", "Scavenge", "Waterborn" },
+  Kobold = { "Hoarder", "Scavenge", "Tinkering" },
+  Minotaur = { "Irongrip", "Intimidation", "Headbash" },
+  Mhun = { "Digging", "Tremor Sense", "Might" },
+  Nazetu = { "Trawling", "Enduring", "Slime Spit" },
+  Ogre = { "Brawler", "Sturdiness", "Overcome" },
+  Orc = { "Cunning", "Enduring", "Might" },
+  Rajamala = { "Fur Coat", "Grooming", "Scent" },
+  Troll = { "Large Size", "Intimidation", "Hemostatic" },
+  ["Tsol'aa"] = { "Meditator", "Foraging", "Lucidity" },
+  Xoran = { "Cold Blooded", "Scales", "Fire Breathing" },
+}
+
+snd.illusionChecks = snd.illusionChecks or {}
+
+--- Check to see if a line sent is actually an illusion.
+-- @function snd.illusionChecks.abilityGate
+function snd.illusionChecks.abilityGate()
+  if snd.illusion_found then
+    return false
+  end
+  if snd.afflictions.aff_flash_blindness.state ~= "healed" then
+    return true
+  end
+  --make sure word 1 and 3 of the line have different colors if you're not flash blinded
+  local words = string.split(getCurrentLine(), " ")
+  selectString(words[1], 1)
+  local color1 = table.concat({ getFgColor() }, "")
+  selectString(words[3], 1)
+  local color2 = table.concat({ getFgColor() }, "")
+  return color1 ~= color2
+end
+
+--- Parse the who list.
+-- @function snd.parse_who
+function snd.parse_who()
+  snd.who_list = {}
+  snd.true_who = {}
+  enableTrigger("Who parser")
+  send("who")
+end
+
+--- Parse people in same room on who list.
+-- @function snd.parse_who_groups
+function snd.parse_who_groups()
+  for room, players in pairs(snd.who_list) do
+    if #players > 1 then
+      snd.message("<gold>" .. room .. " - <green>" .. #players .. " <white>people\n - " .. table.concat(players, ", "))
+    end
+  end
+end

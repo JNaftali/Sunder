@@ -277,4 +277,3 @@ function snd.full_vitals()
   if tonumber(gmcp.Char.Vitals.mp) < tonumber(gmcp.Char.Vitals.maxmp) then return false end
   return true
 end
-
