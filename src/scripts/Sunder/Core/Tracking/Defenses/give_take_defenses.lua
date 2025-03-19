@@ -20,7 +20,7 @@ end
 
 function snd.def_check()
   for i in pairs(snd.defenses) do
-    if i == "def_speed" or i == "def_rebounding" or i == "def_deafness" or i == "def_fangbarrier" then
+    if i == "def_speed" or i == "def_rebounding" or i == "def_fangbarrier" then
       if snd.defenses[i].state == "waiting" and getStopWatchTime(snd.defenses[i].timer) >= 10 then
         snd.def_timeout(i)
       end

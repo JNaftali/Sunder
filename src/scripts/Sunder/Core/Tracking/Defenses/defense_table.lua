@@ -1,7 +1,5 @@
 snd.defenses = {
   -- Probably handled by firstaid anyways, otherwise auto assume people have plants/vials.
-  def_deafness = { defense = "deafness", type = "normal", effect = "Protects from sonic effects", balance = { herb = "ototoxin" }, state = "down", needit = false, timer = createStopWatch(), skill = "Generic" },
-  def_blindness = { defense = "blindness", type = "normal", effect = "Protects from visual effects", balance = { herb = "amaurosis" }, state = "down", needit = false, timer = createStopWatch(), skill = "Generic" },
   def_waterbreathing = { defense = "waterbreathing", type = "normal", effect = "Prevents choking underwater", balance = { herb = "waterbreathing" }, state = "down", needit = false, timer = createStopWatch(), skill = "Generic" },
   def_kola = { defense = "instawake", type = "normal", effect = "Removes the WAKE delay", balance = { herb = "stimulant" }, state = "down", needit = false, timer = createStopWatch(), skill = "Generic" },
   def_insomnia = { defense = "insomnia", type = "normal", effect = "Prevents sleep effects", balance = { eat = "kawhepill" }, state = "down", needit = false, timer = createStopWatch(), skill = "Generic" },
@@ -358,7 +356,7 @@ snd.defenses = {
   def_fury = { defense = "fury", type = "normal", effect = "Can use claws off balance", balance = {}, state = "down", needit = false, timer = createStopWatch(), skill = "Fury" },
   def_bracing = { defense = "bracing", type = "normal", effect = "Bracing for physical attacks", balance = { needybalancetake = "brace" }, state = "down", needit = false, timer = createStopWatch(), skill = "Bracing" },
   def_stealth = { defense = "stealth", type = "normal", effect = "Hide yourself", balance = { needybalancetake = "stealth on" }, state = "down", needit = false, timer = createStopWatch(), skill = "Stealth" },
-  def_boneshaking = { defense = "boneshaking", type = "normal", effect = "howls ignore deafness", balance = { balanceequilibriumtake = "boneshaking" }, state = "down", needit = false, timer = createStopWatch(), skill = "Boneshaking" },
+  def_boneshaking = { defense = "boneshaking", type = "normal", effect = "howls ignore courage", balance = { balanceequilibriumtake = "boneshaking" }, state = "down", needit = false, timer = createStopWatch(), skill = "Boneshaking" },
   --Siderealist
   def_luminesce = { defense = "luminesce", type = "normal", effect = "basic astranomia spells", balance = { balanceequilibriumtake = "astra luminesce" }, state = "down", needit = false, timer = createStopWatch(), skill = "Luminesce" },
   def_blueshift = { defense = "blueshift", type = "normal", effect = "extra hp/mp", balance = { balanceequilibriumtake = "astra blueshift" }, state = "down", needit = false, timer = createStopWatch(), skill = "Blueshift" },

@@ -5,8 +5,6 @@ snd.defenses_list = {
   ["You are diverting melee attacks."] = "divert_melee",
   ["You are surrounded by a cloak of protection."] = "cloak_tattoo",
   ["You are utilising your bodily control to make yourself more fit."] = "fitness",
-  ["You are blind."] = "blindness",
-  ["You are deaf."] = "deafness",
   ["You are feeling extremely energetic."] = "kola",
   ["You are surrounded by a pocket of air."] = "waterbreathing",
   ["Your mind has been touched by the essence of the Underking."] = "deathsight",
@@ -517,4 +515,3 @@ snd.defenses_list = {
   ["You are diffused by a green mist."] = "green_orb",
 
 }
-
