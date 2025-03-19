@@ -74,11 +74,11 @@ snd.all_class_attacks = {
       snd.onHit2({ "Dodge", "Rebounding" })
     end,
     Facesmash = function(target)
-      if not snd.checksomeAffs({ "misery", "sight" }, 1) then
+      if not snd.checksomeAffs({ "misery", "no_courage" }, 1) then
         table.insert(snd.maybe_affs, 1, "misery")
-        table.insert(snd.maybe_affs, 2, "sight")
+        table.insert(snd.maybe_affs, 2, "no_courage")
       elseif snd.checkAff("misery") then
-        table.insert(snd.maybe_affs, 1, "sight")
+        table.insert(snd.maybe_affs, 1, "no_courage")
       else
         table.insert(snd.maybe_affs, 1, "misery")
       end
@@ -96,7 +96,7 @@ snd.all_class_attacks = {
       snd.onHit2({ "Dodge", "Rebounding" }, "Luminary Slam")
     end,
     Brilliance = function(target)
-      table.insert(snd.maybe_affs, "sight")
+      table.insert(snd.maybe_affs, "no_courage")
       snd.onHit2({ "Dodge", "Rebounding" })
     end,
 
@@ -437,7 +437,7 @@ snd.all_class_attacks = {
       snd.affTimers.start("ashen_feet", 180)
     end,
     Conflagrate = function(target)
-      snd.target_got("hearing")
+      snd.target_got("no_courage")
     end,
     Pyroclast = function(target)
       snd.last_hit_limb = "head"
@@ -465,7 +465,7 @@ snd.all_class_attacks = {
     Thunderclap = function(target)
       snd.target_got("dizziness")
       snd.target_got("stupidity")
-      if snd.checkAff("hearing") then
+      if snd.checkAff("no_courage") then
         snd.target_got("confusion")
       end
     end,
@@ -507,7 +507,7 @@ snd.all_class_attacks = {
       snd.affTimers.start("ashen_feet", 180)
     end,
     Disgorge = function(target)
-      snd.target_got("hearing")
+      snd.target_got("no_courage")
     end,
     Acidveins = function(target)
       snd.last_hit_limb = "head"
@@ -535,7 +535,7 @@ snd.all_class_attacks = {
     Stupor = function(target)
       snd.target_got("dizziness")
       snd.target_got("stupidity")
-      if snd.checkAff("hearing") then
+      if snd.checkAff("no_courage") then
         snd.target_got("confusion")
       end
     end,
@@ -636,11 +636,7 @@ snd.all_class_attacks = {
       snd.onHit2({ "Dodge", "Rebounding", "Parry" }, "Sentinel Slam")
     end,
     Blind = function(target)
-      if snd.checkAff("sight") then
-        table.insert(snd.maybe_affs, 1, "blurry_vision")
-      else
-        table.insert(snd.maybe_affs, 1, "sight")
-      end
+      table.insert(snd.maybe_affs, 1, "blindness")
       snd.onHit2({ "Dodge", "Rebounding" }, "Sentinel")
     end,
     Slice = function(target)
@@ -794,7 +790,7 @@ snd.all_class_attacks = {
     Blastwave = function(target, modifier)
       snd.target_got("ablaze")
       if modifier == "two-hand" then
-        snd.target_got("hearing")
+        snd.target_got("ringing_ears")
       end
     end,
   },
@@ -858,9 +854,13 @@ snd.all_class_attacks = {
         snd.target_got("hallucinations")
       end
     end,
-    Effusion    = function(target)
+    Effusion    = function(target, boosted)
       snd.target_got("no_courage")
-      snd.target_got("sensitivity")
+      if boosted then
+        snd.target_got("sensitivity")
+      else
+        snd.target_got("ringing_ears")
+      end
     end,
     Equivalence = function(target, boosted)
       --This might be hidden from all except the Shaman, not sure
@@ -895,7 +895,7 @@ snd.all_class_attacks = {
   --Indorani
   ["Necromancy"] = {
     Screech = function(target)
-      snd.target_got("hearing")
+      snd.target_got("no_courage")
     end,
     Belch = function(target)
       --not used by Sunder but some may want it
@@ -998,7 +998,7 @@ snd.all_class_attacks = {
       if head == "Gas" then
         snd.target_got("no_insomnia")
       elseif head == "Roar" then
-        snd.target_got("hearing")
+        snd.target_got("no_courage")
       end
     end,
 
@@ -2110,7 +2110,7 @@ snd.all_class_attacks = {
   --Shapeshifter
   ["Shapeshifting"] = {
     Swipe = function(target)
-      snd.target_got("hearing")
+      snd.target_got("no_courage")
     end,
     Pounce = function(target, shield)
       if shield then
@@ -2146,7 +2146,9 @@ snd.all_class_attacks = {
       snd.onHit2({ "Dodge", "Parry" })
     end,
     Facemaul = function(target)
-      table.insert(snd.maybe_affs, "mauled_face")
+      if snd.checkAff("blindness") then
+        table.insert(snd.maybe_affs, "mauled_face")
+      end
       snd.last_hit_limb = "head"
       snd.last_limb_dmg = 11.8
       snd.took_limb_dmg(snd.last_hit_limb, snd.last_limb_dmg)
@@ -2205,7 +2207,7 @@ snd.all_class_attacks = {
       snd.onHit2({ "Dodge", "Parry" })
     end,
     Faceslash = function(target)
-      table.insert(snd.maybe_affs, "blurry_vision")
+      table.insert(snd.maybe_affs, "blindness")
       snd.last_hit_limb = "head"
       snd.last_limb_dmg = 7.5
       snd.took_limb_dmg(snd.last_hit_limb, snd.last_limb_dmg)
@@ -2321,7 +2323,7 @@ snd.all_class_attacks = {
     Baying = function(target, conditional)
       local howl_conversion =
       {
-        ["piercing"] = "hearing",
+        ["piercing"] = "no_courage",
         ["paralyzing"] = "paresis",
         ["baleful"] = "impairment",
         ["rousing"] = "recklessness",
@@ -2366,10 +2368,9 @@ snd.all_class_attacks = {
       snd.onHit2({ "Dodge" }, "Wayfarer")
     end,
     Bash = function(target)
-      if snd.checkAff("hearing") then
+      if snd.proned() then
         table.insert(snd.maybe_affs, "dizziness")
-      else
-        table.insert(snd.maybe_affs, "hearing")
+        table.insert(snd.maybe_affs, "confusion")
       end
       snd.last_hit_limb = "head"
       snd.last_limb_dmg = 9
@@ -2378,7 +2379,7 @@ snd.all_class_attacks = {
         snd.target_cured("assault_damage_head")
       end
       snd.took_limb_dmg(snd.last_hit_limb, snd.last_limb_dmg)
-      snd.onHit2({ "Rebounding", "Dodge", "Parry" })
+      snd.onHit2({ "Rebounding", "Dodge", "Parry" }, "Double Aff")
     end,
     Slaughter = function(target)
       table.insert(snd.maybe_affs, 1, snd.maybe_affs[2])
@@ -2435,8 +2436,8 @@ snd.all_class_attacks = {
 
   ["Fury"] = {
     Warcry = function(target, boosted)
-      snd.target_got("hearing")
-      if boosted then snd.target_got("ringing ears") end
+      snd.target_got("deafness")
+      if boosted then snd.target_got("ringing_ears") end
     end,
 
     Threaten = function(target, boosted)
@@ -2574,7 +2575,7 @@ snd.all_class_attacks = {
     Owinta = function(target, modifier)
       snd.target_got("ablaze")
       if modifier == "two-hand" then
-        snd.target_got("hearing")
+        snd.target_got("ringing_ears")
       end
     end,
   },
@@ -2854,11 +2855,11 @@ snd.all_class_attacks = {
       snd.onHit2({ "Dodge", "Rebounding" })
     end,
     Facesmash = function(target)
-      if not snd.checksomeAffs({ "misery", "sight" }, 1) then
+      if not snd.checksomeAffs({ "misery", "no_courage" }, 1) then
         table.insert(snd.maybe_affs, 1, "misery")
-        table.insert(snd.maybe_affs, 2, "sight")
+        table.insert(snd.maybe_affs, 2, "no_courage")
       elseif snd.checkAff("misery") then
-        table.insert(snd.maybe_affs, 1, "sight")
+        table.insert(snd.maybe_affs, 1, "no_courage")
       else
         table.insert(snd.maybe_affs, 1, "misery")
       end
@@ -2876,7 +2877,7 @@ snd.all_class_attacks = {
       snd.onHit2({ "Dodge", "Rebounding" }, "Luminary Slam")
     end,
     Horrification = function(target)
-      table.insert(snd.maybe_affs, "sight")
+      table.insert(snd.maybe_affs, "no_courage")
       snd.onHit2({ "Dodge", "Rebounding" })
     end,
 
@@ -2931,7 +2932,7 @@ snd.all_class_attacks = {
   --Oneiromancer
   ["Oneiromancy"] = {
     Bells = function(target)
-      snd.target_got("hearing")
+      snd.target_got("no_courage")
     end,
     Fumes = function(target)
       --not used by Sunder but some may want it
@@ -3035,7 +3036,7 @@ snd.all_class_attacks = {
     end,
     Quetzal = function(target, attack)
       if attack == "Croon" then
-        snd.target_got("hearing")
+        snd.target_got("no_courage")
       elseif attack == "Shimmer" then
         snd.target_got("no_insomnia")
       end
@@ -3234,9 +3235,13 @@ snd.all_class_attacks = {
         snd.target_got("hallucinations")
       end
     end,
-    Rousing      = function(target) --33 fabled
+    Rousing      = function(target, boosted) --33 fabled
       snd.target_got("no_courage")
-      snd.target_got("ringing_ears")
+      if boosted then
+        snd.target_got("sensitivity")
+      else
+        snd.target_got("ringing_ears")
+      end
     end,
     Parity       = function(target, boosted) --66 virtuoso
       --This might be hidden from all except the Shaman, not sure
@@ -4337,11 +4342,7 @@ snd.all_class_attacks = {
       snd.onHit2({ "Dodge", "Rebounding", "Parry" }, "Sentinel Slam")
     end,
     Ploy = function(target)
-      if snd.checkAff("sight") then
-        table.insert(snd.maybe_affs, 1, "blurry_vision")
-      else
-        table.insert(snd.maybe_affs, 1, "sight")
-      end
+      table.insert(snd.maybe_affs, 1, "blindness")
       snd.onHit2({ "Dodge", "Rebounding" }, "Sentinel")
     end,
     Wile = function(target)
@@ -4509,10 +4510,10 @@ snd.all_class_attacks = {
               snd.target_got("epilepsy")
             end
           elseif vibe == "Stridulation" then
-            if snd.checkAff("hearing") then
-              snd.target_got("sensitivity")
+            if snd.checkAff("no_courage") then
+              snd.target_got("ringing_ears")
             else
-              snd.target_got("hearing")
+              snd.target_got("no_courage")
             end
           elseif vibe == "Gravity" then
             snd.lev_gone = true

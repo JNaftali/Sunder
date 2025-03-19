@@ -186,28 +186,28 @@ end
 -- @function snd.venomEffect
 -- @param venom string
 -- @return string of affliction
-function snd.proned()
-  local prone = false
-  local proneaffs = {
-    "frozen",
-    "paralysis",
-    "writhe_transfix",
-    "writhe_web",
-    "writhe_impaled",
-    "writhe_thighlock",
-    "writhe_armpitlock",
-    "writhe_necklock",
-    "writhe_ropes",
-    "writhe_vines",
-    "writhe_grappled",
-    "writhe_dartpinned",
-    "writhe_ice",
-    "fallen",
-    "asleep",
-  }
-  if snd.checksomeAffs(proneaffs, 1) then prone = true end
-  if snd.checksomeAffs({ "feeble_arms", "feeble_legs" }, 2) then prone = true end
-  return prone
+function snd.venomEffect(venom)
+  local aff = ""
+  if venom == "cripple" then
+    if snd.checkAff("crippled") then
+      aff = "crippled_body"
+    else
+      aff = "crippled"
+    end
+  elseif venom == "disrupt" then
+    if snd.checkAff("extravasation") then
+      aff = "delirium"
+    else
+      aff = "extravasation"
+    end
+  else
+    for i in pairs(snd.effects) do
+      if snd.effects[i] == venom then
+        aff = i
+      end
+    end
+  end
+  return aff
 end
 
 --- Check to see if we are able to use dome right now.
