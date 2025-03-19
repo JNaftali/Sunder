@@ -157,7 +157,7 @@ snd.all_class_attacks = {
       snd.target_got("sore_ankle")
     end,
     Jawcrack = function(target)
-      snd.target_got("blurry_vision")
+      snd.target_got("watery_eyes")
     end,
     Descent = function(target)
       snd.target_got("backstrain")
@@ -298,7 +298,7 @@ snd.all_class_attacks = {
       snd.target_got("sore_ankle")
     end,
     Slug = function(target)
-      snd.target_got("blurry_vision")
+      snd.target_got("watery_eyes")
     end,
     Flog = function(target)
       snd.target_got("backstrain")
