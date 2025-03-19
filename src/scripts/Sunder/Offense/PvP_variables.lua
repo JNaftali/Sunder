@@ -231,6 +231,8 @@ snd.effects = {
 
   stuttering = "jalk",
 
+  no_density = "araceae",
+
   voyria = "voyria", --immunity
 
   squelched = "selarnia",
