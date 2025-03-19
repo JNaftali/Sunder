@@ -161,7 +161,6 @@ function snd.proned()
   local prone = false
   local proneaffs = {
     "frozen",
-    "indifference",
     "paralysis",
     "writhe_transfix",
     "writhe_web",
@@ -178,6 +177,7 @@ function snd.proned()
     "asleep",
   }
   if snd.checksomeAffs(proneaffs, 1) then prone = true end
+  if snd.checksomeAffs({ "feeble_arms", "feeble_legs" }, 2) then prone = true end
   return prone
 end
 
@@ -188,31 +188,7 @@ end
 -- @return string of affliction
 function snd.venomEffect(venom)
   local aff = ""
-  if venom == "epseth" then
-    if snd.checkAff("left_leg_crippled") then
-      aff = "right_leg_crippled"
-    else
-      aff = "left_leg_crippled"
-    end
-  elseif venom == "epteth" then
-    if snd.checkAff("left_arm_crippled") then
-      aff = "right_arm_crippled"
-    else
-      aff = "left_arm_crippled"
-    end
-  elseif venom == "prefarar" then
-    if snd.checkAff("hearing") then
-      aff = "sensitivity"
-    else
-      aff = "hearing"
-    end
-  elseif venom == "oculus" then
-    if snd.checkAff("sight") then
-      aff = "blurry_vision"
-    else
-      aff = "sight"
-    end
-  elseif venom == "cripple" then
+  if venom == "cripple" then
     if snd.checkAff("crippled") then
       aff = "crippled_body"
     else

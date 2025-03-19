@@ -1,5 +1,8 @@
 snd.afflictions = {
   aff_oblivion                   = { state = "healed", effect = "Death unless you interrupt the bard", cures = {}, assess = false, timer = createStopWatch() },
+  aff_blindness                  = { state = "healed", effect = "negates accuracy for 1s every 8s", cures = { salve = "press epidermal to head" }, assess = false, timer = createStopWatch() },
+  aff_deafness                   = { state = "healed", effect = "Grants attackers 15% accuracy bonus", cures = { salve = "press epidermal to head" }, assess = false, timer = createStopWatch() },
+  aff_watery_eyes                = { state = "healed", effect = "15% chance to miss", cures = { salve = "press epidermal to head" }, assess = false, timer = createStopWatch() },
 
   aff_shock                      = { state = "healed", effect = "less mobility", cures = {}, assess = false, timer = createStopWatch() },
   aff_burnout                    = { state = "healed", effect = "slower cds", cures = {}, assess = false, timer = createStopWatch() },
@@ -60,7 +63,6 @@ snd.afflictions = {
   aff_blunt_weakness             = { state = "healed", effect = "more dmg from blunt source", cures = {}, assess = false, timer = createStopWatch() },
   aff_blurry_vision              = { state = "healed", effect = "", cures = { salve = "epidermal to body", tree = "send" }, assess = false, timer = createStopWatch() },
   aff_bulimia                    = { state = "healed", effect = "vomit the next thing you eat", cures = {}, assess = false, timer = createStopWatch() },
-  aff_burnt_eyes                 = { state = "healed", effect = "", cures = { salve = "epidermal to head", tree = "send" }, assess = false, timer = createStopWatch() },
   aff_burnt_skin                 = { state = "healed", effect = "", cures = { salve = "restoration to torso" }, assess = false, timer = createStopWatch() },
   aff_chaos_warp                 = { state = "healed", effect = "", cures = {}, assess = false, timer = createStopWatch() },
   aff_claustrophobia             = { state = "healed", effect = "", cures = { herb = "lobelia", tree = "send", focus = "send" }, assess = false, timer = createStopWatch() },
@@ -105,6 +107,8 @@ snd.afflictions = {
   aff_farag_rot                  = { state = "healed", effect = "", cures = {}, assess = false, timer = createStopWatch() },
   aff_faintness                  = { state = "healed", effect = "", cures = {}, assess = false, timer = createStopWatch() },
   aff_fear                       = { state = "healed", effect = "", cures = { special = "compose" }, assess = false, timer = createStopWatch() },
+  aff_feeble_arms                = { state = "healed", effect = "Lowers dex by 3", cures = { salve = "press epidermal to arms" }, assess = false, timer = createStopWatch() },
+  aff_feeble_legs                = { state = "healed", effect = "Standing up costs balance", cures = { salve = "press epidermal to legs" }, assess = false, timer = createStopWatch() },
   aff_fire_weakness              = { state = "healed", effect = "more dmg from fire source", cures = {}, assess = false, timer = createStopWatch() },
   aff_flamewreathed_limb         = { state = "healed", effect = "extra limb damage if hit by fire spell", cures = {}, assess = false, timer = createStopWatch() },
   aff_flared                     = { state = "healed", effect = "unable to stealth or go incorporeal", cures = {}, assess = false, timer = createStopWatch() },

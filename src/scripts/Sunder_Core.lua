@@ -492,8 +492,6 @@ snd.priorities =
   "embedded_dagger",
   "def_acuity",
   "def_thirdeye",
-  "def_blindness",
-  "def_deafness",
   "def_skywatch",
   "def_treewatch",
   "def_kola",

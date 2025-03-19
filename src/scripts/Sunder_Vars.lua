@@ -222,6 +222,7 @@ snd.physical_affs = {
   "sore_wrist",
   "sore_ankle",
   "burnt_eyes",
+  "watery_eyes",
   "blurry_vision",
   "migraine",
   "deadening",

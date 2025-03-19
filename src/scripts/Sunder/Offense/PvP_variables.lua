@@ -203,13 +203,13 @@ snd.fleshbaneStacks = 0
 
 snd.effects = {
   --venoms
-  sight = "oculus",
-  blurry_vision = "oculus",
-  hearing = "prefarar",
+  watery_eyes = "oculus",
+  -- blurry_vision = "oculus",
+  ringing_ears = "prefarar",
   asthma = "kalmia",
   paresis = "curare",
   clumsiness = "xentio",
-  sensitivity = "prefarar",
+  -- sensitivity = "prefarar",
   vomiting = "euphorbia",
   allergies = "darkshade",
   colocasia = "colocasia",
@@ -231,16 +231,16 @@ snd.effects = {
 
   stuttering = "jalk",
 
+  no_density = "araceae",
+
   voyria = "voyria", --immunity
 
   squelched = "selarnia",
   disfigurement = "monkshood",
 
   dyscrasia = "scytherus",
-  left_leg_crippled = "epseth",
-  right_leg_crippled = "epseth",
-  left_arm_crippled = "epteth",
-  right_arm_crippled = "epteth",
+  feeble_legs = "epseth",
+  feeble_arms = "epteth",
 
   conviction = "conviction",
   delirium = "disrupt",
@@ -371,14 +371,9 @@ snd.hound_attacks = {
 
 snd.cures = {
 
-  amaurosis = {
-    "sight",
+  pluck = {
+    "no_courage",
   },
-
-  ototoxin = {
-    "hearing",
-  },
-
   kawhe = {
     "no_insomnia",
   },
@@ -459,6 +454,7 @@ snd.cures = {
     "hypochondria",
     "weariness",
     "asthma",
+    "ringing_ears",
     "sensitivity",
     "ringing_ears",
     "impairment",
