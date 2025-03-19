@@ -27,6 +27,4 @@ if snd.class == "Voidseer" then snd.send("foment longing") end
 if snd.class == "Luminary" then snd.send("angel summon") end
 if snd.class == "Earthcaller" then snd.send("osso draw") end
 
-class_catch()
 snd.load_def(selection)
-

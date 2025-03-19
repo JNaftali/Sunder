@@ -133,7 +133,7 @@ function npb.qwsorted(people)
     if org == "Unknown" then org = "Rogues" end
     table.insert(sorted[org], name)
   end
-  for _, org in ipairs(order) do
+  for _, org in ipairs(npb.order) do
     local peoples = sorted[org]
     table.sort(peoples)
     if #peoples > 0 then
