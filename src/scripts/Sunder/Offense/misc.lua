@@ -161,7 +161,6 @@ function snd.proned()
   local prone = false
   local proneaffs = {
     "frozen",
-    "indifference",
     "paralysis",
     "writhe_transfix",
     "writhe_web",
@@ -178,6 +177,7 @@ function snd.proned()
     "asleep",
   }
   if snd.checksomeAffs(proneaffs, 1) then prone = true end
+  if snd.checksomeAffs({ "feeble_arms", "feeble_legs" }, 2) then prone = true end
   return prone
 end
 
