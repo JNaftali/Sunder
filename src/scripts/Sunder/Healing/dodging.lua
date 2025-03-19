@@ -1,5 +1,3 @@
---- @submodule core
-
 snd.current_dodge = nil
 snd.waiting.dodge = nil
 

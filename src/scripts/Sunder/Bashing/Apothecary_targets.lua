@@ -1,7 +1,3 @@
---- @submodule core
-
---- List of targets for apothecary bashing.
--- @table snd.apoAreas
 snd.apoAreas = {
   { area = "the Itzatl Morass",             level = "apothecary", targets = { "an oversized fly", "an oversized earthworm", "a poisonous water moccasin", "a silent reed cat", "a green slime toad", "a long-toothed beaver", "Match:a family of %a+ beavers", } },
   { area = "the Isle of Ollin",             level = "apothecary", targets = { "a dark-furred, rabid boar", "Match:a sounder of %a+ boars", "a wild boar", "a docile boar" } },
@@ -38,4 +34,3 @@ snd.apoAreas = {
   { area = "the Offspring",                 level = "95+",        targets = { "a long-tailed bullfrog", "A chromatic aquatic dragonfly" } },
 
 }
-

@@ -1,4 +1,4 @@
---- @submodule core
+--- Placeholder.
 
 --- Reset target state.
 -- Completely resets your target, removing all limb trauma, resetting any cure timers, killing all timed afflictions.

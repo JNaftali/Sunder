@@ -1,5 +1,3 @@
---- @submodule core
-
 snd.staticParry = snd.staticParry or "auto"
 
 --- Logic to determine what to parry.
@@ -63,4 +61,3 @@ function snd.setStaticParry(limb)
   end
   snd.core()
 end
-

@@ -1,5 +1,3 @@
---- @submodule core
-
 snd.class_list = {
   { class = "Akkari",       func = function(current) snd.akkari_bash() end },
   { class = "Alchemist",    func = function(current) snd.alchemist_bash() end },

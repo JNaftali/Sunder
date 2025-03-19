@@ -1,8 +1,3 @@
---- @submodule core
-
---- Load bashing targets for an area.
--- @function snd.load_targets
--- @param area string Name of area
 function snd.load_targets(area)
   snd.my.area = area
   snd.area_found = false

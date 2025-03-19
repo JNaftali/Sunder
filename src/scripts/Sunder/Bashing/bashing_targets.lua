@@ -1,7 +1,3 @@
---- @submodule core
-
---- Table with target lists for areas
--- @table snd.areas
 snd.areas = {
 
   { area = "Bloodloch",                                   level = "globes only",            targets = { "a massive elemental" } },

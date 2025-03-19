@@ -1,3 +1,5 @@
+--- @module bashing
+
 --- Autobashing.
 -- Toggles autobashing on. Also defups vigor and turns on leading so you don't loose people following you
 -- @function snd.aa

@@ -61,9 +61,6 @@ end
 
 --- @section mappings
 
---- This table contains a list of cities and their associated clans
--- @fixme switch the order of this table
--- @table npb.city_guess
 npb.city_guess = {
   -- duiran
   ["Heartwood Yews"] = "duiran",
@@ -90,8 +87,6 @@ npb.city_guess = {
   ["The Side Line"] = "enorian",
 }
 
---- Order used later to iterate over organizations
--- @table npb.order
 npb.order = { "Bloodloch", "Duiran", "Enorian", "Spinesreach", "Rogues", "Divine" }
 
 --- @section utilities

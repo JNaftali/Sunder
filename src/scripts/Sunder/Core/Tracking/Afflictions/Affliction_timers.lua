@@ -1,6 +1,3 @@
---- @submodule core
-
-
 snd.affTimers = snd.affTimers or {}
 snd.affTimers.list = snd.affTimers.list or {}
 
