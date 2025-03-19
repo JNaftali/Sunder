@@ -104,6 +104,8 @@ snd.afflictions = {
   aff_farag_rot                  = { state = "healed", effect = "", cures = {}, assess = false, timer = createStopWatch() },
   aff_faintness                  = { state = "healed", effect = "", cures = {}, assess = false, timer = createStopWatch() },
   aff_fear                       = { state = "healed", effect = "", cures = { special = "compose" }, assess = false, timer = createStopWatch() },
+  aff_feeble_arms                = { state = "healed", effect = "Lowers dex by 3", cures = { salve = "press epidermal to arms" }, assess = false, timer = createStopWatch() },
+  aff_feeble_legs                = { state = "healed", effect = "Standing up costs balance", cures = { salve = "press epidermal to legs" }, assess = false, timer = createStopWatch() },
   aff_fire_weakness              = { state = "healed", effect = "more dmg from fire source", cures = {}, assess = false, timer = createStopWatch() },
   aff_flamewreathed_limb         = { state = "healed", effect = "extra limb damage if hit by fire spell", cures = {}, assess = false, timer = createStopWatch() },
   aff_flared                     = { state = "healed", effect = "unable to stealth or go incorporeal", cures = {}, assess = false, timer = createStopWatch() },
