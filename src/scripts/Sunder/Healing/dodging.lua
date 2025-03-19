@@ -11,7 +11,11 @@ function snd.dodge()
   if snd.dodge_override then
     tododge = snd.dodge_override()
   else
-    tododge = "melee"
+    if hasSkill("Dodging") then
+      tododge = "melee"
+    else
+      tododge = "none"
+    end
   end
 
   if tododge ~= "none" and tododge ~= snd.current_dodge and not snd.waiting.dodge then
