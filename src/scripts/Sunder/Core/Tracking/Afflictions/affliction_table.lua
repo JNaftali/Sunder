@@ -1,5 +1,7 @@
 snd.afflictions = {
   aff_oblivion                   = { state = "healed", effect = "Death unless you interrupt the bard", cures = {}, assess = false, timer = createStopWatch() },
+  aff_blindness                  = { state = "healed", effect = "negates accuracy for 1s every 8s", cures = { salve = "press epidermal to head" }, assess = false, timer = createStopWatch() },
+  aff_deafness                   = { state = "healed", effect = "Grants attackers 15% accuracy bonus", cures = { salve = "press epidermal to head" }, assess = false, timer = createStopWatch() },
 
   aff_shock                      = { state = "healed", effect = "less mobility", cures = {}, assess = false, timer = createStopWatch() },
   aff_burnout                    = { state = "healed", effect = "slower cds", cures = {}, assess = false, timer = createStopWatch() },
