@@ -1,6 +1,6 @@
 local selection = ""
-if matches[3] then 
-  selection = matches[3] 
+if matches[3] then
+  selection = matches[3]
 else
   if snd.class == "None" and snd.toggles.ascendedtype ~= "none" then
     selection = snd.toggles.ascendedtype
@@ -10,7 +10,8 @@ else
 end
 
 if snd.toggles.active == false then
-  display("Sunder is currently off. Please SNDON to turn it back on! If you wish to remove this behavior, alter it in the 'general deaths' trigger.")
+  display(
+    "Sunder is currently off. Please SNDON to turn it back on! If you wish to remove this behavior, alter it in the 'general deaths' trigger.")
 else
   send("def", false)
 end
@@ -26,4 +27,6 @@ if snd.class == "Voidseer" then snd.send("foment longing") end
 if snd.class == "Luminary" then snd.send("angel summon") end
 if snd.class == "Earthcaller" then snd.send("osso draw") end
 
+class_catch()
 snd.load_def(selection)
+
