@@ -369,6 +369,9 @@ snd.hound_attacks = {
 
 snd.cures = {
 
+  pluck = {
+    "no_courage",
+  },
   kawhe = {
     "no_insomnia",
   },
