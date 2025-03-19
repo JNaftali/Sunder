@@ -1119,3 +1119,612 @@ function snd.parse_who_groups()
     end
   end
 end
+
+function snd.functional()
+  if snd.have_aff("stun") or snd.have_aff("petrified") or snd.have_aff("asleep") then
+    return false
+  else
+    return true
+  end
+end
+
+function snd.wielding(weapon)
+  if
+      snd.weaponType(snd.wielded.left.name) == weapon or
+      snd.weaponType(snd.wielded.right.name) == weapon
+  then
+    return true
+  else
+    return false
+  end
+end
+
+function snd.full_balance()
+  if gmcp.Char == nil then
+    return false
+  end
+  if
+      gmcp.Char.Vitals.balance == "1" and
+      gmcp.Char.Vitals.equilibrium == "1" and
+      gmcp.Char.Vitals.left_arm == "1" and
+      gmcp.Char.Vitals.right_arm == "1" and
+      not snd.waiting.balance and
+      not snd.waiting.equilibrium
+  then
+    return true
+  else
+    return false
+  end
+end
+
+function snd.have_aff(affliction)
+  if not string.find(affliction, "aff_") then
+    affliction = "aff_" .. affliction
+  end
+  if snd.afflictions[affliction] == nil then
+    return false
+  end
+  if snd.afflictions[affliction].state ~= "healed" then
+    return true
+  else
+    return false
+  end
+end
+
+function snd.have_def(defense)
+  if not string.find(defense, "def_") then
+    defense = "def_" .. defense
+  end
+  if not snd.defenses[defense] then
+    return false
+  end
+  return snd.defenses[defense].state == "deffed"
+end
+
+function snd.aff_tally()
+  count = 0
+  for aff in pairs(snd.afflictions) do
+    if snd.have_aff(aff) then
+      if
+          snd.afflictions[aff]["cures"]["herb"] ~= nil or
+          snd.afflictions[aff]["cures"]["salve"] ~= nil or
+          snd.afflictions[aff]["cures"]["smoke"] ~= nil
+      then
+        count = count + 1
+      end
+    end
+  end
+  return count
+end
+
+function snd.aff_tally_specific(afflictions, number)
+  --aff_tally checks all affs, aff_tally_specific requires you send it the specific affs you want to check
+  if number == 0 then
+    return true
+  end
+  if number == nil then
+    number = 1
+  end
+  if type(afflictions) == "string" then
+    return snd.have_aff(afflictions)
+  elseif type(afflictions) == "table" then
+    local count = 0
+    for i, v in ipairs(afflictions) do
+      if snd.have_aff(v) then
+        count = count + 1
+        if count >= number then
+          return true
+        end
+      end
+    end
+    -- if the count of how many returned true didn't meet or exceed the number given, return false
+    return false
+  end
+end
+
+function snd.not_aff(affliction)
+  if not string.find(affliction, "aff_") then
+    affliction = "aff_" .. affliction
+  end
+  if snd.afflictions[affliction].state == "healed" then
+    return true
+  else
+    return false
+  end
+end
+
+function snd.can_cast()
+  if
+      snd.full_balance() and
+      snd.functional() and
+      snd.not_aff("paralysis") and
+      gmcp.Char.Vitals.prone == "0"
+  then
+    return true
+  else
+    return false
+  end
+end
+
+function snd.can_axe()
+  return gmcp.Char.Vitals.wield_left ~= "empty" or gmcp.Char.Vitals.wield_right ~= "empty"
+end
+
+function snd.can_tattoo()
+  if snd.not_aff("paresis") and snd.not_aff("frozen") then
+    return true
+  else
+    return false
+  end
+end
+
+function snd.can_eat()
+  if snd.not_aff("anorexia") and snd.not_aff("destroyed_throat") then
+    return true
+  else
+    return false
+  end
+end
+
+function snd.can_apply()
+  if snd.not_aff("slickness") then
+    return true
+  else
+    return false
+  end
+end
+
+function snd.can_smoke()
+  if snd.not_aff("asthma") then
+    return true
+  else
+    return false
+  end
+end
+
+function snd.can_focus()
+  if snd.not_aff("impatience") and snd.not_aff("muddled") then
+    return true
+  else
+    return false
+  end
+end
+
+function snd.can_fitness()
+  if
+      snd.not_aff("destroyed_throat") and
+      hasSkill("Fitness") and
+      snd.balance.fitness
+  then
+    return true
+  else
+    return false
+  end
+end
+
+function snd.can_shrug()
+  if snd.class == "Infiltrator" and hasSkill("Shrugging") and snd.balance.shrug then
+    return true
+  else
+    return false
+  end
+end
+
+function snd.can_rage()
+  if
+      (snd.class == "Templar" or snd.class == "Revenant" or snd.class == "Shapeshifter") and
+      hasSkill("Rage") and
+      snd.balance.rage and
+      snd.not_aff("besilence")
+  then
+    return true
+  else
+    return false
+  end
+end
+
+function snd.not_entangled()
+  if
+      snd.have_aff("grappled") or
+      snd.have_aff("writhe_web") or
+      snd.have_aff("writhe_impaled") or
+      snd.have_aff("writhe_grappled")
+  then
+    return false
+  else
+    return true
+  end
+end
+
+function snd.not_slow()
+  if snd.not_aff("aeon") then
+    return true
+  else
+    return false
+  end
+end
+
+function snd.have_slow()
+  if snd.have_aff("aeon") then
+    return true
+  else
+    return false
+  end
+end
+
+function snd.can_arms()
+  if
+      snd.have_aff("left_arm_crippled") or
+      snd.have_aff("left_arm_broken") or
+      snd.have_aff("left_arm_mangled") or
+      snd.have_aff("right_arm_crippled") or
+      snd.have_aff("right_arm_broken") or
+      snd.have_aff("right_arm_mangled")
+  then
+    return false
+  else
+    return true
+  end
+end
+
+function snd.can_legs()
+  if
+      snd.have_aff("left_leg_crippled") or
+      snd.have_aff("left_leg_broken") or
+      snd.have_aff("left_leg_mangled") or
+      snd.have_aff("right_leg_crippled") or
+      snd.have_aff("right_leg_broken") or
+      snd.have_aff("right_leg_mangled")
+  then
+    return false
+  else
+    return true
+  end
+end
+
+function snd.self_prone()
+  if not snd.have_aff("frozen") or snd.have_aff("indifference") or snd.have_aff("paralysis") or
+      snd.have_aff("writhe_transfix") or snd.have_aff("writhe_web") or snd.have_aff("writhe_impaled") or
+      snd.have_aff("writhe_thighlock") or snd.have_aff("writhe_armpitlock") or
+      snd.have_aff("writhe_necklock") or snd.have_aff("writhe_ropes") or snd.have_aff("writhe_vines") or
+      snd.have_aff("fallen") or snd.have_aff("asleep") then
+    return false
+  else
+    return true
+  end
+end
+
+function snd.full_vitals()
+  if tonumber(gmcp.Char.Vitals.hp) < tonumber(gmcp.Char.Vitals.maxhp) then return false end
+  if tonumber(gmcp.Char.Vitals.mp) < tonumber(gmcp.Char.Vitals.maxmp) then return false end
+  return true
+end
+
+function snd.delay()
+  if snd.not_slow() then
+    return 0.5
+  else
+    return 1.5
+  end
+end
+
+function snd.message(string, type)
+  if snd.toggles.gags then
+    if type == "atk" then
+      color = "magenta"
+    elseif type == "death" then
+      color = "red"
+    elseif type == "q" then
+      color = "brown"
+    elseif type == "balance" then
+      color = "orange"
+    elseif type == "level" then
+      color = "yellow"
+    elseif type == "reset" then
+      color = "brown"
+    elseif type == "affliction" then
+      color = "DeepSkyBlue"
+    elseif type == "dendara" then
+      color = "green"
+    else
+      color = "white"
+    end
+    if type == "toggle" or type == "echo" then
+      line = ""
+    else
+      line = "\n"
+    end
+    cecho(line .. "<green>[<white>SND<green>]<" .. color .. "> " .. string)
+    if type == "reset" then
+      send(" ")
+    end
+  end
+end
+
+function snd.attack_hit(attack, target)
+  snd.message("You: <green>HIT<magenta> " .. attack .. "<white> " .. target .. "<magenta>!", "atk")
+end
+
+function snd.got_hit(attack, attacker)
+  snd.message(attacker .. ": <red>HIT<magenta> " .. attack .. "<white> you<magenta>!", "atk")
+end
+
+function snd.third_hit(attack, attacker, target)
+  snd.message("<white>" .. attacker .. ": <red>HIT<white> " .. attack .. " " .. target)
+end
+
+function snd.target_hit(attack, attacker, target)
+  snd.message("<grey>" .. attacker .. ": <red>HIT<grey> " .. attack .. " " .. target)
+end
+
+function snd.changeClass()
+  if snd.assumed_class ~= nil then
+    snd.class = snd.assumed_class
+  else
+    snd.class = gmcp.Char.Status.class
+    if snd.class == "(None)" then snd.class = "None" end
+  end
+  snd.city = gmcp.Char.Status.city
+  if snd.city == "Spinesreach" or snd.city == "Bloodloch" then
+    snd.faction = "shadow"
+  elseif snd.city == "Enorian" or snd.city == "Duiran" then
+    snd.faction = "spirit"
+  end
+  raiseEvent("sunder_update_vitals")
+  expandAlias("ldd none", false)
+end
+
+function snd.updateMonolith()
+  if snd.items["a monolith sigil"] ~= nil then
+    snd.monolith = true
+  else
+    snd.monolith = false
+  end
+end
+
+function snd.updateItems()
+  raiseEvent("sunder_item_update")
+  if snd.questing_loaded then
+    snd.runQuests()
+  end
+end
+
+function snd.weaponType(weapon)
+  for wtype in pairs(snd.weapon_types) do
+    if string.find(weapon, snd.weapon_types[wtype]) then
+      return snd.weapon_types[wtype]
+    end
+  end
+  return weapon
+end
+
+function snd.skillrankcheck(rank)
+  local skillranks = { "Transcendent", "Mythical", "Fabled", "Virtuoso" }
+  for _, v in pairs(skillranks) do
+    if string.find(rank, v) then
+      return true
+    end
+  end
+end
+
+function snd.get_moving()
+  hp = 100 * (gmcp.Char.Vitals.hp / gmcp.Char.Vitals.maxhp)
+  if snd.can_path and snd.can_cast() and hp >= 85 and snd.moving_to ~= "none" then
+    if snd.toggles.gallop then
+      if gmcp.Char.Vitals.mounted == "0" then
+        snd.mount()
+      end
+      snd.send("path find " .. snd.moving_to .. snd.sep .. "path go gallop")
+    elseif snd.toggles.dash then
+      snd.send("path find " .. snd.moving_to .. snd.sep .. "path go dash")
+    else
+      snd.send("path track " .. snd.moving_to)
+    end
+    snd.moving_to = "none"
+    if ylm.active and ylm.next_zone == "city" then
+      ylm.active = false
+    end
+  end
+end
+
+function snd.parseDir(direction)
+  if direction == "north" then
+    return "n"
+  elseif direction == "south" then
+    return "s"
+  elseif direction == "east" then
+    return "e"
+  elseif direction == "west" then
+    return "w"
+  elseif direction == "northeast" then
+    return "ne"
+  elseif direction == "northwest" then
+    return "nw"
+  elseif direction == "southeast" then
+    return "se"
+  elseif direction == "southwest" then
+    return "sw"
+  elseif direction == "up" then
+    return "up"
+  elseif direction == "down" then
+    return "d"
+  else
+    return direction
+  end
+end
+
+function snd.swapDir(direction)
+  directions =
+  {
+    north = "south",
+    south = "north",
+    east = "west",
+    west = "east",
+    northeast = "southwest",
+    southwest = "northeast",
+    northwest = "southeast",
+    southeast = "northwest",
+    ["in"] = "out",
+    out = "in",
+    up = "down",
+    down = "up",
+  }
+  return directions[direction]
+end
+
+function snd.no_target()
+  --deleteLine()
+  --snd.message("Need new targets!")
+  if snd.offense_loaded then
+    snd.target_gone = true
+    snd.get_new_target()
+  end
+  if snd.bashing_loaded then
+    snd.untarget()
+    snd.waiting.balance = false
+    snd.waiting.equilibrium = false
+    snd.bashing.target_priority = 10000
+  end
+end
+
+function snd.untarget()
+  snd.bashing.engaged = false
+  snd.bashing.targeted = false
+  snd.last_attack = "none"
+  if snd.bashing.stopping then
+    snd.message("Bashing OFF!")
+    if snd.toggles.bashing then
+      snd.toggle("bashing")
+    end
+    snd.bashing.stopping = false
+  end
+end
+
+function snd.set_queue(action)
+  if snd.can_cast() then
+    snd.send_attack(action)
+  else
+    snd.queued = action
+    snd.message("Queued: " .. string.upper(action), "q")
+    send(" ")
+  end
+end
+
+function snd.send_attack(action)
+  if snd.can_cast() then
+    snd.send(action)
+    if action == snd.queued then
+      snd.queued = nil
+    end
+  end
+end
+
+function snd.send(action)
+  send(action, false)
+end
+
+function round(num, idp)
+  local mult = 10 ^ (idp or 0)
+  return math.floor(num * mult + 0.5) / mult
+end
+
+function table.isMember(table, member)
+  for i, m in ipairs(table) do
+    if m == member then
+      return true
+    end
+  end
+  return false
+end
+
+function snd.count(table)
+  local count = 0
+  for i, v in ipairs(table) do
+    count = count + 1
+  end
+  return count
+end
+
+function tablelength(T)
+  local count = 0
+  for _ in pairs(T) do count = count + 1 end
+  return count
+end
+
+function deleteFull()
+  deleteLine()
+  tempLineTrigger(1, 1, [[if isPrompt() then
+    deleteLine()
+  end]])
+end
+
+function padLeft(s, l, c)
+  return string.rep(c or ' ', l - #s) .. s
+end
+
+function padRight(s, l, c)
+  return s .. string.rep(c or ' ', l - #s)
+end
+
+function snd.goggle_update()
+  local goggle_defenses = {
+    --heatsight = {level = 1, non_goggle_method = {needybalancetake = "heatsight"}, non_goggle_skill = "Heatsight"},
+    nightsight = { level = 1, non_goggle = { special = "nightsight" }, non_goggle_skill = "Nightsight" },
+    -- mindseye_tattoo = {level = 2, non_goggle = {balanceequilibrium = "touch allsight"}, non_goggle_skill = "Generic"},
+    thirdeye = { level = 2, non_goggle = { eat = "acuity" }, non_goggle_skill = "Generic" },
+    overwatch = { level = 5, non_goggle = { "" }, non_goggle_skill = "Generic" },
+    insight = { level = 8, non_goggle = { needyequilibriumtake = "mind insight on" }, non_goggle_skill = "Insight" },
+    lifevision = { level = 9, non_goggle = { balanceequilibriumtake = "lifevision" }, non_goggle_skill = "Lifevision" },
+    lipreading = { level = 17, non_goggle = { needybalancetake = "lipread" }, non_goggle_skill = "Lipread" },
+  }
+
+  for k, v in pairs(goggle_defenses) do
+    if tonumber(snd.toggles.goggle_level) >= v.level and snd.toggles.goggles then
+      snd.def_options.general_defs["def_" .. k] = "on"
+      snd.defenses["def_" .. k].skill = "Goggle"
+      snd.defenses["def_" .. k].balance = { special = "goggle toggle " .. k }
+    else
+      snd.defenses["def_" .. k].balance = goggle_defenses[k].non_goggle
+      snd.defenses["def_" .. k].skill = goggle_defenses[k].non_goggle_skill
+    end
+  end
+end
+
+function snd.are_we_with_grouped()
+  local good2go = true
+  for _, name in pairs(snd.players_here) do
+    if not table.contains(snd.group, name) and name ~= gmcp.Char.Status.name then
+      good2go = false
+    end
+  end
+  return good2go
+end
+
+function snd.recklessCheck()
+  if
+      gmcp.Char.Vitals.hp == gmcp.Char.Vitals.maxhp
+      and gmcp.Char.Vitals.mp == gmcp.Char.Vitals.maxmp
+      and snd.afflictions.aff_recklessness.state == "healed"
+      and snd.afflictions.aff_blackout.state == "healed"
+  then
+    send("firstaid predict recklessness")
+  end
+end
+
+function snd.reset_me()
+  for i in pairs(snd.afflictions) do
+    snd.aff_remove(i)
+  end
+  for i in pairs(snd.defenses) do
+    snd.def_remove(i)
+  end
+  for i in pairs(snd.balance) do
+    snd.balance[i] = true
+  end
+  snd.hidden_afflictions = 0
+  snd.parrying = "none"
+  snd.crescentable = true
+  snd.pipes_lit = false
+  snd.runemarkMajor = "none"
+  snd.runemarkMinor = "none"
+end
