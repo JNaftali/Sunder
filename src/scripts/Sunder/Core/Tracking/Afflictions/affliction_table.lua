@@ -60,7 +60,6 @@ snd.afflictions = {
   aff_blunt_weakness             = { state = "healed", effect = "more dmg from blunt source", cures = {}, assess = false, timer = createStopWatch() },
   aff_blurry_vision              = { state = "healed", effect = "", cures = { salve = "epidermal to body", tree = "send" }, assess = false, timer = createStopWatch() },
   aff_bulimia                    = { state = "healed", effect = "vomit the next thing you eat", cures = {}, assess = false, timer = createStopWatch() },
-  aff_burnt_eyes                 = { state = "healed", effect = "", cures = { salve = "epidermal to head", tree = "send" }, assess = false, timer = createStopWatch() },
   aff_burnt_skin                 = { state = "healed", effect = "", cures = { salve = "restoration to torso" }, assess = false, timer = createStopWatch() },
   aff_chaos_warp                 = { state = "healed", effect = "", cures = {}, assess = false, timer = createStopWatch() },
   aff_claustrophobia             = { state = "healed", effect = "", cures = { herb = "lobelia", tree = "send", focus = "send" }, assess = false, timer = createStopWatch() },

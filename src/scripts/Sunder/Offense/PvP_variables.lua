@@ -524,7 +524,6 @@ snd.cures = {
     "indifference",
     "stuttering",
     "blurry_vision",
-    "burnt_eyes",
     "blindness",
     "gloom",
     "deafness"
