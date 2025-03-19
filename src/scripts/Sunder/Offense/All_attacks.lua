@@ -126,9 +126,8 @@ snd.all_class_attacks = {
       snd.target_got("allergies")
     end,
 
-    Transfixion = function(target, blindness)
-      snd.target_got("sight")
-      if not blindness then
+    Transfixion = function(target, courage)
+      if not courage then
         snd.target_got("writhe_transfix")
       end
     end,
@@ -860,8 +859,7 @@ snd.all_class_attacks = {
       end
     end,
     Effusion    = function(target)
-      snd.target_got("sight")
-      snd.target_got("hearing")
+      snd.target_got("no_courage")
       snd.target_got("sensitivity")
     end,
     Equivalence = function(target, boosted)
@@ -1039,9 +1037,8 @@ snd.all_class_attacks = {
         end
       end
     end,
-    Mesmerize = function(target, blindness)
-      snd.target_got("sight")
-      if not blindness then
+    Mesmerize = function(target, courage)
+      if not courage then
         snd.target_got("writhe_transfix")
       end
     end,
@@ -1113,8 +1110,8 @@ snd.all_class_attacks = {
     end,
 
     Spew = function(target)
-      snd.target_got("hearing")
-      snd.target_got("sight")
+      snd.target_got("no_courage")
+      snd.target_got("ringing_ears")
     end,
 
     Feast = function(target, fail)
@@ -1307,7 +1304,7 @@ snd.all_class_attacks = {
     end,
     Voidgaze = function(target, shadowprice)
       snd.target_got("voidgaze")
-      if shadowprice then snd.target_got("sight") end
+      if shadowprice then snd.target_got("no_courage") end
     end,
     Fever = function(target, shadowprice)
       snd.target_got("vomiting")
@@ -1334,9 +1331,8 @@ snd.all_class_attacks = {
   },
 
   ["Sorcery"] = {
-    Transfix = function(target, blindness)
-      snd.target_got("sight")
-      if not blindness then
+    Transfix = function(target, courage)
+      if not courage then
         snd.target_got("writhe_transfix")
       end
       snd.balance.sorcery_transfix = false
@@ -2910,9 +2906,8 @@ snd.all_class_attacks = {
       snd.target_got("allergies")
     end,
 
-    Transfixion = function(target, blindness)
-      snd.target_got("sight")
-      if not blindness then
+    Transfixion = function(target, courage)
+      if not courage then
         snd.target_got("writhe_transfix")
       end
     end,
@@ -3240,9 +3235,8 @@ snd.all_class_attacks = {
       end
     end,
     Rousing      = function(target) --33 fabled
-      snd.target_got("sight")
-      snd.target_got("hearing")
-      snd.target_got("sensitivity")
+      snd.target_got("no_courage")
+      snd.target_got("ringing_ears")
     end,
     Parity       = function(target, boosted) --66 virtuoso
       --This might be hidden from all except the Shaman, not sure
@@ -3314,9 +3308,8 @@ snd.all_class_attacks = {
         end
       end
     end,
-    Exhort = function(target, blindness)
-      snd.target_got("sight")
-      if not blindness then
+    Exhort = function(target, courage)
+      if not courage then
         snd.target_got("writhe_transfix")
       end
     end,
@@ -3395,8 +3388,8 @@ snd.all_class_attacks = {
     end,
 
     Attend = function(target)
-      snd.target_got("hearing")
-      snd.target_got("sight")
+      snd.target_got("no_courage")
+      snd.target_got("ringing_ears")
     end,
 
     Exorcism = function(target, fail)
@@ -3813,7 +3806,7 @@ snd.all_class_attacks = {
     end,
     Mystify = function(target, spiritpact)
       snd.target_got("voidgaze")
-      if spiritpact then snd.target_got("sight") end
+      if spiritpact then snd.target_got("no_courage") end
     end,
     Malady = function(target, spiritpact)
       snd.target_got("vomiting")
@@ -3840,9 +3833,8 @@ snd.all_class_attacks = {
   },
 
   ["Runecarving"] = {
-    Bewitch = function(target, blindness)
-      snd.target_got("sight")
-      if not blindness then
+    Bewitch = function(target, courage)
+      if not courage then
         snd.target_got("writhe_transfix")
       end
       snd.balance.sorcery_transfix = false
