@@ -321,13 +321,6 @@ function snd.dismount()
   snd.send("qeb qdmount" .. snd.sep .. "order " .. snd.toggles.mount .. " follow me")
 end
 
---- Event registrations.
--- Here is where all Core events are registered for.
--- @section events
-snd.registerEvent("SunderLogin", "gmcp.Char.Name", snd.login)
-snd.registerEvent("SunderParseSkills", "gmcp.Char.Skills.Groups", parse_skillsets)
-snd.registerEvent("SunderPopulateSkills", "gmcp.Char.Skills.List", populate_skills)
-
 --- Set some alternate defenses for classes that use the same defense name
 -- @function class_catch
 function class_catch()
@@ -1727,3 +1720,10 @@ function snd.reset_me()
   snd.runemarkMajor = "none"
   snd.runemarkMinor = "none"
 end
+
+--- Event registrations.
+-- Here is where all Core events are registered for.
+-- @section events
+snd.registerEvent("SunderLogin", "gmcp.Char.Name", snd.login)
+snd.registerEvent("SunderParseSkills", "gmcp.Char.Skills.Groups", parse_skillsets)
+snd.registerEvent("SunderPopulateSkills", "gmcp.Char.Skills.List", populate_skills)
