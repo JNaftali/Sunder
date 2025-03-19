@@ -325,6 +325,8 @@ end
 -- Here is where all Core events are registered for.
 -- @section events
 snd.registerEvent("SunderLogin", "gmcp.Char.Name", snd.login)
+snd.registerEvent("SunderParseSkills", "gmcp.Char.Skills.Groups", parse_skillsets)
+snd.registerEvent("SunderPopulateSkills", "gmcp.Char.Skills.List", populate_skills)
 
 --- Set some alternate defenses for classes that use the same defense name
 -- @function class_catch
@@ -1010,8 +1012,7 @@ function hasSkill(skill, tree)
   end
 end
 
---- Unknown
--- Unsure about this one, it isn't called anywhere in the system that I can see
+--- Populates snd.skills based off GMCP.
 -- @function populate_skills
 function populate_skills()
   local group = gmcp.Char.Skills.List.group
@@ -1051,7 +1052,7 @@ end
 -- @field Orc
 -- @field Rajamala
 -- @field Troll
--- @field Xoran
+-- @field Xorani
 -- @table snd.defaultRaceskills
 snd.defaultRaceskills = {
   Arborean = { "Photosynth", "Hardy", "Enroot" },
@@ -1076,7 +1077,7 @@ snd.defaultRaceskills = {
   Rajamala = { "Fur Coat", "Grooming", "Scent" },
   Troll = { "Large Size", "Intimidation", "Hemostatic" },
   ["Tsol'aa"] = { "Meditator", "Foraging", "Lucidity" },
-  Xoran = { "Cold Blooded", "Scales", "Fire Breathing" },
+  Xorani = { "Cold Blooded", "Scales", "Fire Breathing" },
 }
 
 snd.illusionChecks = snd.illusionChecks or {}

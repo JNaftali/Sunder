@@ -20,7 +20,7 @@ function npb.init_config()
     spinesreach = "medium_purple",
     duiran = "lawn_green",
     enorian = "gold",
-    rogues = "a_brown",
+    rogues = "saddle_brown",
     divine = "hot_pink",
   }
   npb.t.guess_from_clans = true

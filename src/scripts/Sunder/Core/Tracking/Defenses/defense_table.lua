@@ -526,7 +526,7 @@ snd.defenses = {
   def_masked = { defense = "masked", type = "normal", effect = "Veil-like effect", balance = { balanceequilibrium = "wear mask" }, state = "down", needit = false, timer = createStopWatch(), skill = "Mask" },
   def_trueparry = { defense = "trueparry", type = "normal", effect = "Parry all limbs, channel", balance = { balanceequilibrium = "trueparry" }, state = "down", needit = false, timer = createStopWatch(), skill = "Trueparry" },
   def_bladesurge = { defense = "bladesurge", type = "normal", effect = "Burstheal like vitality, plus extra hit when activated", balance = { balanceequilibriumtake = "bladesurge" }, requiredBalance = "bladesurge", state = "down", needit = false, timer = createStopWatch(), skill = "Bladesurge" },
-  def_bladesurge_energy = { defense = "bladesurge_regeneration", type = "goldenrod", effect = "All knifeplay stances", balance = {}, state = "down", needit = false, timer = createStopWatch(), skill = "Bladesurge" },
+  def_bladesurge_energy = { defense = "bladesurge_energy", type = "goldenrod", effect = "All knifeplay stances", balance = {}, state = "down", needit = false, timer = createStopWatch(), skill = "Bladesurge" },
   def_absorption = { defense = "absorption", type = "normal", effect = "Burst damage after receiving enough magic based damage", balance = { balanceequilibriumtake = "absorption" }, state = "down", needit = false, timer = createStopWatch(), skill = "Tidalslash" },
   --def_regeneration = {defense = "regeneration", type = "normal", effect = "Regen health", balance = {balanceequilibrium = "regeneration on"}, state = "down", needit = false, timer = createStopWatch(), skill = "Regeneration"},
   --This shares monks' regeneration defense - it's handled in that part of the dictionary.
@@ -622,7 +622,7 @@ snd.defenses = {
   def_nocturn_double = { defense = "nocturn_double", type = "normal", effect = "Chance to replicate your abilities", balance = { balanceequilibriumtake = "nocturn double on" }, state = "down", needit = false, timer = createStopWatch(), skill = "Generic" },
   def_nocturn_shadow = { defense = "nocturn_shadow", type = "normal", effect = "Blocks the next attack", balance = { balanceequilibriumtake = "nocturn shadow" }, state = "down", needit = false, timer = createStopWatch(), skill = "Generic" },
   def_nocturn_shadow_stored = { defense = "nocturn_shadow_stored", type = "normal", effect = "Will raise shadow if <40% health", balance = { balanceequilibriumtake = "nocturn shadow store" }, state = "down", needit = false, timer = createStopWatch(), skill = "Generic" },
-  def_nocturn_store = { defense = "astral_store", type = "normal", effect = "Return to your fancy room on death", balance = {}, state = "down", needit = false, timer = createStopWatch(), skill = "Generic" },
+  def_nocturn_store = { defense = "nocturn_store", type = "normal", effect = "Return to your fancy room on death", balance = {}, state = "down", needit = false, timer = createStopWatch(), skill = "Generic" },
 
   --sagani
   def_sagani_form = { defense = "sagani_form", type = "normal", effect = "You're the Avatar!", balance = { balanceequilibriumtake = "sagani coalesce brutal" }, state = "down", needit = false, timer = createStopWatch(), skill = "Generic" },
