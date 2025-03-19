@@ -421,7 +421,7 @@ end
 -- @function npb.echo
 -- @param args string message to send
 function npb.echo(args)
-  cecho("\n<a_darkgreen>[<turquoise>NPB<a_darkgreen>]<reset>:" .. args)
+  cecho("\n<dark_green>[<turquoise>NPB<dark_green>]<reset>:" .. args)
 end
 
 --- @section sndNDB
