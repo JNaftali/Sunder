@@ -3439,6 +3439,7 @@ snd.all_class_attacks = {
     end,
     Stability = function(target)
       snd.immediateResto()
+      snd.target_cured("no_density")
     end,
   },
   ["Manipulation"] = {

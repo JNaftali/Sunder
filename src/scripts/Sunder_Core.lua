@@ -166,7 +166,7 @@ function snd.do_queue()
       end
       if snd.toggles.active and
           (snd.fitness_override and snd.fitness_override()) or
-          (not snd.fitness_override and (snd.have_aff("asthma") and snd.have_aff("slickness") and gmcp.Char.Vitals.pipe == "1")) then
+          (not snd.fitness_override and (snd.have_aff("asthma") and (snd.have_aff("slickness") or snd.have_aff("aeon")) and gmcp.Char.Vitals.pipe == "1")) then
         snd.need_fitness = true
         table.insert(snd.queue, "fitness")
       else

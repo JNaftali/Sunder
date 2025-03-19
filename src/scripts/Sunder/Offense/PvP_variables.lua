@@ -226,7 +226,7 @@ snd.effects = {
   shyness = "digitalis",
 
   anorexia = "slike",
-  belonephobia = "araceae",
+  no_density = "araceae",
   slickness = "gecko",
 
   stuttering = "jalk",
