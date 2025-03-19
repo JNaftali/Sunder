@@ -369,14 +369,6 @@ snd.hound_attacks = {
 
 snd.cures = {
 
-  amaurosis = {
-    "sight",
-  },
-
-  ototoxin = {
-    "hearing",
-  },
-
   kawhe = {
     "no_insomnia",
   },
