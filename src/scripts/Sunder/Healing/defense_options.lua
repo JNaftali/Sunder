@@ -6,7 +6,7 @@ snd.def_options = {
 
   general_defs = {
     def_thirdeye = "on",
-    def_mindseye = "on",
+    def_mindseye = "once",
     def_cloak_tattoo = "on",
     def_kola = "on",
     def_deathsight = "on",
@@ -495,4 +495,3 @@ snd.def_options = {
   }
 
 }
-
