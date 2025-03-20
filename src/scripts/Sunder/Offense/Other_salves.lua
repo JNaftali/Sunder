@@ -44,6 +44,7 @@ local function salve(cure, limb)
   for _, aff in ipairs(salveCures[cure][limb]) do
     if snd.checkAff(aff) then
       if aff == "gloom" then -- this handled by a delayed trigger
+        snd.target_got("no_courage")
         return true
       end
       snd.target_cured(aff)

@@ -52,8 +52,6 @@ function snd.aff_gain(affliction)
   end
   snd.message("You: <red>GOT<DeepSkyBlue> " .. affliction .. ".", "affliction")
   snd.aff_have(affliction)
-  raiseEvent("sunder_my_affs_updated")
-  raiseEvent("sunder_my_limbs_updated")
 end
 
 --- Appears to tell Sunder that you have this affliction, is this something like target_got?.

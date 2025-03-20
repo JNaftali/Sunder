@@ -1,5 +1,4 @@
 if matches[2] == snd.target then
   snd.target_got("weariness")
-  snd.target_got("exhaustion")
+  snd.target_got("crippled")
 end
-

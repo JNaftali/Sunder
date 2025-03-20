@@ -1,146 +1,135 @@
 [
-       {
-              "name": "Random paresis",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^Focus disrupted, (\\w+) staggers, body tensing as muscles numb with paresis.$",
-                            "type": "regex"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "Nycto from gloom or shadeling",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^(\\w+) airs a shuddering whimper as the pressing darkness afflicts .+ with nyctophobia.",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^An inky shadeling stuns (\\w+) and afflicts nyctophobia.$",
-                            "type": "regex"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "Falter - Exhaustion just in case",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^(\\w+)'s breath wavers and fluctates as (\\w+) staggers on (\\w+) feet, weariness giving way to exhaustion against the dark.$",
-                            "type": "regex"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "Already frozen",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^(\\w+) is too frozen to prevent an inky shadeling enveloping \\w+.$",
-                            "type": "regex"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "Nycto Validation on Falter",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^Flinching and paranoid, (\\w+) cries out as the terrors of the dark seize within (\\w+) head and heart.$",
-                            "type": "regex"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "Dementia and Dizziness on Falter",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^(\\w+)'s eyes widen, unfocused, senses following a demented path between disjointed islands of thought.$",
-                            "type": "regex"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "Haemo Validation on Falter",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^Pinpricks of blackened red bead through (\\w+)'s pores, leaving trails down his body as (\\w+) begins to bleed.$",
-                            "type": "regex"
-                     }
-              ],
-              "script": ""
-       }
+  {
+    "name": "Random paresis",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^Focus disrupted, (\\w+) staggers, body tensing as muscles numb with paresis.$",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "Nycto from gloom or shadeling",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^(\\w+) airs a shuddering whimper as the pressing darkness afflicts .+ with nyctophobia.",
+        "type": "regex"
+      },
+      {
+        "pattern": "^An inky shadeling stuns (\\w+) and afflicts nyctophobia.$",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "Falter Exhaustion just in case",
+    "patterns": [
+      {
+        "pattern": "^(\\w+)'s breath wavers and fluctu?ates as (\\w+) staggers on (\\w+) feet, weariness giving way to weakness against the dark.$",
+        "type": "regex"
+      }
+    ]
+  },
+  {
+    "name": "Already frozen",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^(\\w+) is too frozen to prevent an inky shadeling enveloping \\w+.$",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "Nycto Validation on Falter",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^Flinching and paranoid, (\\w+) cries out as the terrors of the dark seize within (\\w+) head and heart.$",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "Dementia and Dizziness on Falter",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^(\\w+)'s eyes widen, unfocused, senses following a demented path between disjointed islands of thought.$",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "Haemo Validation on Falter",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^Pinpricks of blackened red bead through (\\w+)'s pores, leaving trails down .+ body as (\\w+) begins to bleed.$",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  }
 ]

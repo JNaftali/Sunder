@@ -15,6 +15,8 @@ snd.defenses = {
   def_fangbarrier = { defense = "fangbarrier", type = "normal", effect = "Protects against syssin bites", balance = { special = "apply paste" }, state = "down", needit = false, timer = createStopWatch(), skill = "Generic" },
   def_rebounding = { defense = "rebounding", type = "blue", effect = "Causes weapon attacks to backfire", balance = { smoke = "reishi" }, state = "down", needit = false, timer = createStopWatch(), skill = "Generic" },
   def_reflection = { defense = "reflection", type = "blue", effect = "Takes your place for 1 attack", balance = { special = "cast reflection" }, state = "down", needit = false, timer = createStopWatch(), skill = "Reflection" },
+  def_courage = { defense = "courage", type = "normal", effect = "Protects against transfixes n stuff", state = "down", needit = false, timer = createStopWatch(), skill = "Generic" },
+
 
   --Generic skills or occurs in more than one
   def_treewatch = { defense = "treewatch", type = "normal", effect = "Watch out for climbers", balance = { special = "treewatch on" }, state = "down", needit = false, timer = createStopWatch(), skill = "Treewatch" },

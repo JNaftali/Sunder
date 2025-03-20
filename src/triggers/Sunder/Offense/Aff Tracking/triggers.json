@@ -1,478 +1,472 @@
 [
-       {
-              "name": "aff called",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "50",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^\\(Web\\)\\: (\\w+) says, \\\"(?i:Afflicting|Afflictingway) (\\w+): (.*)\\.\\\"$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^\\(Web\\): (\\w+) says, \\\"(?i:Vinelash|Virulent) (\\w+): (\\w+)\\.\\\"$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^\\(Web\\)\\: (\\w+) says, \\\"(?:\\[\\w+\\] )?Afflicting (\\w+): (.*)(.|,)\\\"$",
-                            "type": "regex"
-                     }
-              ],
-              "script": "",
-              "children": [
-                     {
-                            "name": "vorpal",
-                            "isActive": "yes",
-                            "isFolder": "no",
-                            "multiline": "yes",
-                            "multilineDelta": "2",
-                            "matchall": "no",
-                            "filter": "no",
-                            "fireLength": "0",
-                            "highlight": "no",
-                            "highlightFG": "#ff0000",
-                            "highlightBG": "#ffff00",
-                            "patterns": [
-                                   {
-                                          "pattern": "^(\\w+) uses Bladefire Vorpal on (\\w+)\\.$",
-                                          "type": "regex"
-                                   },
-                                   {
-                                          "pattern": "1",
-                                          "type": "spacer"
-                                   }
-                            ],
-                            "script": ""
-                     },
-                     {
-                            "name": "end",
-                            "isActive": "yes",
-                            "isFolder": "no",
-                            "multiline": "no",
-                            "multilineDelta": "0",
-                            "matchall": "no",
-                            "filter": "no",
-                            "fireLength": "0",
-                            "highlight": "no",
-                            "highlightFG": "#ff0000",
-                            "highlightBG": "#ffff00",
-                            "patterns": [
-                                   {
-                                          "pattern": "",
-                                          "type": "prompt"
-                                   }
-                            ],
-                            "script": ""
-                     }
-              ]
-       },
-       {
-              "name": "batter call",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "20",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^\\(Web\\)\\: (\\w+) says, \\\"(Battering|Battered) (\\w+): (.*)\\.\\\"$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^\\(Web\\)\\: (\\w+) says, \\\"(Whispering|Whisper) (\\w+): (.*)\\.\\\"$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^\\(Web\\)\\: (\\w+) says, \\\"(Dictate|Dictating) (\\w+): (.*)\\.\\\"$",
-                            "type": "regex"
-                     }
-              ],
-              "script": "",
-              "children": [
-                     {
-                            "name": "undo",
-                            "isActive": "yes",
-                            "isFolder": "no",
-                            "multiline": "no",
-                            "multilineDelta": "0",
-                            "matchall": "no",
-                            "filter": "no",
-                            "fireLength": "0",
-                            "highlight": "no",
-                            "highlightFG": "#ff0000",
-                            "highlightBG": "#ffff00",
-                            "patterns": [
-                                   {
-                                          "pattern": "^You discern that (\\w+) has resisted the (\\w+) affliction\\.$",
-                                          "type": "regex"
-                                   }
-                            ],
-                            "script": ""
-                     },
-                     {
-                            "name": "end",
-                            "isActive": "yes",
-                            "isFolder": "no",
-                            "multiline": "no",
-                            "multilineDelta": "0",
-                            "matchall": "no",
-                            "filter": "no",
-                            "fireLength": "0",
-                            "highlight": "no",
-                            "highlightFG": "#ff0000",
-                            "highlightBG": "#ffff00",
-                            "patterns": [
-                                   {
-                                          "pattern": "return isPrompt()",
-                                          "type": "lua"
-                                   }
-                            ],
-                            "script": ""
-                     }
-              ]
-       },
-       {
-              "name": "aff called by vamps",
-              "isActive": "no",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "50",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^\\(Web\\): (\\w+) says, \"Afflicting (\\w+): (\\w+)\\. (?:Whispering|Dictating): (\\w+), (\\w+)\\.\"$",
-                            "type": "regex"
-                     }
-              ],
-              "script": "",
-              "children": [
-                     {
-                            "name": "vorpal",
-                            "isActive": "yes",
-                            "isFolder": "no",
-                            "multiline": "yes",
-                            "multilineDelta": "2",
-                            "matchall": "no",
-                            "filter": "no",
-                            "fireLength": "0",
-                            "highlight": "no",
-                            "highlightFG": "#ff0000",
-                            "highlightBG": "#ffff00",
-                            "patterns": [
-                                   {
-                                          "pattern": "^(\\w+) uses Bladefire Vorpal on (\\w+)\\.$",
-                                          "type": "regex"
-                                   },
-                                   {
-                                          "pattern": "3",
-                                          "type": "spacer"
-                                   }
-                            ],
-                            "script": ""
-                     },
-                     {
-                            "name": "end",
-                            "isActive": "yes",
-                            "isFolder": "no",
-                            "multiline": "no",
-                            "multilineDelta": "0",
-                            "matchall": "no",
-                            "filter": "no",
-                            "fireLength": "0",
-                            "highlight": "no",
-                            "highlightFG": "#ff0000",
-                            "highlightBG": "#ffff00",
-                            "patterns": [
-                                   {
-                                          "pattern": "return isPrompt()",
-                                          "type": "lua"
-                                   }
-                            ],
-                            "script": ""
-                     }
-              ]
-       },
-       {
-              "name": "Wounds other",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "7",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^You take a moment to assess how damaged (\\w+)'s limbs are:$",
-                            "type": "regex"
-                     }
-              ],
-              "script": "",
-              "children": [
-                     {
-                            "name": "Wounds capture stuff",
-                            "isActive": "yes",
-                            "isFolder": "no",
-                            "multiline": "no",
-                            "multilineDelta": "0",
-                            "matchall": "no",
-                            "filter": "no",
-                            "fireLength": "0",
-                            "highlight": "no",
-                            "highlightFG": "#ff0000",
-                            "highlightBG": "#ffff00",
-                            "patterns": [
-                                   {
-                                          "pattern": "^(.+): +(\\d{1,2}\\.\\d{2})% \\((\\w+) bruising\\).*$",
-                                          "type": "regex"
-                                   }
-                            ],
-                            "script": ""
-                     }
-              ]
-       },
-       {
-              "name": "proned",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^(\\w+)('s|') broken legs cause .+ to fall to the ground in a heap\\.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^(\\w+) wobbles uncertainly before falling to the ground, .+ leg pulled awkwardly behind .+ own head\\.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^(\\w+) leaps up in what is apparently an attempt at a graceful swan dive\\. .+ smacks head ?first into the solid ground\\.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^You whistle at .+ and send .+ barreling into (\\w+), knocking .+ to the ground\\.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^The injury to (\\w+)('s|') knees causes .+ legs to buckle and .+ falls to the ground in a heap\\.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "barrels into (\\w+) and knocks .+ to the ground\\.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^\\w+ \\w+ into (\\w+), knocking .+ to the ground\\.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^\\w connects? and sends? (\\w+) sprawling to the floor\\.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^You let forth a forceful howl toward (\\w+)\\.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "lowers its head and rams it into (\\w+) painfully, antlers goring .+ flesh before the beast gives a toss of its great head and sends .+ sprawling unceremoniously to the ground\\.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^Crumpling over in mental agony, (\\w+) collapses to the floor and clutches .+ head\\.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^The frenzied air reaches its peak of intensity and slams into (\\w+) with a ferocity that knocks .+ to the ground\\.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^(\\w+) is blasted backward as you will an expulsion of energy from your staff,the forked blow knocking .+ to the ground\\.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^(\\w+)'s? eyes close suddenly as .+ falls asleep\\.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^The tentacle drags (\\w+) from the skies and hurls .+ to the ground.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^(\\w+) is unearthed from the ground!$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^An elk lowers its head and rams it into (\\w+) painfully, antlers goring .+ flesh before the beast gives a toss of its great head and sends it sprawling unceremoniously to the ground.",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^The force of the blow drives (\\w+) to .+ knees.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^Your foot slams into (\\w+), knocking \\w+ off \\w+ feet.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "(\\w+) is already upon the ground.",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^(\\w+) is knocked to the ground by a sudden powerful gust of wind\\.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^(\\w+) leaps up in what is apparently an attempt at a graceful swan dive\\. .+ smacks head ?first into shallow water\\.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^Being unconscious, (\\w+) falls over\\.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^(\\w+) appears dizzy and falls to the ground\\.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^(\\w+) is already fallen upon the ground\\.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^With a struggle, (\\w+) attempts to call upon \\w+ willpower reserves, however the effort leaves \\w+ looking dizzy and weak. \\w+ eyes quickly grow unfocused and .+ sways? slightly before crashing heavily to the ground, and \\w+ quickly slips into unconsciousness.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^A blow knocks (\\w+)'s? balance too far from the balls of \\w+ feet, bringing \\w+ crashing to the ground\\.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^(\\w+) is dragged into the location from the \\w+ by a thin thread looped around one of \\w+ feet\\.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^.+ whips one of its muscular tentacles toward (\\w+), sending \\w+ toppling to the ground in an unceremonious pile\\.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^The ground beneath you heaves in revolt, casting (\\w+) down\\.$",
-                            "type": "regex"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "stood",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^(\\w+) stands up and stretches .+ arms out wide\\.$",
-                            "type": "regex"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "Ravager Rebound",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^Rebounding with aggres?sive agility, (\\w+) forces \\w+ back to \\w+ feet.$",
-                            "type": "regex"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "asleep",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^(\\w+)'s? eyes close suddenly as \\w+ falls asleep\\.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^(\\w+) gives in to exhaustion, drifting off to sleep\\.$",
-                            "type": "regex"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "no asleep",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^(\\w+) opens \\w+ eyes and yawns mightily\\.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^(\\w+) wakes up with a gasp of pain\\.$",
-                            "type": "regex"
-                     }
-              ],
-              "script": ""
-       }
+  {
+    "name": "aff called",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "50",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^\\(Web\\)\\: (\\w+) says, \\\"(?i:Afflicting|Afflictingway) (\\w+): (.*)\\.\\\"$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\(Web\\): (\\w+) says, \\\"(?i:Vinelash|Virulent) (\\w+): (\\w+)\\.\\\"$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\(Web\\)\\: (\\w+) says, \\\"(?:\\[\\w+\\] )?Afflicting (\\w+): (.*)(.|,)\\\"$",
+        "type": "regex"
+      }
+    ],
+    "script": "",
+    "children": [
+      {
+        "name": "vorpal",
+        "isActive": "yes",
+        "isFolder": "no",
+        "multiline": "yes",
+        "multilineDelta": "2",
+        "matchall": "no",
+        "filter": "no",
+        "fireLength": "0",
+        "highlight": "no",
+        "highlightFG": "#ff0000",
+        "highlightBG": "#ffff00",
+        "patterns": [
+          {
+            "pattern": "^(\\w+) uses Bladefire Vorpal on (\\w+)\\.$",
+            "type": "regex"
+          },
+          {
+            "pattern": "1",
+            "type": "spacer"
+          }
+        ],
+        "script": ""
+      },
+      {
+        "name": "end",
+        "isActive": "yes",
+        "isFolder": "no",
+        "multiline": "no",
+        "multilineDelta": "0",
+        "matchall": "no",
+        "filter": "no",
+        "fireLength": "0",
+        "highlight": "no",
+        "highlightFG": "#ff0000",
+        "highlightBG": "#ffff00",
+        "patterns": [
+          {
+            "pattern": "",
+            "type": "prompt"
+          }
+        ],
+        "script": ""
+      }
+    ]
+  },
+  {
+    "name": "batter call",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "20",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^\\(Web\\)\\: (\\w+) says, \\\"(Battering|Battered) (\\w+): (.*)\\.\\\"$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\(Web\\)\\: (\\w+) says, \\\"(Whispering|Whisper) (\\w+): (.*)\\.\\\"$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\(Web\\)\\: (\\w+) says, \\\"(Dictate|Dictating) (\\w+): (.*)\\.\\\"$",
+        "type": "regex"
+      }
+    ],
+    "script": "",
+    "children": [
+      {
+        "name": "undo",
+        "isActive": "yes",
+        "isFolder": "no",
+        "multiline": "no",
+        "multilineDelta": "0",
+        "matchall": "no",
+        "filter": "no",
+        "fireLength": "0",
+        "highlight": "no",
+        "highlightFG": "#ff0000",
+        "highlightBG": "#ffff00",
+        "patterns": [
+          {
+            "pattern": "^You discern that (\\w+) has resisted the (\\w+) affliction\\.$",
+            "type": "regex"
+          }
+        ],
+        "script": ""
+      },
+      {
+        "name": "end",
+        "isActive": "yes",
+        "isFolder": "no",
+        "multiline": "no",
+        "multilineDelta": "0",
+        "matchall": "no",
+        "filter": "no",
+        "fireLength": "0",
+        "highlight": "no",
+        "highlightFG": "#ff0000",
+        "highlightBG": "#ffff00",
+        "patterns": [
+          {
+            "pattern": "return isPrompt()",
+            "type": "lua"
+          }
+        ],
+        "script": ""
+      }
+    ]
+  },
+  {
+    "name": "aff called by vamps",
+    "isActive": "no",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "50",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^\\(Web\\): (\\w+) says, \"Afflicting (\\w+): (\\w+)\\. (?:Whispering|Dictating): (\\w+), (\\w+)\\.\"$",
+        "type": "regex"
+      }
+    ],
+    "script": "",
+    "children": [
+      {
+        "name": "vorpal",
+        "isActive": "yes",
+        "isFolder": "no",
+        "multiline": "yes",
+        "multilineDelta": "2",
+        "matchall": "no",
+        "filter": "no",
+        "fireLength": "0",
+        "highlight": "no",
+        "highlightFG": "#ff0000",
+        "highlightBG": "#ffff00",
+        "patterns": [
+          {
+            "pattern": "^(\\w+) uses Bladefire Vorpal on (\\w+)\\.$",
+            "type": "regex"
+          },
+          {
+            "pattern": "3",
+            "type": "spacer"
+          }
+        ],
+        "script": ""
+      },
+      {
+        "name": "end",
+        "isActive": "yes",
+        "isFolder": "no",
+        "multiline": "no",
+        "multilineDelta": "0",
+        "matchall": "no",
+        "filter": "no",
+        "fireLength": "0",
+        "highlight": "no",
+        "highlightFG": "#ff0000",
+        "highlightBG": "#ffff00",
+        "patterns": [
+          {
+            "pattern": "return isPrompt()",
+            "type": "lua"
+          }
+        ],
+        "script": ""
+      }
+    ]
+  },
+  {
+    "name": "Wounds other",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "7",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^You take a moment to assess how damaged (\\w+)'s limbs are:$",
+        "type": "regex"
+      }
+    ],
+    "script": "",
+    "children": [
+      {
+        "name": "Wounds capture stuff",
+        "isActive": "yes",
+        "isFolder": "no",
+        "multiline": "no",
+        "multilineDelta": "0",
+        "matchall": "no",
+        "filter": "no",
+        "fireLength": "0",
+        "highlight": "no",
+        "highlightFG": "#ff0000",
+        "highlightBG": "#ffff00",
+        "patterns": [
+          {
+            "pattern": "^(.+): +(\\d{1,2}\\.\\d{2})% \\((\\w+) bruising\\).*$",
+            "type": "regex"
+          }
+        ],
+        "script": ""
+      }
+    ]
+  },
+  {
+    "name": "proned",
+    "patterns": [
+      {
+        "pattern": "^Confusingly, (\\w+) adds a spin afterward and missteps, falling to the ground\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^(\\w+)('s|') broken legs cause .+ to fall to the ground in a heap\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^(\\w+) wobbles uncertainly before falling to the ground, .+ leg pulled awkwardly behind .+ own head\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^(\\w+) leaps up in what is apparently an attempt at a graceful swan dive\\. .+ smacks head ?first into the solid ground\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^You whistle at .+ and send .+ barreling into (\\w+), knocking .+ to the ground\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^The injury to (\\w+)('s|') knees causes .+ legs to buckle and .+ falls to the ground in a heap\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "barrels into (\\w+) and knocks .+ to the ground\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w+ \\w+ into (\\w+), knocking .+ to the ground\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^\\w connects? and sends? (\\w+) sprawling to the floor\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^You let forth a forceful howl toward (\\w+)\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "lowers its head and rams it into (\\w+) painfully, antlers goring .+ flesh before the beast gives a toss of its great head and sends .+ sprawling unceremoniously to the ground\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^Crumpling over in mental agony, (\\w+) collapses to the floor and clutches .+ head\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^The frenzied air reaches its peak of intensity and slams into (\\w+) with a ferocity that knocks .+ to the ground\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^(\\w+) is blasted backward as you will an expulsion of energy from your staff,the forked blow knocking .+ to the ground\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^(\\w+)'s? eyes close suddenly as .+ falls asleep\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^The tentacle drags (\\w+) from the skies and hurls .+ to the ground.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^(\\w+) is unearthed from the ground!$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^An elk lowers its head and rams it into (\\w+) painfully, antlers goring .+ flesh before the beast gives a toss of its great head and sends it sprawling unceremoniously to the ground.",
+        "type": "regex"
+      },
+      {
+        "pattern": "^The force of the blow drives (\\w+) to .+ knees.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^Your foot slams into (\\w+), knocking \\w+ off \\w+ feet.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "(\\w+) is already upon the ground.",
+        "type": "regex"
+      },
+      {
+        "pattern": "^(\\w+) is knocked to the ground by a sudden powerful gust of wind\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^(\\w+) leaps up in what is apparently an attempt at a graceful swan dive\\. .+ smacks head ?first into shallow water\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^Being unconscious, (\\w+) falls over\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^(\\w+) appears dizzy and falls to the ground\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^(\\w+) is already fallen upon the ground\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^With a struggle, (\\w+) attempts to call upon \\w+ willpower reserves, however the effort leaves \\w+ looking dizzy and weak. \\w+ eyes quickly grow unfocused and .+ sways? slightly before crashing heavily to the ground, and \\w+ quickly slips into unconsciousness.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^A blow knocks (\\w+)'s? balance too far from the balls of \\w+ feet, bringing \\w+ crashing to the ground\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^(\\w+) is dragged into the location from the \\w+ by a thin thread looped around one of \\w+ feet\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^.+ whips one of its muscular tentacles toward (\\w+), sending \\w+ toppling to the ground in an unceremonious pile\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^The ground beneath you heaves in revolt, casting (\\w+) down\\.$",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "stood",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^(\\w+) stands up and stretches .+ arms out wide\\.$",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "Ravager Rebound",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^Rebounding with aggres?sive agility, (\\w+) forces \\w+ back to \\w+ feet.$",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "asleep",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^(\\w+)'s? eyes close suddenly as \\w+ falls asleep\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^(\\w+) gives in to exhaustion, drifting off to sleep\\.$",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "no asleep",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^(\\w+) opens \\w+ eyes and yawns mightily\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^(\\w+) wakes up with a gasp of pain\\.$",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  }
 ]

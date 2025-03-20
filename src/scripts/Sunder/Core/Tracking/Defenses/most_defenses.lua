@@ -1,5 +1,6 @@
 snd.defenses_list = {
   ["Your hands are gripping your wielded items tightly."] = "irongrip",
+  ["You are brimming with courage."] = "courage",
   ["You are utilising a careful, trained grip on your weapons."] = "gripping",
   ["Your senses are magically heightened."] = "mindseye",
   ["You are diverting melee attacks."] = "divert_melee",

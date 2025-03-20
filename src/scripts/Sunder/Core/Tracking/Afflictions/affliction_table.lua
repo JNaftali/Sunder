@@ -1,8 +1,28 @@
 snd.afflictions = {
-  aff_oblivion                   = { state = "healed", effect = "Death unless you interrupt the bard", cures = {}, assess = false, timer = createStopWatch() },
-  aff_blindness                  = { state = "healed", effect = "negates accuracy for 1s every 8s", cures = { salve = "press epidermal to head" }, assess = false, timer = createStopWatch() },
-  aff_deafness                   = { state = "healed", effect = "Grants attackers 15% accuracy bonus", cures = { salve = "press epidermal to head" }, assess = false, timer = createStopWatch() },
-  aff_watery_eyes                = { state = "healed", effect = "15% chance to miss", cures = { salve = "press epidermal to head" }, assess = false, timer = createStopWatch() },
+  aff_oblivion        = { state = "healed", effect = "Death unless you interrupt the bard", cures = {}, assess = false, timer = createStopWatch() },
+  aff_blindness       = { state = "healed", effect = "negates accuracy for 1s every 8s", cures = { salve = "press epidermal to head" }, assess = false, timer = createStopWatch() },
+  aff_deafness        = { state = "healed", effect = "Grants attackers 15% accuracy bonus", cures = { salve = "press epidermal to head" }, assess = false, timer = createStopWatch() },
+  aff_watery_eyes     = { state = "healed", effect = "15% chance to miss", cures = { salve = "press epidermal to head" }, assess = false, timer = createStopWatch() },
+  aff_chaosray_blue   = { state = "healed", effect = "", cures = {}, assess = false, timer = createStopWatch() },
+  aff_chaosray_green  = { state = "healed", effect = "", cures = {}, assess = false, timer = createStopWatch() },
+  aff_chaosray_indigo = { state = "healed", effect = "", cures = {}, assess = false, timer = createStopWatch() },
+  aff_chaosray_orange = { state = "healed", effect = "", cures = {}, assess = false, timer = createStopWatch() },
+  aff_chaosray_red    = { state = "healed", effect = "", cures = {}, assess = false, timer = createStopWatch() },
+  aff_chaosray_violet = { state = "healed", effect = "", cures = {}, assess = false, timer = createStopWatch() },
+  aff_chaosray_yellow = { state = "healed", effect = "", cures = {}, assess = false, timer = createStopWatch() },
+  aff_lichenwrap      = { state = "healed", effect = "", cures = {}, assess = false, timer = createStopWatch() },
+  aff_stasis_rune     = { state = "healed", effect = "", cures = {}, assess = false, timer = createStopWatch() },
+  aff_verdantskin     = { state = "healed", effect = "", cures = {}, assess = false, timer = createStopWatch() },
+
+  aff_redshift        = { state = "healed", effect = "Delayed damage based on distance", cures = {}, assess = false, timer = createStopWatch() },
+
+
+  aff_conflicted                 = { state = "healed", effect = "Your next two appeals must be from two different categories, or you will take heavy acumen damage", cures = {}, assess = false, timer = createStopWatch() },
+  aff_confounded                 = { state = "healed", effect = "Your ability to score compelling points with appeals is disabled", cures = {}, assess = false, timer = createStopWatch() },
+  aff_dissuaded                  = { state = "healed", effect = "You have recently lost a Persuasion battle and cannot undertake another", cures = {}, assess = false, timer = createStopWatch() },
+  aff_engrossed                  = { state = "healed", effect = "Can't run from persuasion", cures = {}, assess = false, timer = createStopWatch() },
+  aff_entrenched                 = { state = "healed", effect = "Your next two appeals must be from the same category, or you will take heavy acumen damage", cures = {}, assess = false, timer = createStopWatch() },
+  aff_fatigued                   = { state = "healed", effect = "Your acumen regeneration is reduced by 20%", cures = {}, assess = false, timer = createStopWatch() },
 
   aff_shock                      = { state = "healed", effect = "less mobility", cures = {}, assess = false, timer = createStopWatch() },
   aff_burnout                    = { state = "healed", effect = "slower cds", cures = {}, assess = false, timer = createStopWatch() },
