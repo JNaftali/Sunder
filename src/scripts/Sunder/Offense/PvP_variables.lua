@@ -219,6 +219,9 @@ snd.effects = {
 
   sleep = "delphinium", --note this is not the asleep aff, is going to be a meta aff
 
+  deafness = "colocasia",
+  blindness = "oleander",
+
   stupidity = "aconite",
   weariness = "vernalius",
   recklessness = "eurypteria",

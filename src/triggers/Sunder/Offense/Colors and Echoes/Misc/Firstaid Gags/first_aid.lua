@@ -1,3 +1,4 @@
-if snd.gui.enabled then 
-deleteLine()
+if snd.toggles.gags then
+  deleteLine()
 end
+

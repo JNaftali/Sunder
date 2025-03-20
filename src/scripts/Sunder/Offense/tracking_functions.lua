@@ -189,6 +189,12 @@ function snd.target_cured(affliction)
   if affliction == "paralysis" then
     snd.target_cured("paresis")
   end
+  if affliction == "sensitivity" then
+    snd.target_cured("ringing_ears")
+  end
+  if affliction == "blurry_vision" then
+    snd.target_cured("watery_eyes")
+  end
   --if affliction == "anorexia" then
   --  snd.target_cured("voyria")
   --end
