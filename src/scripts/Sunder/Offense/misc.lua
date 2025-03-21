@@ -141,10 +141,6 @@ function snd.no_parry()
   end
   if snd.checksomeAffs(noparryaffs, 1) then no_parry = true end
 
-  if (snd.limb_dmg["left arm"] >= 33.33) and (snd.limb_dmg["right arm"] >= 33.33) then
-    no_parry = true
-  end
-
   if snd.checksomeAffs({ "feeble_arms", "feeble_legs" }, 2) then
     no_parry = true
   end
