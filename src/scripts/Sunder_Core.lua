@@ -235,9 +235,8 @@ function snd.login()
 
     tempTimer(1, function() raiseEvent("sunder_login") end)
     tempTimer(2.5, function()
+      snd.class = ""
       snd.changeClass()
-      sendGMCP("Char.Skills.get")
-      send("")
     end)
     tempTimer(4, [[send("tattoos", false)]])
     snd.registerCityMarks()
@@ -1450,12 +1449,14 @@ function snd.target_hit(attack, attacker, target)
 end
 
 function snd.changeClass()
-  if snd.assumed_class ~= nil then
-    snd.class = snd.assumed_class
-  else
-    snd.class = gmcp.Char.Status.class
-    if snd.class == "(None)" then snd.class = "None" end
-  end
+  if not gmcp.Char.Vitals then return end --oop make sure it doesn't fire before things happen
+  local gmcpClass = gmcp.Char.Status.class == "(None)" and "None" or gmcp.Char.Status.class
+  if snd.class == gmcpClass then return end
+  snd.class = gmcpClass
+  tempTimer(1, function()
+    sendGMCP("Char.Skills.get")
+    send("")
+  end)
   snd.city = gmcp.Char.Status.city
   if snd.city == "Spinesreach" or snd.city == "Bloodloch" then
     snd.faction = "shadow"
@@ -1465,6 +1466,8 @@ function snd.changeClass()
   raiseEvent("sunder_update_vitals")
   expandAlias("ldd none", false)
 end
+
+snd.registerEvent("SunderClassChanging", "gmcp.Char.Status", snd.changeClass)
 
 function snd.updateMonolith()
   if snd.items["a monolith sigil"] ~= nil then
