@@ -1703,6 +1703,8 @@ function snd.recklessCheck()
   end
 end
 
+--- Reset self status.
+-- @function snd.reset_me
 function snd.reset_me()
   for i in pairs(snd.afflictions) do
     snd.aff_remove(i)
@@ -1719,6 +1721,7 @@ function snd.reset_me()
   snd.pipes_lit = false
   snd.runemarkMajor = "none"
   snd.runemarkMinor = "none"
+  snd.current_dodge = "none"
 end
 
 --- Event registrations.

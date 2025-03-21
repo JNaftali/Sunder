@@ -122,7 +122,6 @@ function snd.no_parry()
     --"punished_arms",
     --"paresis",
     "paralysis",
-    "indifference",
     "asleep",
     "writhe_transfix",
     "writhe_web",
@@ -146,11 +145,30 @@ function snd.no_parry()
     no_parry = true
   end
 
-  if snd.class == "Predator" and snd.checkAff("fallen") and snd.checksomeAffs({ "left_leg_broken", "right_leg_broken" }, 1) then
-    return true
+  if snd.checksomeAffs({ "feeble_arms", "feeble_legs" }, 2) then
+    no_parry = true
+  end
+  if snd.checkAff("left_arm_crippled") and snd.checkAff("right_arm_crippled") then
+    no_parry = true
+  end
+  if snd.checkAff("left_arm_numbed") and snd.checkAff("right_arm_crippled") then
+    no_parry = true
+  end
+  if snd.checkAff("left_arm_crippled") and snd.checkAff("right_arm_numbed") then
+    no_parry = true
   end
 
   return no_parry
+end
+
+--- Check to see if teardown is active (Predator parry bypass for sitara).
+-- @function snd.teardown
+-- @return boolean
+function snd.teardown()
+  if snd.class == "Predator" and snd.checkAff("fallen") and snd.checksomeAffs({ "left_leg_broken", "right_leg_broken" }, 1) then
+    return true
+  end
+  return false
 end
 
 --- Check to see if our target is prone.
