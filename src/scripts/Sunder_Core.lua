@@ -1021,31 +1021,32 @@ function populate_skills()
 end
 
 --- Table containing the default race skills.
--- The tsol'aa field seems like it doesn't want to properly format but it is
--- there, it's referenced by ["Tsol'aa"]. Stupid races with apostrophes
--- @field Arborean
--- @field Arqeshi
--- @field Atavian
--- @field Djeirani
--- @field Dwarf
--- @field Grecht
--- @field Gnome
--- @field Grook
--- @field Harpy
--- @field Human
--- @field Horkval
--- @field Imp
--- @field Kelki
--- @field Kobold
--- @field Minotaur
--- @field Mhun
--- @field Nazetu
--- @field Ogre
--- @field Orc
--- @field Rajamala
--- @field Troll
--- @field Xorani
+-- Maps each race to their default set of skills.
+-- Note: Races with special characters (like apostrophes) are handled as string keys.
 -- @table snd.defaultRaceskills
+-- @field Arborean Skills for Arborean.
+-- @field Arqeshi Skills for Arqeshi.
+-- @field Atavian Skills for Atavian.
+-- @field Djeirani Skills for Djeirani.
+-- @field Dwarf Skills for Dwarf.
+-- @field Grecht Skills for Grecht.
+-- @field Gnome Skills for Gnome.
+-- @field Grook Skills for Grook.
+-- @field Harpy Skills for Harpy.
+-- @field Human Skills for Human.
+-- @field Horkval Skills for Horkval.
+-- @field Imp Skills for Imp.
+-- @field Kelki Skills for Kelki.
+-- @field Kobold Skills for Kobold.
+-- @field Minotaur Skills for Minotaur.
+-- @field Mhun Skills for Mhun.
+-- @field Nazetu Skills for Nazetu.
+-- @field Ogre Skills for Ogre.
+-- @field Orc Skills for Orc.
+-- @field Rajamala Skills for Rajamala.
+-- @field Troll Skills for Troll.
+-- @field Xorani Skills for Xorani.
+-- @field["Tsol'aa"] Skills for Tsol'aa.
 snd.defaultRaceskills = {
   Arborean = { "Photosynth", "Hardy", "Enroot" },
   Arqeshi = { "Trawling", "Willful", "Ice Breathing" },
@@ -1071,6 +1072,7 @@ snd.defaultRaceskills = {
   ["Tsol'aa"] = { "Meditator", "Foraging", "Lucidity" },
   Xorani = { "Cold Blooded", "Scales", "Fire Breathing" },
 }
+
 
 snd.illusionChecks = snd.illusionChecks or {}
 

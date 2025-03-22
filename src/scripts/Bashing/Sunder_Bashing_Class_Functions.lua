@@ -1,3 +1,8 @@
+--- @module Bashing
+
+--- List of classes that Sunder can handle bashing for.
+-- @table snd.class_list
+-- @field table class definition
 snd.class_list = {
   { class = "Akkari",       func = function(current) snd.akkari_bash() end },
   { class = "Alchemist",    func = function(current) snd.alchemist_bash() end },
@@ -33,57 +38,8 @@ snd.class_list = {
   { class = "None",         func = function(current) snd.none_bash() end }, --200
 }
 
---- This just checks to see if shield is deffed.
--- Probably will remove, this seems redundant
--- @function snd.shield_check
-function snd.shield_check()
-  if snd.defenses.def_shield_tattoo.state ~= "deffed" then
-    return true
-  end
-end
-
---- Bashing function, picks attacks based on your class.
--- @functioon snd.bashing_function
-function snd.bashing_function()
-  if not snd.room_clear then
-    return
-  end
-
-  if not snd.waiting.queue then
-    if not snd.bashing.targeted then
-      snd.runBasher()
-    else
-      battack = ""
-      local class = snd.class:lower()
-      if snd[class .. "_bash_override"] then
-        snd[class .. "_bash_override"]()                                      --try bashing override first
-      elseif snd[class .. "_bash"] then
-        snd[class .. "_bash"]()                                               --check for/use stock bashing function
-      else
-        battack = "kill " .. snd.bashing.target                               --if no bashing function exists, default to kill
-      end
-      if snd.have_aff("shock") and hasSkill("Overdrive") then                 -- let's use overdrive if we have shock, adds to new class bashing attack line
-        battack = "overdrive" .. snd.sep .. battack .. snd.sep
-      end
-      if snd.toggles.parrying and snd.toparry ~= "none" and snd.toparry ~= snd.parrying then
-        battack = "parry " .. snd.toparry .. snd.sep .. battack
-      end
-      if tonumber(snd.toggles.gauntlet_level) >= 2 then battack = battack .. snd.sep .. "absorb ylem" end       -- if you have a level 2 gauntlet, auto-absorb
-
-      if battack == "" and (snd.counterattack_active or not snd.defenses.def_reflection.state == "deffed") then -- if the basher couldn't change battack to something from your class, it will give an error
-        echo("\nTried to bash, no class ability set.")
-      elseif battack ~= snd.last_attack and not snd.ylem_check then                                             -- if your battack isn't the same as your last attempted attack, and you aren't trying to capture ylem
-        snd.last_attack = battack                                                                               -- ATTACK
-        if battack ~= "none" then                                                                               -- if for some reason it's none as your attack, stand
-          snd.send("qeb stand" .. snd.sep .. snd.last_attack)
-        end
-        snd.waiting.queue = true
-        tempTimer(snd.delay(), [[snd.waiting.queue = false]])
-      end
-    end
-  end
-end
-
+--- akkari bashing function.
+-- @function snd.akkari_bash
 function snd.akkari_bash()
   hp = 100 * (gmcp.Char.Vitals.hp / gmcp.Char.Vitals.maxhp)
   wp = 100 * (gmcp.Char.Vitals.wp / gmcp.Char.Vitals.maxwp)
@@ -109,6 +65,8 @@ function snd.akkari_bash()
   end
 end
 
+--- alchemist bashing function.
+-- @function snd.alchemist_bash
 function snd.alchemist_bash()
   hp = 100 * (gmcp.Char.Vitals.hp / gmcp.Char.Vitals.maxhp)
   mp = 100 * (gmcp.Char.Vitals.mp / gmcp.Char.Vitals.maxmp)
@@ -148,6 +106,8 @@ function snd.alchemist_bash()
   end
 end
 
+--- archivist bashing function.
+-- @function snd.archivist_bash
 function snd.archivist_bash()
   hp = 100 * (gmcp.Char.Vitals.hp / gmcp.Char.Vitals.maxhp)
   bioessence = tonumber(gmcp.Char.Vitals.bio) or 0
@@ -171,6 +131,8 @@ function snd.archivist_bash()
   end
 end
 
+--- ascendril bashing function.
+-- @function snd.ascendril_bash
 function snd.ascendril_bash()
   hp = 100 * (gmcp.Char.Vitals.hp / gmcp.Char.Vitals.maxhp)
   wp = 100 * (gmcp.Char.Vitals.wp / gmcp.Char.Vitals.maxwp)
@@ -197,6 +159,8 @@ function snd.ascendril_bash()
   end
 end
 
+--- bard bashing function.
+-- @function snd.bard_bash
 function snd.bard_bash()
   hp = 100 * (gmcp.Char.Vitals.hp / gmcp.Char.Vitals.maxhp)
 
@@ -214,6 +178,8 @@ function snd.bard_bash()
   end
 end
 
+--- bloodborn bashing function.
+-- @function snd.bloodborn_bash
 function snd.bloodborn_bash()
   hp = 100 * (gmcp.Char.Vitals.hp / gmcp.Char.Vitals.maxhp)
   wp = 100 * (gmcp.Char.Vitals.wp / gmcp.Char.Vitals.maxwp)
@@ -234,6 +200,8 @@ function snd.bloodborn_bash()
   end
 end
 
+--- carnifex bashing function.
+-- @function snd.carnifex_bash
 function snd.carnifex_bash()
   hp = 100 * (gmcp.Char.Vitals.hp / gmcp.Char.Vitals.maxhp)
 
@@ -249,6 +217,8 @@ function snd.carnifex_bash()
   end
 end
 
+--- earthcaller bashing function.
+-- @function snd.earthcaller_bash
 function snd.earthcaller_bash()
   hp = 100 * (gmcp.Char.Vitals.hp / gmcp.Char.Vitals.maxhp)
 
@@ -264,6 +234,8 @@ function snd.earthcaller_bash()
   end
 end
 
+--- executor bashing function.
+-- @function snd.executor_bash
 function snd.executor_bash()
   hp = 100 * (gmcp.Char.Vitals.hp / gmcp.Char.Vitals.maxhp)
 
@@ -292,6 +264,8 @@ function snd.executor_bash()
   end
 end
 
+--- indorani bashing function.
+-- @function snd.indorani_bash
 function snd.indorani_bash()
   hp = 100 * (gmcp.Char.Vitals.hp / gmcp.Char.Vitals.maxhp)
 
@@ -311,6 +285,8 @@ function snd.indorani_bash()
   end
 end
 
+--- luminary bashing function.
+-- @function snd.luminary_bash
 function snd.luminary_bash()
   hp = 100 * (gmcp.Char.Vitals.hp / gmcp.Char.Vitals.maxhp)
   if hp <= 40 and snd.shield_check() then
@@ -325,6 +301,8 @@ function snd.luminary_bash()
   end
 end
 
+--- monk bashing function.
+-- @function snd.monk_bash
 function snd.monk_bash()
   hp = 100 * (gmcp.Char.Vitals.hp / gmcp.Char.Vitals.maxhp)
   mp = 100 * (gmcp.Char.Vitals.mp / gmcp.Char.Vitals.maxmp)
@@ -360,6 +338,8 @@ function snd.monk_bash()
   end
 end
 
+--- oneiromancer bashing function.
+-- @function snd.oneiromancer_bash
 function snd.oneiromancer_bash()
   hp = 100 * (gmcp.Char.Vitals.hp / gmcp.Char.Vitals.maxhp)
 
@@ -381,6 +361,8 @@ function snd.oneiromancer_bash()
   end
 end
 
+--- praenomen bashing function.
+-- @function snd.praenomen_bash
 function snd.praenomen_bash()
   hp = 100 * (gmcp.Char.Vitals.hp / gmcp.Char.Vitals.maxhp)
   wp = 100 * (gmcp.Char.Vitals.wp / gmcp.Char.Vitals.maxwp)
@@ -406,6 +388,8 @@ function snd.praenomen_bash()
   end
 end
 
+--- predator bashing function.
+-- @function snd.predator_bash
 function snd.predator_bash()
   hp = 100 * (gmcp.Char.Vitals.hp / gmcp.Char.Vitals.maxhp)
   mp = 100 * (gmcp.Char.Vitals.mp / gmcp.Char.Vitals.maxmp)
@@ -419,6 +403,8 @@ function snd.predator_bash()
   end
 end
 
+--- ravager bashing function.
+-- @function snd.ravager_bash
 function snd.ravager_bash()
   hp = 100 * (gmcp.Char.Vitals.hp / gmcp.Char.Vitals.maxhp)
   mp = 100 * (gmcp.Char.Vitals.mp / gmcp.Char.Vitals.maxmp)
@@ -446,6 +432,8 @@ function snd.ravager_bash()
   end
 end
 
+--- revenant bashing function.
+-- @function snd.revenant_bash
 function snd.revenant_bash()
   hp = 100 * (gmcp.Char.Vitals.hp / gmcp.Char.Vitals.maxhp)
   mp = 100 * (gmcp.Char.Vitals.mp / gmcp.Char.Vitals.maxmp)
@@ -471,6 +459,8 @@ function snd.revenant_bash()
   end
 end
 
+--- runecarver bashing function.
+-- @function snd.runecarver_bash
 function snd.runecarver_bash()
   hp = 100 * (gmcp.Char.Vitals.hp / gmcp.Char.Vitals.maxhp)
 
@@ -497,6 +487,8 @@ function snd.runecarver_bash()
   end
 end
 
+--- sciomancer bashing function.
+-- @function snd.sciomancer_bash
 function snd.sciomancer_bash()
   hp = 100 * (gmcp.Char.Vitals.hp / gmcp.Char.Vitals.maxhp)
 
@@ -523,6 +515,8 @@ function snd.sciomancer_bash()
   end
 end
 
+--- sentinel bashing function.
+-- @function snd.sentinel_bash
 function snd.sentinel_bash()
   hp = 100 * (gmcp.Char.Vitals.hp / gmcp.Char.Vitals.maxhp)
   if hp <= 40 and snd.shield_check() then
@@ -550,6 +544,8 @@ function snd.sentinel_bash()
   end
 end
 
+--- shaman bashing function.
+-- @function snd.shaman_bash
 function snd.shaman_bash()
   hp = 100 * (gmcp.Char.Vitals.hp / gmcp.Char.Vitals.maxhp)
   mp = 100 * (gmcp.Char.Vitals.mp / gmcp.Char.Vitals.maxmp)
@@ -585,6 +581,8 @@ function snd.shaman_bash()
   end
 end
 
+--- shapeshifter bashing function.
+-- @function snd.shapeshifter_bash
 function snd.shapeshifter_bash()
   hp = 100 * (gmcp.Char.Vitals.hp / gmcp.Char.Vitals.maxhp)
 
@@ -598,6 +596,8 @@ function snd.shapeshifter_bash()
   end
 end
 
+--- siderealist bashing function.
+-- @function snd.siderealist_bash
 function snd.siderealist_bash()
   hp = 100 * (gmcp.Char.Vitals.hp / gmcp.Char.Vitals.maxhp)
   if hp <= 40 and snd.shield_check() then
@@ -610,6 +610,8 @@ function snd.siderealist_bash()
   end
 end
 
+--- infiltrator bashing function.
+-- @function snd.infiltrator_bash
 function snd.infiltrator_bash()
   local hp = 100 * (gmcp.Char.Vitals.hp / gmcp.Char.Vitals.maxhp)
   local endur = 100 * (gmcp.Char.Vitals.ep / gmcp.Char.Vitals.maxep)
@@ -643,6 +645,8 @@ function snd.infiltrator_bash()
   end
 end
 
+--- templar bashing function.
+-- @function snd.templar_bash
 function snd.templar_bash()
   hp = 100 * (gmcp.Char.Vitals.hp / gmcp.Char.Vitals.maxhp)
   mp = 100 * (gmcp.Char.Vitals.mp / gmcp.Char.Vitals.maxmp)
@@ -668,6 +672,8 @@ function snd.templar_bash()
   end
 end
 
+--- teradrim bashing function.
+-- @function snd.teradrim_bash
 function snd.teradrim_bash()
   hp = 100 * (gmcp.Char.Vitals.hp / gmcp.Char.Vitals.maxhp)
   endur = 100 * (gmcp.Char.Vitals.ep / gmcp.Char.Vitals.maxep)
@@ -685,6 +691,8 @@ function snd.teradrim_bash()
   end
 end
 
+--- tidesage bashing function.
+-- @function snd.tidesage_bash
 function snd.tidesage_bash()
   hp = 100 * (gmcp.Char.Vitals.hp / gmcp.Char.Vitals.maxhp)
   endur = 100 * (gmcp.Char.Vitals.ep / gmcp.Char.Vitals.maxep)
@@ -702,6 +710,8 @@ function snd.tidesage_bash()
   end
 end
 
+--- warden bashing function.
+-- @function snd.warden_bash
 function snd.warden_bash()
   hp = 100 * (gmcp.Char.Vitals.hp / gmcp.Char.Vitals.maxhp)
 
@@ -721,6 +731,8 @@ function snd.warden_bash()
   end
 end
 
+--- wayfarer bashing function.
+-- @function snd.wayfarer_bash
 function snd.wayfarer_bash()
   hp = 100 * (gmcp.Char.Vitals.hp / gmcp.Char.Vitals.maxhp)
 
@@ -739,6 +751,8 @@ function snd.wayfarer_bash()
   end
 end
 
+--- voidseer bashing function.
+-- @function snd.voidseer_bash
 function snd.voidseer_bash()
   hp = 100 * (gmcp.Char.Vitals.hp / gmcp.Char.Vitals.maxhp)
   insight = tonumber(gmcp.Char.Vitals.insight) or 0
@@ -762,6 +776,8 @@ function snd.voidseer_bash()
   end
 end
 
+--- zealot bashing function.
+-- @function snd.zealot_bash
 function snd.zealot_bash()
   hp = 100 * (gmcp.Char.Vitals.hp / gmcp.Char.Vitals.maxhp)
   mp = 100 * (gmcp.Char.Vitals.mp / gmcp.Char.Vitals.maxmp)
@@ -808,6 +824,9 @@ local ascendedAttacks = {
   none = "kill",
 }
 
+--- 200 bashing function.
+-- This uses the ascendedAttacks table for picking what ur supposed to be doing.
+-- @function snd.none_bash
 function snd.none_bash() --super basic bashing function for 200's.
   hp = 100 * (gmcp.Char.Vitals.hp / gmcp.Char.Vitals.maxhp)
 

@@ -56,7 +56,7 @@
             ];
 
             buildPhase = ''
-              ldoc src/
+              ldoc --config ldoc/config.ld src/
             '';
 
             installPhase = ''
