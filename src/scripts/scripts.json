@@ -12,10 +12,11 @@
     "name": "Sunder Phonebook"
   },
   {
-    "name": "Sunder Bashing"
+    "name": "Sunder Healing"
   },
   {
-    "name": "Sunder Healing"
+    "name": "Bashing",
+    "isFolder": "yes"
   },
   {
     "name": "Sunder Offense"
