@@ -1,93 +1,97 @@
 [
-       {
-              "name": "enable Phonebook",
-              "isActive": "yes",
-              "regex": "^pb enable$",
-              "script": "",
-              "isFolder": "no"
-       },
-       {
-              "name": "disable Phonebook",
-              "isActive": "yes",
-              "regex": "^pb disable$",
-              "script": "",
-              "isFolder": "no"
-       },
-       {
-              "name": "update off qwho",
-              "isActive": "yes",
-              "regex": "^pb update$",
-              "script": "",
-              "isFolder": "no"
-       },
-       {
-              "name": "update off qwho - short",
-              "isActive": "yes",
-              "regex": "^pbu$",
-              "script": "",
-              "isFolder": "no"
-       },
-       {
-              "name": "honour person",
-              "isActive": "yes",
-              "regex": "^pb honours (\\w+)$",
-              "script": "",
-              "isFolder": "no"
-       },
-       {
-              "name": "honour person - shorthand",
-              "isActive": "yes",
-              "regex": "^pbh (\\w+)$",
-              "script": "",
-              "isFolder": "no"
-       },
-       {
-              "name": "set org",
-              "isActive": "yes",
-              "regex": "^pb set (\\w+) ([Bb]loodloch|[Ss]pinesreach|[Ee]norian|[Dd]uiran|[Rr]ogues|[Dd]ivine)$",
-              "script": "",
-              "isFolder": "no"
-       },
-       {
-              "name": "Set Org Colours",
-              "isActive": "yes",
-              "regex": "^pb hl (\\w+) (\\w+)$",
-              "script": "",
-              "isFolder": "no"
-       },
-       {
-              "name": "Remove single person",
-              "isActive": "yes",
-              "regex": "^pb remove (\\w+)$",
-              "script": "",
-              "isFolder": "no"
-       },
-       {
-              "name": "Toggle highlights",
-              "isActive": "yes",
-              "regex": "^(toggle highlights|pb hl)$",
-              "script": "",
-              "isFolder": "no"
-       },
-       {
-              "name": "Show Settings",
-              "isActive": "yes",
-              "regex": "^pb settings$",
-              "script": "",
-              "isFolder": "no"
-       },
-       {
-              "name": "help",
-              "isActive": "yes",
-              "regex": "^pb .+$",
-              "script": "",
-              "isFolder": "no"
-       },
-       {
-              "name": "Qws",
-              "isActive": "yes",
-              "regex": "(?i)^qws$",
-              "script": "",
-              "isFolder": "no"
-       }
+  {
+    "name": "enable Phonebook",
+    "isActive": "yes",
+    "regex": "^pb enable$",
+    "script": "",
+    "isFolder": "no"
+  },
+  {
+    "name": "disable Phonebook",
+    "isActive": "yes",
+    "regex": "^pb disable$",
+    "script": "",
+    "isFolder": "no"
+  },
+  {
+    "name": "update off qwho",
+    "isActive": "yes",
+    "regex": "^pb update$",
+    "script": "",
+    "isFolder": "no"
+  },
+  {
+    "name": "update off qwho - short",
+    "isActive": "yes",
+    "regex": "^pbu$",
+    "script": "",
+    "isFolder": "no"
+  },
+  {
+    "name": "honour person",
+    "isActive": "yes",
+    "regex": "^pb honours (\\w+)$",
+    "script": "",
+    "isFolder": "no"
+  },
+  {
+    "name": "honour person - shorthand",
+    "isActive": "yes",
+    "regex": "^pbh (\\w+)$",
+    "script": "",
+    "isFolder": "no"
+  },
+  {
+    "name": "set org",
+    "isActive": "yes",
+    "regex": "^pb set (\\w+) ([Bb]loodloch|[Ss]pinesreach|[Ee]norian|[Dd]uiran|[Rr]ogues|[Dd]ivine)$",
+    "script": "",
+    "isFolder": "no"
+  },
+  {
+    "name": "Set Org Colours",
+    "isActive": "yes",
+    "regex": "^pb hl (\\w+) (\\w+)$",
+    "script": "",
+    "isFolder": "no"
+  },
+  {
+    "name": "Remove single person",
+    "isActive": "yes",
+    "regex": "^pb remove (\\w+)$",
+    "script": "",
+    "isFolder": "no"
+  },
+  {
+    "name": "Toggle highlights",
+    "isActive": "yes",
+    "regex": "^(toggle highlights|pb hl)$",
+    "script": "",
+    "isFolder": "no"
+  },
+  {
+    "name": "Show Settings",
+    "isActive": "yes",
+    "regex": "^pb settings$",
+    "script": "",
+    "isFolder": "no"
+  },
+  {
+    "name": "help",
+    "isActive": "yes",
+    "regex": "^pb .+$",
+    "script": "",
+    "isFolder": "no"
+  },
+  {
+    "name": "Qws",
+    "isActive": "yes",
+    "regex": "(?i)^qws$",
+    "script": "",
+    "isFolder": "no"
+  },
+  {
+    "name": "Qwp",
+    "regex": "(?i)^qwp$"
+  }
 ]

@@ -126,7 +126,7 @@ end
 -- @function npb.qwsorted
 -- @param people table of people to sort
 function npb.qwsorted(people)
-  local wrap = getWindowWrap()
+  local wrap = getWindowWrap() - 17
   local sorted = { Bloodloch = {}, Duiran = {}, Enorian = {}, Spinesreach = {}, Rogues = {}, Divine = {} }
   for _, name in pairs(people) do
     local org = sndNDB_getCitizenship(name)
@@ -138,16 +138,18 @@ function npb.qwsorted(people)
     table.sort(peoples)
     if #peoples > 0 then
       newLine()
+      x = 0
       cecho("<" .. npb.t.config.colors[org:lower()] .. ">" ..
         string.rep(" ", 11 - #org) ..
         "<b><u>" .. org:title() .. "<reset>" .. (#peoples > 9 and "" or " ") .. "<white>(<cyan>" ..
         #peoples .. "<white>): ")
       for i, v in pairs(peoples) do
-        local linelength = #getCurrentLine()
         local comma = next(peoples, i)
         local personlength = (comma and 2 or 0) + #v
-        if linelength + personlength > wrap then
+        x = x + personlength
+        if x > wrap then
           echo("\n" .. string.rep(" ", 17))
+          x = 0
           moveCursorEnd()
         end
         cecho(npb.cformat(v))
