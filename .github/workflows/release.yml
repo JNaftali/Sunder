@@ -31,7 +31,6 @@ jobs:
           name: release-artifacts
           path: |
             result/Sunder.mpackage
-            result/Sunder.xml
 
       - name: Extract Version from config.lua
         id: extract-version
