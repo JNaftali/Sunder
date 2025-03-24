@@ -1,5 +1,5 @@
 if snd.toggles.gags then
     deleteLine()
-    snd.attack_hit("tapped", "minor")
+    snd.message("You: <green>HIT<magenta> tapped<white> minor<magenta>!", "atk")
 end
 

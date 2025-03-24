@@ -4,5 +4,5 @@ if snd.eld > 0 then
 end  
 if snd.toggles.gags then
     deleteLine()
-    snd.attack_hit("shackled", "eld")
+    snd.message("You: <green>HIT<magenta> shackled<white> eld<magenta>!", "atk")
 end
