@@ -401,6 +401,8 @@ function bot_room_info()
   end
 end
 
+snd.registerEvent("SunderBotRoomInfo", "gmcp.Room.Info", bot_room_info)
+
 --- Make the autobasher go to the next room.
 -- @function snd.move
 function snd.move()
