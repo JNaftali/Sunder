@@ -1,13 +1,13 @@
 snd.defenses = {
   -- Probably handled by firstaid anyways, otherwise auto assume people have plants/vials.
   def_waterbreathing = { defense = "waterbreathing", type = "normal", effect = "Prevents choking underwater", balance = { herb = "waterbreathing" }, state = "down", needit = false, timer = createStopWatch(), skill = "Generic" },
-  def_kola = { defense = "instawake", type = "normal", effect = "Removes the WAKE delay", balance = { herb = "stimulant" }, state = "down", needit = false, timer = createStopWatch(), skill = "Generic" },
+  def_instawake = { defense = "instawake", type = "normal", effect = "Removes the WAKE delay", balance = { herb = "stimulant" }, state = "down", needit = false, timer = createStopWatch(), skill = "Generic" },
   def_insomnia = { defense = "insomnia", type = "normal", effect = "Prevents sleep effects", balance = { eat = "kawhepill" }, state = "down", needit = false, timer = createStopWatch(), skill = "Generic" },
   def_deathsight = { defense = "deathsight", type = "normal", effect = "Reports player deaths", balance = { eat = "thanatonin" }, state = "down", needit = false, timer = createStopWatch(), skill = "Generic" },
   def_thirdeye = { defense = "thirdeye", type = "normal", effect = "Adds locations to WHO", balance = { eat = "acuity" }, state = "down", needit = false, timer = createStopWatch(), skill = "Generic" },
-  def_venom = { defense = "antivenin", type = "normal", effect = "Protects against poison damage", balance = { vial = "antivenin" }, state = "down", needit = false, timer = createStopWatch(), skill = "Generic" },
+  def_antivenin = { defense = "antivenin", type = "normal", effect = "Protects against poison damage", balance = { vial = "antivenin" }, state = "down", needit = false, timer = createStopWatch(), skill = "Generic" },
   def_levitation = { defense = "levitation", type = "normal", effect = "Protects against falling effects", balance = { vial = "levitation" }, state = "down", needit = false, timer = createStopWatch(), skill = "Generic" },
-  def_frost = { defense = "temperance", type = "normal", effect = "Protects against fire damage", balance = { vial = "frost" }, state = "down", needit = false, timer = createStopWatch(), skill = "Generic" },
+  def_temperance = { defense = "temperance", type = "normal", effect = "Protects against fire damage", balance = { vial = "frost" }, state = "down", needit = false, timer = createStopWatch(), skill = "Generic" },
   def_speed = { defense = "speed", type = "green", effect = "Protects against aeon affliction", balance = { vial = "speed" }, state = "down", needit = false, timer = createStopWatch(), skill = "Generic" },
   def_arcane = { defense = "arcane", type = "normal", effect = "Protects against elemental damage", balance = { vial = "arcane" }, state = "down", needit = false, timer = createStopWatch(), skill = "Generic" },
   --def_caloric = {defense = "insulation", type = "normal", effect = "Protects against cold damage", balance = {salve = "caloric"}, state = "down", needit = false, timer = createStopWatch(), skill = "Generic"},
@@ -24,7 +24,6 @@ snd.defenses = {
 
   def_nightsight = { defense = "nightsight", type = "normal", effect = "Allows glancing at night", balance = { special = "nightsight on" }, state = "down", needit = false, timer = createStopWatch(), skill = "Nightsight" },
   def_fitness = { defense = "fitness", type = "normal", effect = "Protects from asthma", balance = { balanceequilibriumtake = "fitness" }, state = "down", needit = false, timer = createStopWatch(), skill = "Fitness" },
-  def_divert_melee = { defense = "divert_melee", type = "normal", effect = "Protects from melee damage", balance = { special = "divert melee" }, state = "down", needit = false, timer = createStopWatch(), skill = "Jerk" },
   def_clarity = { defense = "clarity", type = "normal", effect = "Protects against some mental affs", balance = { needyequilibriumtake = "clarity" }, state = "down", needit = false, timer = createStopWatch(), skill = "Clarity", tree = "Survival" },
   def_shroud = { defense = "shroud", type = "normal", effect = "Shrouded.", balance = { needybalancetake = "shroud" }, state = "down", needit = false, timer = createStopWatch(), skill = "Generic" },
   def_manipulation_dome = { defense = "manipulation_dome", type = "normal", effect = "cheap prism", balance = { needyequilibriumtake = "manipulate pylon for dome" }, state = "down", needit = false, timer = createStopWatch(), skill = "Generic" },
@@ -44,11 +43,11 @@ snd.defenses = {
 
 
   --Ylem
-  def_yellow_orb                 = { defense = "mist_yellow", type = "ansi_light_yellow", effect = "5% increase in experience", balance = { special = "activate amber orb" }, state = "down", needit = false, timer = createStopWatch(), skill = "Generic" },
-  def_green_orb                  = { defense = "mist_green", type = "lawn_green", effect = "25% increase in vigour healing", balance = { special = "activate green orb" }, state = "down", needit = false, timer = createStopWatch(), skill = "Generic" },
-  def_red_orb                    = { defense = "mist_red", type = "firebrick", effect = "more damage to and less from denizens", balance = { special = "activate crimson orb" }, state = "down", needit = false, timer = createStopWatch(), skill = "Generic" },
-  def_blue_orb                   = { defense = "mist_blue", type = "ansiLightBlue", effect = "protection from damage", balance = { special = "activate cerulean orb" }, state = "down", needit = false, timer = createStopWatch(), skill = "Generic" },
-  def_white_orb                  = { defense = "mist_white", type = "ghost_white", effect = "increased ylem gain from eld", balance = { special = "activate white orb" }, state = "down", needit = false, timer = createStopWatch(), skill = "Generic" },
+  def_mist_yellow                 = { defense = "mist_yellow", type = "ansi_light_yellow", effect = "5% increase in experience", balance = { special = "activate amber orb" }, state = "down", needit = false, timer = createStopWatch(), skill = "Generic" },
+  def_mist_green                  = { defense = "mist_green", type = "lawn_green", effect = "25% increase in vigour healing", balance = { special = "activate green orb" }, state = "down", needit = false, timer = createStopWatch(), skill = "Generic" },
+  def_mist_red                    = { defense = "mist_red", type = "firebrick", effect = "more damage to and less from denizens", balance = { special = "activate crimson orb" }, state = "down", needit = false, timer = createStopWatch(), skill = "Generic" },
+  def_mist_blue                   = { defense = "mist_blue", type = "ansiLightBlue", effect = "protection from damage", balance = { special = "activate cerulean orb" }, state = "down", needit = false, timer = createStopWatch(), skill = "Generic" },
+  def_mist_white                  = { defense = "mist_white", type = "ghost_white", effect = "increased ylem gain from eld", balance = { special = "activate white orb" }, state = "down", needit = false, timer = createStopWatch(), skill = "Generic" },
 
   --Generic endgame
   def_safeguard                  = { defense = "safeguard", type = "normal", effect = "Increased resistances", balance = { balanceequilibrium = "safeguard" }, state = "down", needit = false, timer = createStopWatch(), skill = "Instill" },
@@ -59,11 +58,11 @@ snd.defenses = {
   def_pacing                     = { defense = "pacing", type = "red", effect = "Keep up while following", balance = { needybalancetake = "pacing on" }, state = "down", needit = false, timer = createStopWatch(), skill = "Pacing" },
   def_heatsight                  = { defense = "heatsight", type = "normal", effect = "See hidden people", balance = { needybalancetake = "heatsight" }, state = "down", needit = false, timer = createStopWatch(), skill = "Heatsight" },
   def_chameleon                  = { defense = "chameleon", type = "normal", effect = "Change your name on QW/WHO", balance = { balanceequilibrium = "touch chameleon " }, state = "down", needit = false, timer = createStopWatch(), skill = "ChameleonTattoo" },
-  def_cloak_tattoo               = { defense = "cloak", type = "blue", effect = "Protects from unwanted summons", balance = { tattoo = "cloak" }, state = "down", needit = false, timer = createStopWatch(), skill = "CloakTattoo" },
+  def_cloak               = { defense = "cloak", type = "blue", effect = "Protects from unwanted summons", balance = { tattoo = "cloak" }, state = "down", needit = false, timer = createStopWatch(), skill = "CloakTattoo" },
   def_mindseye                   = { defense = "mindseye", type = "green", effect = "Allows deaf/blind hearing/vision", balance = { needybalancetake = "mindseye" }, state = "down", needit = false, timer = createStopWatch(), skill = "Generic" },
-  def_firefly_tattoo             = { defense = "firefly", type = "green", effect = "Protects you against them Sciomancers", balance = { tattoo = "firefly" }, state = "down", needit = false, timer = createStopWatch(), skill = "FireflyTattoo" },
-  def_flame_tattoo               = { defense = "flame", type = "green", effect = "Helps protect against writhe affs", balance = { tattoo = "flame" }, state = "down", needit = false, timer = createStopWatch(), skill = "FlameTattoo" },
-  def_shield_tattoo              = { defense = "shielded", type = "green", effect = "Magical shield to stop attacks", balance = { tattoo = "shield" }, state = "down", needit = false, timer = createStopWatch(), skill = "ShieldTattoo" },
+  def_firefly             = { defense = "firefly", type = "green", effect = "Protects you against them Sciomancers", balance = { tattoo = "firefly" }, state = "down", needit = false, timer = createStopWatch(), skill = "FireflyTattoo" },
+  def_flame                      = { defense = "flame", type = "green", effect = "Helps protect against writhe affs", balance = { tattoo = "flame" }, state = "down", needit = false, timer = createStopWatch(), skill = "FlameTattoo" },
+  def_shielded.                  = { defense = "shielded", type = "green", effect = "Magical shield to stop attacks", balance = { tattoo = "shield" }, state = "down", needit = false, timer = createStopWatch(), skill = "ShieldTattoo" },
   --balance = {needyequilibriumtake = "heatsight"}
 
   --Akkari
@@ -82,7 +81,7 @@ snd.defenses = {
   def_retaliation                = { defense = "retaliation", type = "ivory", effect = "The Light strikes out at your attacker", balance = { balanceequilibriumtake = "spirit retaliation" }, state = "down", needit = false, timer = createStopWatch(), skill = "Retaliation" },
   def_suppressed                 = { defense = "suppressed", type = "ivory", effect = "Others cannot see your vitals", balance = { balanceequilibriumtake = "spirit suppress" }, state = "down", needit = false, timer = createStopWatch(), skill = "Suppress" },
   def_holylight                  = { defense = "holylight", type = "ivory", effect = "Strike fear into enemies with the Light", balance = { balanceequilibriumtake = "spirit light" }, state = "down", needit = false, timer = createStopWatch(), skill = "Light" },
-  def_bolster                    = { defense = "spiritbolster", type = "ivory", effect = "Reduce damage to your squire by half", balance = { balanceequilibriumtake = "spirit bolster" }, state = "down", needit = false, timer = createStopWatch(), skill = "Bolster" },
+  def_spiritbolster                    = { defense = "spiritbolster", type = "ivory", effect = "Reduce damage to your squire by half", balance = { balanceequilibriumtake = "spirit bolster" }, state = "down", needit = false, timer = createStopWatch(), skill = "Bolster" },
   def_unbroken                   = { defense = "unbroken", type = "ivory", effect = "Damage will not break you.", balance = { balanceequilibriumtake = "spirit unbroken" }, state = "down", needit = false, timer = createStopWatch(), skill = "Unbroken" },
   def_transcendence              = { defense = "transcendence", type = "ivory", effect = "Transcend mortal limitations", balance = { balanceequilibriumtake = "spirit transcend" }, state = "down", needit = false, timer = createStopWatch(), skill = "Transcend" },
 
@@ -121,7 +120,6 @@ snd.defenses = {
   --def_sagacity = {defense = "sagacity", type = "normal", effect = "extra mana recovery", balance = {balanceequilibriumtake = "cast sagacity"}, state = "down", needit = false, timer = createStopWatch(), skill = "Sagacity" },
   def_arcaneskin = { defense = "arcaneskin", type = "normal", effect = "Increased cutting/blunt resistances", balance = { balanceequilibrium = "cast arcaneskin" }, state = "down", needit = false, timer = createStopWatch(), skill = "Arcaneskin" },
   def_countercurrent = { defense = "countercurrent", type = "normal", effect = "chance to resist venoms", balance = { balanceequilibrium = "cast countercurrent" }, state = "down", needit = false, timer = createStopWatch(), skill = "Countercurrent" },
-  def_stalled = { defense = "stalled", type = "normal", effect = "holding an attack", balance = { balanceequilibrium = "" }, state = "down", needit = false, timer = createStopWatch(), skill = "Stall" },
   def_afterburn = { defense = "afterburn", type = "normal", effect = "faster fire spells", balance = { balanceequilibriumtake = "cast afterburn" }, state = "down", needit = false, timer = createStopWatch(), skill = "Afterburn" },
   def_capacitance = { defense = "capacitance", type = "normal", effect = "one time electric dodge", balance = { balanceequilibriumtake = "cast capacitance" }, state = "down", needit = false, timer = createStopWatch(), skill = "Capacitance" },
   def_fireburst = { defense = "fireburst", type = "normal", effect = "throw fireballs", balance = { balanceequilibriumtake = "cast fireburst" }, state = "down", needit = false, timer = createStopWatch(), skill = "Fireburst" },
@@ -137,13 +135,12 @@ snd.defenses = {
   def_aurora = { defense = "aurora", type = "normal", effect = "Damage bonus against hostiles", balance = { needyequilibriumtake = "weave aurora" }, state = "down", needit = false, timer = createStopWatch(), skill = "Aurora" },
   def_equipoise = { defense = "equipoise", type = "normal", effect = "Follow when off eq", balance = { needybalancetake = "equipoise on" }, state = "down", needit = false, timer = createStopWatch(), skill = "Equipoise" },
   def_stretching = { defense = "stretching", type = "normal", effect = "Heal limb damage on mending cure", balance = { needybalancetake = "stretching on" }, state = "down", needit = false, timer = createStopWatch(), skill = "Stretching" },
-  def_destiny = { defense = "song_destiny", type = "normal", effect = "Certain Weaving spells cost no eq on next cast", balance = { special = "sing song of destiny" }, state = "down", needit = false, timer = createStopWatch(), skill = "Destiny" },
+  def_song_destiny = { defense = "song_destiny", type = "normal", effect = "Certain Weaving spells cost no eq on next cast", balance = { special = "sing song of destiny" }, state = "down", needit = false, timer = createStopWatch(), skill = "Destiny" },
 
   --Bloodborn
   def_victimise = { defense = "victimise", type = "normal", effect = "PvE damage", balance = { balanceequilibriumtake = "unleash victimise on" }, state = "down", needit = false, timer = createStopWatch(), skill = "Victimise" },
   def_panoply = { defense = "panoply", type = "normal", effect = "Increased cutting/blunt resistances", balance = { balanceequilibrium = "unleash panoply" }, state = "down", needit = false, timer = createStopWatch(), skill = "Panoply" },
   def_forestall = { defense = "forestall", type = "normal", effect = "chance to resist venoms", balance = { balanceequilibrium = "unleash forestall" }, state = "down", needit = false, timer = createStopWatch(), skill = "Forestall" },
-  def_arrhythmia = { defense = "arrhythmia", type = "normal", effect = "holding an attack", balance = { balanceequilibrium = "" }, state = "down", needit = false, timer = createStopWatch(), skill = "Arrhythmia" },
   def_roil = { defense = "roil", type = "normal", effect = "faster fire spells", balance = { balanceequilibriumtake = "humour roil" }, state = "down", needit = false, timer = createStopWatch(), skill = "Roil" },
   def_impediment = { defense = "impediment", type = "normal", effect = "Disrupt after 5 spells", balance = { balanceequilibriumtake = "humour impediment" }, state = "down", needit = false, timer = createStopWatch(), skill = "Impediment" },
   def_blackfire = { defense = "blackfire", type = "normal", effect = "throw fireballs", balance = { balanceequilibriumtake = "humour retch" }, state = "down", needit = false, timer = createStopWatch(), skill = "Retch" },
@@ -153,7 +150,7 @@ snd.defenses = {
   --Carnifex
   def_fearless = { defense = "fearless", type = "normal", effect = "Protects against fear affliction.", balance = { special = "fearless" }, state = "down", needit = false, timer = createStopWatch(), skill = "Fearless" },
   def_reveling = { defense = "reveling", type = "normal", effect = "Periodic heal on damage done.", balance = { needybalancetake = "reveling on" }, state = "down", needit = false, timer = createStopWatch(), skill = "Reveling" },
-  def_recklessness = { defense = "reckless", type = "normal", effect = "Can attack with 1 broken arm.", balance = { needybalancetake = "recklessness on" }, state = "down", needit = false, timer = createStopWatch(), skill = "Reckless" },
+  def_reckless = { defense = "reckless", type = "normal", effect = "Can attack with 1 broken arm.", balance = { needybalancetake = "recklessness on" }, state = "down", needit = false, timer = createStopWatch(), skill = "Reckless" },
   def_soulharvest = { defense = "soulharvest", type = "normal", effect = "Automatically harvest souls.", balance = { special = "soul harvest on" }, state = "down", needit = false, timer = createStopWatch(), skill = "Harvest" },
   def_soul_fracture = { defense = "soul_fracture", type = "normal", effect = "Boosts defenses and weapon damage.", balance = { special = "soul fracture" }, state = "down", needit = false, timer = createStopWatch(), skill = "Fracture" },
   def_soul_body = { defense = "soul_body", type = "normal", effect = "Boosts physical defense.", balance = { needyequilibriumtake = "soul embed in body" }, state = "down", needit = false, timer = createStopWatch(), skill = "EmbedBody" },
@@ -326,8 +323,8 @@ snd.defenses = {
   def_lifesap            = { defense = "lifesap", type = "normal", effect = "Gain health on melee attack", balance = { needyequilibriumtake = "lifesap" }, state = "down", needit = false, timer = createStopWatch(), skill = "Lifesap" },
   def_hardiness          = { defense = "hardiness", type = "normal", effect = "15% Resist to Cold/Venom", balance = { needyequilibriumtake = "hardiness" }, state = "down", needit = false, timer = createStopWatch(), skill = "Hardiness" },
   def_flexibility        = { defense = "flexibility", type = "normal", effect = "Increased writhe", balance = { balanceequilibriumtake = "flexibility" }, state = "down", needit = false, timer = createStopWatch(), skill = "Flexibility" },
-  def_maskedscent        = { defense = "masked_scent", type = "normal", effect = "Not listed on scent", balance = { balanceequilibriumtake = "mask scent" }, state = "down", needit = false, timer = createStopWatch(), skill = "Masking" },
-  def_conceal            = { defense = "concealed", type = "normal", effect = "You are a shadowy figure", balance = { balanceequilibriumtake = "conceal" }, state = "down", needit = false, timer = createStopWatch(), skill = "Conceal" },
+  def_masked_scent        = { defense = "masked_scent", type = "normal", effect = "Not listed on scent", balance = { balanceequilibriumtake = "mask scent" }, state = "down", needit = false, timer = createStopWatch(), skill = "Masking" },
+  def_concealed            = { defense = "concealed", type = "normal", effect = "You are a shadowy figure", balance = { balanceequilibriumtake = "conceal" }, state = "down", needit = false, timer = createStopWatch(), skill = "Conceal" },
   def_foreststride       = { defense = "foreststride", type = "normal", effect = "You move faster outdoors & in forests", balance = { balanceequilibriumtake = "foreststride" }, state = "down", needit = false, timer = createStopWatch(), skill = "Foreststriding" },
   def_alacrity           = { defense = "alacrity", type = "normal", effect = "You shoot and trap faster", balance = { balanceequilibriumtake = "alacrity" }, state = "down", needit = false, timer = createStopWatch(), skill = "Alacrity" },
 
@@ -350,11 +347,11 @@ snd.defenses = {
   --Shapeshifter
   def_weathering = { defense = "weathering", type = "normal", effect = "Cold resistance", balance = { special = "weathering" }, state = "down", needit = false, timer = createStopWatch(), skill = "Weathering" },
   def_bodyheat = { defense = "bodyheat", type = "normal", effect = "Protects against chill", balance = { needyequilibriumtake = "bodyheat" }, state = "down", needit = false, timer = createStopWatch(), skill = "Bodyheat" },
-  def_metabolize = { defense = "metabolism", type = "normal", effect = "Increase strength", balance = { balancetake = "metabolize on" }, state = "down", needit = false, timer = createStopWatch(), skill = "Metabolize" },
+  def_metabolism = { defense = "metabolism", type = "normal", effect = "Increase strength", balance = { balancetake = "metabolize on" }, state = "down", needit = false, timer = createStopWatch(), skill = "Metabolize" },
   def_thickhide = { defense = "thickhide", type = "normal", effect = "Physical protection", balance = { balancetake = "thickhide" }, state = "down", needit = false, timer = createStopWatch(), skill = "Thickhide" },
-  def_corner = { defense = "cornering", type = "normal", effect = "Increase dodge chance", balance = { needybalancetake = "corner on" }, state = "down", needit = false, timer = createStopWatch(), skill = "Cornering" },
-  def_salivate = { defense = "salivating", type = "normal", effect = "Bites give haemophilia", balance = { equilibriumneed = "salivate" }, state = "down", needit = false, timer = createStopWatch(), skill = "Salivate" },
-  def_harden = { defense = "hardening", type = "normal", effect = "Chance to prevent crippled limbs", balance = { needyequilibriumtake = "harden bones" }, state = "down", needit = false, timer = createStopWatch(), skill = "Hardening" },
+  def_cornering = { defense = "cornering", type = "normal", effect = "Increase dodge chance", balance = { needybalancetake = "corner on" }, state = "down", needit = false, timer = createStopWatch(), skill = "Cornering" },
+  def_salivating = { defense = "salivating", type = "normal", effect = "Bites give haemophilia", balance = { equilibriumneed = "salivate" }, state = "down", needit = false, timer = createStopWatch(), skill = "Salivate" },
+  def_hardening = { defense = "hardening", type = "normal", effect = "Chance to prevent crippled limbs", balance = { needyequilibriumtake = "harden bones" }, state = "down", needit = false, timer = createStopWatch(), skill = "Hardening" },
   def_fury = { defense = "fury", type = "normal", effect = "Can use claws off balance", balance = {}, state = "down", needit = false, timer = createStopWatch(), skill = "Fury" },
   def_bracing = { defense = "bracing", type = "normal", effect = "Bracing for physical attacks", balance = { needybalancetake = "brace" }, state = "down", needit = false, timer = createStopWatch(), skill = "Bracing" },
   def_stealth = { defense = "stealth", type = "normal", effect = "Hide yourself", balance = { needybalancetake = "stealth on" }, state = "down", needit = false, timer = createStopWatch(), skill = "Stealth" },
@@ -375,8 +372,8 @@ snd.defenses = {
   def_finesse = { defense = "finesse", type = "normal", effect = "Protects against rebounding", balance = { needybalancetake = "finesse" }, state = "down", needit = false, timer = createStopWatch(), skill = "Finesse" },
   def_weaving = { defense = "weaving", type = "red", effect = "Increases dodge rate", balance = { needybalancetake = "weaving on" }, state = "down", needit = false, timer = createStopWatch(), skill = "Weaving" },
   def_shadowsight = { defense = "shadowsight", type = "normal", effect = "See hidden people", balance = { equilibriumtake = "shadowsight" }, state = "down", needit = false, timer = createStopWatch(), skill = "Shadowsight" },
-  def_ghost = { defense = "ghosted", type = "normal", effect = "Conceals movement", balance = { needyequilibriumtake = "conjure ghost" }, state = "down", needit = false, timer = createStopWatch(), skill = "Ghost" },
-  def_phase = { defense = "phased", type = "yellow", effect = "On another plane", balance = {}, state = "down", needit = false, timer = createStopWatch(), skill = "Phase" },
+  def_ghosted = { defense = "ghosted", type = "normal", effect = "Conceals movement", balance = { needyequilibriumtake = "conjure ghost" }, state = "down", needit = false, timer = createStopWatch(), skill = "Ghost" },
+  def_phased = { defense = "phased", type = "yellow", effect = "On another plane", balance = {}, state = "down", needit = false, timer = createStopWatch(), skill = "Phase" },
   def_lipreading = { defense = "lipreading", type = "normal", effect = "Hear through DEAF", balance = { needybalancetake = "lipread" }, state = "down", needit = false, timer = createStopWatch(), skill = "Lipread" },
 
   --Templar
@@ -414,7 +411,7 @@ snd.defenses = {
   def_twinsoul        = { defense = "twinsoul", type = "normal", effect = "Link your soul to your golem", balance = { balanceequilibriumtake = "golem twinsoul on" }, state = "down", needit = false, timer = createStopWatch(), skill = "Twinsoul" },
   def_earth_resonance = { defense = "earth_resonance", type = "normal", effect = "Boosted health/mana regen", balance = { balanceequilibriumtake = "earth resonance" }, state = "down", needit = false, timer = createStopWatch(), skill = "Resonance" },
   def_stonebind       = { defense = "stonebind", type = "normal", effect = "They can't take your weapon", balance = { balanceequilibriumtake = "earth stonebind" }, state = "down", needit = false, timer = createStopWatch(), skill = "Stonebind" },
-  def_erosion         = { defense = "imbue_erosion", type = "normal", effect = "Erosion is useful on your weapon if you're sand sweltering", balance = { balanceequilibriumtake = "earth imbue erosion" }, state = "down", needit = false, timer = createStopWatch(), skill = "Erosion" },
+  def_imbue_erosion         = { defense = "imbue_erosion", type = "normal", effect = "Erosion is useful on your weapon if you're sand sweltering", balance = { balanceequilibriumtake = "earth imbue erosion" }, state = "down", needit = false, timer = createStopWatch(), skill = "Erosion" },
   def_imbue_stonefury = { defense = "imbue_stonefury", type = "normal", effect = "Stonefury is useful on your weapon for bashing", balance = { balanceequilibriumtake = "earth imbue stonefury" }, state = "down", needit = false, timer = createStopWatch(), skill = "Stonefury" },
   def_sand_swelter    = { defense = "sand_swelter", type = "normal", effect = "Your sands hit people in the room", balance = { balanceequilibriumtake = "sand swelter on" }, state = "down", needit = false, timer = createStopWatch(), skill = "Swelter" },
   def_projection      = { defense = "projection", type = "normal", effect = "Remotely control sand abilities", balance = { balanceequilibriumtake = "sand projection on" }, state = "down", needit = false, timer = createStopWatch(), skill = "Projection" },
@@ -443,7 +440,7 @@ snd.defenses = {
 
   -- Warden
   def_battleflow = { defense = "battleflow", type = "normal", effect = "Can attack with 1 broken arm.", balance = { needybalancetake = "warden battleflow on" }, state = "down", needit = false, timer = createStopWatch(), skill = "Battleflow" },
-  def_ancest_victory = { defense = "victory", type = "normal", effect = "Automatically harvest renown.", balance = { special = "ancest victory on" }, state = "down", needit = false, timer = createStopWatch(), skill = "Victory" },
+  def_victory = { defense = "victory", type = "normal", effect = "Automatically harvest renown.", balance = { special = "ancest victory on" }, state = "down", needit = false, timer = createStopWatch(), skill = "Victory" },
   def_invocation = { defense = "invocation", type = "normal", effect = "Boosts defenses and weapon damage.", balance = { special = "ancest invocation" }, state = "down", needit = false, timer = createStopWatch(), skill = "Invocation" },
   def_ancest_blessing_safeguard = { defense = "ancest_blessing_safeguard", type = "normal", effect = "Boosts physical defense.", balance = { needyequilibriumtake = "ancest blessing safeguard" }, state = "down", needit = false, timer = createStopWatch(), skill = "Safeguard" },
   def_ancestral_bolster = { defense = "ancestral_bolster", type = "normal", effect = "Increased constitution.", balance = { needyequilibriumtake = "ancest bolster" }, state = "down", needit = false, timer = createStopWatch(), skill = "Bolster" },

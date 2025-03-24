@@ -1,1 +1,0 @@
-snd.def_def("resurgence")

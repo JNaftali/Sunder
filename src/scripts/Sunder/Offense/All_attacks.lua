@@ -30,7 +30,7 @@ snd.all_class_attacks = {
     Aura = function(target)
       snd.used.shield = true
       if snd.hitting == "You" then
-        snd.defenses.def_shield_tattoo.state = "deffed"
+        snd.defenses.def_shielded.state = "deffed"
       end
     end,
 
@@ -2813,7 +2813,7 @@ snd.all_class_attacks = {
     Ribcage = function(target)
       snd.used.shield = true
       if snd.hitting == "You" then
-        snd.defenses.def_shield_tattoo.state = "deffed"
+        snd.defenses.def_shielded.state = "deffed"
       end
     end,
 
