@@ -191,6 +191,11 @@ snd.physical_affs = {
   "left_arm_crippled",
   "right_leg_crippled",
   "left_leg_crippled",
+  "feeble_arms",
+  "feeble_legs",
+  "blindness",
+  "deafness",
+  "extravasation",
   "haemophilia",
   "asthma",
   "impairment",
@@ -210,6 +215,7 @@ snd.physical_affs = {
   "shivering",
   "frigid",
   "frozen",
+  "dissonance",
   "hypotension",
   "rend",
   "exhaustion",
@@ -221,13 +227,10 @@ snd.physical_affs = {
   "backstrain",
   "sore_wrist",
   "sore_ankle",
-  "burnt_eyes",
   "watery_eyes",
   "blurry_vision",
   "migraine",
   "deadening",
-  "ice_encased",
-  "dissonance",
 }
 
 snd.mental_affs = {
@@ -245,21 +248,26 @@ snd.mental_affs = {
   "mania",
   "infatuation",
   "laxity",
+  "manablight",
   "hatred",
   "claustrophobia",
   "vertigo",
   "faintness",
   "loneliness",
   "agoraphobia",
+  "echoes",
+  "gnawing",
   "masochism",
   "recklessness",
   "weariness",
   "impatience",
   "confusion",
   "dementia",
+  "nyctophobia",
   "patterns",
   "dread"
 }
+
 
 snd.all_affs = table.n_union(snd.physical_affs, snd.mental_affs, { "hypochondria", })
 
