@@ -1,3 +1,6 @@
+--- Sunder Defenses.
+-- @module Defenses
+
 local formDefs = {
   def_adherent_form = true,
   def_seraph_form = true,
