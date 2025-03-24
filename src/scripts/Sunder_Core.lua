@@ -1434,22 +1434,6 @@ function snd.message(string, type)
   end
 end
 
-function snd.attack_hit(attack, target)
-  snd.message("You: <green>HIT<magenta> " .. attack .. "<white> " .. target .. "<magenta>!", "atk")
-end
-
-function snd.got_hit(attack, attacker)
-  snd.message(attacker .. ": <red>HIT<magenta> " .. attack .. "<white> you<magenta>!", "atk")
-end
-
-function snd.third_hit(attack, attacker, target)
-  snd.message("<white>" .. attacker .. ": <red>HIT<white> " .. attack .. " " .. target)
-end
-
-function snd.target_hit(attack, attacker, target)
-  snd.message("<grey>" .. attacker .. ": <red>HIT<grey> " .. attack .. " " .. target)
-end
-
 function snd.changeClass()
   if not gmcp.Char.Vitals then return end --oop make sure it doesn't fire before things happen
   local gmcpClass = gmcp.Char.Status.class == "(None)" and "None" or gmcp.Char.Status.class
