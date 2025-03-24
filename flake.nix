@@ -41,7 +41,7 @@
 
             installPhase = ''
               mkdir -p $out
-              cp -r build/* $out/
+              cp -r build/Sunder.mpackage $out/
             '';
           };
           docs = pkgs.stdenv.mkDerivation {
