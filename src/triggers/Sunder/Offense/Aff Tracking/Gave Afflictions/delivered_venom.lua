@@ -4,7 +4,8 @@ if snd.getting_hit ~= "You" then
    snd.message("Gave: "..matches[2])
   end
   
-  local attacks = {Backstab = true, Lob = true, Assault = true, Slaughter = true, Carve = true, Cripple = true, Bloodscourge = true, Fleshbane = true, Butterfly = true}
+  local attacks = {Backstab = true, Lob = true, Assault = true, Slaughter = true, Carve = true, Cripple = true, Bloodscourge = true,
+                   Fleshbane = true, Butterfly = true, Athame = true, Bonedagger = true, }
   if attacks[snd.skill_being_used] == nil then
     snd.used.rebounding = false
   end
