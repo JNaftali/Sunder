@@ -315,7 +315,7 @@ snd.global_targets = {
 -- Probably will remove, this seems redundant
 -- @function snd.shield_check
 function snd.shield_check()
-  if snd.defenses.def_shield_tattoo.state ~= "deffed" then
+  if snd.defenses.def_shielded.state ~= "deffed" then
     return true
   end
 end

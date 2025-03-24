@@ -1,24 +1,5 @@
 [
   {
-    "name": "divert melee gain",
-    "isActive": "yes",
-    "isFolder": "no",
-    "multiline": "no",
-    "multilineDelta": "0",
-    "matchall": "no",
-    "filter": "no",
-    "fireLength": "0",
-    "highlight": "no",
-    "highlightFG": "#ff0000",
-    "highlightBG": "#ffff00",
-    "patterns": [
-      {
-        "pattern": "You begin to focus your efforts on diverting damage from melee attacks.",
-        "type": "exactMatch"
-      }
-    ]
-  },
-  {
     "name": "soul embed body",
     "isActive": "yes",
     "isFolder": "no",
