@@ -1,0 +1,1 @@
+snd.def_def("parallax")
