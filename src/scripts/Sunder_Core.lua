@@ -320,6 +320,28 @@ function snd.dismount()
   snd.send("qeb qdmount" .. snd.sep .. "order " .. snd.toggles.mount .. " follow me")
 end
 
+local mountTimer
+
+--- Inject mounting into mapper speedwalking
+-- @function snd.mapperAutoMount
+function snd.mapperAutoMount()
+  if not snd.toggles.automount then return end
+  if gmcp.Char.Vitals.mounted ~= "0" then return end
+  if mountTimer then killTimer(mountTimer) end
+  mountTimer =
+      tempTimer(
+        0,
+        function()
+          if #mmp.speedWalkPath > 10 then
+            send("qeb recall " ..
+              snd.toggles.mount .. snd.sep .. "recall mount" .. snd.sep .. "quickmount " .. snd.toggles.mount)
+          end
+        end
+      )
+end
+
+snd.registerEvent("SunderAutoMount", "mmp link externals", snd.mapperAutoMount)
+
 --- Set some alternate defenses for classes that use the same defense name
 -- @function class_catch
 function class_catch()
