@@ -1,166 +1,166 @@
 [
-       {
-              "name": "rend 3p",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^(\\w+) begins to bleed vivid red blood from the lacerations by the blade.$",
-                            "type": "regex"
-                     },
-                     {
-                            "pattern": "^The claws tear at .+ flesh, blood pouring freely from (\\w+)'s grievous incisions.$",
-                            "type": "regex"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "cripple body",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^Colorless light lances forth from .+, warping (\\w+) beneath its onslaught\\.$",
-                            "type": "regex"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "cripple legs",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^Colorless light crackles from .+, mercilessly withering (\\w+)'s lower half\\.$",
-                            "type": "regex"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "disrupt body",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^A burst of colorless light from .+ - eerily silent despite the force of the blaze - disrupts (\\w+)'s balance\\.$",
-                            "type": "regex"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "disrupt mind",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^A burst of colorless light from .+ - eerily silent despite the force of the blaze - disrupts (\\w+)'s equilibrium\\.$",
-                            "type": "regex"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "conviction",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "engulfs (\\w+) in an oily smear of shadow, causing .+ to stagger for a moment before .+ recovers? - dark motes remain, dancing across .+ frame\\.",
-                            "type": "regex"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "atdum confirmation",
-              "isActive": "no",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^\\w+ scribes the silvery mark of atdum upon .+ - a split second later, a shadow of the weapon descends, landing an insubstantial strike upon (\\w+)\\.",
-                            "type": "regex"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "Flared got",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^In the wake of .+'s strike, the shadows recoil from (\\w+) as though in disgust\\.$",
-                            "type": "regex"
-                     }
-              ],
-              "script": ""
-       }
+  {
+    "name": "rend 3p",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^(\\w+) begins to bleed vivid red blood from the lacerations by the blade.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^The claws tear at .+ flesh, blood pouring freely from (\\w+)'s grievous incisions.$",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "cripple body",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^Colorless light lances forth from .+, warping (\\w+) beneath its onslaught\\.$",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "cripple legs",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^Colorless light crackles from .+, mercilessly withering (\\w+)'s lower half\\.$",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "disrupt body",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^A burst of colorless light from .+ - eerily silent - ripples through (\\w+)'s bodily fluids\\.$",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "disrupt mind",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^A burst of colorless light from .+ - eerily silent - robs (\\w+) of \\w+ brain function\\.$",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "conviction",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "engulfs (\\w+) in an oily smear of shadow, causing .+ to stagger for a moment before .+ recovers? - dark motes remain, dancing across .+ frame\\.",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "atdum confirmation",
+    "isActive": "no",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^\\w+ scribes the silvery mark of atdum upon .+ - a split second later, a shadow of the weapon descends, landing an insubstantial strike upon (\\w+)\\.",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  },
+  {
+    "name": "Flared got",
+    "isActive": "yes",
+    "isFolder": "no",
+    "multiline": "no",
+    "multilineDelta": "0",
+    "matchall": "no",
+    "filter": "no",
+    "fireLength": "0",
+    "highlight": "no",
+    "highlightFG": "#ff0000",
+    "highlightBG": "#ffff00",
+    "patterns": [
+      {
+        "pattern": "^In the wake of .+'s strike, the shadows recoil from (\\w+) as though in disgust\\.$",
+        "type": "regex"
+      }
+    ],
+    "script": ""
+  }
 ]
