@@ -77,7 +77,7 @@
     "highlightBG": "#ffff00",
     "patterns": [
       {
-        "pattern": "^A flash of energy cascades down .+, disrupting (\\w+)('s|') balance\\.$",
+        "pattern": "^A flash of energy cascades down .+, hammering (\\w+)'s blood vessels\\.$",
         "type": "regex"
       }
     ],
@@ -97,7 +97,7 @@
     "highlightBG": "#ffff00",
     "patterns": [
       {
-        "pattern": "^A flash of energy cascades down .+, disrupting (\\w+)('s|') equilibrium\\.$",
+        "pattern": "^A flash of energy cascades down .+, shearing through (\\w+)'s mind\\.$",
         "type": "regex"
       }
     ],
