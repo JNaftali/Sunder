@@ -66,14 +66,20 @@ function snd.def_have(defense)
   end
 end
 
+--- Put up a defense.
+-- @function snd.def_def
+-- @param defense the def to put up
 function snd.def_def(defense)
-  if snd.toggles.gags then
-    deleteLine()
-  end
+  local str
   if snd.defenses["def_" .. defense].type == "normal" then
-    cecho("<white>\n" .. defense)
+    str = "<white>" .. defense
   else
-    cecho("<" .. snd.defenses["def_" .. defense].type .. ">\n" .. defense)
+    str = "<" .. snd.defenses["def_" .. defense].type .. ">" .. defense
+  end
+  if snd.toggles.gags then
+    creplaceLine(str)
+  else
+    cecho("\n" .. str)
   end
   if not string.find(defense, "def_") then
     defense = "def_" .. defense
