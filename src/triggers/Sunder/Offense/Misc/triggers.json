@@ -305,23 +305,11 @@
     "highlightBG": "#ffff00",
     "patterns": [
       {
-        "pattern": "^You order a hellcat to kill (\\w+).$",
-        "type": "regex"
-      },
-      {
-        "pattern": "^You order a (\\w+) spirit to kill (\\w+).$",
-        "type": "regex"
-      },
-      {
-        "pattern": "^A (\\w+) spirit is already hostile towards (\\w+).$",
-        "type": "regex"
-      },
-      {
         "pattern": "^You order (.*) to kill (\\w+).$",
         "type": "regex"
       },
       {
-        "pattern": "^A (\\w+) is already hostile towards (\\w+).$",
+        "pattern": "^A (.*) is already hostile towards (\\w+).$",
         "type": "regex"
       }
     ],
@@ -329,27 +317,9 @@
   },
   {
     "name": "Loyals Not Attacking",
-    "isActive": "yes",
-    "isFolder": "no",
-    "multiline": "no",
-    "multilineDelta": "0",
-    "matchall": "no",
-    "filter": "no",
-    "fireLength": "0",
-    "highlight": "no",
-    "highlightFG": "#ff0000",
-    "highlightBG": "#ffff00",
     "patterns": [
       {
-        "pattern": "You order a hellcat to assume a passive stance.",
-        "type": "exactMatch"
-      },
-      {
         "pattern": "^Your spirit familiar morphs into the form of a (\\w+) spirit\\.$",
-        "type": "regex"
-      },
-      {
-        "pattern": "^You order a (\\w+) spirit to assume a passive stance.$",
         "type": "regex"
       },
       {
@@ -357,7 +327,7 @@
         "type": "exactMatch"
       },
       {
-        "pattern": "^You order (a|an|the) (\\w+) to assume a passive stance.$",
+        "pattern": "^You order (a|an|the) (.*) to assume a passive stance.$",
         "type": "regex"
       }
     ],

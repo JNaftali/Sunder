@@ -1,33 +1,5 @@
 [
   {
-    "name": "resisted",
-    "isActive": "no",
-    "isFolder": "no",
-    "multiline": "yes",
-    "multilineDelta": "1",
-    "matchall": "no",
-    "filter": "no",
-    "fireLength": "0",
-    "highlight": "no",
-    "highlightFG": "#ff0000",
-    "highlightBG": "#ffff00",
-    "patterns": [
-      {
-        "pattern": "^You discern that a layer of (\\w+) has rubbed off your \\w+\\.$",
-        "type": "regex"
-      },
-      {
-        "pattern": "1",
-        "type": "spacer"
-      },
-      {
-        "pattern": "^You discern that (\\w+) has resisted the (\\w+) affliction\\.$",
-        "type": "regex"
-      }
-    ],
-    "script": ""
-  },
-  {
     "name": "resisted venom",
     "isActive": "yes",
     "isFolder": "no",
@@ -46,34 +18,6 @@
       },
       {
         "pattern": "^The countercurrent coating (\\w+)'s skin wicks away (\\w+) before it can take.$",
-        "type": "regex"
-      }
-    ],
-    "script": ""
-  },
-  {
-    "name": "chaos lord resist",
-    "isActive": "yes",
-    "isFolder": "no",
-    "multiline": "yes",
-    "multilineDelta": "2",
-    "matchall": "no",
-    "filter": "no",
-    "fireLength": "0",
-    "highlight": "no",
-    "highlightFG": "#ff0000",
-    "highlightBG": "#ffff00",
-    "patterns": [
-      {
-        "pattern": "^The crackling chaotic energies surrounding (\\w+)'s? body absorb the affliction\\.$",
-        "type": "regex"
-      },
-      {
-        "pattern": "1",
-        "type": "spacer"
-      },
-      {
-        "pattern": "^You discern that (\\w+) has resisted the (\\w+) affliction\\.$",
         "type": "regex"
       }
     ],
@@ -254,34 +198,6 @@
     "patterns": [
       {
         "pattern": "^(\\w+) looks mildly stressed in pain, but .+ (\\w+ \\w+) endures\\.$",
-        "type": "regex"
-      }
-    ],
-    "script": ""
-  },
-  {
-    "name": "Elder shaman proc resistance",
-    "isActive": "yes",
-    "isFolder": "no",
-    "multiline": "yes",
-    "multilineDelta": "3",
-    "matchall": "no",
-    "filter": "no",
-    "fireLength": "0",
-    "highlight": "no",
-    "highlightFG": "#ff0000",
-    "highlightBG": "#ffff00",
-    "patterns": [
-      {
-        "pattern": "^(\\w+) summons the will of the Elder Shaman to resist delusion.$",
-        "type": "regex"
-      },
-      {
-        "pattern": "^You discern that (\\w+) has resisted the (\\w+) affliction\\.$",
-        "type": "regex"
-      },
-      {
-        "pattern": "^You discern that (\\w+) has been afflicted with (\\w+)\\.$",
         "type": "regex"
       }
     ],

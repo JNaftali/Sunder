@@ -1,1 +1,0 @@
-snd.target_cured(matches[2].."_crippled")
