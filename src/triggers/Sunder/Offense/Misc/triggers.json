@@ -383,5 +383,14 @@
         "type": "exactMatch"
       }
     ]
+  },
+  {
+    "name": "Egotism Dethrone",
+    "patterns": [
+      {
+        "pattern": "^(\\w+) plummets from the skies, hitting the ground with a dull, heavy crunch\\.$",
+        "type": "regex"
+      }
+    ]
   }
 ]
