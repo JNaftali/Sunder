@@ -1725,7 +1725,7 @@ function snd.reset_me()
     snd.balance[i] = true
   end
   snd.hidden_afflictions = 0
-  snd.parrying = "none"
+  snd.parrying.current_parry = "none"
   snd.crescentable = true
   snd.pipes_lit = false
   snd.runemarkMajor = "none"

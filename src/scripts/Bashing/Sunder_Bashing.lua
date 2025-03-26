@@ -344,8 +344,8 @@ function snd.bashing_function()
       if snd.have_aff("shock") and hasSkill("Overdrive") then -- let's use overdrive if we have shock, adds to new class bashing attack line
         battack = "overdrive" .. snd.sep .. battack .. snd.sep
       end
-      if snd.toggles.parrying and snd.toparry ~= "none" and snd.toparry ~= snd.parrying then
-        battack = "parry " .. snd.toparry .. snd.sep .. battack
+      if snd.toggles.parrying and snd.parrying.toparry ~= "none" and snd.parrying.toparry ~= snd.parrying.current_parry then
+        battack = "parry " .. snd.parrying.toparry .. snd.sep .. battack
       end
       if tonumber(snd.toggles.gauntlet_level) >= 2 then battack = battack .. snd.sep .. "absorb ylem" end       -- if you have a level 2 gauntlet, auto-absorb
 

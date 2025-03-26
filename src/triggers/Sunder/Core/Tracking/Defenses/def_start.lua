@@ -3,5 +3,4 @@ for i in pairs(snd.defenses) do
 end
 snd.runemarkMajor, snd.runemarkMinor = "none", "none"
 snd.current_dodge = "none"
-snd.parrying = "none"
-
+snd.parrying.current_parry = "none"

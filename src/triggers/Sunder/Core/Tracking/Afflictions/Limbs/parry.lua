@@ -1,1 +1,2 @@
-snd.parrying = matches[2]
+snd.parrying.current_parry = matches[2]
+

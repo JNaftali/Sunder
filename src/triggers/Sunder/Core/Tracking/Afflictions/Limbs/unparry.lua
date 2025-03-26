@@ -1,1 +1,2 @@
-snd.parrying = "none"
+snd.parrying.current_parry = "none"
+

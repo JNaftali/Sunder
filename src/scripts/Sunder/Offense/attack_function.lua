@@ -1,20 +1,20 @@
-  local wf_axe_count = {
-    chop = 1,
-    sweep = 1,
-    lacerate = 1,
-    bash = 1,
-    whirlwind = 2,
-    punish = 2,
-    ravage = 2,
-    execute = 2,
-    
-    lob = 1,
-    assault = 1,
-    cripple = 1,
-    carve = 2,
-    devastate = 2,
-    slaughter = 2,
-  }
+local wf_axe_count = {
+  chop = 1,
+  sweep = 1,
+  lacerate = 1,
+  bash = 1,
+  whirlwind = 2,
+  punish = 2,
+  ravage = 2,
+  execute = 2,
+
+  lob = 1,
+  assault = 1,
+  cripple = 1,
+  carve = 2,
+  devastate = 2,
+  slaughter = 2,
+}
 
 function snd.attack_function()
   echo("\nYou haven't set up an attack alias yet!")
@@ -27,20 +27,20 @@ function snd.attack(attack)
   else
     string = attack
   end
-  string = "stand" .. snd.sep .. "g body" .. snd.sep .. "g husk" .. snd.sep .."g remains"..snd.sep.. string
-  if snd.toggles.parrying and snd.toparry ~= "none" and snd.toparry ~= snd.parrying then
-    string = "parry " .. snd.toparry .. snd.sep .. string
+  string = "stand" .. snd.sep .. "g body" .. snd.sep .. "g husk" .. snd.sep .. "g remains" .. snd.sep .. string
+  if snd.toggles.parrying and snd.parrying.toparry ~= "none" and snd.parrying.toparry ~= snd.parrying.current_parry then
+    string = "parry " .. snd.parrying.toparry .. snd.sep .. string
   end
   for pipe, isEmpty in pairs(snd.emptypipes) do
     if isEmpty then
-        string ="outc " .. pipe ..snd.sep .."put " .. pipe .." in emptypipe"..snd.sep ..string
+      string = "outc " .. pipe .. snd.sep .. "put " .. pipe .. " in emptypipe" .. snd.sep .. string
     end
   end
 
   if not snd.pipes_lit and snd.toggles.lighting then
     string = "light pipes" .. snd.sep .. string
   end
-  
+
   if snd.class == "Wayfarer" then
     local axes = 0
     local checkString = string:lower()
@@ -55,13 +55,13 @@ function snd.attack(attack)
       snd.send("queue axes2 " .. string)
     elseif axes == 1 and not snd.can_axe() then
       snd.send("qeb")
-      snd.send("queue axe "..string)
+      snd.send("queue axe " .. string)
     else
       snd.send("queue axes")
       snd.send("qeb " .. string)
     end
   else
-      snd.send("qeb " .. string)
+    snd.send("qeb " .. string)
   end
 end
 
@@ -79,13 +79,13 @@ end
 
 function snd.handle_hounds()
   if gmcp.Char.Vitals.ability_bal == "1" and not snd.waiting.hound and gmcp.Char.Vitals.balance == "0" then
-    local class = {["Carnifex"] = "hound", ["Warden"] = "simulacrum"}
+    local class = { ["Carnifex"] = "hound", ["Warden"] = "simulacrum" }
     local string = ""
     local hound_aff = "none"
     local mark_check = false
     if
-      (snd.class == "Carnifex" and snd.defenses.def_houndmark.state == "deffed") or
-      (snd.class == "Warden" and snd.defenses.def_tacticianmark.state == "deffed")
+        (snd.class == "Carnifex" and snd.defenses.def_houndmark.state == "deffed") or
+        (snd.class == "Warden" and snd.defenses.def_tacticianmark.state == "deffed")
     then
       mark_check = true
     end
@@ -124,3 +124,4 @@ function snd.handle_hounds()
     end
   end
 end
+
