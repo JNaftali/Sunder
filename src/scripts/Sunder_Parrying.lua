@@ -37,8 +37,8 @@ function snd.parry()
     snd.parrying.toparry = snd.parrying.get_default()
   elseif snd.parrying.type == "random" then
     snd.parrying.toparry = snd.parrying.get_random()
-  elseif snd.parrying.type == "higest" then
-    snd.parrying.toparry = snd.parrying.get_higest()
+  elseif snd.parrying.type == "highest" then
+    snd.parrying.toparry = snd.parrying.get_highest()
   else
   end
   if snd.parrying.toparry ~= "none" and snd.parrying.toparry ~= snd.parrying.current_parry and snd.full_balance() and not snd.waiting.parry then
@@ -96,15 +96,15 @@ function snd.parrying.get_default()
 end
 
 --- Get highest trauma limb.
--- @function snd.parrying.get_higest
+-- @function snd.parrying.get_highest
 -- @return limb to parry
 function snd.parrying.get_highest()
-  local higest = 0
+  local highest = 0
   local toparry = "none"
 
   for limb, dmg in pairs(snd.my_limb_damage) do
-    if dmg > higest then
-      higest = dmg
+    if dmg > highest then
+      highest = dmg
       toparry = limb
     end
   end
