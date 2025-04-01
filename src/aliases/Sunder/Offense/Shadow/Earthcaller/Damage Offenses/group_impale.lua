@@ -1,26 +1,32 @@
 if snd.class == "Earthcaller" then
-  snd.giving_shield = {"paresis", "weariness", "sight", "asthma"}
-  snd.giving_spur = {"impatience", "sensitivity", "self_pity", "stupidity", "vertigo"}
+  snd.giving_shield = { "paresis", "weariness", "sight", "asthma" }
+  snd.giving_spur = { "impatience", "sensitivity", "self_pity", "stupidity", "vertigo" }
   snd.giving_subdue =
-    {
-      "hypochondria",
-      "recklessness",
-      "stupidity",
-      "lethargy",
-      "justice",
-      "dementia",
-      "paranoia",
-      "anorexia",
-    }
+  {
+    "hypochondria",
+    "recklessness",
+    "stupidity",
+    "lethargy",
+    "justice",
+    "dementia",
+    "paranoia",
+    "anorexia",
+  }
   snd.starting_attack()
 
   function snd.attack_function()
-  local total_aff_count = snd.aff_count_all()
-  local mental_aff_count = snd.aff_count_mental()
-  
-  local string = "contemplate "..snd.target..snd.sep
- 	if not string.find(gmcp.Char.Vitals.wield_right, "crozier") then string = string.."quickwield right crozier"..snd.sep end
-	if not string.find(gmcp.Char.Vitals.wield_left, "buckler") then string = string.."quickwield left buckler"..snd.sep end
+    local total_aff_count = snd.aff_count_all()
+    local mental_aff_count = snd.aff_count_mental()
+
+    local string = "contemplate " .. snd.target .. snd.sep
+    if not string.find(gmcp.Char.Vitals.wield_right, "crozier") then
+      string = string ..
+          "quickwield right crozier" .. snd.sep
+    end
+    if not string.find(gmcp.Char.Vitals.wield_left, "buckler") then
+      string = string .. "quickwield left buckler" ..
+          snd.sep
+    end
 
     local shield = "none"
     local spur = "none"
@@ -64,9 +70,9 @@ if snd.class == "Earthcaller" then
 
       for i in pairs(snd.giving_subdue) do
         if
-          not snd.checkAff(snd.giving_subdue[i]) and
-          subdue == "none" and
-          snd.giving_subdue[i] ~= spur
+            not snd.checkAff(snd.giving_subdue[i]) and
+            subdue == "none" and
+            snd.giving_subdue[i] ~= spur
         then
           subdue = snd.giving_subdue[i]
         end
@@ -76,7 +82,7 @@ if snd.class == "Earthcaller" then
         if snd.toggles.affcalling and not snd.target_gone then
           string = "wt spur " .. snd.target .. ": " .. spur .. snd.sep
         end
-        string = string .. "osso spur " .. spur .. " " .. snd.target .. snd.sep
+        string = string .. "osso spur " .. snd.target .. " " .. spur .. snd.sep
       end
 
       string = string .. shield .. " " .. snd.target .. snd.sep
@@ -94,7 +100,7 @@ if snd.class == "Earthcaller" then
     end
 
     if string.find(string, "deface") and not string.find(gmcp.Char.Vitals.wield_left, "tower") then
-      string = "quickwield left tower"..string..snd.sep
+      string = "quickwield left tower" .. string .. snd.sep
     end
 
 

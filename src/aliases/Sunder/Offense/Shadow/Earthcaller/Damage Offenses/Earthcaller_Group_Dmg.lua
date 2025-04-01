@@ -24,12 +24,18 @@ if snd.class == "Earthcaller" then
         if table.contains(snd.target_has, snd.mental_affs[aff]) then mental_aff_count = mental_aff_count + 1 end
       end
 
-      if not string.find(gmcp.Char.Vitals.wield_right, "crozier") then string = string ..
-        "quickwield right " .. snd.crozier .. snd.sep end
-      if not string.find(gmcp.Char.Vitals.wield_left, "buckler") then string = string ..
-        "quickwield left buckler" .. snd.sep end
-      if not string.find(gmcp.Char.Vitals.wield_left, "tower") then string = string .. "quickwield left tower" .. snd
-        .sep end
+      if not string.find(gmcp.Char.Vitals.wield_right, "crozier") then
+        string = string ..
+            "quickwield right " .. snd.crozier .. snd.sep
+      end
+      if not string.find(gmcp.Char.Vitals.wield_left, "buckler") then
+        string = string ..
+            "quickwield left buckler" .. snd.sep
+      end
+      if not string.find(gmcp.Char.Vitals.wield_left, "tower") then
+        string = string .. "quickwield left tower" .. snd
+            .sep
+      end
 
       snd.giving_shield = {
         "paresis",
@@ -148,7 +154,7 @@ if snd.class == "Earthcaller" then
       end
 
       if battle ~= "none" then
-        string = string .. "osso spur " .. battle .. " " .. snd.target .. snd.sep
+        string = string .. "osso spur " .. snd.target .. " " .. battle .. snd.sep
       end
       --Add shield/tectonics/dirge attacks
       string = string .. shield .. " " .. snd.target .. snd.sep

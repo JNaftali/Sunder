@@ -1,14 +1,15 @@
 -- The purpose of this is to lock someone down with disrupt so they cannot use lock-breakers to escape.
 if snd.class == "Luminary" then
-  snd.giving_shield = {"sight", "paresis", "weariness", "confusion", "writhe_transfix", "asthma", "misery"}
-  snd.giving_battle = {"impatience", "stupidity", "sensitivity", "self_pity", "vertigo"}
-  snd.giving_chasten = {"hypochondria", "stupidity", "recklessness", "lethargy", "justice", "dementia", "paranoia", "anorexia",}
+  snd.giving_shield = { "sight", "paresis", "weariness", "confusion", "writhe_transfix", "asthma", "misery" }
+  snd.giving_battle = { "impatience", "stupidity", "sensitivity", "self_pity", "vertigo" }
+  snd.giving_chasten = { "hypochondria", "stupidity", "recklessness", "lethargy", "justice", "dementia", "paranoia",
+    "anorexia", }
   snd.starting_attack()
 
   function snd.attack_function()
     local total_aff_count = snd.aff_count_all()
     local mental_aff_count = snd.aff_count_mental()
-  
+
     local string = "contemplate " .. snd.target .. snd.sep
     if not string.find(gmcp.Char.Vitals.wield_right, "mace") then
       string = string .. "quickwield right mace" .. snd.sep
@@ -46,10 +47,10 @@ if snd.class == "Luminary" then
         end
         --If they have 2 mental affs and confusion is one of them, disrupt ASAP to lock them in place.
         if
-          mental_aff_count >= 2 and
-          snd.checkAff("confusion") and
-          not snd.checkAff("disrupted") and
-          total_aff_count < 7
+            mental_aff_count >= 2 and
+            snd.checkAff("confusion") and
+            not snd.checkAff("disrupted") and
+            total_aff_count < 7
         then
           shield = "shield crash"
         end
@@ -65,9 +66,9 @@ if snd.class == "Luminary" then
       --Chasten aff pick
       for i in pairs(snd.giving_chasten) do
         if
-          not snd.checkAff(snd.giving_chasten[i]) and
-          chasten == "none" and
-          snd.giving_chasten[i] ~= battle
+            not snd.checkAff(snd.giving_chasten[i]) and
+            chasten == "none" and
+            snd.giving_chasten[i] ~= battle
         then
           chasten = snd.giving_chasten[i]
         end
@@ -77,7 +78,7 @@ if snd.class == "Luminary" then
         if snd.toggles.affcalling and not snd.target_gone then
           string = "wt Battle " .. snd.target .. ": " .. battle .. snd.sep
         end
-        string = string .. "angel battle " .. battle .. " " .. snd.target .. snd.sep
+        string = string .. "angel battle " .. snd.target .. " " .. battle .. snd.sep
       end
       --Add shield/evoke/perform attacks
       string = string .. shield .. " " .. snd.target .. snd.sep
@@ -95,7 +96,7 @@ if snd.class == "Luminary" then
     end
     --Are we gonna smack them with overwhelm? Let's make it hurt.
     if string.find(string, "overwhelm") and not string.find(gmcp.Char.Vitals.wield_left, "tower") then
-      string = string..snd.sep.."quickwield left tower"
+      string = string .. snd.sep .. "quickwield left tower"
     end
     if string ~= snd.last_attack and not snd.waiting.queue then
       snd.last_attack = string
@@ -107,3 +108,4 @@ if snd.class == "Luminary" then
 
   snd.attack_function()
 end
+

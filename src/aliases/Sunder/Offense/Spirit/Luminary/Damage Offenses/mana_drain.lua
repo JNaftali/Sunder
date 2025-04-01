@@ -1,22 +1,25 @@
 if snd.class == "Luminary" then
-  snd.giving_battle = {"stupidity", "vertigo", "self_pity", "migraine", "sensitivity", "impatience"}
+  snd.giving_battle = { "stupidity", "vertigo", "self_pity", "migraine", "sensitivity", "impatience" }
   snd.giving_chasten =
-    {
-      "lethargy",
-      "self_loathing",
-      "stupidity",
-      "hypochondria",
-      "dementia",
-      "recklessness",
-      "justice",
-      "paranoia",
-    }
+  {
+    "lethargy",
+    "self_loathing",
+    "stupidity",
+    "hypochondria",
+    "dementia",
+    "recklessness",
+    "justice",
+    "paranoia",
+  }
   snd.starting_attack()
 
   function snd.attack_function()
- local string = "contemplate "..snd.target..snd.sep
- 	if not string.find(gmcp.Char.Vitals.wield_right, "mace") then string = string.."quickwield right mace"..snd.sep end
-	if not string.find(gmcp.Char.Vitals.wield_left, "buckler") then string = string.."quickwield left buckler"..snd.sep end
+    local string = "contemplate " .. snd.target .. snd.sep
+    if not string.find(gmcp.Char.Vitals.wield_right, "mace") then string = string .. "quickwield right mace" .. snd.sep end
+    if not string.find(gmcp.Char.Vitals.wield_left, "buckler") then
+      string = string .. "quickwield left buckler" ..
+          snd.sep
+    end
 
     local battle = "none"
     local chasten = "none"
@@ -25,9 +28,9 @@ if snd.class == "Luminary" then
     elseif snd.mana_percent < 40 and snd.used.shield then
       for i in pairs(snd.giving_chasten) do
         if
-          not snd.checkAff(snd.giving_chasten[i]) and
-          chasten == "none" and
-          snd.giving_chasten[i] ~= battle
+            not snd.checkAff(snd.giving_chasten[i]) and
+            chasten == "none" and
+            snd.giving_chasten[i] ~= battle
         then
           chasten = snd.giving_chasten[i]
         end
@@ -38,9 +41,9 @@ if snd.class == "Luminary" then
       end
       string = string .. "chasten " .. snd.target .. " " .. chasten
     else
-      string = string.."angel sap " .. snd.target
+      string = string .. "angel sap " .. snd.target
     end
-		
+
     if snd.balance.battle then
       for i in pairs(snd.giving_battle) do
         if not snd.checkAff(snd.giving_battle[i]) and battle == "none" then
@@ -48,7 +51,7 @@ if snd.class == "Luminary" then
         end
       end
     end
-    string = "angel battle " .. battle .. " " .. snd.target .. snd.sep .. string
+    string = "angel battle " .. snd.target .. " " .. battle .. snd.sep .. string
     if snd.toggles.affcalling and not snd.target_gone then
       string = "wt Battle " .. snd.target .. ": " .. battle .. snd.sep .. string
     end
@@ -63,3 +66,4 @@ if snd.class == "Luminary" then
 
   snd.attack_function()
 end
+

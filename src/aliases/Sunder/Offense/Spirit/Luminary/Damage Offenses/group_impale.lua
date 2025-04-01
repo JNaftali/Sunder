@@ -24,8 +24,10 @@ if snd.class == "Luminary" then
 
     local string = "contemplate " .. snd.target .. snd.sep
     if not string.find(gmcp.Char.Vitals.wield_right, "mace") then string = string .. "quickwield right mace" .. snd.sep end
-    if not string.find(gmcp.Char.Vitals.wield_left, "buckler") then string = string .. "quickwield left buckler" ..
-      snd.sep end
+    if not string.find(gmcp.Char.Vitals.wield_left, "buckler") then
+      string = string .. "quickwield left buckler" ..
+          snd.sep
+    end
 
     local shield = "none"
     local battle = "none"
@@ -83,7 +85,7 @@ if snd.class == "Luminary" then
         if snd.toggles.affcalling and not snd.target_gone then
           string = "wt Battle " .. snd.target .. ": " .. battle .. snd.sep
         end
-        string = string .. "angel battle " .. battle .. " " .. snd.target .. snd.sep
+        string = string .. "angel battle " .. snd.target .. " " .. battle .. snd.sep
       end
       --Add shield/evoke/perform attacks
       string = string .. shield .. " " .. snd.target .. snd.sep
