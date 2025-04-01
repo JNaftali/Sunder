@@ -33,7 +33,7 @@
         "type": "regex"
       },
       {
-        "pattern": "(\\w+) frets as .+ eyes flit to and fro, mercy restraining .+ demeanour\\.$",
+        "pattern": "^(\\w+) frets as .+ eyes flit to and fro, mercy restraining .+ demeanour\\.$",
         "type": "regex"
       }
     ]
