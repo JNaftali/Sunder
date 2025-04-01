@@ -1,182 +1,84 @@
 [
-       {
-              "name": "Spores - Gain 1 stack from Imbue",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^Writhing lines disturb the surface of (.*)'s skin as the spore invading .* body gluts itself upon the hex's energies\\.$",
-                            "type": "regex"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "Spores - lose 1 stack",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^A patch of fungus breaks off from (.*) as an invasive culture dies out\\.$",
-                            "type": "regex"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "Sporulation Sporey Spores",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^Your morass propagates a culture upon (.*)\\.$",
-                            "type": "regex"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "Hyphae Proc",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^Myriad hyphae dig into (.*)'s body, rooting a spore culture to .*\\.$",
-                            "type": "regex"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "Branch",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "You use Runecarving Branch.",
-                            "type": "regex"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "More Branch",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "You burgeon with primal power, further possibilities of the reflective Branch rune coming into your grasp.",
-                            "type": "regex"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "No Branch",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "The branch rune's reflective power eludes you for now.",
-                            "type": "regex"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "Full Branch",
-              "isActive": "yes",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "A wild flare of instinct fills your heart, the power of the reflective Branch rune returning to you.",
-                            "type": "regex"
-                     }
-              ],
-              "script": ""
-       },
-       {
-              "name": "Branch on Someone Else",
-              "isActive": "no",
-              "isFolder": "no",
-              "multiline": "no",
-              "multilineDelta": "0",
-              "matchall": "no",
-              "filter": "no",
-              "fireLength": "0",
-              "highlight": "no",
-              "highlightFG": "#ff0000",
-              "highlightBG": "#ffff00",
-              "patterns": [
-                     {
-                            "pattern": "^You use Runecarving Branch on (\\w+).$",
-                            "type": "regex"
-                     }
-              ],
-              "script": ""
-       }
+  {
+    "name": "Spores - Gain 1 stack from Imbue",
+    "patterns": [
+      {
+        "pattern": "^Writhing lines disturb the surface of (\\w+)'s skin as the spore invading .* body gluts itself upon the hex's energies\\.$",
+        "type": "regex"
+      }
+    ]
+  },
+  {
+    "name": "Spores - lose 1 stack",
+    "patterns": [
+      {
+        "pattern": "^A patch of fungus breaks off from (\\w+) as an invasive culture dies out\\.$",
+        "type": "regex"
+      }
+    ]
+  },
+  {
+    "name": "Sporulation Sporey Spores",
+    "patterns": [
+      {
+        "pattern": "^Your morass propagates a culture upon (\\w+)\\.$",
+        "type": "regex"
+      }
+    ]
+  },
+  {
+    "name": "Hyphae Proc",
+    "patterns": [
+      {
+        "pattern": "^Myriad hyphae dig into (\\w+)'s body, rooting a spore culture to .*\\.$",
+        "type": "regex"
+      }
+    ]
+  },
+  {
+    "name": "Branch",
+    "patterns": [
+      {
+        "pattern": "You use Runecarving Branch.",
+        "type": "exactMatch"
+      }
+    ]
+  },
+  {
+    "name": "More Branch",
+    "patterns": [
+      {
+        "pattern": "You burgeon with primal power, further possibilities of the reflective Branch rune coming into your grasp.",
+        "type": "exactMatch"
+      }
+    ]
+  },
+  {
+    "name": "No Branch",
+    "patterns": [
+      {
+        "pattern": "The branch rune's reflective power eludes you for now.",
+        "type": "exactMatch"
+      }
+    ]
+  },
+  {
+    "name": "Full Branch",
+    "patterns": [
+      {
+        "pattern": "A wild flare of instinct fills your heart, the power of the reflective Branch rune returning to you.",
+        "type": "exactMatch"
+      }
+    ]
+  },
+  {
+    "name": "Branch on Someone Else",
+    "isActive": "no",
+    "patterns": [
+      {
+        "pattern": "^You use Runecarving Branch on (\\w+).$",
+        "type": "regex"
+      }
+    ]
+  }
 ]
