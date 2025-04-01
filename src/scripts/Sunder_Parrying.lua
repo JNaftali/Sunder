@@ -140,6 +140,6 @@ function snd.parrying.set_static_parry(limb)
     snd.message("Parrying handed off to function")
   else
     snd.parrying.static_parry = limb
-    snd.messages("Now static parrying " .. limb)
+    snd.message("Now static parrying " .. limb)
   end
 end
