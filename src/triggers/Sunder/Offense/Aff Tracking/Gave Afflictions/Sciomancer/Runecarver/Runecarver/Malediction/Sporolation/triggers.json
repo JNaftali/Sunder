@@ -78,7 +78,8 @@
         "pattern": "^The psychoactive nature of your morass infects (\\w+) with (\\w+)\\.$",
         "type": "regex"
       }
-    ],
+    ]
+  },
   {
     "name": "Impede Fail",
     "patterns": [
