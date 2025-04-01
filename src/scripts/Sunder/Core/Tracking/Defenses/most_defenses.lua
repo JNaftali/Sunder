@@ -1,4 +1,10 @@
 snd.defenses_list = {
+  ["You are trying to absorb blows to your body."] = "bodyblock",
+  ["You are using Tekura to evade incoming attacks."] = "evadeblock",
+  ["You will attack the arms of hostile opponents."] = "armblock",
+  ["You will attack the legs of hostile opponents."] = "legblock",
+  ["You are attempting to trip block hostile opponents."] = "tripblock",
+  ["You will try to pinch block a weakened foe."] = "pinchblock",
   ["Your hands are gripping your wielded items tightly."] = "irongrip",
   ["You are brimming with courage."] = "courage",
   ["You are utilising a careful, trained grip on your weapons."] = "gripping",
