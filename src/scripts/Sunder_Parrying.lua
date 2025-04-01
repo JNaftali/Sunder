@@ -5,14 +5,14 @@
 --- Parry namespace.
 -- @table snd.parrying
 snd.parrying = snd.parrying or {
-  type = "default", -- valid types are default, random, static, and highest
+  type = "default", -- valid types are default, random, and highest
   toparry = "none",
   current_parry = "none",
-  static_parry = "left leg",
+  static_parry = nil,
   seed = os.time()
 }
 
-local legal_parry = { "default", "random", "static", "highest" }
+local legal_parry = { "default", "random", "highest" }
 
 --- Call this function to switch your parry.
 -- @function snd.parrying.set_parry
@@ -31,12 +31,12 @@ end
 function snd.parry()
   if snd.parry_override then
     snd.parrying.toparry = snd.parry_override()
+  elseif snd.parrying.static_parry then
+    snd.parrying.toparry = snd.parrying.static_parry
   elseif snd.parrying.type == "default" then
     snd.parrying.toparry = snd.parrying.get_default()
   elseif snd.parrying.type == "random" then
     snd.parrying.toparry = snd.parrying.get_random()
-  elseif snd.parrying.type == "static" then
-    snd.parrying.toparry = snd.parrying.static_parry
   elseif snd.parrying.type == "higest" then
     snd.parrying.toparry = snd.parrying.get_higest()
   else
