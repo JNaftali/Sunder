@@ -29,10 +29,10 @@ end
 -- This function can be overriden via snd.parry_override
 -- @function snd.parry
 function snd.parry()
-  if snd.parry_override then
-    snd.parrying.toparry = snd.parry_override()
-  elseif snd.parrying.static_parry then
+  if snd.parrying.static_parry then
     snd.parrying.toparry = snd.parrying.static_parry
+  elseif snd.parry_override then
+    snd.parrying.toparry = snd.parry_override()
   elseif snd.parrying.type == "default" then
     snd.parrying.toparry = snd.parrying.get_default()
   elseif snd.parrying.type == "random" then
@@ -132,4 +132,14 @@ function snd.parrying.get_random()
   toparry = limb_to_num[math.random(1, 6)]
 
   return toparry
+end
+
+function snd.parrying.set_static_parry(limb)
+  if limb == "auto" then
+    snd.parrying.static_parry = nil
+    snd.message("Parrying handed off to function")
+  else
+    snd.parrying.static_parry = limb
+    snd.messages("Now static parrying " .. limb)
+  end
 end

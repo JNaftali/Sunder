@@ -7,4 +7,4 @@ local map = {
   h = "head",
   a = "auto",
 }
-snd.setStaticParry(map[matches[2]:lower()])
+snd.parrying.set_static_parry(map[matches[2]:lower()])
