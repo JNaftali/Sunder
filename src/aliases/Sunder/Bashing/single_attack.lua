@@ -8,7 +8,7 @@ elseif snd[class .. "_bash"] then
 else
   battack = "kill " .. snd.target                       --if no bashing function exists, default to kill
 end
-local commands = [battack]
+local commands = {battack}
 if snd.have_aff("shock") and hasSkill("Overdrive") then -- let's use overdrive if we have shock, adds to new class bashing attack line
   table.insert(commands, 1, "overdrive")
 end
