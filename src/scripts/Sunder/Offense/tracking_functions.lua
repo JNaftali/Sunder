@@ -419,9 +419,9 @@ function snd.onHit2(checks, conditional)
       table.remove(snd.maybe_affs, 2)
     end
 
-    if aff == "misery" and conditional == "Luminary Facesmash" and snd.maybe_affs[2] == "sight" then
-      snd.target_got("sight")
-      table.insert(snd.last_affs, "sight")
+    if aff == "misery" and conditional == "Luminary Facesmash" and snd.maybe_affs[2] == "no_courage" then
+      snd.target_got("no_courage")
+      table.insert(snd.last_affs, "no_courage")
       table.remove(snd.maybe_affs, 2)
     end
 
