@@ -485,6 +485,9 @@ function snd.onHit2(checks, conditional)
   end
 end
 
+--- Check if affliction exists on target
+-- @function snd.checkAff
+-- @param affliction string name of affliction
 function snd.checkAff(affliction)
   if affliction == "paresis" then
     if table.contains(snd.target_has, affliction) or table.contains(snd.target_has, "paralysis") then
@@ -500,6 +503,18 @@ function snd.checkAff(affliction)
     end
   elseif affliction == "anorexia" then
     if table.contains(snd.target_has, affliction) then
+      return true
+    else
+      return false
+    end
+  elseif affliction == "ringing_ears" then
+    if table.contains(snd.target_has, affliction) or table.contains(snd.target_has, "sensitivity") then
+      return true
+    else
+      return false
+    end
+  elseif affliction == "watery_eyes" then
+    if table.contains(snd.target_has, affliction) or table.contains(snd.target_has, "blurry_vision") then
       return true
     else
       return false

@@ -459,7 +459,6 @@ snd.cures = {
     "asthma",
     "ringing_ears",
     "sensitivity",
-    "ringing_ears",
     "impairment",
     "sepsis",
   },
@@ -522,6 +521,7 @@ snd.cures = {
   epidermal_head = {
     "indifference",
     "stuttering",
+    "watery_eyes",
     "blurry_vision",
     "burnt_eyes",
     "blindness",
@@ -535,6 +535,7 @@ snd.cures = {
     --"effused_blood",
     "indifference",
     "stuttering",
+    "watery_eyes",
     "blurry_vision",
     "blindness",
     "deafness"
