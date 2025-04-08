@@ -101,6 +101,7 @@ function snd.aff_have(affliction)
   end
   if snd.afflictions[affliction].state == "healed" then
     snd.afflictions[affliction].state = "afflicted"
+    snd.player_has[affliction] = true
     raiseEvent("sunder_my_affs_updated")
     raiseEvent("sunder_my_limbs_updated")
   end
@@ -154,6 +155,7 @@ function snd.aff_remove(affliction)
   end
   if snd.afflictions[affliction].state ~= "healed" then
     snd.afflictions[affliction].state = "healed"
+    snd.player_has[affliction] = nil
     if not snd.defer_ui_update then
       raiseEvent("sunder_my_affs_updated")
       raiseEvent("sunder_my_limbs_updated")

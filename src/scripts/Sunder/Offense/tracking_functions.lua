@@ -519,6 +519,12 @@ function snd.checkAff(affliction)
     else
       return false
     end
+  elseif affliction == "agony" then
+    if table.contains(snd.target_has, affliction) or table.contains(snd.target_has, "accursed") then
+      return true
+    else
+      return false
+    end
   else
     affliction = snd.affNameCheck(affliction)
     if table.contains(snd.target_has, affliction) then
@@ -550,6 +556,50 @@ function snd.checksomeAffs(afflictions, number)
     end
     -- if the count of how many returned true didn't meet or exceed the number given, return false
     return false
+  end
+end
+
+function snd.checkSelfAff(affliction)
+  if not string.find(affliction, "aff_") then
+    affliction = "aff_" .. affliction
+  end
+  if affliction == "aff_paresis" then
+    if snd.player_has["aff_paresis"] or snd.player_has["aff_paralysis"] then
+      return true
+    else
+      return false
+    end
+  elseif affliction == "crippled" then
+    if snd.player_has["aff_crippled"] or snd.player_has["aff_crippled_body"] then
+      return true
+    else
+      return false
+    end
+  elseif affliction == "ringing_ears" then
+    if snd.player_has["aff_ringing_ears"] or snd.player_has["aff_sensitivity"] then
+      return true
+    else
+      return false
+    end
+  elseif affliction == "watery_eyes" then
+    if snd.player_has["aff_watery_eyes"] or snd.player_has["aff_blurry_vision"] then
+      return true
+    else
+      return false
+    end
+  elseif affliction == "agony" then
+    if snd.player_has["aff_agony"] or snd.player_has["aff_accursed"] then
+      return true
+    else
+      return false
+    end
+  else
+    affliction = snd.affNameCheck(affliction)
+    if table.contains(snd.we_has, affliction) then
+      return true
+    else
+      return false
+    end
   end
 end
 

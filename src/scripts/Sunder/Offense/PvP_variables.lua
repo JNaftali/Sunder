@@ -196,6 +196,7 @@ snd.use_hourglass_on_prismatic = false
 snd.giving = {}
 snd.hound_queue = {}
 snd.target_has = {}
+snd.player_has = {}
 snd.rebounded = false
 snd.target_impaled = false -- do we specifically have our target imapled
 
