@@ -18,16 +18,6 @@
   },
   {
     "name": "batter call",
-    "isActive": "yes",
-    "isFolder": "no",
-    "multiline": "no",
-    "multilineDelta": "0",
-    "matchall": "no",
-    "filter": "no",
-    "fireLength": "20",
-    "highlight": "no",
-    "highlightFG": "#ff0000",
-    "highlightBG": "#ffff00",
     "patterns": [
       {
         "pattern": "^\\(Web\\)\\: (\\w+) says, \\\"(Battering|Battered) (\\w+): (.*)\\.\\\"$",
