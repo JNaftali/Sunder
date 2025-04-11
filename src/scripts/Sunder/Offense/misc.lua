@@ -161,7 +161,7 @@ end
 -- @function snd.teardown
 -- @return boolean
 function snd.teardown()
-  if snd.class == "Predator" and snd.checkAff("fallen") and snd.checksomeAffs({ "left_leg_broken", "right_leg_broken" }, 1) then
+  if snd.class == "Predator" and (snd.checkAff("fallen") and snd.checksomeAffs({ "left_leg_broken", "right_leg_broken" }, 1)) or snd.no_parry() then
     return true
   end
   return false

@@ -126,12 +126,7 @@ function snd.aff_diag(affliction)
   end
   snd.aff_color = "<yellow>"
   cecho(snd.aff_color .. "\n" .. affliction)
-  if not string.find(affliction, "aff_") then
-    affliction = "aff_" .. affliction
-  end
   echo(" " .. snd.afflictions[affliction].effect)
-  raiseEvent("sunder_my_affs_updated")
-  raiseEvent("sunder_my_limbs_updated")
 end
 
 --- Removes an affliction from your self.
