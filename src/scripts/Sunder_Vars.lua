@@ -88,7 +88,6 @@ snd.pathing = snd.pathing or false
 snd.need_fitness = snd.need_fitness or false
 snd.need_dome = snd.need_dome or false
 snd.shopih = snd.shopih or false
-snd.parrying.toparry = snd.parrying.toparry or "none"
 snd.counterattack_active = snd.counterattack_active or false
 snd.ylem_check = snd.ylem_check or false
 snd.pushattack = snd.pushattack or false
