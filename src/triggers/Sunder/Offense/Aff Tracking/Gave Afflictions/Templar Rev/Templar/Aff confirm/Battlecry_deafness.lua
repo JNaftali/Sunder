@@ -1,3 +1,3 @@
 if matches[2] == snd.target then
-  snd.target_got("hearing")
+  snd.target_cured("sensitivity")
 end
