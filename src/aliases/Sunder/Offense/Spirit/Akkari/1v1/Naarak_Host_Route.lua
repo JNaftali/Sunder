@@ -114,7 +114,7 @@ if snd.class == "Akkari" then
       snd.last_attack = string
       snd.attack(snd.last_attack)
       snd.waiting.queue = true
-      tempTimer(snd.delay(d), [[snd.waiting.queue = false]])
+      tempTimer(snd.delay(), [[snd.waiting.queue = false]])
     end
   end
 
