@@ -44,5 +44,18 @@
         "type": "lua"
       }
     ]
+  },
+  {
+    "name": "Voidgaze/Mystify hit courage",
+    "patterns": [
+      {
+        "pattern": "^Fingers of thick, viscous cold climb up (\\w+)'s body, but the void passes \\w+ by\\.$",
+        "type": "regex"
+      },
+      {
+        "pattern": "^A wash of mystical energy ripples across (\\w+)'s form, but its mystifying power fails to possess \\w+\\.$",
+        "type": "regex"
+      }
+    ]
   }
 ]
