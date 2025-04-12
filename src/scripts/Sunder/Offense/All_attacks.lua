@@ -2051,7 +2051,9 @@ snd.all_class_attacks = {
         snd.target_got("disrupted")
       end
     end,
-
+    Clamp = function(target)
+      snd.mindclamped = true
+    end,
 
   },
 
